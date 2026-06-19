@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Binary Brain Network — Software for Operations That Run on Paper</title>
+<meta name="description" content="The Binary Brain Network builds focused software for hospitality and service businesses in India. Folio handles hotel room service billing. More systems in development.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tbn.tbbn.in/">
+<meta property="og:title" content="The Binary Brain Network — Software for Operations That Run on Paper">
+<meta property="og:description" content="Focused software for hospitality and service operations in India. Built by The Big Brand Network.">
+<meta property="og:url" content="https://tbn.tbbn.in/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1015">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Binary Brain Network",
+  "alternateName": "TBN",
+  "url": "https://tbn.tbbn.in/",
+  "parentOrganization": {"@type": "Organization", "name": "The Big Brand Network", "url": "https://tbbn.in/"},
+  "description": "Software development division building focused operational systems for hospitality and service businesses in India."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1015;
+    --ink2:#15181F;
+    --paper:#F7F5F0;
+    --paper-dim:#EDEAE2;
+    --amber:#E8A33D;
+    --amber-dim:#7A5A24;
+    --slate:#5A6270;
+    --slate-light:#8A92A0;
+    --green:#3D7A5C;
+    --green-glow:rgba(61,122,92,0.35);
+    --line:rgba(247,245,240,0.1);
+    --mono:'Space Mono',monospace;
+    --sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.container{padding:0 20px;}}
+
+  /* ── Texture: faint grid like graph paper / ops board ── */
+  .grid-texture{
+    position:fixed;inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:64px 64px;
+    opacity:0.4;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* ── NAV ── */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(14,16,21,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav__inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .nav__brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;letter-spacing:0.02em;}
+  .nav__brand-mark{
+    width:28px;height:28px;
+    border:1.5px solid var(--amber);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:700;color:var(--amber);
+  }
+  .nav__brand-name{font-weight:700;}
+  .nav__brand-name span{color:var(--slate-light);font-weight:400;}
+  .nav__links{display:flex;gap:36px;list-style:none;}
+  .nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
+  .nav__links a:hover{color:var(--paper);}
+  .nav__cta{
+    font-family:var(--mono);font-size:12px;font-weight:700;
+    border:1px solid var(--amber);color:var(--amber);
+    padding:9px 18px;letter-spacing:0.04em;
+    transition:all 0.2s;
+  }
+  .nav__cta:hover{background:var(--amber);color:var(--ink);}
+  @media(max-width:768px){.nav__links{display:none;}}
+
+  /* ── HERO ── */
+  .hero{
+    position:relative;z-index:1;
+    padding:120px 0 100px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero__eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.12em;
+    color:var(--amber);text-transform:uppercase;margin-bottom:24px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .hero__eyebrow::before{
+    content:'';width:8px;height:8px;background:var(--green);
+    box-shadow:0 0 0 4px var(--green-glow);
+    border-radius:50%;
+  }
+  .hero__title{
+    font-family:var(--sans);font-weight:800;
+    font-size:clamp(36px,6vw,68px);
+    line-height:1.04;letter-spacing:-0.02em;
+    max-width:880px;margin-bottom:28px;
+  }
+  .hero__title em{font-style:normal;color:var(--amber);}
+  .hero__desc{
+    font-size:18px;color:var(--slate-light);
+    max-width:560px;line-height:1.7;margin-bottom:40px;
+  }
+  .hero__actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:13px;font-weight:700;
+    padding:14px 28px;letter-spacing:0.03em;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:all 0.2s;
+  }
+  .btn--primary{background:var(--amber);color:var(--ink);}
+  .btn--primary:hover{background:#f4b65a;}
+  .btn--ghost{border:1px solid var(--line);color:var(--paper);}
+  .btn--ghost:hover{border-color:var(--paper);}
+
+  /* ── STATUS STRIP (signature element) ── */
+  .status-strip{
+    position:relative;z-index:1;
+    border-bottom:1px solid var(--line);
+    background:var(--ink2);
+  }
+  .status-strip__inner{
+    display:flex;align-items:stretch;
+    overflow-x:auto;
+  }
+  .status-item{
+    flex:1;min-width:220px;
+    padding:18px 28px;
+    border-right:1px solid var(--line);
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .status-item:last-child{border-right:none;}
+  .status-item__label{
+    font-family:var(--mono);font-size:11px;color:var(--slate-light);
+    letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .status-item__value{
+    font-family:var(--mono);font-size:13px;font-weight:700;
+    display:flex;align-items:center;gap:8px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+  .dot--live{background:var(--green);box-shadow:0 0 0 3px var(--green-glow);}
+  .dot--dev{background:var(--amber);box-shadow:0 0 0 3px rgba(232,163,61,0.25);animation:pulse 2s infinite;}
+  .dot--queue{background:var(--slate);}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+
+  /* ── SECTION HEADER ── */
+  .section{position:relative;z-index:1;padding:96px 0;}
+  .section--border{border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:56px;max-width:640px;}
+  .section-tag{
+    font-family:var(--mono);font-size:12px;color:var(--amber);
+    letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;
+  }
+  .section-title{
+    font-size:clamp(26px,3.4vw,38px);font-weight:800;
+    letter-spacing:-0.01em;line-height:1.15;margin-bottom:14px;
+  }
+  .section-sub{color:var(--slate-light);font-size:16px;line-height:1.7;}
+
+  /* ── PRODUCT DOCKETS ── */
+  .docket-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+  .docket{
+    display:grid;grid-template-columns:80px 1fr auto;gap:32px;
+    padding:36px 0;border-bottom:1px solid var(--line);
+    align-items:center;
+  }
+  .docket__num{font-family:var(--mono);font-size:13px;color:var(--slate);}
+  .docket__body{display:flex;flex-direction:column;gap:10px;}
+  .docket__top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .docket__name{font-size:22px;font-weight:700;letter-spacing:-0.01em;}
+  .docket__badge{
+    font-family:var(--mono);font-size:10px;font-weight:700;
+    padding:4px 10px;letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .docket__badge--live{background:rgba(61,122,92,0.18);color:#6FCB9A;}
+  .docket__badge--dev{background:rgba(232,163,61,0.15);color:var(--amber);}
+  .docket__badge--queue{background:rgba(90,98,112,0.2);color:var(--slate-light);}
+  .docket__desc{color:var(--slate-light);font-size:15px;max-width:560px;}
+  .docket__tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+  .docket__tag{
+    font-family:var(--mono);font-size:11px;color:var(--slate-light);
+    border:1px solid var(--line);padding:4px 10px;
+  }
+  .docket__action{font-family:var(--mono);font-size:13px;font-weight:700;white-space:nowrap;}
+  .docket__action--live{color:var(--amber);}
+  .docket__action--live::after{content:' →';}
+  .docket__action--inactive{color:var(--slate);}
+  @media(max-width:760px){
+    .docket{grid-template-columns:1fr;gap:14px;}
+    .docket__action{justify-self:start;}
+  }
+
+  /* ── APPROACH ── */
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .approach-item{background:var(--ink);padding:36px 32px;}
+  .approach-item__num{font-family:var(--mono);font-size:12px;color:var(--amber);margin-bottom:18px;}
+  .approach-item__title{font-size:18px;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;}
+  .approach-item__desc{font-size:14px;color:var(--slate-light);line-height:1.65;}
+  @media(max-width:760px){.approach-grid{grid-template-columns:1fr;}}
+
+  /* ── PARENT BRAND STRIP ── */
+  .parent-strip{
+    background:var(--paper);color:var(--ink);
+    position:relative;z-index:1;
+  }
+  .parent-strip__inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:48px 0;flex-wrap:wrap;gap:24px;
+  }
+  .parent-strip__text{font-size:15px;color:var(--slate);max-width:480px;}
+  .parent-strip__text strong{color:var(--ink);}
+  .parent-strip__link{
+    font-family:var(--mono);font-size:13px;font-weight:700;
+    color:var(--ink);border-bottom:2px solid var(--ink);
+    padding-bottom:2px;white-space:nowrap;
+  }
+
+  /* ── CTA ── */
+  .cta{position:relative;z-index:1;padding:100px 0;text-align:center;}
+  .cta__title{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.01em;margin-bottom:16px;}
+  .cta__sub{color:var(--slate-light);font-size:16px;margin-bottom:36px;}
+  .cta__actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+
+  /* ── FOOTER ── */
+  .footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:48px 0;}
+  .footer__inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer__text{font-family:var(--mono);font-size:12px;color:var(--slate);}
+  .footer__links{display:flex;gap:24px;}
+  .footer__links a{font-family:var(--mono);font-size:12px;color:var(--slate-light);}
+  .footer__links a:hover{color:var(--paper);}
+
+  ::selection{background:var(--amber);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+</style>
+</head>
+<body>
+<div class="grid-texture" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="The Binary Brain Network home">
+      <span class="nav__brand-mark">TBN</span>
+      <span class="nav__brand-name">The Binary Brain Network <span>/ Systems</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="https://tbbn.in" target="_blank" rel="noopener">TBBN Agency ↗</a></li>
+      </ul>
+    </nav>
+    <a href="/contact.html" class="nav__cta">Request Access</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__eyebrow">01 systems live · building toward 06</div>
+      <h1 class="hero__title">Software for the operations<br>that still run on <em>paper.</em></h1>
+      <p class="hero__desc">The Binary Brain Network builds focused, single-purpose software for hospitality and service businesses in India — replacing the notebook, the WhatsApp order, the manual bill. One system, one job, done properly.</p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn--primary">View Systems →</a>
+        <a href="/contact.html" class="btn btn--ghost">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS STRIP — signature element -->
+  <div class="status-strip">
+    <div class="container">
+      <div class="status-strip__inner">
+        <div class="status-item">
+          <span class="status-item__label">Folio</span>
+          <span class="status-item__value"><span class="dot dot--live"></span>Live · In Trial</span>
+        </div>
+        <div class="status-item">
+          <span class="status-item__label">Restaurant Billing</span>
+          <span class="status-item__value"><span class="dot dot--dev"></span>In Development</span>
+        </div>
+        <div class="status-item">
+          <span class="status-item__label">Lodging & Guest House</span>
+          <span class="status-item__value"><span class="dot dot--queue"></span>Queued</span>
+        </div>
+        <div class="status-item">
+          <span class="status-item__label">Agency Workflow</span>
+          <span class="status-item__value"><span class="dot dot--queue"></span>Queued</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="section section--border" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">The Roster</div>
+        <h2 class="section-title">Six systems. One operating logic.</h2>
+        <p class="section-sub">Each product solves exactly one operational gap — nothing bundled, nothing bloated. Built first, priced fairly, handed to a team once proven.</p>
+      </div>
+
+      <div class="docket-list">
+
+        <div class="docket">
+          <span class="docket__num">01</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">Folio</span>
+              <span class="docket__badge docket__badge--live">Live</span>
+            </div>
+            <p class="docket__desc">Room service ordering and billing for hotels that already run hotel management software — but have no system for guest room orders. Desktop app, thermal printer support, offline-first.</p>
+            <div class="docket__tags"><span class="docket__tag">Hospitality</span><span class="docket__tag">Billing</span><span class="docket__tag">Windows Desktop</span></div>
+          </div>
+          <a href="/folio/" class="docket__action docket__action--live">View Folio</a>
+        </div>
+
+        <div class="docket">
+          <span class="docket__num">02</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">Restaurant Management & Billing</span>
+              <span class="docket__badge docket__badge--dev">In Development</span>
+            </div>
+            <p class="docket__desc">Full order, table and billing management for independent restaurants and small chains — built for the floor staff who actually use it, not the owner who commissioned it.</p>
+            <div class="docket__tags"><span class="docket__tag">F&amp;B</span><span class="docket__tag">Billing</span><span class="docket__tag">POS</span></div>
+          </div>
+          <span class="docket__action docket__action--inactive">Coming Soon</span>
+        </div>
+
+        <div class="docket">
+          <span class="docket__num">03</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">Guest House &amp; Lodging Management</span>
+              <span class="docket__badge docket__badge--queue">Queued</span>
+            </div>
+            <p class="docket__desc">A lighter, faster cousin of Folio — built for guest houses and lodges that need booking, billing and room status, without the overhead of full hotel software.</p>
+            <div class="docket__tags"><span class="docket__tag">Hospitality</span><span class="docket__tag">Bookings</span></div>
+          </div>
+          <span class="docket__action docket__action--inactive">Queued</span>
+        </div>
+
+        <div class="docket">
+          <span class="docket__num">04</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">Agency &amp; Production Workflow</span>
+              <span class="docket__badge docket__badge--queue">Queued</span>
+            </div>
+            <p class="docket__desc">Standardised, repeatable workflows for media production houses and agencies — built by people who run one. Goes into production once internal use proves it out.</p>
+            <div class="docket__tags"><span class="docket__tag">Agency Ops</span><span class="docket__tag">Workflow</span></div>
+          </div>
+          <span class="docket__action docket__action--inactive">Queued</span>
+        </div>
+
+        <div class="docket">
+          <span class="docket__num">05</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">HR &amp; Employee Management</span>
+              <span class="docket__badge docket__badge--queue">Queued</span>
+            </div>
+            <p class="docket__desc">End-to-end employee lifecycle — onboarding through exit — for growing teams who've outgrown spreadsheets but don't need enterprise HRMS complexity.</p>
+            <div class="docket__tags"><span class="docket__tag">HR</span><span class="docket__tag">Operations</span></div>
+          </div>
+          <span class="docket__action docket__action--inactive">Queued</span>
+        </div>
+
+        <div class="docket">
+          <span class="docket__num">06</span>
+          <div class="docket__body">
+            <div class="docket__top">
+              <span class="docket__name">Psychology &amp; Online Therapy</span>
+              <span class="docket__badge docket__badge--queue">Queued</span>
+            </div>
+            <p class="docket__desc">A dedicated platform connecting therapists, psychologists and counsellors with clients — built last, once the trust and infrastructure to handle health data properly is in place.</p>
+            <div class="docket__tags"><span class="docket__tag">Mental Health</span><span class="docket__tag">Marketplace</span></div>
+          </div>
+          <span class="docket__action docket__action--inactive">Queued</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="section section--border" id="approach">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">How We Build</div>
+        <h2 class="section-title">Narrow scope. Real users. No bloat.</h2>
+        <p class="section-sub">Every system in the roster follows the same build logic — three principles that keep the software sharp instead of sprawling.</p>
+      </div>
+      <div class="approach-grid">
+        <div class="approach-item">
+          <div class="approach-item__num">PRINCIPLE 01</div>
+          <h3 class="approach-item__title">Solve one gap, fully</h3>
+          <p class="approach-item__desc">Folio doesn't try to replace your hotel management system — it fills the exact gap that one leaves open. Every product targets a single, specific operational hole, solved completely.</p>
+        </div>
+        <div class="approach-item">
+          <div class="approach-item__num">PRINCIPLE 02</div>
+          <h3 class="approach-item__title">Built for the floor, not the boardroom</h3>
+          <p class="approach-item__desc">The person using this software daily is rarely the person who bought it. We design for the staff member at 11pm with a queue of orders — not the slide deck.</p>
+        </div>
+        <div class="approach-item">
+          <div class="approach-item__num">PRINCIPLE 03</div>
+          <h3 class="approach-item__title">Priced to close, not to impress</h3>
+          <p class="approach-item__desc">Flat annual licensing, no hidden tiers, no per-seat traps. A hotel knows exactly what it pays before it signs — and what it gets for it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- PARENT BRAND -->
+<div class="parent-strip">
+  <div class="container parent-strip__inner">
+    <p class="parent-strip__text">The Binary Brain Network is the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai, operating across Delhi NCR and pan-India.</p>
+    <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency ↗</a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">Running a hotel that needs<br>a proper room service system?</h2>
+    <p class="cta__sub">Folio is live and onboarding new properties. Flat annual pricing, no setup fees.</p>
+    <div class="cta__actions">
+      <a href="/folio/" class="btn btn--primary">Explore Folio →</a>
+      <a href="/contact.html" class="btn btn--ghost">Request a Demo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
+    <div class="footer__links">
+      <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>
+      <a href="/contact.html">CONTACT</a>
+      <a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
