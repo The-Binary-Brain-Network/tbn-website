@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folio — Room Service Billing for Hotels | The Binary Brain Network</title>
+<meta name="description" content="Folio adds room service ordering and billing to hotels that already run hotel management software. Offline-first, thermal printer ready, ₹6,000–7,500/property/year.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tbn.tbbn.in/folio/">
+<meta property="og:title" content="Folio — Room Service Billing for Hotels">
+<meta property="og:description" content="The room service billing layer your hotel management software doesn't have. Offline-first, thermal printer ready. Built by The Binary Brain Network.">
+<meta property="og:url" content="https://tbn.tbbn.in/folio/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1015">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Folio",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Room service ordering and billing system for hotels that already have hotel management software but lack a guest room service layer.",
+  "offers": {"@type": "Offer", "priceCurrency": "INR", "price": "6000", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "6000", "priceCurrency": "INR", "unitText": "per property per year"}},
+  "publisher": {"@type": "Organization", "name": "The Binary Brain Network", "url": "https://tbn.tbbn.in/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1015;--ink2:#15181F;--paper:#F7F5F0;--paper-dim:#EDEAE2;
+    --amber:#E8A33D;--amber-dim:#7A5A24;--slate:#5A6270;--slate-light:#8A92A0;
+    --green:#3D7A5C;--green-glow:rgba(61,122,92,0.35);--line:rgba(247,245,240,0.1);
+    --mono:'Space Mono',monospace;--sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.container{padding:0 20px;}}
+  .grid-texture{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px, transparent 1px),linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:64px 64px;opacity:0.4;pointer-events:none;z-index:0;}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(14,16,21,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .nav__brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;}
+  .nav__brand-mark{width:28px;height:28px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--amber);}
+  .nav__brand-name{font-weight:700;}
+  .nav__brand-name span{color:var(--slate-light);font-weight:400;}
+  .nav__links{display:flex;gap:32px;list-style:none;align-items:center;}
+  .nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
+  .nav__links a:hover{color:var(--paper);}
+  .nav__cta{font-family:var(--mono);font-size:12px;font-weight:700;border:1px solid var(--amber);color:var(--amber);padding:9px 18px;transition:all 0.2s;}
+  .nav__cta:hover{background:var(--amber);color:var(--ink);}
+  @media(max-width:768px){.nav__links{display:none;}}
+
+  .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--slate-light);padding:24px 0 0;}
+  .breadcrumb a{color:var(--slate-light);}
+  .breadcrumb a:hover{color:var(--amber);}
+  .breadcrumb span{color:var(--paper);}
+
+  .hero{position:relative;z-index:1;padding:48px 0 80px;border-bottom:1px solid var(--line);}
+  .hero__grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:start;}
+  @media(max-width:900px){.hero__grid{grid-template-columns:1fr;}}
+  .hero__badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6FCB9A;background:rgba(61,122,92,0.15);padding:6px 12px;margin-bottom:24px;}
+  .hero__badge::before{content:'';width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px var(--green-glow);}
+  .hero__title{font-size:clamp(34px,5.4vw,58px);font-weight:800;line-height:1.06;letter-spacing:-0.02em;margin-bottom:24px;}
+  .hero__title em{font-style:normal;color:var(--amber);}
+  .hero__desc{font-size:17px;color:var(--slate-light);line-height:1.75;margin-bottom:32px;max-width:520px;}
+  .hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{font-family:var(--mono);font-size:13px;font-weight:700;padding:14px 26px;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer;}
+  .btn--primary{background:var(--amber);color:var(--ink);}
+  .btn--primary:hover{background:#f4b65a;}
+  .btn--ghost{border:1px solid var(--line);color:var(--paper);background:none;}
+  .btn--ghost:hover{border-color:var(--paper);}
+  .hero__meta{display:flex;gap:28px;flex-wrap:wrap;}
+  .hero__meta-item{display:flex;flex-direction:column;gap:4px;}
+  .hero__meta-label{font-family:var(--mono);font-size:10px;color:var(--slate-light);text-transform:uppercase;letter-spacing:0.08em;}
+  .hero__meta-value{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--amber);}
+
+  /* Receipt visual */
+  .receipt-card{background:var(--paper);color:var(--ink);padding:0;font-family:var(--mono);width:100%;max-width:340px;margin-left:auto;box-shadow:0 24px 60px rgba(0,0,0,0.4);transform:rotate(1.2deg);}
+  .receipt-card__inner{padding:28px 24px;border:1px dashed rgba(14,16,21,0.2);margin:6px;}
+  .receipt-card__hotel{font-size:14px;font-weight:700;text-align:center;letter-spacing:0.03em;}
+  .receipt-card__addr{font-size:9px;text-align:center;color:var(--slate);margin-top:4px;line-height:1.5;}
+  .receipt-card__rule{border-top:1px dashed rgba(14,16,21,0.25);margin:14px 0;}
+  .receipt-card__meta{font-size:9px;display:flex;justify-content:space-between;color:var(--slate);margin-bottom:3px;}
+  .receipt-card__row{display:flex;justify-content:space-between;font-size:10.5px;padding:5px 0;}
+  .receipt-card__row span:first-child{color:var(--ink);}
+  .receipt-card__row span:last-child{color:var(--slate);}
+  .receipt-card__total{display:flex;justify-content:space-between;font-size:13px;font-weight:700;padding-top:10px;margin-top:6px;border-top:1px solid rgba(14,16,21,0.3);}
+  .receipt-card__footer{text-align:center;font-size:9px;color:var(--slate);margin-top:16px;}
+  .receipt-card__tag{position:absolute;top:-12px;right:18px;background:var(--amber);color:var(--ink);font-size:10px;font-weight:700;padding:5px 12px;letter-spacing:0.05em;}
+  .receipt-wrap{position:relative;}
+
+  .status-strip{position:relative;z-index:1;border-bottom:1px solid var(--line);background:var(--ink2);}
+  .status-strip__inner{display:flex;overflow-x:auto;}
+  .status-item{flex:1;min-width:180px;padding:18px 28px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;}
+  .status-item:last-child{border-right:none;}
+  .status-item__label{font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase;}
+  .status-item__value{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--paper);}
+
+  .section{position:relative;z-index:1;padding:88px 0;}
+  .section--border{border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:52px;max-width:640px;}
+  .section-tag{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;}
+  .section-title{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-0.01em;line-height:1.15;margin-bottom:14px;}
+  .section-sub{color:var(--slate-light);font-size:16px;line-height:1.7;}
+
+  /* Feature grid */
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .feature-item{background:var(--ink);padding:32px 28px;}
+  .feature-item__icon{font-family:var(--mono);font-size:11px;color:var(--amber);margin-bottom:16px;letter-spacing:0.08em;}
+  .feature-item__title{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;}
+  .feature-item__desc{font-size:13.5px;color:var(--slate-light);line-height:1.65;}
+  @media(max-width:900px){.feature-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}}
+
+  /* How it works */
+  .flow-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+  .flow-item{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);}
+  .flow-item__num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--amber);}
+  .flow-item__title{font-size:18px;font-weight:700;margin-bottom:8px;}
+  .flow-item__desc{font-size:14.5px;color:var(--slate-light);line-height:1.7;max-width:560px;}
+
+  /* Trust strip */
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .trust-item{background:var(--ink);padding:28px 24px;text-align:center;}
+  .trust-item__val{font-family:var(--mono);font-size:24px;font-weight:700;color:var(--amber);margin-bottom:6px;}
+  .trust-item__label{font-size:11px;color:var(--slate-light);font-family:var(--mono);letter-spacing:0.04em;}
+  @media(max-width:760px){.trust-grid{grid-template-columns:1fr 1fr;}}
+
+  /* Pricing */
+  .pricing-card{border:1px solid var(--amber);background:var(--ink2);padding:48px;max-width:480px;margin:0 auto;text-align:center;}
+  .pricing-card__label{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;}
+  .pricing-card__price{font-size:48px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;}
+  .pricing-card__price span{font-size:16px;color:var(--slate-light);font-weight:400;}
+  .pricing-card__sub{font-size:13px;color:var(--slate-light);margin-bottom:32px;}
+  .pricing-list{list-style:none;text-align:left;margin-bottom:32px;}
+  .pricing-list li{font-size:14px;color:var(--paper);padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;}
+  .pricing-list li:last-child{border-bottom:none;}
+  .pricing-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+
+  /* Real deployment */
+  .deploy-card{background:var(--ink2);border-left:3px solid var(--green);padding:36px 40px;}
+  .deploy-card__tag{font-family:var(--mono);font-size:11px;color:#6FCB9A;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;}
+  .deploy-card__text{font-size:16px;color:var(--paper);line-height:1.8;}
+  .deploy-card__text strong{color:var(--amber);}
+
+  .parent-strip{background:var(--paper);color:var(--ink);position:relative;z-index:1;}
+  .parent-strip__inner{display:flex;align-items:center;justify-content:space-between;padding:44px 0;flex-wrap:wrap;gap:24px;}
+  .parent-strip__text{font-size:14px;color:var(--slate);max-width:480px;}
+  .parent-strip__text strong{color:var(--ink);}
+  .parent-strip__link{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:2px;white-space:nowrap;}
+
+  .cta{position:relative;z-index:1;padding:96px 0;text-align:center;}
+  .cta__title{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.01em;margin-bottom:16px;}
+  .cta__sub{color:var(--slate-light);font-size:16px;margin-bottom:32px;}
+  .cta__actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+
+  .footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:44px 0;}
+  .footer__inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer__text{font-family:var(--mono);font-size:12px;color:var(--slate);}
+  .footer__links{display:flex;gap:24px;}
+  .footer__links a{font-family:var(--mono);font-size:12px;color:var(--slate-light);}
+  .footer__links a:hover{color:var(--paper);}
+
+  ::selection{background:var(--amber);color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="grid-texture" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="The Binary Brain Network home">
+      <span class="nav__brand-mark">TBN</span>
+      <span class="nav__brand-name">The Binary Brain Network <span>/ Folio</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="/#products">All Products</a></li>
+        <li><a href="https://tbbn.in" target="_blank" rel="noopener">TBBN Agency ↗</a></li>
+      </ul>
+    </nav>
+    <a href="mailto:tbn@tbbn.in?subject=Folio Demo Request" class="nav__cta">Request a Demo</a>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">TBN</a> / <span>Folio</span></nav>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="hero__badge">Live · Deployed in Mumbai</div>
+        <h1 class="hero__title">The room service layer<br>your hotel software <em>forgot.</em></h1>
+        <p class="hero__desc">Folio gives your front desk and kitchen a proper system for room service orders and billing — built for hotels that already run a hotel management system, but have nothing for the orders that happen after check-in.</p>
+        <div class="hero__actions">
+          <a href="mailto:tbn@tbbn.in?subject=Folio Demo Request" class="btn btn--primary">Request a Demo →</a>
+          <a href="#how-it-works" class="btn btn--ghost">See How It Works</a>
+        </div>
+        <div class="hero__meta">
+          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows Desktop</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Internet</span><span class="hero__meta-value">Not Required</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Setup Time</span><span class="hero__meta-value">~30 Minutes</span></div>
+        </div>
+      </div>
+      <div class="receipt-wrap">
+        <div class="receipt-card">
+          <span class="receipt-card__tag">Live Preview</span>
+          <div class="receipt-card__inner">
+            <div class="receipt-card__hotel">HOTEL RIVIERA</div>
+            <div class="receipt-card__addr">Jogeshwari West, Mumbai 400102<br>GSTIN: 27XXXXX1234X1ZX</div>
+            <div class="receipt-card__rule"></div>
+            <div class="receipt-card__meta"><span>BILL #0142</span><span>17-JUN-26</span></div>
+            <div class="receipt-card__meta"><span>ROOM 204</span><span>2 NIGHTS</span></div>
+            <div class="receipt-card__rule"></div>
+            <div class="receipt-card__row"><span>Veg Pulao ×2</span><span>₹360</span></div>
+            <div class="receipt-card__row"><span>Butter Naan ×4</span><span>₹240</span></div>
+            <div class="receipt-card__row"><span>Cold Coffee ×2</span><span>₹180</span></div>
+            <div class="receipt-card__row"><span>Club Sandwich ×1</span><span>₹220</span></div>
+            <div class="receipt-card__rule"></div>
+            <div class="receipt-card__row"><span>Subtotal</span><span>₹1,000</span></div>
+            <div class="receipt-card__row"><span>CGST 2.5%</span><span>₹25</span></div>
+            <div class="receipt-card__row"><span>SGST 2.5%</span><span>₹25</span></div>
+            <div class="receipt-card__total"><span>TOTAL</span><span>₹1,050</span></div>
+            <div class="receipt-card__footer">Thank you for your stay!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS STRIP -->
+  <div class="status-strip">
+    <div class="container">
+      <div class="status-strip__inner">
+        <div class="status-item"><span class="status-item__label">Status</span><span class="status-item__value">Live in Production</span></div>
+        <div class="status-item"><span class="status-item__label">Deployment</span><span class="status-item__value">34-Room Hotel, Mumbai</span></div>
+        <div class="status-item"><span class="status-item__label">Pricing</span><span class="status-item__value">₹6,000–7,500/yr</span></div>
+        <div class="status-item"><span class="status-item__label">Works Offline</span><span class="status-item__value">100% of Core Features</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <section class="section section--border">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">The Gap</div>
+        <h2 class="section-title">Your hotel software handles check-in.<br>Nobody built the bit after.</h2>
+        <p class="section-sub">Most hotel management systems are excellent at bookings, rooms, and front-desk operations. Almost none of them handle what happens when a guest calls down for food at 11pm — so it ends up on a notepad, a WhatsApp message, or nowhere at all.</p>
+      </div>
+      <div class="deploy-card">
+        <div class="deploy-card__tag">Real Deployment</div>
+        <p class="deploy-card__text">A 34-room mid-range hotel near Jogeshwari/Andheri, Mumbai runs <strong>Menson</strong> for their day-to-day hotel management — but Menson has no room service module. Folio now handles every in-room order, kitchen ticket, and itemized bill alongside it. <strong>Live for over a week.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--border" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">What It Does</div>
+        <h2 class="section-title">Everything between an order and a bill.</h2>
+        <p class="section-sub">Not a stripped-down MVP — Folio handles the full lifecycle of a room service operation, including the messy edge cases that actually happen on a hotel floor.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-item__icon">01 / TABS</div>
+          <h3 class="feature-item__title">Multi-room tabs</h3>
+          <p class="feature-item__desc">Every room runs its own open tab — guest name, check-in date, running total. Unlimited simultaneous tabs across different rooms, with duplicate-tab protection per room.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">02 / ORDERS</div>
+          <h3 class="feature-item__title">Orders against any tab</h3>
+          <p class="feature-item__desc">Add multiple line items at once from your menu. Each tracks cost price, selling price, and per-unit profit automatically — no separate spreadsheet needed.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">03 / INVENTORY</div>
+          <h3 class="feature-item__title">Auto stock deduction</h3>
+          <p class="feature-item__desc">Link a menu item to an inventory item once. Every order placed deducts the right quantity automatically — reversed cleanly if an order is cancelled.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">04 / BILLING</div>
+          <h3 class="feature-item__title">GST-ready itemized bills</h3>
+          <p class="feature-item__desc">CGST + SGST calculated automatically when enabled. Sequential bill numbering with your own prefix. Customer copy and hotel copy printed together.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">05 / RECTIFY</div>
+          <h3 class="feature-item__title">Bill correction, properly versioned</h3>
+          <p class="feature-item__desc">Made a mistake on a printed bill? Rectify it — Folio creates a new versioned bill linked to the original with a reason logged, never silently overwritten.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">06 / BULK</div>
+          <h3 class="feature-item__title">Bulk billing across tabs</h3>
+          <p class="feature-item__desc">Finalize and print combined bills for multiple rooms in one operation — built for group bookings and corporate stays settling together.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">07 / PAYMENTS</div>
+          <h3 class="feature-item__title">Partial &amp; full payments</h3>
+          <p class="feature-item__desc">Take cash, card, or UPI payments against a tab at any point — partial or full — with running paid totals and balance due always visible.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">08 / REPORTS</div>
+          <h3 class="feature-item__title">Day-close &amp; handover reports</h3>
+          <p class="feature-item__desc">Printable end-of-day summaries, revenue by room and by item, and a dedicated shift handover report so nothing gets lost between staff changes.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">09 / SECURITY</div>
+          <h3 class="feature-item__title">PIN-protected access</h3>
+          <p class="feature-item__desc">A 4–6 digit PIN keeps the till honest. Combined with a hardware-locked license, Folio stays tied to the machine it was issued for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--border" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Getting Started</div>
+        <h2 class="section-title">Set up once. Runs itself after.</h2>
+        <p class="section-sub">No IT department, no server, no monthly maintenance call. Folio is installed, configured, and left to run.</p>
+      </div>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-item__num">01</div>
+          <div>
+            <h3 class="flow-item__title">Install &amp; activate</h3>
+            <p class="flow-item__desc">We install Folio on the hotel's machine and issue a hardware-locked license key. No admin password required — runs as a standard per-user install.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">02</div>
+          <div>
+            <h3 class="flow-item__title">5-step onboarding wizard</h3>
+            <p class="flow-item__desc">Hotel details, rooms, and partner restaurants are set up directly in the app — no spreadsheets, no support ticket. Takes about 20 minutes for a property your size.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">03</div>
+          <div>
+            <h3 class="flow-item__title">30-minute walkthrough</h3>
+            <p class="flow-item__desc">A short live demo gets your front desk comfortable with orders, billing, and reports. A built-in help guide handles anything that comes up after.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">04</div>
+          <div>
+            <h3 class="flow-item__title">It just runs</h3>
+            <p class="flow-item__desc">Updates download silently in the background and install on restart — no action needed from staff. The database backs itself up every 6 hours automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / RELIABILITY -->
+  <section class="section section--border">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Built To Not Fail You</div>
+        <h2 class="section-title">Hotel operations don't pause for software problems.</h2>
+        <p class="section-sub">Folio is engineered around the reality of a hotel floor — patchy internet, sudden power cuts, and a front desk that doesn't have time to troubleshoot.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-item__val">100%</div><div class="trust-item__label">CORE FEATURES WORK OFFLINE</div></div>
+        <div class="trust-item"><div class="trust-item__val">6 HRS</div><div class="trust-item__label">AUTOMATIC DATABASE BACKUPS</div></div>
+        <div class="trust-item"><div class="trust-item__val">0</div><div class="trust-item__label">DATA LOSS ON POWER CUT</div></div>
+        <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">BACKGROUND AUTO-UPDATES</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section--border" id="pricing">
+    <div class="container">
+      <div class="section-head" style="margin:0 auto 52px;text-align:center;max-width:560px;">
+        <div class="section-tag" style="justify-content:center;">Pricing</div>
+        <h2 class="section-title">One flat fee. Nothing hidden.</h2>
+        <p class="section-sub">No per-seat charges, no usage tiers, no surprise renewal hikes.</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-card__label">Annual License</div>
+        <div class="pricing-card__price">₹6,000<span>–7,500 / property / year</span></div>
+        <div class="pricing-card__sub">Exact pricing depends on property size — confirmed before you commit to anything.</div>
+        <ul class="pricing-list">
+          <li>Unlimited rooms &amp; simultaneous tabs</li>
+          <li>Unlimited menu items &amp; partner restaurants</li>
+          <li>GST billing, bulk billing &amp; bill rectification</li>
+          <li>Full reporting suite + day-close &amp; handover reports</li>
+          <li>Installation, onboarding &amp; a 30-min walkthrough included</li>
+          <li>Silent auto-updates for the full license period</li>
+        </ul>
+        <a href="mailto:tbn@tbbn.in?subject=Folio Pricing Enquiry" class="btn btn--primary" style="width:100%;justify-content:center;">Get Exact Pricing →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="parent-strip">
+  <div class="container parent-strip__inner">
+    <p class="parent-strip__text">Folio is built by <strong>The Binary Brain Network</strong>, the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai.</p>
+    <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency ↗</a>
+  </div>
+</div>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">Your front desk shouldn't run<br>room service on a notepad.</h2>
+    <p class="cta__sub">Get Folio running at your property in under an hour, start to finish.</p>
+    <div class="cta__actions">
+      <a href="mailto:tbn@tbbn.in?subject=Folio Demo Request" class="btn btn--primary">Request a Demo →</a>
+      <a href="/" class="btn btn--ghost">← All TBN Products</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
+    <div class="footer__links">
+      <a href="/">TBN HOME</a>
+      <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>
+      <a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
