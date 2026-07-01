@@ -11,13 +11,13 @@
 <meta property="og:description" content="The room-service billing layer your hotel management software doesn't have. Offline-first, thermal-printer ready, GST-compliant. Built by The Binary Brain Network.">
 <meta property="og:url" content="https://tbn.tbbn.in/folio/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://tbn.tbbn.in/og-folio.png">
+<meta property="og:image" content="https://tbn.tbbn.in/og-folio.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Folio — Room Service Billing System for Hotels">
 <meta name="twitter:description" content="Offline-first room-service billing that plugs alongside your existing hotel management software. Built by hoteliers, for hoteliers.">
-<meta name="twitter:image" content="https://tbn.tbbn.in/og-folio.png">
+<meta name="twitter:image" content="https://tbn.tbbn.in/og-folio.svg">
 <meta name="theme-color" content="#0E1015">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">
@@ -156,6 +156,49 @@
   .deploy-card__text{font-size:16px;color:var(--paper);line-height:1.8;position:relative;}
   .deploy-card__text strong{color:var(--amber);}
 
+  /* APP MOCK */
+  .appmock{background:var(--ink2);border:1px solid var(--line);position:relative;overflow:hidden;}
+  .appmock__chrome{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase;background:rgba(0,0,0,0.25);}
+  .appmock__chrome-left{display:flex;align-items:center;gap:10px;}
+  .appmock__dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px var(--green-glow);}
+  .appmock__body{display:grid;grid-template-columns:1.4fr 1fr;gap:0;}
+  @media(max-width:820px){.appmock__body{grid-template-columns:1fr;}}
+  .appmock__pane{padding:22px 24px;}
+  .appmock__pane + .appmock__pane{border-left:1px solid var(--line);}
+  @media(max-width:820px){.appmock__pane + .appmock__pane{border-left:none;border-top:1px solid var(--line);}}
+  .appmock__pane-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;}
+  .appmock__pane-title{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.08em;text-transform:uppercase;}
+  .appmock__pane-sub{font-family:var(--mono);font-size:10px;color:var(--slate);letter-spacing:0.05em;}
+  .rooms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+  @media(max-width:520px){.rooms-grid{grid-template-columns:repeat(3,1fr);}}
+  .room{background:var(--ink);border:1px solid var(--line);padding:10px 10px;display:flex;flex-direction:column;gap:4px;transition:border-color 0.2s;position:relative;overflow:hidden;}
+  .room:hover{border-color:var(--amber-dim);}
+  .room__num{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--paper);}
+  .room__state{font-family:var(--mono);font-size:9px;letter-spacing:0.06em;text-transform:uppercase;}
+  .room__total{font-family:var(--mono);font-size:10px;color:var(--slate-light);margin-top:2px;}
+  .room--occ{border-color:rgba(232,163,61,0.35);}
+  .room--occ .room__state{color:var(--amber);}
+  .room--occ::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--amber);}
+  .room--dues{border-color:rgba(200,80,80,0.4);}
+  .room--dues .room__state{color:#E88585;}
+  .room--dues::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#E88585;}
+  .room--vac .room__state{color:var(--slate);}
+  .room--sel{background:rgba(232,163,61,0.08);border-color:var(--amber);}
+  .order-list{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .order-row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;padding:6px 0;border-bottom:1px dashed var(--line);color:var(--paper-dim);}
+  .order-row:last-child{border-bottom:none;}
+  .order-row span:last-child{color:var(--paper);}
+  .order-total{display:flex;justify-content:space-between;padding-top:12px;border-top:1px solid var(--amber-dim);font-family:var(--mono);font-size:14px;font-weight:700;color:var(--amber);margin-bottom:14px;}
+  .order-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;}
+  .order-status::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;animation:pulse 1.6s ease-in-out infinite;}
+  .order-actions{display:flex;gap:8px;}
+  .order-btn{flex:1;font-family:var(--mono);font-size:10px;font-weight:700;padding:9px 10px;letter-spacing:0.06em;text-align:center;border:1px solid var(--line);color:var(--slate-light);cursor:default;}
+  .order-btn--primary{background:var(--amber);color:var(--ink);border-color:var(--amber);}
+  .appmock__foot{display:flex;justify-content:space-between;padding:14px 22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.05em;flex-wrap:wrap;gap:12px;background:rgba(0,0,0,0.2);}
+  .appmock__foot strong{color:var(--amber);font-weight:700;}
+  .appmock__caption{text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--slate);letter-spacing:0.05em;margin-top:14px;text-transform:uppercase;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+
   /* STORY */
   .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
   @media(max-width:860px){.story-grid{grid-template-columns:1fr;gap:36px;}}
@@ -276,7 +319,8 @@
     </a>
     <nav aria-label="Primary">
       <ul class="nav__links">
-        <li><a href="#story">Our Story</a></li>
+        <li><a href="#inside">Inside Folio</a></li>
+        <li><a href="#story">Story</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -371,6 +415,74 @@
         <div class="deploy-card__tag">Real Deployment</div>
         <p class="deploy-card__text">A 34-room mid-range hotel near Jogeshwari and Andheri, Mumbai runs their existing hotel management platform for check-ins, room allocation, and front-desk operations — but it has no room service module. Folio now handles every in-room order, kitchen ticket, dues entry, and itemized GST bill alongside it. <strong>Live for over a month with zero data loss and no operational downtime.</strong></p>
       </div>
+    </div>
+  </section>
+
+  <!-- INSIDE FOLIO — APP MOCK -->
+  <section class="section section--border reveal" id="inside">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Inside Folio</div>
+        <h2 class="section-title">What the front desk sees at 11pm.</h2>
+        <p class="section-sub">A single view — every occupied room, every dues balance, every active order. One screen, one operator, no scrolling through modules.</p>
+      </div>
+      <div class="appmock">
+        <div class="appmock__chrome">
+          <div class="appmock__chrome-left"><span class="appmock__dot"></span>Folio · Front Desk · Live</div>
+          <div>17-JUN-2026 · 22:47</div>
+        </div>
+        <div class="appmock__body">
+
+          <div class="appmock__pane">
+            <div class="appmock__pane-head">
+              <span class="appmock__pane-title">Rooms · 34 total</span>
+              <span class="appmock__pane-sub">21 occupied · 3 dues</span>
+            </div>
+            <div class="rooms-grid">
+              <div class="room room--occ"><div class="room__num">101</div><div class="room__state">Occupied</div><div class="room__total">₹1,240</div></div>
+              <div class="room room--dues"><div class="room__num">102</div><div class="room__state">Dues 12d</div><div class="room__total">₹3,850</div></div>
+              <div class="room room--occ"><div class="room__num">103</div><div class="room__state">Occupied</div><div class="room__total">₹680</div></div>
+              <div class="room room--vac"><div class="room__num">104</div><div class="room__state">Vacant</div><div class="room__total">—</div></div>
+              <div class="room room--occ"><div class="room__num">201</div><div class="room__state">Occupied</div><div class="room__total">₹2,110</div></div>
+              <div class="room room--occ"><div class="room__num">202</div><div class="room__state">Occupied</div><div class="room__total">₹450</div></div>
+              <div class="room room--occ room--sel"><div class="room__num">204</div><div class="room__state" style="color:var(--amber);">Ordering…</div><div class="room__total" style="color:var(--paper);">₹1,050</div></div>
+              <div class="room room--vac"><div class="room__num">205</div><div class="room__state">Vacant</div><div class="room__total">—</div></div>
+              <div class="room room--occ"><div class="room__num">301</div><div class="room__state">Occupied</div><div class="room__total">₹520</div></div>
+              <div class="room room--dues"><div class="room__num">302</div><div class="room__state">Dues 3d</div><div class="room__total">₹1,150</div></div>
+              <div class="room room--occ"><div class="room__num">303</div><div class="room__state">Occupied</div><div class="room__total">₹0</div></div>
+              <div class="room room--vac"><div class="room__num">304</div><div class="room__state">Vacant</div><div class="room__total">—</div></div>
+            </div>
+          </div>
+
+          <div class="appmock__pane">
+            <div class="appmock__pane-head">
+              <span class="appmock__pane-title">Active Order · Room 204</span>
+              <span class="appmock__pane-sub">Tab #142</span>
+            </div>
+            <div class="order-status">Preparing · Kitchen</div>
+            <div class="order-list">
+              <div class="order-row"><span>Veg Pulao ×2</span><span>₹360</span></div>
+              <div class="order-row"><span>Butter Naan ×4</span><span>₹240</span></div>
+              <div class="order-row"><span>Cold Coffee ×2</span><span>₹180</span></div>
+              <div class="order-row"><span>Club Sandwich ×1</span><span>₹220</span></div>
+              <div class="order-row"><span>CGST + SGST 5%</span><span>₹50</span></div>
+            </div>
+            <div class="order-total"><span>Bill Total</span><span>₹1,050</span></div>
+            <div class="order-actions">
+              <span class="order-btn">Add Item</span>
+              <span class="order-btn order-btn--primary">Print Bill</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="appmock__foot">
+          <div>Today · <strong>₹12,340</strong> collected</div>
+          <div>Open tabs · <strong>21</strong></div>
+          <div>Orders in progress · <strong>3</strong></div>
+          <div>Last backup · <strong>22:00</strong></div>
+        </div>
+      </div>
+      <p class="appmock__caption">Representative view of Folio · Actual UI may vary by property configuration</p>
     </div>
   </section>
 
@@ -568,9 +680,9 @@
         <div class="pricing-side">
           <div class="pricing-tile">
             <div class="pricing-tile__label">Refer &amp; Save</div>
-            <h3 class="pricing-tile__title">₹1,500 off — for both hotels</h3>
-            <p class="pricing-tile__desc">Refer another hotel that signs up for Folio, and both you and the referred property get a flat ₹1,500 off. Applied at billing — nothing to redeem or code in.</p>
-            <p class="pricing-tile__fine">T&amp;C — Applies to first-time new customers on their first year only. Renewals are billed at the standard ₹6,500/year. Discount applies once per referred hotel.</p>
+            <h3 class="pricing-tile__title">₹1,500 off for every hotel you refer</h3>
+            <p class="pricing-tile__desc">Refer another hotel that signs up for Folio, and you get a flat ₹1,500 off your next renewal billing — for every property that comes in through you. Stackable across multiple referrals.</p>
+            <p class="pricing-tile__fine">T&amp;C — Discount applies only to the referring hotel, credited to next renewal. The referred hotel pays the standard ₹6,500/year but can then refer their own hotels and earn the same discount.</p>
           </div>
           <div class="pricing-tile">
             <div class="pricing-tile__label">Free Trial</div>
@@ -607,7 +719,7 @@
           <div class="faq-item__body">A Windows machine (7 / 8 / 10 / 11), an 80mm thermal printer for bills (most hotels already have one), and — optionally — internet for bill-share and updates. Nothing else. No server, no cloud subscription, no per-terminal licensing.</div>
         </details>
         <details class="faq-item"><summary>How does the referral discount work?</summary>
-          <div class="faq-item__body">Refer another hotel to Folio. When they sign up as a paid customer, both properties get a flat ₹1,500 off — applied at billing, no code to redeem. Applies only to first-time customers on their first year; renewals are billed at the standard ₹6,500. Discount is applied once per referred hotel.</div>
+          <div class="faq-item__body">Refer another hotel to Folio. When they sign up as a paid customer, <strong>you</strong> — the referring hotel — get a flat ₹1,500 off your next renewal billing. Stackable: refer three hotels, get ₹4,500 off renewal. The referred hotel pays the standard ₹6,500 for their first year, but is free to refer their own hotels and earn the same discount themselves.</div>
         </details>
         <details class="faq-item"><summary>What happens on renewal?</summary>
           <div class="faq-item__body">Renewals are billed at the standard flat ₹6,500 per property per year, regardless of how you got in (trial, referral, or direct). No auto-charge — we contact you before renewal and you confirm. No usage tiers or surprise hikes.</div>
