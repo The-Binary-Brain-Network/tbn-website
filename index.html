@@ -11,7 +11,25 @@
 <meta property="og:description" content="Focused software for hospitality and service operations in India. Built by The Big Brand Network.">
 <meta property="og:url" content="https://tbn.tbbn.in/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://tbn.tbbn.in/og-tbn.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Binary Brain Network — Software for Operations That Run on Paper">
+<meta name="twitter:description" content="Focused software for hospitality and service operations in India. Built by The Big Brand Network.">
+<meta name="twitter:image" content="https://tbn.tbbn.in/og-tbn.png">
 <meta name="theme-color" content="#0E1015">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<!-- GA4 — paste your G-XXXXXXXXXX measurement ID below and uncomment. Same ID as tbbn.in is fine; sessions carry across the root domain. -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -91,14 +109,18 @@
   .nav__links{display:flex;gap:36px;list-style:none;}
   .nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
   .nav__links a:hover{color:var(--paper);}
+  .nav__right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .nav__phone{font-family:var(--mono);font-size:12px;color:var(--slate-light);white-space:nowrap;transition:color 0.2s;}
+  .nav__phone:hover{color:var(--amber);}
   .nav__cta{
     font-family:var(--mono);font-size:12px;font-weight:700;
-    border:1px solid var(--amber);color:var(--amber);
-    padding:9px 18px;letter-spacing:0.04em;
-    transition:all 0.2s;
+    background:#25D366;color:#0B2E1A;
+    padding:10px 18px;letter-spacing:0.02em;
+    transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
   }
-  .nav__cta:hover{background:var(--amber);color:var(--ink);}
-  @media(max-width:768px){.nav__links{display:none;}}
+  .nav__cta:hover{background:#2fe377;}
+  .nav__cta svg{width:14px;height:14px;fill:currentColor;}
+  @media(max-width:900px){.nav__links,.nav__phone{display:none;}}
 
   /* ── HERO ── */
   .hero{
@@ -210,7 +232,7 @@
   }
   .docket__action{font-family:var(--mono);font-size:13px;font-weight:700;white-space:nowrap;}
   .docket__action--live{color:var(--amber);}
-  .docket__action--live::after{content:' →';}
+  .docket__action--live::after{content:'';}
   .docket__action--inactive{color:var(--slate);}
   @media(max-width:760px){
     .docket{grid-template-columns:1fr;gap:14px;}
@@ -273,10 +295,16 @@
       <ul class="nav__links">
         <li><a href="#products">Products</a></li>
         <li><a href="#approach">Approach</a></li>
-        <li><a href="https://tbbn.in" target="_blank" rel="noopener">TBBN Agency ↗</a></li>
+        <li><a href="https://tbbn.in" target="_blank" rel="noopener">TBBN Agency</a></li>
       </ul>
     </nav>
-    <a href="mailto:tbn@tbbn.in" class="nav__cta">Request Access</a>
+    <div class="nav__right">
+      <a href="tel:+919987991072" class="nav__phone">+91 99879 91072</a>
+      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%27s%20software." target="_blank" rel="noopener" class="nav__cta" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
   </div>
 </header>
 
@@ -289,8 +317,8 @@
       <h1 class="hero__title">Software for the operations<br>that still run on <em>paper.</em></h1>
       <p class="hero__desc">The Binary Brain Network builds focused, single-purpose software for hospitality and service businesses in India — replacing the notebook, the WhatsApp order, the manual bill. One system, one job, done properly.</p>
       <div class="hero__actions">
-        <a href="#products" class="btn btn--primary">View Systems →</a>
-        <a href="mailto:tbn@tbbn.in" class="btn btn--ghost">Talk to Us</a>
+        <a href="#products" class="btn btn--primary">View Systems</a>
+        <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%27s%20software." target="_blank" rel="noopener" class="btn btn--ghost">Talk to Us on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -446,7 +474,7 @@
 <div class="parent-strip">
   <div class="container parent-strip__inner">
     <p class="parent-strip__text">The Binary Brain Network is the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai, operating across Delhi NCR and pan-India.</p>
-    <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency ↗</a>
+    <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency</a>
   </div>
 </div>
 
@@ -456,8 +484,8 @@
     <h2 class="cta__title">Running a hotel that needs<br>a proper room service system?</h2>
     <p class="cta__sub">Folio is live and onboarding new properties. Flat annual pricing, no setup fees.</p>
     <div class="cta__actions">
-      <a href="/folio/" class="btn btn--primary">Explore Folio →</a>
-      <a href="mailto:tbn@tbbn.in" class="btn btn--ghost">Request a Demo</a>
+      <a href="/folio/" class="btn btn--primary">Explore Folio</a>
+      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Folio%20demo%20for%20my%20hotel." target="_blank" rel="noopener" class="btn btn--ghost">Request a Demo on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -467,8 +495,9 @@
     <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
     <div class="footer__links">
       <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>
-      <a href="mailto:tbn@tbbn.in">CONTACT</a>
+      <a href="tel:+919987991072">+91 99879 91072</a>
       <a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
+      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%27s%20software." target="_blank" rel="noopener">WHATSAPP</a>
     </div>
   </div>
 </footer>
