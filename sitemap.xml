@@ -13,4 +13,12 @@
       <image:loc>https://tbn.tbbn.in/og-folio.svg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://tbn.tbbn.in/pass/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+      <image:loc>https://tbn.tbbn.in/og-pass.svg</image:loc>
+    </image:image>
+  </url>
 </urlset>

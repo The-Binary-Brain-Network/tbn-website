@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pass — Restaurant Management &amp; Billing Software | The Binary Brain Network</title>
+<meta name="description" content="Pass is offline-first restaurant management and billing software for Indian restaurants. Orders, GST billing, UPI QR, inventory, staff, payroll and AI insights on your own hardware. 30-day free trial. Free setup and training.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tbn.tbbn.in/pass/">
+<meta property="og:title" content="Pass — Restaurant Management &amp; Billing Software">
+<meta property="og:description" content="Offline-first restaurant POS with GST billing, UPI QR, staff &amp; payroll, inventory and AI insights. No monthly SaaS fees. Built by The Binary Brain Network.">
+<meta property="og:url" content="https://tbn.tbbn.in/pass/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tbn.tbbn.in/og-pass.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pass — Restaurant Management &amp; Billing Software">
+<meta name="twitter:description" content="Your restaurant. Your data. Your rules. Offline-first POS with everything Indian restaurants actually need.">
+<meta name="twitter:image" content="https://tbn.tbbn.in/og-pass.svg">
+<meta name="theme-color" content="#0E1015">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pass",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "Offline-first restaurant management and billing software. Orders, tables, KOT, GST billing, UPI QR, inventory with recipes, staff and payroll, customer loyalty, thermal printing, and AI-powered business insights.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "INR",
+    "price": "7500",
+    "priceSpecification": {"@type": "UnitPriceSpecification", "price": "7500", "priceCurrency": "INR", "unitText": "per property per year"}
+  },
+  "publisher": {"@type": "Organization", "name": "The Binary Brain Network", "url": "https://tbn.tbbn.in/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1015;--ink2:#15181F;--paper:#F7F5F0;--paper-dim:#EDEAE2;
+    --amber:#E8A33D;--amber-dim:#7A5A24;--slate:#5A6270;--slate-light:#8A92A0;
+    --green:#3D7A5C;--green-glow:rgba(61,122,92,0.35);--line:rgba(247,245,240,0.1);
+    --whatsapp:#25D366;
+    --mono:'Space Mono',monospace;--sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.container{padding:0 20px;}}
+  .grid-texture{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px, transparent 1px),linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:64px 64px;opacity:0.4;pointer-events:none;z-index:0;}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(14,16,21,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px;}
+  .nav__brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;flex-shrink:0;}
+  .nav__brand-mark{width:28px;height:28px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--amber);}
+  .nav__brand-name{font-weight:700;white-space:nowrap;}
+  .nav__brand-name span{color:var(--slate-light);font-weight:400;}
+  .nav__links{display:flex;gap:28px;list-style:none;align-items:center;}
+  .nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
+  .nav__links a:hover{color:var(--paper);}
+  .nav__right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .nav__phone{font-family:var(--mono);font-size:12px;color:var(--slate-light);white-space:nowrap;transition:color 0.2s;}
+  .nav__phone:hover{color:var(--amber);}
+  .nav__cta{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--whatsapp);color:#0B2E1A;padding:10px 18px;letter-spacing:0.02em;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
+  .nav__cta:hover{background:#2fe377;}
+  .nav__cta svg{width:14px;height:14px;fill:currentColor;}
+  @media(max-width:900px){.nav__links,.nav__phone{display:none;}}
+  @media(max-width:520px){.nav__brand-name{font-size:12px;}}
+
+  .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--slate-light);padding:24px 0 0;position:relative;z-index:1;}
+  .breadcrumb a{color:var(--slate-light);}
+  .breadcrumb a:hover{color:var(--amber);}
+  .breadcrumb span{color:var(--paper);}
+
+  .hero{position:relative;z-index:1;padding:48px 0 88px;border-bottom:1px solid var(--line);}
+  .hero__grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:start;}
+  @media(max-width:900px){.hero__grid{grid-template-columns:1fr;gap:48px;}}
+  .hero__badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6FCB9A;background:rgba(61,122,92,0.15);padding:7px 14px;margin-bottom:24px;}
+  .hero__badge::before{content:'';width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px var(--green-glow);animation:pulse-glow 2.4s ease-in-out infinite;}
+  @keyframes pulse-glow{0%,100%{box-shadow:0 0 0 3px var(--green-glow);}50%{box-shadow:0 0 0 6px rgba(61,122,92,0.15);}}
+  .hero__title{font-size:clamp(34px,5.4vw,58px);font-weight:800;line-height:1.06;letter-spacing:-0.02em;margin-bottom:24px;}
+  .hero__title em{font-style:normal;color:var(--amber);}
+  .hero__desc{font-size:17px;color:var(--slate-light);line-height:1.75;margin-bottom:32px;max-width:520px;}
+  .hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{font-family:var(--mono);font-size:13px;font-weight:700;padding:14px 26px;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s;border:none;cursor:pointer;}
+  .btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0;}
+  .btn--primary{background:var(--amber);color:var(--ink);}
+  .btn--primary:hover{background:#f4b65a;transform:translateY(-1px);}
+  .btn--whatsapp{background:var(--whatsapp);color:#0B2E1A;}
+  .btn--whatsapp:hover{background:#2fe377;transform:translateY(-1px);}
+  .btn--ghost{border:1px solid var(--line);color:var(--paper);background:none;}
+  .btn--ghost:hover{border-color:var(--paper);}
+  .hero__meta{display:flex;gap:28px;flex-wrap:wrap;}
+  .hero__meta-item{display:flex;flex-direction:column;gap:4px;}
+  .hero__meta-label{font-family:var(--mono);font-size:10px;color:var(--slate-light);text-transform:uppercase;letter-spacing:0.08em;}
+  .hero__meta-value{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--amber);}
+
+  /* KOT visual */
+  .kot-card{background:var(--paper);color:var(--ink);font-family:var(--mono);width:100%;max-width:340px;margin-left:auto;box-shadow:0 24px 60px rgba(0,0,0,0.4);transform:rotate(-1.4deg);animation:receipt-in 0.9s cubic-bezier(0.2,0.9,0.3,1.2) both;}
+  @keyframes receipt-in{from{clip-path:inset(0 0 100% 0);transform:rotate(-1.4deg) translateY(-8px);}to{clip-path:inset(0 0 0 0);transform:rotate(-1.4deg) translateY(0);}}
+  .kot-card__inner{padding:24px 22px;border:1px dashed rgba(14,16,21,0.2);margin:6px;}
+  .kot-card__head{text-align:center;}
+  .kot-card__tag{position:absolute;top:-12px;left:18px;background:var(--amber);color:var(--ink);font-size:10px;font-weight:700;padding:5px 12px;letter-spacing:0.05em;}
+  .kot-wrap{position:relative;}
+  .kot-card__title{font-size:15px;font-weight:700;letter-spacing:0.06em;margin-bottom:2px;}
+  .kot-card__sub{font-size:9px;color:var(--slate);letter-spacing:0.03em;}
+  .kot-card__rule{border-top:1px dashed rgba(14,16,21,0.25);margin:14px 0;}
+  .kot-card__meta{font-size:10px;display:flex;justify-content:space-between;color:var(--slate);margin-bottom:3px;letter-spacing:0.02em;}
+  .kot-card__row{display:flex;justify-content:space-between;font-size:11.5px;padding:5px 0;font-weight:700;}
+  .kot-card__row span:first-child{color:var(--ink);}
+  .kot-card__row span:last-child{color:var(--ink);font-family:var(--mono);}
+  .kot-card__note{font-size:10px;color:var(--slate);font-style:italic;padding:3px 0;}
+  .kot-card__foot{text-align:center;font-size:10px;color:var(--slate);margin-top:12px;letter-spacing:0.03em;}
+
+  .status-strip{position:relative;z-index:1;border-bottom:1px solid var(--line);background:var(--ink2);}
+  .status-strip__inner{display:flex;overflow-x:auto;scrollbar-width:none;}
+  .status-strip__inner::-webkit-scrollbar{display:none;}
+  .status-item{flex:1;min-width:200px;padding:20px 28px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;}
+  .status-item:last-child{border-right:none;}
+  .status-item__label{font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase;}
+  .status-item__value{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--paper);}
+
+  .section{position:relative;z-index:1;padding:88px 0;}
+  .section--border{border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:52px;max-width:680px;}
+  .section-head--center{margin:0 auto 52px;text-align:center;}
+  .section-tag{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;}
+  .section-title{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-0.01em;line-height:1.18;margin-bottom:14px;}
+  .section-sub{color:var(--slate-light);font-size:16px;line-height:1.7;}
+
+  .deploy-card{background:var(--ink2);border-left:3px solid var(--green);padding:36px 40px;position:relative;overflow:hidden;}
+  .deploy-card::after{content:'';position:absolute;top:0;right:0;width:180px;height:100%;background:radial-gradient(circle at 100% 50%, var(--green-glow), transparent 70%);opacity:0.6;pointer-events:none;}
+  .deploy-card__tag{font-family:var(--mono);font-size:11px;color:#6FCB9A;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;position:relative;}
+  .deploy-card__text{font-size:16px;color:var(--paper);line-height:1.8;position:relative;}
+  .deploy-card__text strong{color:var(--amber);}
+
+  /* APP MOCK — dashboard view (Pass) */
+  .appmock{background:var(--ink2);border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5);}
+  .appmock__titlebar{display:flex;align-items:center;gap:10px;padding:8px 14px;background:#0a0c11;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;color:var(--slate-light);letter-spacing:0.04em;}
+  .appmock__titlebar-dots{display:flex;gap:5px;}
+  .appmock__titlebar-dots span{width:9px;height:9px;border-radius:50%;background:var(--slate);opacity:0.4;}
+  .appmock__body{display:grid;grid-template-columns:200px 1fr;min-height:520px;}
+  @media(max-width:820px){.appmock__body{grid-template-columns:1fr;}}
+  .appmock__side{background:#0b0d13;border-right:1px solid var(--line);display:flex;flex-direction:column;padding:20px 0;}
+  @media(max-width:820px){.appmock__side{border-right:none;border-bottom:1px solid var(--line);padding:16px 0;}}
+  .appmock__brand{padding:0 18px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);margin-bottom:14px;}
+  .appmock__brand-mark{width:32px;height:32px;background:var(--amber);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;font-weight:700;flex-shrink:0;}
+  .appmock__brand-name{font-family:var(--sans);font-size:15px;font-weight:700;line-height:1.1;color:var(--paper);}
+  .appmock__brand-sub{font-family:var(--mono);font-size:10px;color:var(--slate-light);letter-spacing:0.04em;margin-top:2px;}
+  .appmock__menu{display:flex;flex-direction:column;gap:2px;flex:1;}
+  .appmock__menu-item{display:flex;align-items:center;gap:10px;padding:9px 18px;font-family:var(--sans);font-size:13px;color:var(--slate-light);border-left:2px solid transparent;line-height:1;}
+  .appmock__menu-item svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;flex-shrink:0;}
+  .appmock__menu-item--active{color:var(--amber);background:rgba(232,163,61,0.08);border-left-color:var(--amber);font-weight:600;}
+  .appmock__side-foot{padding:12px 18px 0;border-top:1px solid var(--line);margin-top:12px;}
+  .appmock__license{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;color:#6FCB9A;}
+  .appmock__license::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 0 2px var(--green-glow);}
+  .appmock__ver{font-family:var(--mono);font-size:9px;color:var(--slate);margin-top:8px;letter-spacing:0.05em;}
+  .appmock__main{padding:22px 26px;display:flex;flex-direction:column;gap:20px;}
+  .appmock__top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .appmock__date{font-family:var(--sans);font-size:14px;color:var(--slate-light);}
+  .appmock__actions{display:flex;gap:8px;flex-wrap:wrap;}
+  .appmock__btn{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:7px 12px;letter-spacing:0.05em;border:1px solid var(--line);color:var(--slate-light);display:inline-flex;align-items:center;gap:5px;}
+  .appmock__btn--primary{background:var(--amber);color:var(--ink);border-color:var(--amber);}
+  .appmock__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media(max-width:680px){.appmock__stats{grid-template-columns:repeat(2,1fr);}}
+  .appmock__stat{background:var(--ink);border:1px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:10px;position:relative;transition:border-color 0.2s;}
+  .appmock__stat:hover{border-color:var(--amber-dim);}
+  .appmock__stat-label{font-family:var(--mono);font-size:10px;color:var(--slate-light);letter-spacing:0.08em;text-transform:uppercase;}
+  .appmock__stat-value{font-family:var(--sans);font-size:24px;font-weight:800;color:var(--paper);letter-spacing:-0.02em;}
+  .appmock__stat--profit .appmock__stat-value{color:var(--amber);}
+  .appmock__stat-icon{position:absolute;top:14px;right:14px;width:16px;height:16px;color:var(--slate);opacity:0.6;stroke:currentColor;fill:none;stroke-width:1.5;}
+  .appmock__alert{background:rgba(232,163,61,0.09);border:1px solid rgba(232,163,61,0.3);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .appmock__alert-left{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:13px;color:var(--amber);}
+  .appmock__alert-left::before{content:'';width:8px;height:8px;background:var(--amber);border-radius:50%;animation:pulse 1.6s ease-in-out infinite;flex-shrink:0;}
+  .appmock__alert-badge{font-family:var(--mono);font-size:10.5px;font-weight:700;background:rgba(232,163,61,0.15);color:var(--amber);padding:4px 10px;letter-spacing:0.05em;}
+  .appmock__alert-link{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--paper);letter-spacing:0.05em;}
+  .appmock__panels{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:820px){.appmock__panels{grid-template-columns:1fr;}}
+  .appmock__panel{background:var(--ink);border:1px solid var(--line);padding:20px 22px;display:flex;flex-direction:column;gap:14px;}
+  .appmock__panel-head{display:flex;justify-content:space-between;align-items:center;}
+  .appmock__panel-title{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--paper);}
+  .appmock__panel-link{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--amber);letter-spacing:0.05em;}
+  .apptab{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:11px 12px;background:var(--ink2);border:1px solid var(--line);transition:border-color 0.2s;}
+  .apptab:hover{border-color:var(--amber-dim);}
+  .apptab__num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--amber);background:rgba(232,163,61,0.12);padding:6px 10px;letter-spacing:0.03em;white-space:nowrap;}
+  .apptab__body{display:flex;flex-direction:column;gap:2px;min-width:0;}
+  .apptab__name{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--paper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .apptab__meta{font-family:var(--mono);font-size:10.5px;color:var(--slate-light);letter-spacing:0.03em;}
+  .apptab__amount{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);}
+  .source-bar{display:flex;flex-direction:column;gap:10px;}
+  .source-row{display:flex;flex-direction:column;gap:6px;}
+  .source-row__head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--paper-dim);letter-spacing:0.03em;}
+  .source-row__amount{color:var(--amber);font-weight:700;}
+  .source-bar__track{height:6px;background:var(--ink2);border:1px solid var(--line);overflow:hidden;}
+  .source-bar__fill{height:100%;background:linear-gradient(90deg, var(--amber-dim), var(--amber));}
+  .source-summary{display:flex;justify-content:space-between;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:11.5px;color:var(--slate-light);}
+  .source-summary strong{color:var(--paper);font-weight:700;}
+  .appmock__caption{text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--slate);letter-spacing:0.05em;margin-top:14px;text-transform:uppercase;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  @media(max-width:860px){.story-grid{grid-template-columns:1fr;gap:36px;}}
+  .story-text p{font-size:15.5px;color:var(--paper-dim);line-height:1.85;margin-bottom:18px;}
+  .story-text p:last-child{margin-bottom:0;}
+  .story-text strong{color:var(--amber);font-weight:600;}
+  .story-marks{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .story-mark{background:var(--ink);padding:28px 24px;}
+  .story-mark__num{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--amber);margin-bottom:8px;letter-spacing:-0.02em;}
+  .story-mark__label{font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.05em;line-height:1.5;}
+
+  /* CAPABILITY CATEGORIES */
+  .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:860px){.cap-grid{grid-template-columns:1fr;}}
+  .cap-card{background:var(--ink2);border:1px solid var(--line);padding:32px 30px;transition:border-color 0.2s, transform 0.2s;}
+  .cap-card:hover{border-color:var(--amber-dim);transform:translateY(-2px);}
+  .cap-card__head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
+  .cap-card__num{font-family:var(--mono);font-size:12px;color:var(--amber);}
+  .cap-card__title{font-size:19px;font-weight:700;letter-spacing:-0.01em;}
+  .cap-card__sub{font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:22px;}
+  .cap-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  .cap-list li{font-size:14px;color:var(--paper-dim);line-height:1.55;padding-left:22px;position:relative;}
+  .cap-list li::before{content:'';position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--amber);}
+  .cap-list li strong{color:var(--paper);font-weight:600;}
+
+  .flow-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+  .flow-item{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);}
+  .flow-item__num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--amber);}
+  .flow-item__title{font-size:18px;font-weight:700;margin-bottom:8px;}
+  .flow-item__desc{font-size:14.5px;color:var(--slate-light);line-height:1.7;max-width:640px;}
+
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .trust-item{background:var(--ink);padding:28px 22px;text-align:center;}
+  .trust-item__val{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--amber);margin-bottom:8px;letter-spacing:-0.01em;}
+  .trust-item__label{font-size:11px;color:var(--slate-light);font-family:var(--mono);letter-spacing:0.04em;line-height:1.5;}
+  @media(max-width:760px){.trust-grid{grid-template-columns:1fr 1fr;}}
+
+  .pricing-wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:32px;align-items:stretch;}
+  @media(max-width:860px){.pricing-wrap{grid-template-columns:1fr;}}
+  .pricing-card{border:1px solid var(--amber);background:var(--ink2);padding:44px 40px;text-align:center;position:relative;overflow:hidden;}
+  .pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, transparent, var(--amber), transparent);}
+  .pricing-card__label{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;}
+  .pricing-card__price{font-size:52px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;}
+  .pricing-card__price span{font-size:16px;color:var(--slate-light);font-weight:400;display:block;margin-top:6px;}
+  .pricing-card__sub{font-size:13px;color:var(--slate-light);margin-bottom:28px;}
+  .pricing-list{list-style:none;text-align:left;margin-bottom:28px;}
+  .pricing-list li{font-size:14px;color:var(--paper);padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;}
+  .pricing-list li:last-child{border-bottom:none;}
+  .pricing-list li::before{content:'+';color:var(--green);font-weight:700;flex-shrink:0;font-family:var(--mono);}
+  .pricing-side{display:flex;flex-direction:column;gap:20px;}
+  .pricing-tile{border:1px solid var(--line);background:var(--ink2);padding:26px 26px;flex:1;display:flex;flex-direction:column;justify-content:center;transition:border-color 0.2s;}
+  .pricing-tile:hover{border-color:var(--amber-dim);}
+  .pricing-tile__label{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;}
+  .pricing-tile__title{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-0.01em;}
+  .pricing-tile__desc{font-size:13px;color:var(--slate-light);line-height:1.65;margin-bottom:14px;}
+  .pricing-tile__fine{font-family:var(--mono);font-size:10px;color:var(--slate);letter-spacing:0.03em;line-height:1.5;}
+
+  .faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{list-style:none;padding:22px 0;font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--paper);transition:color 0.2s;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary:hover{color:var(--amber);}
+  .faq-item summary::after{content:'+';font-family:var(--mono);font-size:20px;color:var(--amber);transition:transform 0.25s;flex-shrink:0;}
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item__body{padding:0 0 22px;font-size:14.5px;color:var(--slate-light);line-height:1.75;max-width:760px;}
+  .faq-item__body a{color:var(--amber);border-bottom:1px solid var(--amber-dim);}
+
+  .parent-strip{background:var(--paper);color:var(--ink);position:relative;z-index:1;}
+  .parent-strip__inner{display:flex;align-items:center;justify-content:space-between;padding:44px 0;flex-wrap:wrap;gap:24px;}
+  .parent-strip__text{font-size:14px;color:var(--slate);max-width:520px;}
+  .parent-strip__text strong{color:var(--ink);}
+  .parent-strip__link{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:2px;white-space:nowrap;}
+
+  .cta{position:relative;z-index:1;padding:96px 0;text-align:center;}
+  .cta__title{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.01em;margin-bottom:16px;}
+  .cta__sub{color:var(--slate-light);font-size:16px;margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto;}
+  .cta__actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+  .cta__contact{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;font-family:var(--mono);font-size:13px;color:var(--slate-light);}
+  .cta__contact a{color:var(--slate-light);transition:color 0.2s;}
+  .cta__contact a:hover{color:var(--amber);}
+
+  .footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:44px 0;}
+  .footer__inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer__text{font-family:var(--mono);font-size:12px;color:var(--slate);}
+  .footer__links{display:flex;gap:24px;flex-wrap:wrap;}
+  .footer__links a{font-family:var(--mono);font-size:12px;color:var(--slate-light);}
+  .footer__links a:hover{color:var(--paper);}
+
+  @supports (animation-timeline: view()) {
+    .reveal{animation:reveal-in linear both;animation-timeline:view();animation-range:entry 5% cover 30%;}
+    @keyframes reveal-in{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+
+  ::selection{background:var(--amber);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBHC2VR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="grid-texture" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="The Binary Brain Network home">
+      <span class="nav__brand-mark">TBN</span>
+      <span class="nav__brand-name">The Binary Brain Network <span>/ Pass</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#inside">Inside Pass</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+919987991072" class="nav__phone">+91 99879 91072</a>
+      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="nav__cta" aria-label="Request a demo on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
+        Request Demo
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">TBN</a> / <span>Pass</span></nav>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="hero__badge">In Trials · Restaurants Across India</div>
+        <h1 class="hero__title">Your restaurant.<br>Your data. <em>Your rules.</em></h1>
+        <p class="hero__desc">Pass is offline-first restaurant management and billing software that runs on your own hardware. Orders, GST bills, UPI QR, KOTs, inventory, staff and payroll, customer loyalty, and AI-powered insights — no cloud lock-in, no monthly SaaS fees.</p>
+        <div class="hero__actions">
+          <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
+            Request Demo on WhatsApp
+          </a>
+          <a href="https://github.com/the-binary-brain-network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z" fill="currentColor"/></svg>
+            Download for Windows
+          </a>
+        </div>
+        <div class="hero__meta">
+          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows · macOS · Linux</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Free Trial</span><span class="hero__meta-value">30 Days</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Setup + Training</span><span class="hero__meta-value">Included</span></div>
+        </div>
+      </div>
+      <div class="kot-wrap">
+        <div class="kot-card">
+          <span class="kot-card__tag">KOT · KITCHEN</span>
+          <div class="kot-card__inner">
+            <div class="kot-card__head">
+              <div class="kot-card__title">SANDESH DINING</div>
+              <div class="kot-card__sub">FSSAI 12345678901234 · GSTIN 27XXXXX1234X1ZX</div>
+            </div>
+            <div class="kot-card__rule"></div>
+            <div class="kot-card__meta"><span>KOT #0074</span><span>17-JUN-26 · 20:42</span></div>
+            <div class="kot-card__meta"><span>TABLE 07 · AC ROOM</span><span>DINE-IN</span></div>
+            <div class="kot-card__rule"></div>
+            <div class="kot-card__row"><span>Paneer Butter Masala</span><span>×1</span></div>
+            <div class="kot-card__row"><span>Butter Naan</span><span>×4</span></div>
+            <div class="kot-card__note">No onion</div>
+            <div class="kot-card__row"><span>Veg Biryani</span><span>×2</span></div>
+            <div class="kot-card__row"><span>Gulab Jamun</span><span>×3</span></div>
+            <div class="kot-card__rule"></div>
+            <div class="kot-card__foot">SERVER · SUMIT · PAX 4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS STRIP -->
+  <div class="status-strip">
+    <div class="container">
+      <div class="status-strip__inner">
+        <div class="status-item"><span class="status-item__label">Status</span><span class="status-item__value">In Restaurant Trials</span></div>
+        <div class="status-item"><span class="status-item__label">Platform</span><span class="status-item__value">Windows · macOS · Linux</span></div>
+        <div class="status-item"><span class="status-item__label">Free Trial</span><span class="status-item__value">30 Days · No Card</span></div>
+        <div class="status-item"><span class="status-item__label">Works Offline</span><span class="status-item__value">100% of Core Features</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE GAP -->
+  <section class="section section--border reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">The Gap</div>
+        <h2 class="section-title">Restaurant software you rent forever,<br>that dies the moment your internet does.</h2>
+        <p class="section-sub">Most restaurant POS in India is a monthly SaaS bill that runs in the cloud — brittle when the connection drops, expensive over years, and structured around whoever holds your data. Pass is the opposite of all of that.</p>
+      </div>
+      <div class="deploy-card">
+        <div class="deploy-card__tag">In Restaurant Trials</div>
+        <p class="deploy-card__text">Pass is currently deployed with a small cohort of Indian restaurants across dine-in, takeaway and delivery formats — processing live orders, printing KOTs to real kitchens, taking UPI QR payments at the counter, and running end-of-day reports the owner actually reads. <strong>One flat annual license. Your database on your machine. Your rules.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE PASS -->
+  <section class="section section--border reveal" id="inside">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Inside Pass</div>
+        <h2 class="section-title">What the counter sees at 8pm.</h2>
+        <p class="section-sub">A single dashboard — active orders, today's revenue, cash vs UPI split, live kitchen queue. Updated in real time. No modules to hunt through, no menu of menus.</p>
+      </div>
+      <div class="appmock">
+        <div class="appmock__titlebar">
+          <div class="appmock__titlebar-dots"><span></span><span></span><span></span></div>
+          <div>Pass by TBBN · Dashboard</div>
+        </div>
+        <div class="appmock__body">
+
+          <aside class="appmock__side">
+            <div class="appmock__brand">
+              <div class="appmock__brand-mark">P</div>
+              <div>
+                <div class="appmock__brand-name">Pass</div>
+                <div class="appmock__brand-sub">Sandesh Dining</div>
+              </div>
+            </div>
+            <nav class="appmock__menu" aria-hidden="true">
+              <div class="appmock__menu-item appmock__menu-item--active">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                Dashboard
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                Orders
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+                Tables
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM4 14h16v6H4z"/></svg>
+                Menu
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
+                Inventory
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                Staff
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Customers
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-6M22 20H2"/></svg>
+                Reports
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+                AI Insights
+              </div>
+              <div class="appmock__menu-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.11-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6h.02A1.7 1.7 0 0 0 10 3.04V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.02a1.7 1.7 0 0 0 1.56 1.03H21a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z"/></svg>
+                Settings
+              </div>
+            </nav>
+            <div class="appmock__side-foot">
+              <div class="appmock__license">Trial · Day 12/30</div>
+              <div class="appmock__ver">v1.4.2</div>
+            </div>
+          </aside>
+
+          <div class="appmock__main">
+            <div class="appmock__top">
+              <div class="appmock__date">Wednesday, 17 June 2026 · 20:42</div>
+              <div class="appmock__actions">
+                <span class="appmock__btn">KOT Queue</span>
+                <span class="appmock__btn">Tables</span>
+                <span class="appmock__btn appmock__btn--primary">+ New Order</span>
+              </div>
+            </div>
+
+            <div class="appmock__stats">
+              <div class="appmock__stat">
+                <span class="appmock__stat-label">Active Orders</span>
+                <span class="appmock__stat-value">8</span>
+                <svg class="appmock__stat-icon" viewBox="0 0 24 24"><path d="M6 4h12l-1 16H7z"/><path d="M9 8h6"/></svg>
+              </div>
+              <div class="appmock__stat">
+                <span class="appmock__stat-label">Today's Bills</span>
+                <span class="appmock__stat-value">34</span>
+                <svg class="appmock__stat-icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              </div>
+              <div class="appmock__stat">
+                <span class="appmock__stat-label">Today's Revenue</span>
+                <span class="appmock__stat-value">₹18,420</span>
+                <svg class="appmock__stat-icon" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M17 7h4v4"/></svg>
+              </div>
+              <div class="appmock__stat appmock__stat--profit">
+                <span class="appmock__stat-label">Avg Bill</span>
+                <span class="appmock__stat-value">₹542</span>
+                <svg class="appmock__stat-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M8 10h6a2 2 0 1 1 0 4H10a2 2 0 1 0 0 4h6"/></svg>
+              </div>
+            </div>
+
+            <div class="appmock__alert">
+              <div class="appmock__alert-left">
+                <span>3 KOTs in kitchen queue</span>
+                <span class="appmock__alert-badge">Low stock: Paneer, Naan flour</span>
+              </div>
+              <span class="appmock__alert-link">View Kitchen</span>
+            </div>
+
+            <div class="appmock__panels">
+              <div class="appmock__panel">
+                <div class="appmock__panel-head">
+                  <span class="appmock__panel-title">Live Orders</span>
+                  <span class="appmock__panel-link">View All</span>
+                </div>
+                <div class="apptab">
+                  <span class="apptab__num">T07</span>
+                  <div class="apptab__body"><span class="apptab__name">Dine-in · 4 pax</span><span class="apptab__meta">Preparing · ORD-260617-074</span></div>
+                  <span class="apptab__amount">₹1,240</span>
+                </div>
+                <div class="apptab">
+                  <span class="apptab__num">T02</span>
+                  <div class="apptab__body"><span class="apptab__name">Dine-in · 2 pax</span><span class="apptab__meta">Placed · ORD-260617-075</span></div>
+                  <span class="apptab__amount">₹680</span>
+                </div>
+                <div class="apptab">
+                  <span class="apptab__num">TA</span>
+                  <div class="apptab__body"><span class="apptab__name">Takeaway · +91 98•••32</span><span class="apptab__meta">Ready · ORD-260617-073</span></div>
+                  <span class="apptab__amount">₹420</span>
+                </div>
+                <div class="apptab">
+                  <span class="apptab__num">DL</span>
+                  <div class="apptab__body"><span class="apptab__name">Delivery · Runner</span><span class="apptab__meta">Served · ORD-260617-072</span></div>
+                  <span class="apptab__amount">₹910</span>
+                </div>
+              </div>
+
+              <div class="appmock__panel">
+                <div class="appmock__panel-head">
+                  <span class="appmock__panel-title">Today by Payment</span>
+                  <span class="appmock__panel-link">Reports</span>
+                </div>
+                <div class="source-bar">
+                  <div class="source-row">
+                    <div class="source-row__head"><span>UPI QR (auto-confirmed)</span><span class="source-row__amount">₹11,240</span></div>
+                    <div class="source-bar__track"><div class="source-bar__fill" style="width:61%;"></div></div>
+                  </div>
+                  <div class="source-row">
+                    <div class="source-row__head"><span>Cash</span><span class="source-row__amount">₹5,180</span></div>
+                    <div class="source-bar__track"><div class="source-bar__fill" style="width:28%;"></div></div>
+                  </div>
+                  <div class="source-row">
+                    <div class="source-row__head"><span>Card</span><span class="source-row__amount">₹2,000</span></div>
+                    <div class="source-bar__track"><div class="source-bar__fill" style="width:11%;"></div></div>
+                  </div>
+                </div>
+                <div class="source-summary"><span>Avg prep time <strong>14 min</strong></span><span>Top item <strong>Paneer Butter Masala ×9</strong></span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <p class="appmock__caption">Representative dashboard view · Actual data varies by restaurant</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section section--border reveal" id="story">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-title">Built the way three generations of<br>hospitality would have wanted it.</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-text">
+          <p>Pass wasn't sketched on a whiteboard by product managers who had never sent a KOT to a kitchen. Our family has been in Indian hospitality for <strong>three generations</strong> — running properties, running kitchens, running the numbers at the end of the night.</p>
+          <p>Somewhere along the way we became technologists too. And what we saw everywhere was the same trap: restaurants paying rent forever to cloud POS software that fell over the moment the internet did, held their data hostage, and shipped features no one on the floor had asked for.</p>
+          <p>Pass is the opposite of that. <strong>Offline-first, staff-first, owner-honest</strong>, and priced as a flat one-year license instead of a bill that never stops. Every feature was requested by an operator, printed to a real thermal printer, and stress-tested against the kind of shift where nothing goes right and the software still has to.</p>
+        </div>
+        <div class="story-marks">
+          <div class="story-mark"><div class="story-mark__num">3</div><div class="story-mark__label">GENERATIONS IN<br>HOSPITALITY</div></div>
+          <div class="story-mark"><div class="story-mark__num">FLAT</div><div class="story-mark__label">ANNUAL LICENSE<br>NO MONTHLY SAAS</div></div>
+          <div class="story-mark"><div class="story-mark__num">0</div><div class="story-mark__label">FEATURES SHIPPED<br>WITHOUT AN OPERATOR ASK</div></div>
+          <div class="story-mark"><div class="story-mark__num">YOURS</div><div class="story-mark__label">DATA LIVES ON<br>YOUR HARDWARE</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--border reveal" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">What It Does</div>
+        <h2 class="section-title">A full restaurant, in one desktop app.</h2>
+        <p class="section-sub">Pass covers every screen a working restaurant actually needs — order to bill, kitchen to counter, staff to statement — and does it whether the internet is up or not.</p>
+      </div>
+      <div class="cap-grid">
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">01</span><h3 class="cap-card__title">Money &amp; Payments</h3></div>
+          <p class="cap-card__sub">Bills the auditor accepts. Payments the counter closes fast.</p>
+          <ul class="cap-list">
+            <li><strong>GST-compliant billing</strong> — CGST/SGST/IGST breakdown, GSTIN &amp; FSSAI on every invoice</li>
+            <li><strong>Split payments</strong> — cash, UPI, card and loyalty points on a single bill</li>
+            <li><strong>Dynamic UPI QR codes</strong> — Razorpay, PhonePe, Paytm or plain static UPI, auto-confirmed every 3 seconds</li>
+            <li><strong>Cash change calculator</strong> with colour-coded display</li>
+            <li><strong>Auto-print on payment</strong> — configurable per station</li>
+            <li><strong>Post-billing rectification</strong> with manager-PIN authentication</li>
+            <li><strong>Bill void</strong> with reason and staff tracking</li>
+            <li><strong>Configurable prefixes</strong> and audit-safe sequential numbering</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">02</span><h3 class="cap-card__title">Order Operations</h3></div>
+          <p class="cap-card__sub">Dine-in, takeaway, delivery — all on one screen, all in one flow.</p>
+          <ul class="cap-list">
+            <li><strong>Visual table floor plan</strong> — sections (AC Room, Garden, Rooftop) with colour-coded statuses</li>
+            <li><strong>Quick Order Entry</strong> with keyboard type-ahead search</li>
+            <li><strong>KOT printing</strong> to any thermal printer with auto-numbered tickets</li>
+            <li><strong>WhatsApp order notifications</strong> — pre-formatted, one click</li>
+            <li><strong>Table transfer, hold, cancel</strong> with reason tracking</li>
+            <li><strong>Auto-generated order numbers</strong> (ORD-YYYYMMDD-NNN)</li>
+            <li><strong>Customer phone lookup</strong> for returning guests</li>
+            <li><strong>Live order status</strong> — placed → preparing → ready → served</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Menu &amp; Inventory</h3></div>
+          <p class="cap-card__sub">Hierarchical menus, real recipes, stock that deducts itself.</p>
+          <ul class="cap-list">
+            <li><strong>Categories with colour coding</strong>, item counts and one-click availability toggle</li>
+            <li><strong>Size variants</strong> (Half/Full, Small/Large) with individual pricing</li>
+            <li><strong>Add-on modifiers</strong> (Extra Cheese, No Onion) with pricing deltas</li>
+            <li><strong>Per-item tax rate</strong> (0%, 5%, 12%, 18%)</li>
+            <li><strong>Cost-price tracking</strong> for real profit margin calculation</li>
+            <li><strong>AI Menu Reader</strong> — photograph a physical menu, items extracted automatically</li>
+            <li><strong>Recipe management</strong> — link menu items to ingredients, auto-deduct stock on orders</li>
+            <li><strong>Low-stock alerts</strong>, vendor tracking, wastage log</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Staff, Payroll &amp; Loyalty</h3></div>
+          <p class="cap-card__sub">Team management on the same machine as the till. No extra tool.</p>
+          <ul class="cap-list">
+            <li><strong>Role-based access</strong> — Owner, Manager, Cashier, Waiter, Kitchen · 14 granular permissions</li>
+            <li><strong>4-digit PIN authentication</strong> — no passwords to remember</li>
+            <li><strong>Manager PIN override</strong> for sensitive operations</li>
+            <li><strong>Monthly attendance grid</strong> with P/A/H/L keyboard shortcuts</li>
+            <li><strong>Auto-calculated salary sheets</strong> — gross, advances, net pay, Excel export</li>
+            <li><strong>Salary advances</strong> with deduction tracking</li>
+            <li><strong>Phone-based customer database</strong> with visit count and total spend</li>
+            <li><strong>Loyalty points</strong> earning + redemption as a payment mode</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Intelligence &amp; Reports</h3></div>
+          <p class="cap-card__sub">Numbers with an opinion. AI that reads your restaurant back to you.</p>
+          <ul class="cap-list">
+            <li><strong>Daily business insights</strong> — AI compares today vs yesterday with actionable recommendations</li>
+            <li><strong>7-day sales forecast</strong> based on 30-day historical patterns</li>
+            <li><strong>Menu pricing advisor</strong> — flags underperformers and suggests changes</li>
+            <li><strong>Marketing message generator</strong> — 3 WhatsApp/SMS variants for promos, festivals, launches</li>
+            <li><strong>Daily sales summary</strong>, date-range and item-wise reports</li>
+            <li><strong>GST report</strong> — monthly bill-level CGST/SGST/IGST breakdown</li>
+            <li><strong>Profit &amp; Loss</strong> — categorised expenses, net margin</li>
+            <li><strong>All reports export</strong> to Excel and PDF</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Infrastructure &amp; Trust</h3></div>
+          <p class="cap-card__sub">The quiet layer that keeps the loud parts running.</p>
+          <ul class="cap-list">
+            <li><strong>Fully offline</strong> — SQLite database on your hardware, no internet required to run the restaurant</li>
+            <li><strong>Multi-terminal LAN sync</strong> — cashier, kitchen, waiter stations on the same WiFi, zero config</li>
+            <li><strong>Optional cloud backup</strong> — asynchronous replication across all data tables</li>
+            <li><strong>Auto-updates</strong> — download in the background, install silently on quit</li>
+            <li><strong>Thermal printing</strong> — 80mm KOT + bill printers, silent (no print dialog)</li>
+            <li><strong>Hardware-bound license</strong> with offline verification, HMAC-signed keys</li>
+            <li><strong>Full theme system</strong> — dark and light, instant toggle</li>
+            <li><strong>2-minute onboarding wizard</strong> — restaurant running fast</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--border reveal" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Getting Started</div>
+        <h2 class="section-title">Install, onboard, print your first bill —<br>in under an hour.</h2>
+        <p class="section-sub">No IT team. No server. No monthly maintenance call. Pass installs on the counter machine, syncs with any other terminals on your WiFi, and stays out of your way.</p>
+      </div>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-item__num">01</div>
+          <div>
+            <h3 class="flow-item__title">Download &amp; install — free for 30 days</h3>
+            <p class="flow-item__desc">Download for Windows, macOS or Linux. Runs as a standard per-user install, no admin password needed. The full product is unlocked for 30 days. No card, no lock-in, no crippled features.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">02</div>
+          <div>
+            <h3 class="flow-item__title">2-minute onboarding wizard</h3>
+            <p class="flow-item__desc">Restaurant info, GSTIN, FSSAI, logo, tax setup, bill prefix and owner PIN — all set up directly in the app. Your first sitting is ready to take orders within a couple of minutes.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">03</div>
+          <div>
+            <h3 class="flow-item__title">Free staff training &amp; walkthrough</h3>
+            <p class="flow-item__desc">A live session covers the counter, the floor, the kitchen and the reports view. Every user gets a PIN, the right role, and the muscle memory to work fast on a real shift.</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">04</div>
+          <div>
+            <h3 class="flow-item__title">It just runs</h3>
+            <p class="flow-item__desc">Updates download silently in the background and install on restart. Terminals on the same WiFi self-discover — no IP addresses to remember. If a device fails, another one on the LAN keeps taking orders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section section--border reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Built To Not Fail You</div>
+        <h2 class="section-title">The floor doesn't wait for software.</h2>
+        <p class="section-sub">Pass is engineered around the reality of a restaurant on a busy night — flaky internet, sudden printer drop-offs, a new staff member on the till, and a kitchen that will not slow down.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-item__val">100%</div><div class="trust-item__label">CORE FEATURES<br>WORK OFFLINE</div></div>
+        <div class="trust-item"><div class="trust-item__val">LAN</div><div class="trust-item__label">MULTI-TERMINAL<br>ZERO-CONFIG SYNC</div></div>
+        <div class="trust-item"><div class="trust-item__val">HMAC</div><div class="trust-item__label">SIGNED LICENSE<br>HARDWARE-BOUND</div></div>
+        <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">BACKGROUND<br>AUTO-UPDATES</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section--border reveal" id="pricing">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <div class="section-tag">Pricing</div>
+        <h2 class="section-title">One flat fee. Nothing hidden.</h2>
+        <p class="section-sub">A one-year license. Not a monthly SaaS bill that never stops. Try it free for a month first — you only pay if it earns its place at the counter.</p>
+      </div>
+      <div class="pricing-wrap">
+
+        <div class="pricing-card">
+          <div class="pricing-card__label">Annual License · Per Restaurant</div>
+          <div class="pricing-card__price">₹7,500<span>per restaurant per year · flat</span></div>
+          <div class="pricing-card__sub">Includes installation, onboarding, and staff training at no extra cost.</div>
+          <ul class="pricing-list">
+            <li>30-day free trial · no card, no lock-in</li>
+            <li>Free installation, onboarding wizard &amp; live staff training</li>
+            <li>Unlimited orders, terminals on the same LAN, menu items &amp; staff</li>
+            <li>Full GST billing, split payments, UPI QR &amp; bill rectification</li>
+            <li>KOT printing, table floor plan, dine-in / takeaway / delivery flows</li>
+            <li>Inventory with recipe auto-deduction, staff attendance &amp; payroll</li>
+            <li>AI insights, sales forecast, marketing generator &amp; pricing advisor</li>
+            <li>Silent auto-updates and direct WhatsApp support line</li>
+          </ul>
+          <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Pass%2030-day%20free%20trial." target="_blank" rel="noopener" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
+            Start Free Trial on WhatsApp
+          </a>
+        </div>
+
+        <div class="pricing-side">
+          <div class="pricing-tile">
+            <div class="pricing-tile__label">Refer &amp; Save</div>
+            <h3 class="pricing-tile__title">₹1,500 off for every restaurant you refer</h3>
+            <p class="pricing-tile__desc">Refer another restaurant that signs up for Pass, and you get a flat ₹1,500 off — credited immediately, not held for renewal. Stackable across multiple successful referrals.</p>
+            <p class="pricing-tile__fine">T&amp;C — Discount applies only to the referring restaurant, credited immediately on the referred restaurant's paid sign-up. The referred restaurant pays the standard ₹7,500/year but can then refer their own restaurants and earn the same discount.</p>
+          </div>
+          <div class="pricing-tile">
+            <div class="pricing-tile__label">Free Trial</div>
+            <h3 class="pricing-tile__title">30 days, full product</h3>
+            <p class="pricing-tile__desc">Not a demo mode. Not a limited version. The full Pass, installed at your restaurant, free for a month — including setup and training. Pay only if you want to continue.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--border reveal" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Answers</div>
+        <h2 class="section-title">Questions restaurants ask before signing.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>What actually happens during the 30-day free trial?</summary>
+          <div class="faq-item__body">We install the full product on your counter machine, run the 2-minute onboarding wizard with you, and train your team in a live walkthrough — all included. You use every feature for 30 days, exactly as a paid customer would. If Pass doesn't earn its place, you owe nothing and we uninstall it. No card is taken up front.</div>
+        </details>
+        <details class="faq-item"><summary>Do I really need no internet at all?</summary>
+          <div class="faq-item__body">Correct — 100% of core operations (orders, KOT printing, billing, payments, reports, backups) work fully offline. Internet is only used for optional cloud backup, AI insights, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill.</div>
+        </details>
+        <details class="faq-item"><summary>How does multi-terminal work?</summary>
+          <div class="faq-item__body">One machine acts as the host — usually the counter — and every other terminal on the same WiFi (kitchen KOT screen, waiter tablet, second cashier) connects to it automatically. No IP addresses, no port forwarding. If the host goes down, you keep taking orders on the other terminals and they sync back when it returns.</div>
+        </details>
+        <details class="faq-item"><summary>Can I use my own thermal printer?</summary>
+          <div class="faq-item__body">Yes. Pass supports any 80mm thermal receipt printer — USB, network, or Windows default. You can set different printers for KOT and bills. Silent printing means no print dialog interrupts a busy counter.</div>
+        </details>
+        <details class="faq-item"><summary>How is this different from a cloud POS I already pay for?</summary>
+          <div class="faq-item__body">Cloud POS is a rental — you pay every month, forever, and the moment your internet drops your restaurant stops taking bills. Pass is a one-time annual license. Your database lives on your machine. Your data is yours. Your restaurant works when the WiFi doesn't.</div>
+        </details>
+        <details class="faq-item"><summary>What if a device fails or the counter dies mid-shift?</summary>
+          <div class="faq-item__body">If you're running multi-terminal, the other terminals keep taking orders. Your data is on local SQLite with WAL mode — power cuts do not corrupt it. Optional cloud backup replicates all 17 data tables asynchronously, so a full hardware loss still recovers on a fresh install.</div>
+        </details>
+        <details class="faq-item"><summary>Can I get all my data out if I want to leave?</summary>
+          <div class="faq-item__body">Yes. Every report and dataset — menu, orders, bills, staff, inventory, customers — exports to Excel and PDF directly from the app. Your database file itself is standard SQLite, portable to anywhere. No data-ransom situation, ever.</div>
+        </details>
+        <details class="faq-item"><summary>How does the referral discount work?</summary>
+          <div class="faq-item__body">Refer another restaurant to Pass. When they sign up as a paid customer, <strong>you</strong> — the referring restaurant — get a flat ₹1,500 off, credited immediately (not held until renewal). Stackable: three successful referrals means ₹4,500 in credit against your account. The referred restaurant pays the standard ₹7,500 for their first year but is free to refer their own restaurants and earn the same discount themselves.</div>
+        </details>
+        <details class="faq-item"><summary>What happens on renewal?</summary>
+          <div class="faq-item__body">Renewals are billed at the standard flat ₹7,500 per restaurant per year, regardless of how you got in (trial, referral, or direct). No auto-charge — we contact you before renewal and you confirm. No usage tiers or surprise hikes.</div>
+        </details>
+        <details class="faq-item"><summary>Who builds Pass?</summary>
+          <div class="faq-item__body">Pass is built by <strong>The Binary Brain Network</strong>, the software division of <a href="https://tbbn.in" target="_blank" rel="noopener">The Big Brand Network</a> — a Mumbai-based full-service brand ecosystem operating across Delhi NCR and pan-India. Same team behind <a href="/folio/">Folio</a>.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="parent-strip">
+  <div class="container parent-strip__inner">
+    <p class="parent-strip__text">Pass is built by <strong>The Binary Brain Network</strong>, the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai.</p>
+    <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency</a>
+  </div>
+</div>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">Your restaurant shouldn't rent<br>its POS forever.</h2>
+    <p class="cta__sub">Message us on WhatsApp and we'll have Pass installed, onboarded, and running at your restaurant — free for the first 30 days.</p>
+    <div class="cta__actions">
+      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
+        Request a Demo
+      </a>
+      <a href="https://github.com/the-binary-brain-network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z" fill="currentColor"/></svg>
+        Download for Windows
+      </a>
+    </div>
+    <div class="cta__contact">
+      <a href="tel:+919987991072">+91 99879 91072</a>
+      <a href="mailto:tbn@tbbn.in">tbn@tbbn.in</a>
+      <a href="/">All TBN Products</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
+    <div class="footer__links">
+      <a href="/">TBN HOME</a>
+      <a href="/folio/">FOLIO</a>
+      <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>
+      <a href="tel:+919987991072">+91 99879 91072</a>
+      <a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
