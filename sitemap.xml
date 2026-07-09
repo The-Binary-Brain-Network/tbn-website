@@ -31,4 +31,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url><loc>https://tbn.tbbn.in/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tbn.tbbn.in/blog/restaurant-billing-software-cost-india/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tbn.tbbn.in/blog/gst-for-restaurants-india-explained/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tbn.tbbn.in/blog/hotel-room-service-billing-setup-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/kot-kitchen-order-ticket/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/gstin/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/composite-gst-scheme/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/fssai/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tbn.tbbn.in/glossary/hotel-room-service-billing/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tbn.tbbn.in/tools/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tbn.tbbn.in/tools/gst-calculator/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
