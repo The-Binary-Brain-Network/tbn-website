@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(247,245,240,0.06)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E1015"/>
+      <stop offset="1" stop-color="#15181F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#fade)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <g transform="translate(80,90)">
+    <rect x="0" y="0" width="52" height="52" fill="none" stroke="#E8A33D" stroke-width="2"/>
+    <text x="26" y="35" font-family="'Space Mono', monospace" font-size="18" font-weight="700" fill="#E8A33D" text-anchor="middle">TBN</text>
+    <text x="72" y="24" font-family="'Space Mono', monospace" font-size="15" font-weight="700" fill="#F7F5F0">THE BINARY BRAIN NETWORK</text>
+    <text x="72" y="46" font-family="'Space Mono', monospace" font-size="12" fill="#8A92A0">/ SLATE</text>
+  </g>
+
+  <g transform="translate(80,200)">
+    <rect x="0" y="0" width="290" height="34" fill="rgba(232,163,61,0.12)"/>
+    <circle cx="20" cy="17" r="5" fill="#E8A33D"/>
+    <circle cx="20" cy="17" r="10" fill="none" stroke="rgba(232,163,61,0.25)" stroke-width="4"/>
+    <text x="40" y="22" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#E8A33D" letter-spacing="2">IN TRIALS · HOTELS INDIA</text>
+  </g>
+
+  <text x="80" y="325" font-family="Inter, sans-serif" font-size="66" font-weight="800" fill="#F7F5F0" letter-spacing="-1.6">Hotel management,</text>
+  <text x="80" y="395" font-family="Inter, sans-serif" font-size="66" font-weight="800" fill="#F7F5F0" letter-spacing="-1.6">the way <tspan fill="#E8A33D" font-style="italic">your desk</tspan> runs.</text>
+
+  <text x="80" y="465" font-family="Inter, sans-serif" font-size="22" fill="#8A92A0">Bookings · Folios · Housekeeping · C-Form.</text>
+  <text x="80" y="495" font-family="Inter, sans-serif" font-size="22" fill="#8A92A0">14-day free trial · Free setup &amp; training.</text>
+
+  <!-- Right: mini room board -->
+  <g transform="translate(830,140)">
+    <rect x="0" y="0" width="290" height="360" fill="#15181F" stroke="rgba(247,245,240,0.1)"/>
+    <text x="20" y="30" font-family="'Space Mono', monospace" font-size="11" font-weight="700" fill="#E8A33D" letter-spacing="1.5">ROOM BOARD · LIVE</text>
+    <text x="270" y="30" font-family="'Space Mono', monospace" font-size="9" fill="#8A92A0" letter-spacing="1" text-anchor="end">34 ROOMS</text>
+    <g transform="translate(20,50)">
+      <!-- 4x5 room grid -->
+      <g font-family="'Space Mono', monospace" font-size="10" font-weight="700">
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="60" height="42" fill="#0E1015" stroke="rgba(232,163,61,0.4)"/><rect x="0" y="0" width="2" height="42" fill="#E8A33D"/><text x="30" y="18" fill="#F7F5F0" text-anchor="middle">101</text><text x="30" y="34" fill="#E8A33D" font-size="8" text-anchor="middle">OCC</text>
+        <rect x="65" y="0" width="60" height="42" fill="rgba(200,80,80,0.06)" stroke="rgba(200,80,80,0.3)"/><text x="95" y="18" fill="#F7F5F0" text-anchor="middle">102</text><text x="95" y="34" fill="#E88585" font-size="8" text-anchor="middle">DIRTY</text>
+        <rect x="130" y="0" width="60" height="42" fill="rgba(61,122,92,0.08)" stroke="rgba(61,122,92,0.35)"/><text x="160" y="18" fill="#F7F5F0" text-anchor="middle">103</text><text x="160" y="34" fill="#6FCB9A" font-size="8" text-anchor="middle">VAC</text>
+        <rect x="195" y="0" width="60" height="42" fill="rgba(232,163,61,0.1)" stroke="#E8A33D"/><text x="225" y="18" fill="#F7F5F0" text-anchor="middle">104</text><text x="225" y="34" fill="#E8A33D" font-size="8" text-anchor="middle">CI</text>
+        <!-- Row 2 -->
+        <rect x="0" y="48" width="60" height="42" fill="#0E1015" stroke="rgba(232,163,61,0.4)"/><rect x="0" y="48" width="2" height="42" fill="#E8A33D"/><text x="30" y="66" fill="#F7F5F0" text-anchor="middle">201</text><text x="30" y="82" fill="#E8A33D" font-size="8" text-anchor="middle">OCC</text>
+        <rect x="65" y="48" width="60" height="42" fill="#0E1015" stroke="rgba(232,163,61,0.4)"/><rect x="65" y="48" width="2" height="42" fill="#E8A33D"/><text x="95" y="66" fill="#F7F5F0" text-anchor="middle">202</text><text x="95" y="82" fill="#E8A33D" font-size="8" text-anchor="middle">OCC</text>
+        <rect x="130" y="48" width="60" height="42" fill="rgba(61,122,92,0.08)" stroke="rgba(61,122,92,0.35)"/><text x="160" y="66" fill="#F7F5F0" text-anchor="middle">203</text><text x="160" y="82" fill="#6FCB9A" font-size="8" text-anchor="middle">VAC</text>
+        <rect x="195" y="48" width="60" height="42" fill="#0E1015" stroke="rgba(232,163,61,0.4)"/><rect x="195" y="48" width="2" height="42" fill="#E8A33D"/><text x="225" y="66" fill="#F7F5F0" text-anchor="middle">204</text><text x="225" y="82" fill="#E8A33D" font-size="8" text-anchor="middle">OCC</text>
+        <!-- Row 3 -->
+        <rect x="0" y="96" width="60" height="42" fill="rgba(232,163,61,0.1)" stroke="#E8A33D"/><text x="30" y="114" fill="#F7F5F0" text-anchor="middle">301</text><text x="30" y="130" fill="#E8A33D" font-size="8" text-anchor="middle">CI</text>
+        <rect x="65" y="96" width="60" height="42" fill="#0E1015" stroke="rgba(232,163,61,0.4)"/><rect x="65" y="96" width="2" height="42" fill="#E8A33D"/><text x="95" y="114" fill="#F7F5F0" text-anchor="middle">302</text><text x="95" y="130" fill="#E8A33D" font-size="8" text-anchor="middle">OCC</text>
+        <rect x="130" y="96" width="60" height="42" fill="rgba(200,80,80,0.06)" stroke="rgba(200,80,80,0.3)"/><text x="160" y="114" fill="#F7F5F0" text-anchor="middle">303</text><text x="160" y="130" fill="#E88585" font-size="8" text-anchor="middle">DIRTY</text>
+        <rect x="195" y="96" width="60" height="42" fill="rgba(61,122,92,0.08)" stroke="rgba(61,122,92,0.35)"/><text x="225" y="114" fill="#F7F5F0" text-anchor="middle">304</text><text x="225" y="130" fill="#6FCB9A" font-size="8" text-anchor="middle">VAC</text>
+      </g>
+      <!-- Legend -->
+      <g transform="translate(0,220)" font-family="'Space Mono', monospace" font-size="9">
+        <rect x="0" y="0" width="8" height="8" fill="#E8A33D"/><text x="14" y="7" fill="#8A92A0">OCC</text>
+        <rect x="60" y="0" width="8" height="8" fill="#6FCB9A"/><text x="74" y="7" fill="#8A92A0">VAC</text>
+        <rect x="120" y="0" width="8" height="8" fill="#E88585"/><text x="134" y="7" fill="#8A92A0">DIRTY</text>
+        <rect x="190" y="0" width="8" height="8" fill="#E8A33D"/><text x="204" y="7" fill="#8A92A0">CHECK-IN</text>
+      </g>
+    </g>
+  </g>
+
+  <line x1="80" y1="555" x2="1120" y2="555" stroke="rgba(247,245,240,0.1)" stroke-width="1"/>
+  <text x="80" y="590" font-family="'Space Mono', monospace" font-size="14" fill="#5A6270" letter-spacing="2">TBN.TBBN.IN/SLATE</text>
+  <text x="1120" y="590" font-family="'Space Mono', monospace" font-size="14" fill="#5A6270" letter-spacing="2" text-anchor="end">WHATSAPP +91 99879 91072</text>
+</svg>
