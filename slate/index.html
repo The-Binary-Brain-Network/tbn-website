@@ -11,11 +11,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slate — Hotel Management Software for Indian Properties | The Binary Brain Network</title>
-<meta name="description" content="Slate is offline-first hotel management software for Indian hotels — bookings, check-in, room board, guest folios, housekeeping, C-Form, payroll and reports on your own hardware. In trials with select properties. 14-day free trial, free setup.">
+<meta name="description" content="Slate is offline-first hotel management software for Indian properties — bookings, room board, folios, GST invoicing, housekeeping, C-Form, GSTR-1 and Tally export, payroll and 12 reports. Runs on your own hardware. ₹12,000/property/year, 14-day free trial.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tbn.tbbn.in/slate/">
 <meta property="og:title" content="Slate — Hotel Management Software for Indian Properties">
-<meta property="og:description" content="Front desk, bookings, folios, housekeeping, C-Form and payroll — offline-first, your data on your hardware.">
+<meta property="og:description" content="Front desk, bookings, folios, housekeeping, C-Form, GSTR-1 and Tally export — offline-first, your data on your hardware.">
 <meta property="og:url" content="https://tbn.tbbn.in/slate/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://tbn.tbbn.in/og-slate.svg">
@@ -33,13 +33,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "SoftwareApplication",
   "name": "Slate",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "description": "Offline-first hotel management software for Indian properties. Handles bookings, check-in, room board, guest folios, housekeeping, C-Form for foreign guests, payroll, WhatsApp notifications, and reports.",
+  "operatingSystem": "Windows, Android",
+  "softwareVersion": "0.4.0",
+  "description": "Offline-first hotel management software for Indian properties. Bookings, room board, guest folios, GST invoicing, housekeeping, C-Form for foreign guests, GSTR-1 and Tally export, staff payroll, night audit and 12 reports.",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "INR",
-    "price": "9500",
-    "priceSpecification": {"@type": "UnitPriceSpecification", "price": "9500", "priceCurrency": "INR", "unitText": "per property per year"}
+    "price": "12000",
+    "priceSpecification": {"@type": "UnitPriceSpecification", "price": "12000", "priceCurrency": "INR", "unitText": "per property per year"}
   },
   "publisher": {"@type": "Organization", "name": "The Binary Brain Network", "url": "https://tbn.tbbn.in/"}
 }
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav__brand-mark{width:28px;height:28px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--amber);}
   .nav__brand-name{font-weight:700;white-space:nowrap;}
   .nav__brand-name span{color:var(--slate-light);font-weight:400;}
-  .nav__links{display:flex;gap:28px;list-style:none;align-items:center;}
+  .nav__links{display:flex;gap:26px;list-style:none;align-items:center;}
   .nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
   .nav__links a:hover{color:var(--paper);}
   .nav__right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
@@ -77,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav__cta{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--whatsapp);color:#0B2E1A;padding:10px 18px;letter-spacing:0.02em;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
   .nav__cta:hover{background:#2fe377;}
   .nav__cta svg{width:14px;height:14px;fill:currentColor;}
-  @media(max-width:900px){.nav__links,.nav__phone{display:none;}}
+  @media(max-width:1000px){.nav__links,.nav__phone{display:none;}}
   @media(max-width:520px){.nav__brand-name{font-size:12px;}}
 
   .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--slate-light);padding:24px 0 0;position:relative;z-index:1;}
@@ -93,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero__title{font-size:clamp(34px,5.4vw,58px);font-weight:800;line-height:1.06;letter-spacing:-0.02em;margin-bottom:24px;}
   .hero__title em{font-style:normal;color:var(--amber);}
   .hero__desc{font-size:17px;color:var(--slate-light);line-height:1.75;margin-bottom:32px;max-width:520px;}
-  .hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px;}
   .btn{font-family:var(--mono);font-size:13px;font-weight:700;padding:14px 26px;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s;border:none;cursor:pointer;}
   .btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0;}
   .btn--primary{background:var(--amber);color:var(--ink);}
@@ -102,6 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn--whatsapp:hover{background:#2fe377;transform:translateY(-1px);}
   .btn--ghost{border:1px solid var(--line);color:var(--paper);background:none;}
   .btn--ghost:hover{border-color:var(--paper);}
+  .hero__dl-note{font-family:var(--mono);font-size:11px;color:var(--slate);letter-spacing:0.02em;line-height:1.6;margin-bottom:32px;max-width:480px;}
   .hero__meta{display:flex;gap:28px;flex-wrap:wrap;}
   .hero__meta-item{display:flex;flex-direction:column;gap:4px;}
   .hero__meta-label{font-family:var(--mono);font-size:10px;color:var(--slate-light);text-transform:uppercase;letter-spacing:0.08em;}
@@ -144,27 +146,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .section{position:relative;z-index:1;padding:88px 0;}
   .section--border{border-bottom:1px solid var(--line);}
-  .section-head{margin-bottom:52px;max-width:680px;}
+  .section-head{margin-bottom:52px;max-width:700px;}
   .section-head--center{margin:0 auto 52px;text-align:center;}
   .section-tag{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;}
   .section-title{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-0.01em;line-height:1.18;margin-bottom:14px;}
   .section-sub{color:var(--slate-light);font-size:16px;line-height:1.7;}
+  .section-sub a{color:var(--amber);border-bottom:1px solid var(--amber-dim);}
 
   .deploy-card{background:var(--ink2);border-left:3px solid var(--amber);padding:36px 40px;position:relative;overflow:hidden;}
   .deploy-card::after{content:'';position:absolute;top:0;right:0;width:180px;height:100%;background:radial-gradient(circle at 100% 50%, rgba(232,163,61,0.15), transparent 70%);opacity:0.6;pointer-events:none;}
   .deploy-card__tag{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;position:relative;}
   .deploy-card__text{font-size:16px;color:var(--paper);line-height:1.8;position:relative;}
   .deploy-card__text strong{color:var(--amber);}
-
-  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  @media(max-width:860px){.story-grid{grid-template-columns:1fr;gap:36px;}}
-  .story-text p{font-size:15.5px;color:var(--paper-dim);line-height:1.85;margin-bottom:18px;}
-  .story-text p:last-child{margin-bottom:0;}
-  .story-text strong{color:var(--amber);font-weight:600;}
-  .story-marks{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
-  .story-mark{background:var(--ink);padding:28px 24px;}
-  .story-mark__num{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--amber);margin-bottom:8px;letter-spacing:-0.02em;}
-  .story-mark__label{font-family:var(--mono);font-size:11px;color:var(--slate-light);letter-spacing:0.05em;line-height:1.5;}
 
   .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
   @media(max-width:860px){.cap-grid{grid-template-columns:1fr;}}
@@ -179,6 +172,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cap-list li::before{content:'';position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--amber);}
   .cap-list li strong{color:var(--paper);font-weight:600;}
 
+  .features-link{margin-top:36px;text-align:center;}
+  .features-link a{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.04em;border-bottom:1px solid var(--amber-dim);padding-bottom:3px;}
+
+  /* MULTI-DEVICE */
+  .device-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:860px){.device-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.device-grid{grid-template-columns:1fr;}}
+  .device{background:var(--ink);padding:28px 24px;}
+  .device__icon{width:22px;height:22px;color:var(--amber);margin-bottom:14px;stroke:currentColor;fill:none;stroke-width:1.6;}
+  .device__title{font-size:15px;font-weight:700;margin-bottom:8px;letter-spacing:-0.01em;}
+  .device__desc{font-size:13.5px;color:var(--slate-light);line-height:1.65;}
+
+  /* ROADMAP / COMING SOON */
+  .roadmap{border:1px dashed rgba(138,146,160,0.35);background:rgba(21,24,31,0.5);padding:40px 40px;}
+  @media(max-width:640px){.roadmap{padding:28px 24px;}}
+  .roadmap__label{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate-light);border:1px solid rgba(138,146,160,0.3);padding:6px 12px;margin-bottom:24px;}
+  .roadmap__label::before{content:'';width:7px;height:7px;background:var(--slate);border-radius:50%;}
+  .roadmap__list{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media(max-width:760px){.roadmap__list{grid-template-columns:1fr;}}
+  .roadmap__item{border-left:2px solid rgba(138,146,160,0.25);padding-left:20px;}
+  .roadmap__item-title{font-size:17px;font-weight:700;color:var(--paper-dim);margin-bottom:8px;letter-spacing:-0.01em;}
+  .roadmap__item-desc{font-size:14px;color:var(--slate-light);line-height:1.7;}
+  .roadmap__foot{margin-top:28px;padding-top:20px;border-top:1px dashed rgba(138,146,160,0.25);font-family:var(--mono);font-size:11px;color:var(--slate);letter-spacing:0.02em;line-height:1.7;}
+
   .flow-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
   .flow-item{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);}
   .flow-item__num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--amber);}
@@ -187,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .trust-item{background:var(--ink);padding:28px 22px;text-align:center;}
-  .trust-item__val{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--amber);margin-bottom:8px;letter-spacing:-0.01em;}
+  .trust-item__val{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--amber);margin-bottom:8px;letter-spacing:-0.01em;}
   .trust-item__label{font-size:11px;color:var(--slate-light);font-family:var(--mono);letter-spacing:0.04em;line-height:1.5;}
   @media(max-width:760px){.trust-grid{grid-template-columns:1fr 1fr;}}
 
@@ -209,6 +226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pricing-tile__label{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;}
   .pricing-tile__title{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-0.01em;}
   .pricing-tile__desc{font-size:13px;color:var(--slate-light);line-height:1.65;margin-bottom:14px;}
+  .pricing-tile__desc a{color:var(--amber);}
   .pricing-tile__fine{font-family:var(--mono);font-size:10px;color:var(--slate);letter-spacing:0.03em;line-height:1.5;}
 
   .faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
@@ -239,6 +257,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .footer__text{font-family:var(--mono);font-size:12px;color:var(--slate);}
   .footer__links{display:flex;gap:24px;flex-wrap:wrap;}
   .footer__links a{font-family:var(--mono);font-size:12px;color:var(--slate-light);}
+  @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}}
   ::selection{background:var(--amber);color:var(--ink);}
   :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
 </style>
@@ -254,9 +273,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/" class="nav__brand"><span class="nav__brand-mark">TBN</span><span class="nav__brand-name">The Binary Brain Network <span>/ Slate</span></span></a>
     <nav aria-label="Primary"><ul class="nav__links">
       <li><a href="#features">Features</a></li>
+      <li><a href="/slate/features/">Full Spec</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="/folio/">Folio</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/pass/">Pass</a></li>
       <li><a href="/about/">About</a></li>
     </ul></nav>
     <div class="nav__right">
@@ -276,21 +296,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <div class="hero__badge">In Trials · Hotels Across India</div>
+        <div class="hero__badge">In Trials · Hotels Across India · v0.4.0</div>
         <h1 class="hero__title">Hotel management,<br>the way <em>your desk</em> actually runs.</h1>
-        <p class="hero__desc">Slate is offline-first hotel management software for Indian properties — bookings, check-in, room board, guest folios, housekeeping, C-Form for foreign guests, payroll, WhatsApp notifications and reports. All on your own hardware, all under one flat annual licence.</p>
+        <p class="hero__desc">Slate runs your whole property from the front-desk PC — bookings, room board, guest folios, GST invoicing, housekeeping, C-Form, payroll and a manager's day sheet. Offline-first, multi-device over your own WiFi, and one flat annual licence with no per-room charge.</p>
         <div class="hero__actions">
           <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Slate%20demo%20for%20my%20hotel." target="_blank" rel="noopener" class="btn btn--whatsapp">
             <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>
             Request Demo on WhatsApp
           </a>
-          <a href="https://github.com/the-binary-brain-network/slate-releases/releases/latest/download/Slate-Setup.exe" class="btn btn--primary">
+          <a href="https://github.com/The-Binary-Brain-Network/slate-releases/releases/latest/download/Slate-Setup.exe" class="btn btn--primary">
             <svg viewBox="0 0 24 24"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z"/></svg>
             Download for Windows
           </a>
+          <a href="https://github.com/The-Binary-Brain-Network/slate-releases/releases/latest/download/slate.apk" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            Android App
+          </a>
         </div>
+        <p class="hero__dl-note">The Android app is a companion to the desk — housekeeping, room board and check-in from a phone. It pairs to your front-desk PC over your own WiFi by scanning a QR at reception.</p>
         <div class="hero__meta">
-          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows Desktop</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows + Android</span></div>
           <div class="hero__meta-item"><span class="hero__meta-label">Free Trial</span><span class="hero__meta-value">14 Days</span></div>
           <div class="hero__meta-item"><span class="hero__meta-label">Setup + Training</span><span class="hero__meta-value">Included</span></div>
         </div>
@@ -336,7 +361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container">
       <div class="status-strip__inner">
         <div class="status-item"><span class="status-item__label">Status</span><span class="status-item__value">In Hotel Trials</span></div>
-        <div class="status-item"><span class="status-item__label">Platform</span><span class="status-item__value">Windows Desktop</span></div>
+        <div class="status-item"><span class="status-item__label">Modules</span><span class="status-item__value">Front Desk to Night Audit</span></div>
         <div class="status-item"><span class="status-item__label">Free Trial</span><span class="status-item__value">14 Days · No Card</span></div>
         <div class="status-item"><span class="status-item__label">Works Offline</span><span class="status-item__value">100% of Core Features</span></div>
       </div>
@@ -347,34 +372,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container">
       <div class="section-head">
         <div class="section-tag">The Gap</div>
-        <h2 class="section-title">Enterprise PMS you'll never fully use.<br>Excel sheets you shouldn't be using at all.</h2>
-        <p class="section-sub">Most Indian hotels sit between two bad options: a heavy enterprise PMS priced for a 200-room chain, or a stack of Excel sheets, WhatsApp groups and Tally entries that fall apart at the first audit. Slate is designed for the boutique-to-mid-range property that has been forced to pick one of those two.</p>
+        <h2 class="section-title">Enterprise PMS you'll never fully use.<br>Spreadsheets you shouldn't be using at all.</h2>
+        <p class="section-sub">Most Indian hotels are forced to pick between a heavy enterprise PMS priced for a 200-room chain, or a stack of Excel sheets, WhatsApp groups and Tally entries that falls apart at the first audit. Slate is built for the boutique-to-mid-range property caught in between.</p>
       </div>
       <div class="deploy-card">
         <div class="deploy-card__tag">In Trials · Hotels India</div>
-        <p class="deploy-card__text">Slate is currently in trials with a small cohort of Indian boutique and mid-range hotels — running live bookings, check-ins, folios, C-Form filings and housekeeping schedules. <strong>Everything on your machine. Nothing rented monthly. Your data is yours.</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--border" id="story">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-tag">Our Story</div>
-        <h2 class="section-title">Built by hoteliers, for hoteliers.</h2>
-      </div>
-      <div class="story-grid">
-        <div class="story-text">
-          <p>Slate wasn't drawn on a whiteboard by product managers who had never worked a front desk. Our family has been in Indian hospitality for <strong>three generations</strong> — running and operating properties, managing check-in queues at midnight, filing C-Forms for foreign guests, chasing housekeeping across three floors.</p>
-          <p>Somewhere along the way we became technologists too. And what we kept seeing was the same trap — hotel software either priced for a chain of 100 or held together with spreadsheets. Nothing in between worked the way an Indian mid-range property actually operates.</p>
-          <p>So we built our own. <strong>Every module in Slate answers a question one of us asked as an operator first</strong> — long before we were writing code for it.</p>
-        </div>
-        <div class="story-marks">
-          <div class="story-mark"><div class="story-mark__num">3</div><div class="story-mark__label">GENERATIONS IN<br>HOSPITALITY</div></div>
-          <div class="story-mark"><div class="story-mark__num">FLAT</div><div class="story-mark__label">ANNUAL LICENCE<br>NO MONTHLY SAAS</div></div>
-          <div class="story-mark"><div class="story-mark__num">0</div><div class="story-mark__label">FEATURES SHIPPED<br>WITHOUT AN OPERATOR ASK</div></div>
-          <div class="story-mark"><div class="story-mark__num">YOURS</div><div class="story-mark__label">DATA LIVES ON<br>YOUR HARDWARE</div></div>
-        </div>
+        <p class="deploy-card__text">Slate is in trials with a small cohort of Indian boutique and mid-range hotels — running live bookings, check-ins, folios, C-Form filings, night audits and housekeeping schedules. <strong>Everything runs on your machine. Nothing is rented monthly. Your data is yours.</strong></p>
       </div>
     </div>
   </section>
@@ -383,90 +386,195 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container">
       <div class="section-head">
         <div class="section-tag">What It Does</div>
-        <h2 class="section-title">Everything from booking to checkout.</h2>
-        <p class="section-sub">Slate covers the full lifecycle of a hotel operation, including the compliance and staff bits that most PMS quietly ignore. All under one flat annual licence.</p>
+        <h2 class="section-title">Thirty modules. One front desk.</h2>
+        <p class="section-sub">Slate covers the full lifecycle of a hotel — the arrival, the stay, the bill, the compliance paperwork and the manager's morning read. All under one flat annual licence, with nothing held back as a paid add-on.</p>
       </div>
       <div class="cap-grid">
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">01</span><h3 class="cap-card__title">Front Desk Operations</h3></div>
-          <p class="cap-card__sub">Every arrival, every departure, every room, on one screen.</p>
+          <div class="cap-card__head"><span class="cap-card__num">01</span><h3 class="cap-card__title">Front Desk</h3></div>
+          <p class="cap-card__sub">Every arrival, departure and room on one screen.</p>
           <ul class="cap-list">
-            <li><strong>Bookings management</strong> — new reservations, edits, cancellations, no-shows, walk-ins</li>
-            <li><strong>Room board</strong> — real-time grid of every room with colour-coded status (occupied, vacant, dirty, check-in today, out-of-order)</li>
-            <li><strong>Guided check-in flow</strong> — ID capture, room assignment, folio open, key handover, all in one screen</li>
-            <li><strong>Check-out with folio settlement</strong> — auto-computes stay total, F&amp;B, incidentals; supports part-payment and dues</li>
-            <li><strong>Guest master</strong> — phone-based lookup, stay history, preferences, address book</li>
-            <li><strong>Multi-room and group bookings</strong> — one reservation, many rooms, shared folio option</li>
+            <li><strong>Live room board</strong> — colour-coded by occupied, vacant, dirty, arriving today and out-of-order</li>
+            <li><strong>Walk-in check-in</strong> and advance bookings, with a booking calendar and today's arrivals list</li>
+            <li><strong>Room moves</strong> mid-stay with available-room lookup</li>
+            <li><strong>Checkout preview</strong> before you commit — see the full total, then settle</li>
+            <li><strong>Hourly and slot stays</strong> — configurable slots, live quotes, negotiable overstay charges</li>
+            <li><strong>Group bookings</strong> with a master folio and per-room allocation</li>
+            <li><strong>Per-room stay history</strong> — who stayed, when, what they paid</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">02</span><h3 class="cap-card__title">Billing &amp; Folios</h3></div>
-          <p class="cap-card__sub">Guest folios that survive the audit. Bills the guest will pay without argument.</p>
+          <div class="cap-card__head"><span class="cap-card__num">02</span><h3 class="cap-card__title">Rates &amp; Revenue</h3></div>
+          <p class="cap-card__sub">Price the room right, on the right day.</p>
           <ul class="cap-list">
-            <li><strong>Guest folio</strong> per stay — every room charge, F&amp;B posting, laundry, incidental itemised</li>
-            <li><strong>GST-compliant tax invoice</strong> — 12% or 18% based on room tariff, with correct CGST/SGST/IGST split</li>
-            <li><strong>Split billing</strong> — separate bills for company vs personal charges on the same stay</li>
-            <li><strong>Multi-payment</strong> — cash, UPI, card, bank transfer on the same folio, per line</li>
-            <li><strong>Advance payment tracking</strong> against future bookings; balance due at check-in</li>
-            <li><strong>Bill reprint anytime</strong>, versioned corrections with reason logged</li>
-            <li><strong>GSTIN &amp; FSSAI on every bill</strong>, sequential numbering with configurable prefix</li>
+            <li><strong>Rate plans</strong> and <strong>seasons</strong> — set once, applied automatically</li>
+            <li><strong>Per-date rate calendar</strong> with a full rate grid and preview before publishing</li>
+            <li><strong>Live rate quote</strong> per room and per date range</li>
+            <li><strong>Occupancy forecast</strong> based on confirmed bookings</li>
+            <li><strong>Revenue reporting</strong> by source, with ADR and RevPAR</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Housekeeping</h3></div>
-          <p class="cap-card__sub">The floor knows what to clean before the front desk needs it.</p>
+          <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Billing &amp; Folios</h3></div>
+          <p class="cap-card__sub">Invoices the auditor accepts and the guest doesn't argue with.</p>
           <ul class="cap-list">
-            <li><strong>Room status tracker</strong> — clean, dirty, in-progress, inspected, out-of-order</li>
-            <li><strong>Auto-flag rooms as dirty</strong> on check-out, cleared on inspection</li>
+            <li><strong>Guest folio</strong> per stay — room charges, F&amp;B, laundry and incidentals, all itemised</li>
+            <li><strong>Configurable GST bands</strong> for room tariff — set the slabs your property actually falls under</li>
+            <li><strong>Discounts with an approval threshold</strong> — above your set percentage, it needs a manager</li>
+            <li><strong>Charge voids</strong> with reason and actor logged; nothing is silently overwritten</li>
+            <li><strong>UPI payment QR printed on the bill</strong> — guest scans, pays, done</li>
+            <li><strong>Branded PDF invoices</strong> — your logo, header, footer, terms, bank details and accent colour</li>
+            <li><strong>Email the invoice</strong> from your own mailbox — connect your SMTP in Settings, no file editing</li>
+            <li><strong>Billing register</strong> with sequential numbering and a configurable prefix</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Guests &amp; CRM</h3></div>
+          <p class="cap-card__sub">Know the guest before they reach the desk.</p>
+          <ul class="cap-list">
+            <li><strong>Phone-keyed guest search</strong> with full stay history and spend</li>
+            <li><strong>VIP flags</strong> and <strong>blacklist</strong> — so the whole team sees the same context</li>
+            <li><strong>Internal notes</strong> per guest, invisible to the guest</li>
+            <li><strong>ID and photo capture</strong> — camera, file upload, or a Windows flatbed scanner</li>
+            <li><strong>Guest segments</strong> for reporting and follow-up</li>
+            <li><strong>Pre-arrival check-in</strong> — send a link, the guest fills their details, your desk reviews and applies it</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Housekeeping &amp; Maintenance</h3></div>
+          <p class="cap-card__sub">The floor knows what to clean before the desk has to ask.</p>
+          <ul class="cap-list">
+            <li><strong>Room status tracking</strong> — clean, dirty, in progress, inspected, out of order</li>
+            <li><strong>Auto-flag on checkout</strong>, cleared on inspection</li>
             <li><strong>Task assignment</strong> per housekeeper with printable daily lists</li>
-            <li><strong>Priority flags</strong> for expected check-ins today</li>
-            <li><strong>Maintenance log</strong> for out-of-order rooms with reason and ETA</li>
+            <li><strong>Dedicated mobile view</strong> — housekeeping works from a phone, not a printout</li>
+            <li><strong>Priority flags</strong> for rooms with an arrival due today</li>
+            <li><strong>Maintenance log</strong> for out-of-order rooms with reason and resolution</li>
+            <li><strong>Productivity per staff member</strong> — rooms turned, in the manager's report</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Compliance</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Compliance</h3></div>
           <p class="cap-card__sub">The paperwork Indian hotels legally must do. Handled.</p>
           <ul class="cap-list">
-            <li><strong>C-Form generation</strong> for foreign guests — auto-populated from check-in data, ready to submit</li>
-            <li><strong>Passport, visa, PAN, Aadhaar capture</strong> during check-in</li>
-            <li><strong>GST invoicing</strong> with correct rate slabs per stay</li>
-            <li><strong>Sequential bill numbering</strong> — audit-safe, no silent overwrites</li>
-            <li><strong>Bundled legal docs</strong> in-app: EULA, Terms, Privacy, Liability</li>
-            <li><strong>Data-export</strong> for GST returns, F&amp;B reconciliation, income statements</li>
+            <li><strong>C-Form / FRRO register</strong> for foreign guests — auto-populated from check-in</li>
+            <li><strong>Passport and visa scans attached</strong>, guest photo printed on the Form C</li>
+            <li><strong>CSV export</strong> for FRRO submission, with submission tracking</li>
+            <li><strong>GSTR-1 export</strong> — your return data, straight out of the app</li>
+            <li><strong>Tally XML export</strong> — hand your accountant a file, not a shoebox</li>
+            <li><strong>Audit log</strong> — a tamper-visible record of who did what</li>
+            <li><strong>Card data never stored</strong> — a guard actively rejects card numbers pasted into reference fields, keeping you out of PCI scope by design</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Staff &amp; Payroll</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">07</span><h3 class="cap-card__title">Staff, Payroll &amp; F&amp;B</h3></div>
           <p class="cap-card__sub">Team management on the same machine as the front desk.</p>
           <ul class="cap-list">
-            <li><strong>Role-based access</strong> — Owner, Manager, Front Desk, Housekeeping, Kitchen</li>
-            <li><strong>4-digit PIN authentication</strong>, manager PIN override for sensitive actions</li>
-            <li><strong>Monthly attendance grid</strong> with P/A/H/L keyboard shortcuts</li>
-            <li><strong>Auto-calculated payroll</strong> — gross, advances, deductions, net pay; export to Excel</li>
+            <li><strong>Six roles</strong> — owner, manager, receptionist, housekeeping, F&amp;B, accounts — enforced on the server, not just hidden in the menu</li>
+            <li><strong>PIN login</strong> with a brute-force lockout ladder</li>
+            <li><strong>Attendance</strong> with automatic daily fill, so a missed midnight doesn't break the month</li>
+            <li><strong>Payroll</strong> computed from attendance, salary type and advances</li>
             <li><strong>Salary advances</strong> with deduction tracking</li>
-            <li><strong>Shift handover reports</strong> at day-close with cash reconciliation</li>
+            <li><strong>F&amp;B / room-service module</strong> — menu, orders, kitchen tickets, settle straight to the guest folio</li>
+            <li><strong>Bulk menu import</strong> and an F&amp;B sales summary</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Reports, Ops &amp; WhatsApp</h3></div>
-          <p class="cap-card__sub">Numbers the owner reads, plus the last-mile guest touch.</p>
+          <div class="cap-card__head"><span class="cap-card__num">08</span><h3 class="cap-card__title">The Manager's Desk</h3></div>
+          <p class="cap-card__sub">The numbers a GM actually opens in the morning.</p>
           <ul class="cap-list">
-            <li><strong>Occupancy report</strong> — daily, weekly, monthly with ADR &amp; RevPAR</li>
-            <li><strong>Revenue report</strong> — rooms vs F&amp;B vs others, per source</li>
-            <li><strong>Expense tracker</strong> with categories, exportable to Excel/PDF</li>
-            <li><strong>Day-close &amp; night-audit</strong> — auto-printed, cash reconciled</li>
-            <li><strong>WhatsApp bill share</strong> — one click, pre-filled with guest phone</li>
-            <li><strong>WhatsApp booking confirmations</strong> and check-in reminders</li>
-            <li><strong>Owner PWA dashboard</strong> — remote view of key metrics on phone (optional)</li>
+            <li><strong>Day sheet</strong> — the whole day on one screen</li>
+            <li><strong>Exceptions list</strong> — what needs a decision, surfaced instead of buried</li>
+            <li><strong>Flash report</strong> for a fast read on the day so far</li>
+            <li><strong>No-show tracking</strong></li>
+            <li><strong>Automated night audit</strong> — posts room rent, marks no-shows, snapshots the day</li>
+            <li><strong>Shift handover</strong> with cash reconciliation</li>
+            <li><strong>Twelve reports</strong> — revenue, occupancy, arrivals &amp; departures, outstanding dues, GST, P&amp;L, F&amp;B, forecast, audit log and more</li>
           </ul>
         </div>
 
+      </div>
+      <div class="features-link"><a href="/slate/features/">See the complete feature list and technical specification</a></div>
+    </div>
+  </section>
+
+  <section class="section section--border">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">One Property, Many Screens</div>
+        <h2 class="section-title">The desk serves the whole hotel.</h2>
+        <p class="section-sub">Slate runs on the front-desk PC and serves every other device on your own WiFi. No cloud subscription in the middle, no monthly per-device fee.</p>
+      </div>
+      <div class="device-grid">
+        <div class="device">
+          <svg class="device__icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <h3 class="device__title">Front-desk PC</h3>
+          <p class="device__desc">The main terminal. Holds the database, serves everything else, works with the internet unplugged.</p>
+        </div>
+        <div class="device">
+          <svg class="device__icon" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          <h3 class="device__title">Android app</h3>
+          <p class="device__desc">Scan a QR at reception and the phone pairs itself. Housekeeping and room board in a pocket.</p>
+        </div>
+        <div class="device">
+          <svg class="device__icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          <h3 class="device__title">Any tablet or PC</h3>
+          <p class="device__desc">Installable web app on any browser on the network. Nothing to buy, nothing to license per seat.</p>
+        </div>
+        <div class="device">
+          <svg class="device__icon" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14 0M8.5 16.4a6 6 0 0 1 7 0M2 8.82a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg>
+          <h3 class="device__title">Zero-config discovery</h3>
+          <p class="device__desc">Devices find the desk automatically on the network. No IP addresses to type, no router settings to learn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--border">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Built To Not Fail You</div>
+        <h2 class="section-title">Hotel operations don't pause for software problems.</h2>
+        <p class="section-sub">Slate is engineered around a working front desk — power cuts, patchy internet, a new receptionist on the night shift, and guests who don't wait while the system thinks about it.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-item__val">100%</div><div class="trust-item__label">CORE FEATURES<br>WORK OFFLINE</div></div>
+        <div class="trust-item"><div class="trust-item__val">DAILY</div><div class="trust-item__label">AUTOMATIC BACKUPS<br>30 RETAINED</div></div>
+        <div class="trust-item"><div class="trust-item__val">STAGED</div><div class="trust-item__label">RESTORE KEEPS THE<br>REPLACED DATABASE</div></div>
+        <div class="trust-item"><div class="trust-item__val">ON-SITE</div><div class="trust-item__label">GUEST IDS NEVER<br>LEAVE THE PROPERTY</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section section--border" id="roadmap">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">On The Roadmap</div>
+        <h2 class="section-title">What's built but not switched on yet.</h2>
+        <p class="section-sub">We'd rather tell you what's coming than let you find out it isn't here. These are finished or near-finished, and waiting on something other than code.</p>
+      </div>
+      <div class="roadmap">
+        <div class="roadmap__label">Coming Soon</div>
+        <div class="roadmap__list">
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Channel manager</h3>
+            <p class="roadmap__item-desc">Built for major OTAs like Booking.com, MakeMyTrip, Goibibo, Agoda and Expedia. It's currently in testing and partnership approval, and will switch on in a future update once those integrations are certified and the commercial agreements are in place.</p>
+          </div>
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Owner dashboard</h3>
+            <p class="roadmap__item-desc">A read-only mobile dashboard for revenue, occupancy, expenses and staff — so an owner can watch the property without touching the front desk or exposing the guest database. Built and rolling out shortly.</p>
+          </div>
+        </div>
+        <p class="roadmap__foot">One thing worth knowing up front: the Windows installer isn't code-signed yet, so Windows may show a "publisher unknown" warning the first time you run it. It's safe to proceed — and we're sorting the certificate.</p>
       </div>
     </div>
   </section>
@@ -483,46 +591,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="flow-item__num">01</div>
           <div>
             <h3 class="flow-item__title">Download &amp; install — free for 14 days</h3>
-            <p class="flow-item__desc">Download the Windows installer. Runs as a standard per-user install, no admin password required. The full product is unlocked for 14 days. No card, no lock-in, no crippled features.</p>
+            <p class="flow-item__desc">One Windows installer. The full product is unlocked for two weeks — no card, no lock-in, no crippled features. Add the Android app to any phones you want on it.</p>
           </div>
         </div>
         <div class="flow-item">
           <div class="flow-item__num">02</div>
           <div>
-            <h3 class="flow-item__title">Onboarding wizard</h3>
-            <p class="flow-item__desc">Hotel details, GSTIN, FSSAI, room list, tariff, tax setup and owner PIN — all configured in a guided flow. Your front desk is ready to take bookings within an evening.</p>
+            <h3 class="flow-item__title">Guided onboarding wizard</h3>
+            <p class="flow-item__desc">Property details, GSTIN, room types, rooms, tariff, owner PIN and terms — configured in a step-by-step flow that creates your first account as it goes. An in-app tutorial then walks your team through the room board.</p>
           </div>
         </div>
         <div class="flow-item">
           <div class="flow-item__num">03</div>
           <div>
             <h3 class="flow-item__title">Free staff training</h3>
-            <p class="flow-item__desc">A live walkthrough with your front desk, housekeeping and back-office. Every user gets a PIN, the right role, and enough muscle memory to work fast on a real shift.</p>
+            <p class="flow-item__desc">A live walkthrough with your front desk, housekeeping and back office. Every user gets a PIN and the right role, and enough muscle memory to work fast on a real shift.</p>
           </div>
         </div>
         <div class="flow-item">
           <div class="flow-item__num">04</div>
           <div>
             <h3 class="flow-item__title">It just runs</h3>
-            <p class="flow-item__desc">Silent auto-updates. Hourly encrypted backups. Optional owner PWA dashboard on your phone. Direct WhatsApp line to support — not a ticketing queue.</p>
+            <p class="flow-item__desc">Updates download in the background and apply when you quit — never mid-shift. Backups run daily on their own. Support is a direct WhatsApp line, not a ticketing queue.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--border">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-tag">Built To Not Fail You</div>
-        <h2 class="section-title">Hotel operations don't pause for software problems.</h2>
-        <p class="section-sub">Slate is engineered around the reality of a working front desk — power cuts, patchy internet, new staff on the night shift, and guests who don't wait when the system is slow.</p>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-item"><div class="trust-item__val">100%</div><div class="trust-item__label">CORE FEATURES<br>WORK OFFLINE</div></div>
-        <div class="trust-item"><div class="trust-item__val">HOURLY</div><div class="trust-item__label">ENCRYPTED<br>BACKUPS</div></div>
-        <div class="trust-item"><div class="trust-item__val">C-FORM</div><div class="trust-item__label">AUTO-POPULATED<br>FROM CHECK-IN</div></div>
-        <div class="trust-item"><div class="trust-item__val">PIN</div><div class="trust-item__label">ROLE-BASED<br>ACCESS CONTROL</div></div>
       </div>
     </div>
   </section>
@@ -532,23 +624,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="section-head section-head--center">
         <div class="section-tag">Pricing</div>
         <h2 class="section-title">One flat fee. Nothing hidden.</h2>
-        <p class="section-sub">One licence, per property, per year. Not a per-room charge. Not a monthly SaaS bill. Not a per-terminal fee. Try it free for two weeks first — you only pay if it earns its place at your front desk.</p>
+        <p class="section-sub">One licence, per property, per year. Not per room. Not per terminal. Not a monthly SaaS bill. Try it free for two weeks first — you only pay if it earns its place at your front desk.</p>
       </div>
       <div class="pricing-wrap">
 
         <div class="pricing-card">
           <div class="pricing-card__label">Annual Licence · Per Property</div>
-          <div class="pricing-card__price">₹9,500<span>per property per year · flat</span></div>
-          <div class="pricing-card__sub">Includes installation, onboarding, and staff training at no extra cost.</div>
+          <div class="pricing-card__price">₹12,000<span>per property per year · flat</span></div>
+          <div class="pricing-card__sub">Includes installation, onboarding and staff training at no extra cost.</div>
           <ul class="pricing-list">
             <li>14-day free trial · no card, no lock-in</li>
-            <li>Free installation, onboarding wizard &amp; live staff training</li>
-            <li>Unlimited rooms, bookings, guests, staff and reports</li>
-            <li>Bookings, check-in/out, room board, folios, GST invoicing</li>
-            <li>Housekeeping, C-Form, expenses, staff attendance &amp; payroll</li>
-            <li>WhatsApp bill share &amp; booking confirmations</li>
-            <li>Silent auto-updates &amp; hourly encrypted backups</li>
-            <li>Direct WhatsApp support line — no ticketing queue</li>
+            <li>Unlimited rooms, bookings, guests, staff and devices on your network</li>
+            <li>Front desk, rates, groups, hourly stays, folios and GST invoicing</li>
+            <li>Housekeeping, maintenance, C-Form, GSTR-1 and Tally export</li>
+            <li>Staff attendance, payroll, F&amp;B module and 12 reports</li>
+            <li>Android app and installable web app on any device you own</li>
+            <li>Daily automatic backups with a recoverable restore</li>
+            <li>Silent auto-updates and a direct WhatsApp support line</li>
           </ul>
           <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Slate%2014-day%20free%20trial." target="_blank" rel="noopener" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
             <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>
@@ -560,13 +652,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="pricing-tile">
             <div class="pricing-tile__label">Refer &amp; Save</div>
             <h3 class="pricing-tile__title">₹1,500 off for every hotel you refer</h3>
-            <p class="pricing-tile__desc">Refer another hotel that signs up for Slate, and you get a flat ₹1,500 off — credited immediately, not held for renewal. Stackable across multiple successful referrals.</p>
-            <p class="pricing-tile__fine">T&amp;C — Discount applies only to the referring hotel, credited immediately on the referred hotel's paid sign-up. The referred hotel pays the standard ₹9,500/year but can then refer their own hotels and earn the same discount.</p>
+            <p class="pricing-tile__desc">Refer another hotel that signs up for Slate and you get a flat ₹1,500 off — credited immediately, not held until renewal. Stackable across multiple referrals.</p>
+            <p class="pricing-tile__fine">T&amp;C — Discount applies to the referring hotel, credited on the referred hotel's paid sign-up. The referred hotel pays the standard ₹12,000/year and can then refer their own hotels on the same terms.</p>
           </div>
           <div class="pricing-tile">
             <div class="pricing-tile__label">Runs Alongside Folio</div>
             <h3 class="pricing-tile__title">The full TBN hotel stack</h3>
-            <p class="pricing-tile__desc">Already running <a href="/folio/" style="color:var(--amber);">Folio</a> for room-service billing? Slate slots in beside it — Folio keeps handling F&amp;B while Slate takes the front desk. One team, one stack, one support line.</p>
+            <p class="pricing-tile__desc">Already running <a href="/folio/">Folio</a> for room-service billing? Slate slots in beside it — Folio keeps the F&amp;B tabs, Slate takes the front desk. One team, one support line, one way of working.</p>
           </div>
         </div>
 
@@ -585,25 +677,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="faq-item__body">We install the full product on your front-desk machine, run the onboarding wizard with you, and train your team in a live walkthrough — all included. You use every feature for 14 days, exactly as a paid customer would. If Slate doesn't earn its place, you owe nothing and we uninstall it. No card up front.</div>
         </details>
         <details class="faq-item"><summary>Does Slate really work offline?</summary>
-          <div class="faq-item__body">Yes — 100% of core operations (bookings, check-in, folios, billing, housekeeping, reports, backups) work fully offline. Internet is only needed for optional WhatsApp notifications, silent product updates and the owner PWA dashboard. A property with a dead connection can operate for a full shift without missing anything.</div>
+          <div class="faq-item__body">Yes — every core operation works with the internet unplugged: bookings, check-in, folios, billing, printing, housekeeping, reports and backups. Internet is only used for optional WhatsApp notifications, invoice email, and product updates. A property with a dead connection can run a full shift without missing anything.</div>
+        </details>
+        <details class="faq-item"><summary>How does the Android app work?</summary>
+          <div class="faq-item__body">It's a companion to the front desk, not a separate system — it holds no data of its own. Scan the QR shown at reception and the phone pairs to the desk PC over your own WiFi automatically. Housekeeping staff use it to update room status from the floor; managers use it for the room board. Because it's tied to your local network, we hand it out from the desk rather than through the Play Store — you'll see an "install from unknown source" prompt the first time, which is expected.</div>
         </details>
         <details class="faq-item"><summary>Do you handle C-Form for foreign guests?</summary>
-          <div class="faq-item__body">Yes. Slate auto-populates the C-Form from check-in data (passport, visa, arrival, address) and produces a ready-to-submit form. Foreign-guest data is captured during check-in and stored securely on the local database.</div>
+          <div class="faq-item__body">Yes, properly. Slate keeps a full C-Form register, auto-populates from check-in data, attaches passport and visa scans, prints the guest photo on the Form C itself, tracks what's been submitted, and exports CSV for FRRO. Your FRRO user ID and accommodation details are stored once and reprinted on every form.</div>
         </details>
-        <details class="faq-item"><summary>Does it work with my existing hotel software or Folio?</summary>
-          <div class="faq-item__body">Slate is a complete PMS on its own — it doesn't need another hotel system underneath. It does pair natively with <a href="/folio/">Folio</a>: if you already run Folio for room-service billing, Slate slots in for bookings, folios and front desk. Both share a support line and pricing model.</div>
+        <details class="faq-item"><summary>Can my accountant get what they need?</summary>
+          <div class="faq-item__body">Yes. Slate exports <strong>GSTR-1</strong> for your return and <strong>Tally XML</strong> for your books, plus a GST report, P&amp;L and an expense ledger. Most reports also export to Excel and PDF.</div>
+        </details>
+        <details class="faq-item"><summary>What happens if the front-desk PC dies?</summary>
+          <div class="faq-item__body">Backups run automatically every day, 30 are retained, and they're taken using a method that's safe to run while the system is live — so a backup is never a half-written file. Restoring is staged rather than destructive: Slate keeps the database it replaced, so even a bad restore is recoverable. You can also download any backup from the app to keep a copy off the machine.</div>
+        </details>
+        <details class="faq-item"><summary>Is guest data safe if I turn on cloud sync?</summary>
+          <div class="faq-item__body">Guest ID numbers, ID photos and C-Form entries are <strong>never</strong> synced to the cloud — that's a deliberate design decision, not a setting. Only bookings, bills and expenses sync, and only if you enable it. We also actively refuse to store card data anywhere in the system.</div>
         </details>
         <details class="faq-item"><summary>How many rooms is Slate designed for?</summary>
-          <div class="faq-item__body">Slate is designed for boutique to mid-range properties — roughly 5 to 100 rooms. Below that, it may be more than you need (look at <a href="/folio/for-guest-houses/">Folio for guest houses</a> instead). Above that, we'll want to talk about your specific integration needs.</div>
+          <div class="faq-item__body">Boutique to mid-range — roughly 5 to 100 rooms. Below that it may be more than you need; look at <a href="/folio/for-guest-houses/">Folio for guest houses</a> instead. Above that, talk to us about your specific setup.</div>
         </details>
         <details class="faq-item"><summary>What happens on renewal?</summary>
-          <div class="faq-item__body">Renewals are billed at the standard flat ₹9,500 per property per year, regardless of how you got in. No auto-charge — we contact you before renewal and you confirm. No usage tiers or surprise hikes.</div>
-        </details>
-        <details class="faq-item"><summary>Can I get my data out?</summary>
-          <div class="faq-item__body">Yes. Rooms, bookings, guests, folios, staff and reports export to Excel and PDF directly from the app. The underlying database is standard SQLite, portable to anywhere. No data-ransom situation, ever.</div>
+          <div class="faq-item__body">Renewals are billed at the standard flat ₹12,000 per property per year. No auto-charge — we contact you before renewal and you confirm. No usage tiers, no surprise hikes, and the price never changes mid-term.</div>
         </details>
         <details class="faq-item"><summary>Who builds Slate?</summary>
-          <div class="faq-item__body">Slate is built by <strong>The Binary Brain Network</strong>, the software division of <a href="https://tbbn.in" target="_blank" rel="noopener">The Big Brand Network</a> — a Mumbai-based full-service brand ecosystem operating across Delhi NCR and pan-India. Same team behind <a href="/folio/">Folio</a> and <a href="/pass/">Pass</a>.</div>
+          <div class="faq-item__body">Slate is built by <strong>The Binary Brain Network</strong>, the software division of <a href="https://tbbn.in" target="_blank" rel="noopener">The Big Brand Network</a> — a Mumbai-based brand ecosystem operating across Delhi NCR and pan-India. Same team behind <a href="/folio/">Folio</a> and <a href="/pass/">Pass</a>, and the same family that has been in Indian hospitality for three generations.</div>
         </details>
       </div>
     </div>
@@ -627,14 +725,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>
         Request a Demo
       </a>
-      <a href="https://github.com/the-binary-brain-network/slate-releases/releases/latest/download/Slate-Setup.exe" class="btn btn--primary">
+      <a href="https://github.com/The-Binary-Brain-Network/slate-releases/releases/latest/download/Slate-Setup.exe" class="btn btn--primary">
         <svg viewBox="0 0 24 24"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z"/></svg>
         Download for Windows
+      </a>
+      <a href="https://github.com/The-Binary-Brain-Network/slate-releases/releases/latest/download/slate.apk" class="btn btn--ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        Android App
       </a>
     </div>
     <div class="cta__contact">
       <a href="tel:+919987991072">+91 99879 91072</a>
       <a href="mailto:tbn@tbbn.in">tbn@tbbn.in</a>
+      <a href="/slate/features/">Full Feature List</a>
       <a href="/">All TBN Products</a>
     </div>
   </div>
@@ -645,6 +748,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
     <div class="footer__links">
       <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a>
+      <a href="/slate/features/">SLATE SPEC</a>
       <a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a>
       <a href="/about/">ABOUT</a><a href="/careers/">CAREERS</a>
       <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>

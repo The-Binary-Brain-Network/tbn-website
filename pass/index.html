@@ -236,6 +236,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cap-list li::before{content:'';position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--amber);}
   .cap-list li strong{color:var(--paper);font-weight:600;}
 
+  .features-link{margin-top:36px;text-align:center;}
+  .features-link a{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.04em;border-bottom:1px solid var(--amber-dim);padding-bottom:3px;}
+
+  /* ROADMAP / COMING SOON */
+  .roadmap{border:1px dashed rgba(138,146,160,0.35);background:rgba(21,24,31,0.5);padding:40px 40px;}
+  @media(max-width:640px){.roadmap{padding:28px 24px;}}
+  .roadmap__label{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate-light);border:1px solid rgba(138,146,160,0.3);padding:6px 12px;margin-bottom:24px;}
+  .roadmap__label::before{content:'';width:7px;height:7px;background:var(--slate);border-radius:50%;}
+  .roadmap__list{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media(max-width:760px){.roadmap__list{grid-template-columns:1fr;}}
+  .roadmap__item{border-left:2px solid rgba(138,146,160,0.25);padding-left:20px;}
+  .roadmap__item-title{font-size:17px;font-weight:700;color:var(--paper-dim);margin-bottom:8px;letter-spacing:-0.01em;}
+  .roadmap__item-desc{font-size:14px;color:var(--slate-light);line-height:1.7;}
+  .roadmap__foot{margin-top:28px;padding-top:20px;border-top:1px dashed rgba(138,146,160,0.25);font-family:var(--mono);font-size:11px;color:var(--slate);letter-spacing:0.02em;line-height:1.7;}
+
   .flow-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
   .flow-item{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);}
   .flow-item__num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--amber);}
@@ -328,6 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav aria-label="Primary">
       <ul class="nav__links">
         <li><a href="#features">Features</a></li>
+        <li><a href="/pass/features/">Full Spec</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="/folio/">Folio</a></li>
         <li><a href="/slate/">Slate</a></li>
@@ -633,13 +649,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="cap-card__sub">Bills the auditor accepts. Payments the counter closes fast.</p>
           <ul class="cap-list">
             <li><strong>GST-compliant billing</strong> — CGST/SGST/IGST breakdown, GSTIN &amp; FSSAI on every invoice</li>
+            <li><strong>Flat or per-item GST</strong> — one rate for everything, or 0/5/12/18% set per menu item</li>
+            <li><strong>Split bill</strong> — settle one order as several separately-numbered invoices, by share or by item</li>
             <li><strong>Split payments</strong> — cash, UPI, card and loyalty points on a single bill</li>
-            <li><strong>Dynamic UPI QR codes</strong> — Razorpay, PhonePe, Paytm or plain static UPI, auto-confirmed every 3 seconds</li>
+            <li><strong>UPI QR at the counter</strong> — static UPI needs no API key at all; Razorpay adds automatic payment confirmation</li>
             <li><strong>Cash change calculator</strong> with colour-coded display</li>
-            <li><strong>Auto-print on payment</strong> — configurable per station</li>
-            <li><strong>Post-billing rectification</strong> with manager-PIN authentication</li>
-            <li><strong>Bill void</strong> with reason and staff tracking</li>
-            <li><strong>Configurable prefixes</strong> and audit-safe sequential numbering</li>
+            <li><strong>Bill void and adjustments</strong> — reason, staff and timestamp logged, never silently overwritten</li>
+            <li><strong>Per-role discount ceilings</strong> — a cashier can't hand out an owner-sized discount</li>
           </ul>
         </div>
 
@@ -649,36 +665,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul class="cap-list">
             <li><strong>Visual table floor plan</strong> — sections (AC Room, Garden, Rooftop) with colour-coded statuses</li>
             <li><strong>Quick Order Entry</strong> with keyboard type-ahead search</li>
-            <li><strong>KOT printing</strong> to any thermal printer with auto-numbered tickets</li>
+            <li><strong>Merge tables</strong> onto one bill when a group pushes tables together</li>
+            <li><strong>Transfer an order</strong> between tables without re-punching it</li>
+            <li><strong>Online-orders inbox</strong> — a single queue to accept or reject incoming delivery orders</li>
             <li><strong>WhatsApp order notifications</strong> — pre-formatted, one click</li>
-            <li><strong>Table transfer, hold, cancel</strong> with reason tracking</li>
-            <li><strong>Auto-generated order numbers</strong> (ORD-YYYYMMDD-NNN)</li>
-            <li><strong>Customer phone lookup</strong> for returning guests</li>
+            <li><strong>Hold, cancel and complementary orders</strong> with reason tracking</li>
             <li><strong>Live order status</strong> — placed → preparing → ready → served</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Menu &amp; Inventory</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Kitchen</h3></div>
+          <p class="cap-card__sub">The pass, the printers and the screen — routed properly.</p>
+          <ul class="cap-list">
+            <li><strong>Kitchen Display System</strong> included — no extra licence, no add-on tier</li>
+            <li><strong>Filter the screen by station</strong> so tandoor sees tandoor and Chinese sees Chinese</li>
+            <li><strong>Tap to advance</strong> an order through preparing and ready</li>
+            <li><strong>Age colouring</strong> — tickets warm at 8 minutes and go red at 15, so nothing sits forgotten</li>
+            <li><strong>Station-wise KOT routing</strong> — map a menu category to a station, and its tickets print at that station's printer</li>
+            <li><strong>Auto-numbered KOTs</strong> to any 80mm thermal printer, printed silently</li>
+            <li><strong>Separate KOT and bill printers</strong>, configured once</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Menu &amp; Inventory</h3></div>
           <p class="cap-card__sub">Hierarchical menus, real recipes, stock that deducts itself.</p>
           <ul class="cap-list">
             <li><strong>Categories with colour coding</strong>, item counts and one-click availability toggle</li>
             <li><strong>Size variants</strong> (Half/Full, Small/Large) with individual pricing</li>
             <li><strong>Add-on modifiers</strong> (Extra Cheese, No Onion) with pricing deltas</li>
-            <li><strong>Per-item tax rate</strong> (0%, 5%, 12%, 18%)</li>
             <li><strong>Cost-price tracking</strong> for real profit margin calculation</li>
-            <li><strong>AI Menu Reader</strong> — photograph a physical menu, items extracted automatically</li>
+            <li><strong>Menu import from a photo</strong> — point a camera at your printed menu and let it read the items in</li>
+            <li><strong>Excel import</strong> for menu, inventory and staff, with a downloadable template</li>
             <li><strong>Recipe management</strong> — link menu items to ingredients, auto-deduct stock on orders</li>
             <li><strong>Low-stock alerts</strong>, vendor tracking, wastage log</li>
           </ul>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Staff, Payroll &amp; Loyalty</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Multiple Outlets</h3></div>
+          <p class="cap-card__sub">Run two, five or ten outlets from one licence.</p>
+          <ul class="cap-list">
+            <li><strong>Each outlet keeps its own GSTIN, FSSAI and address</strong></li>
+            <li><strong>Separate bill numbering per outlet</strong> — two outlets sharing one counter would issue duplicate invoice numbers, which is a GST problem. Pass doesn't let that happen</li>
+            <li><strong>One central master menu</strong> shared across outlets, so a price change lands everywhere</li>
+            <li><strong>Per-outlet orders, tables, inventory, expenses and staff</strong></li>
+            <li><strong>Outlet switcher</strong> — change context without changing software</li>
+            <li><strong>Unlimited outlets on a single licence</strong> at current pricing</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Staff, Payroll &amp; Loyalty</h3></div>
           <p class="cap-card__sub">Team management on the same machine as the till. No extra tool.</p>
           <ul class="cap-list">
-            <li><strong>Role-based access</strong> — Owner, Manager, Cashier, Waiter, Kitchen · 14 granular permissions</li>
-            <li><strong>4-digit PIN authentication</strong> — no passwords to remember</li>
+            <li><strong>Role-based access</strong> — Owner, Manager, Cashier, Waiter, Kitchen, with 14 granular permissions</li>
+            <li><strong>PIN authentication</strong> — no passwords to remember</li>
             <li><strong>Manager PIN override</strong> for sensitive operations</li>
             <li><strong>Monthly attendance grid</strong> with P/A/H/L keyboard shortcuts</li>
             <li><strong>Auto-calculated salary sheets</strong> — gross, advances, net pay, Excel export</li>
@@ -689,13 +732,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Intelligence &amp; Reports</h3></div>
-          <p class="cap-card__sub">Numbers with an opinion. AI that reads your restaurant back to you.</p>
+          <div class="cap-card__head"><span class="cap-card__num">07</span><h3 class="cap-card__title">Intelligence &amp; Reports</h3></div>
+          <p class="cap-card__sub">Numbers with an opinion.</p>
           <ul class="cap-list">
-            <li><strong>Daily business insights</strong> — AI compares today vs yesterday with actionable recommendations</li>
-            <li><strong>7-day sales forecast</strong> based on 30-day historical patterns</li>
+            <li><strong>Daily business insights</strong> — today compared against yesterday, with what to do about it</li>
+            <li><strong>7-day sales forecast</strong> based on your own trading history</li>
             <li><strong>Menu pricing advisor</strong> — flags underperformers and suggests changes</li>
-            <li><strong>Marketing message generator</strong> — 3 WhatsApp/SMS variants for promos, festivals, launches</li>
+            <li><strong>Marketing message generator</strong> — ready-to-send WhatsApp copy for promos and festivals</li>
             <li><strong>Daily sales summary</strong>, date-range and item-wise reports</li>
             <li><strong>GST report</strong> — monthly bill-level CGST/SGST/IGST breakdown</li>
             <li><strong>Profit &amp; Loss</strong> — categorised expenses, net margin</li>
@@ -704,21 +747,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Infrastructure &amp; Trust</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">08</span><h3 class="cap-card__title">Infrastructure &amp; Trust</h3></div>
           <p class="cap-card__sub">The quiet layer that keeps the loud parts running.</p>
           <ul class="cap-list">
-            <li><strong>Fully offline</strong> — SQLite database on your hardware, no internet required to run the restaurant</li>
-            <li><strong>Multi-terminal LAN sync</strong> — cashier, kitchen, waiter stations on the same WiFi, zero config</li>
-            <li><strong>Optional cloud backup</strong> — asynchronous replication across all core data tables</li>
-            <li><strong>Auto-updates</strong> — download in the background, install silently on quit</li>
-            <li><strong>Thermal printing</strong> — 80mm KOT + bill printers, silent (no print dialog)</li>
-            <li><strong>Hardware-bound license</strong> with offline verification, HMAC-signed keys</li>
-            <li><strong>Full theme system</strong> — dark and light, instant toggle</li>
-            <li><strong>2-minute onboarding wizard</strong> — restaurant running fast</li>
+            <li><strong>Fully offline</strong> — the database lives on your hardware; no internet needed to run the restaurant</li>
+            <li><strong>Multi-terminal over your own WiFi</strong> — cashier, kitchen and waiter stations find each other automatically, no IP addresses to type</li>
+            <li><strong>Offline queue</strong> — a terminal that drops off the network keeps taking orders and catches up when it returns</li>
+            <li><strong>Automatic local backups</strong> with retention and a restore path</li>
+            <li><strong>Optional cloud replication</strong> for an off-site copy, entirely opt-in</li>
+            <li><strong>Auto-updates</strong> — download in the background, install on quit, never mid-service</li>
+            <li><strong>Hardware-bound licence</strong> with offline verification</li>
+            <li><strong>Dark and light themes</strong>, and a guided in-app tour on first run</li>
           </ul>
         </div>
 
       </div>
+      <div class="features-link"><a href="/pass/features/">See the complete feature list and technical specification</a></div>
     </div>
   </section>
 
@@ -774,8 +818,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="trust-grid">
         <div class="trust-item"><div class="trust-item__val">100%</div><div class="trust-item__label">CORE FEATURES<br>WORK OFFLINE</div></div>
         <div class="trust-item"><div class="trust-item__val">LAN</div><div class="trust-item__label">MULTI-TERMINAL<br>ZERO-CONFIG SYNC</div></div>
-        <div class="trust-item"><div class="trust-item__val">HMAC</div><div class="trust-item__label">SIGNED LICENSE<br>HARDWARE-BOUND</div></div>
-        <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">BACKGROUND<br>AUTO-UPDATES</div></div>
+        <div class="trust-item"><div class="trust-item__val">QUEUED</div><div class="trust-item__label">A DROPPED TERMINAL<br>KEEPS TAKING ORDERS</div></div>
+        <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">UPDATES INSTALL ON<br>QUIT, NEVER MID-SERVICE</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section section--border reveal" id="roadmap">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">On The Roadmap</div>
+        <h2 class="section-title">What's coming, and what it's waiting on.</h2>
+        <p class="section-sub">We'd rather tell you what's coming than let you discover it isn't here. These are in progress or waiting on a partner, not vague intentions.</p>
+      </div>
+      <div class="roadmap">
+        <div class="roadmap__label">Coming Soon</div>
+        <div class="roadmap__list">
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Swiggy &amp; Zomato connectivity</h3>
+            <p class="roadmap__item-desc">The online-orders inbox is built and running — accept, reject and queue incoming delivery orders from one screen. Direct connectivity to Swiggy and Zomato is pending a platform partnership, and will switch on in a future update once that's in place.</p>
+          </div>
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Scan &amp; order</h3>
+            <p class="roadmap__item-desc">Guests scan a QR at the table, browse your menu and order from their own phone — straight into the same order queue your counter uses.</p>
+          </div>
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Customer feedback</h3>
+            <p class="roadmap__item-desc">A short post-bill prompt, collected and aggregated in your reports, so you find out about a bad night from the guest rather than from a review site.</p>
+          </div>
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Head-office dashboard</h3>
+            <p class="roadmap__item-desc">One view across every outlet — revenue, top items and margins side by side, without switching context outlet by outlet.</p>
+          </div>
+        </div>
+        <p class="roadmap__foot">One thing worth knowing up front: the Windows installer isn't code-signed yet, so Windows may show a "publisher unknown" warning the first time you run it. It's safe to proceed — we're sorting the certificate.</p>
       </div>
     </div>
   </section>
@@ -791,18 +868,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="pricing-wrap">
 
         <div class="pricing-card">
-          <div class="pricing-card__label">Annual License · Per Restaurant</div>
-          <div class="pricing-card__price">₹7,500<span>per restaurant per year · flat</span></div>
-          <div class="pricing-card__sub">Includes installation, onboarding, and staff training at no extra cost.</div>
+          <div class="pricing-card__label">Annual Licence · Per Business</div>
+          <div class="pricing-card__price">₹7,500<span>per year · flat · unlimited outlets</span></div>
+          <div class="pricing-card__sub">One licence covers your whole business — every outlet with its own GSTIN, FSSAI and bill numbering.</div>
           <ul class="pricing-list">
             <li>30-day free trial · no card, no lock-in</li>
             <li>Free installation, onboarding wizard &amp; live staff training</li>
-            <li>Unlimited orders, terminals on the same LAN, menu items &amp; staff</li>
-            <li>Full GST billing, split payments, UPI QR &amp; bill rectification</li>
-            <li>KOT printing, table floor plan, dine-in / takeaway / delivery flows</li>
+            <li>Unlimited outlets, orders, terminals, menu items &amp; staff</li>
+            <li>Full GST billing, split bill, split payments &amp; UPI QR</li>
+            <li>Kitchen Display System &amp; station-wise KOT routing — included, not an add-on</li>
+            <li>Table floor plan, merge, transfer, dine-in / takeaway / delivery</li>
             <li>Inventory with recipe auto-deduction, staff attendance &amp; payroll</li>
-            <li>AI insights, sales forecast, marketing generator &amp; pricing advisor</li>
-            <li>Silent auto-updates and direct WhatsApp support line</li>
+            <li>Full reporting with Excel and PDF export</li>
+            <li>Silent auto-updates and a direct WhatsApp support line</li>
           </ul>
           <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Pass%2030-day%20free%20trial." target="_blank" rel="noopener" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
@@ -821,6 +899,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="pricing-tile__label">Free Trial</div>
             <h3 class="pricing-tile__title">30 days, full product</h3>
             <p class="pricing-tile__desc">Not a demo mode. Not a limited version. The full Pass, installed at your restaurant, free for a month — including setup and training. Pay only if you want to continue.</p>
+            <p class="pricing-tile__fine">Current licences include unlimited outlets. Pricing for future licence terms may vary for multi-outlet businesses — your renewal price is always confirmed with you in advance, and never changes mid-term.</p>
           </div>
         </div>
 
@@ -840,7 +919,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="faq-item__body">We install the full product on your counter machine, run the 2-minute onboarding wizard with you, and train your team in a live walkthrough — all included. You use every feature for 30 days, exactly as a paid customer would. If Pass doesn't earn its place, you owe nothing and we uninstall it. No card is taken up front.</div>
         </details>
         <details class="faq-item"><summary>Do I really need no internet at all?</summary>
-          <div class="faq-item__body">Correct — 100% of core operations (orders, KOT printing, billing, payments, reports, backups) work fully offline. Internet is only used for optional cloud backup, AI insights, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill.</div>
+          <div class="faq-item__body">Correct — every core operation works fully offline: orders, KOT printing, the kitchen display, billing, reports and backups. Internet is only used for optional cloud replication, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill.</div>
+        </details>
+        <details class="faq-item"><summary>I run more than one outlet. How does that work?</summary>
+          <div class="faq-item__body">One licence covers all of them at current pricing. Each outlet keeps its own GSTIN, FSSAI, address and — importantly — its own bill numbering sequence, because two outlets sharing a counter would issue duplicate invoice numbers and that's a GST problem. Your menu stays central, so a price change lands everywhere at once. Switch between outlets from inside the app.</div>
         </details>
         <details class="faq-item"><summary>How does multi-terminal work?</summary>
           <div class="faq-item__body">One machine acts as the host — usually the counter — and every other terminal on the same WiFi (kitchen KOT screen, waiter tablet, second cashier) connects to it automatically. No IP addresses, no port forwarding. If the host goes down, you keep taking orders on the other terminals and they sync back when it returns.</div>
@@ -852,7 +934,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="faq-item__body">Cloud POS is a rental — you pay every month, forever, and the moment your internet drops your restaurant stops taking bills. Pass is a one-time annual license. Your database lives on your machine. Your data is yours. Your restaurant works when the WiFi doesn't.</div>
         </details>
         <details class="faq-item"><summary>What if a device fails or the counter dies mid-shift?</summary>
-          <div class="faq-item__body">If you're running multi-terminal, the other terminals keep taking orders. Your data is on local SQLite with WAL mode — power cuts do not corrupt it. Optional cloud backup replicates all 16 core data tables asynchronously, so a full hardware loss still recovers on a fresh install.</div>
+          <div class="faq-item__body">If you're running multi-terminal, the other terminals keep taking orders and catch up when the counter returns. Your data sits in a local database designed so a power cut doesn't corrupt it, with automatic local backups you can restore from. You can also switch on optional cloud replication for an off-site copy.</div>
         </details>
         <details class="faq-item"><summary>Can I get all my data out if I want to leave?</summary>
           <div class="faq-item__body">Yes. Every report and dataset — menu, orders, bills, staff, inventory, customers — exports to Excel and PDF directly from the app. Your database file itself is standard SQLite, portable to anywhere. No data-ransom situation, ever.</div>

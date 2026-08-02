@@ -249,6 +249,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cap-list li::before{content:'';position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--amber);}
   .cap-list li strong{color:var(--paper);font-weight:600;}
 
+  .features-link{margin-top:36px;text-align:center;}
+  .features-link a{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.04em;border-bottom:1px solid var(--amber-dim);padding-bottom:3px;}
+
+  /* ROADMAP / COMING SOON */
+  .roadmap{border:1px dashed rgba(138,146,160,0.35);background:rgba(21,24,31,0.5);padding:40px 40px;}
+  @media(max-width:640px){.roadmap{padding:28px 24px;}}
+  .roadmap__label{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate-light);border:1px solid rgba(138,146,160,0.3);padding:6px 12px;margin-bottom:24px;}
+  .roadmap__label::before{content:'';width:7px;height:7px;background:var(--slate);border-radius:50%;}
+  .roadmap__list{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media(max-width:760px){.roadmap__list{grid-template-columns:1fr;}}
+  .roadmap__item{border-left:2px solid rgba(138,146,160,0.25);padding-left:20px;}
+  .roadmap__item-title{font-size:17px;font-weight:700;color:var(--paper-dim);margin-bottom:8px;letter-spacing:-0.01em;}
+  .roadmap__item-desc{font-size:14px;color:var(--slate-light);line-height:1.7;}
+
   /* FLOW / HOW IT WORKS */
   .flow-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
   .flow-item{display:grid;grid-template-columns:60px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);}
@@ -349,6 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav aria-label="Primary">
       <ul class="nav__links">
         <li><a href="#features">Features</a></li>
+        <li><a href="/folio/features/">Full Spec</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="/slate/">Slate</a></li>
         <li><a href="/pass/">Pass</a></li>
@@ -650,10 +665,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><strong>Dues / pay-later</strong> — corporate guests sign, room stays free for the next guest; aging buckets (0–7 / 8–30 / 31–60 / 60+ days)</li>
             <li><strong>Bad-debt write-off</strong> with automatic GST reversal — books stay clean</li>
             <li><strong>Refunds</strong> with a proper audit trail, auto-adjusts revenue</li>
+            <li><strong>Markup modes</strong> — none, percentage, or a fixed amount added per item</li>
             <li><strong>Bill-level cost override</strong> — for negotiated lump-sum deals with restaurant partners</li>
             <li><strong>Cash-basis P&amp;L</strong> — reports show what you actually collected, not what you billed</li>
             <li><strong>Multi-restaurant partner tracking</strong> — profit visible per partner</li>
-            <li><strong>Composite GST scheme</strong> (single rate) with per-item override toggle</li>
+            <li><strong>GST with per-item rate override</strong> — set one rate, or a different rate for beverages than food</li>
             <li><strong>Rupee rounding</strong> with a transparent "Round Off" line on every bill</li>
           </ul>
         </div>
@@ -663,12 +679,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="cap-card__sub">Speed at the front desk. Nothing to remember, nothing to look up.</p>
           <ul class="cap-list">
             <li><strong>Fully offline</strong> — bill and take orders with no internet at all</li>
+            <li><strong>Tab per room</strong>, open from check-in, with a running total always visible</li>
+            <li><strong>Order status tracking</strong> — received → preparing → ready → delivered</li>
+            <li><strong>Split-source orders</strong> — one order drawing from your kitchen and a partner restaurant at once</li>
+            <li><strong>Overdue flag</strong> — a tab unpaid past three days marks itself, so nothing quietly ages</li>
             <li><strong>80mm thermal printer</strong> support out of the box — customer &amp; hotel copies printed together</li>
             <li><strong>WhatsApp bill share</strong> — one click, auto-fills guest phone</li>
-            <li><strong>Bill reprint</strong> anytime, no time limit</li>
-            <li><strong>Bulk billing</strong> for group checkouts and corporate stays</li>
-            <li><strong>Day close + shift handover</strong> — auto-printed, cash reconciliation built in</li>
-            <li><strong>CSV import/export</strong> for rooms, menu, and dues — accountant-friendly</li>
+            <li><strong>Bill reprint</strong> anytime, no time limit · <strong>bulk billing</strong> for group checkouts</li>
+            <li><strong>CSV import</strong> for your menu, with column mapping so any spreadsheet works</li>
           </ul>
         </div>
 
@@ -676,9 +694,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="cap-card__head"><span class="cap-card__num">03</span><h3 class="cap-card__title">Data Safety</h3></div>
           <p class="cap-card__sub">The part that convinces owners. Nothing lost, ever.</p>
           <ul class="cap-list">
-            <li><strong>AES-256 encrypted database</strong>, locked to the machine's hardware</li>
-            <li><strong>Hourly auto-backup</strong> — 48 backups retained, 2 full days of history</li>
-            <li><strong>Auto-recovery</strong> from backup if the database is ever corrupted</li>
+            <li><strong>AES-256 encrypted database</strong>, locked to the machine's hardware — copy the file elsewhere and it's unreadable</li>
+            <li><strong>Hourly auto-backup</strong> — 48 backups retained, two full days of history</li>
+            <li><strong>Automatic recovery</strong> — if the database is ever damaged, Folio finds the newest good backup and restores it on startup, on its own</li>
+            <li><strong>Backups live outside the install folder</strong> — updating or reinstalling never touches your data</li>
             <li><strong>Automatic crash reporting</strong> — we see issues and push fixes before you complain</li>
             <li><strong>Silent auto-updates</strong> — background download, install on restart</li>
             <li><strong>In-app diagnostics</strong> with one-click error report to support</li>
@@ -686,30 +705,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="cap-card">
-          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Growth &amp; Reporting</h3></div>
+          <div class="cap-card__head"><span class="cap-card__num">04</span><h3 class="cap-card__title">Reporting</h3></div>
           <p class="cap-card__sub">Numbers that tell you where the money is — and where it leaks.</p>
           <ul class="cap-list">
+            <li><strong>Owner's daily report, sent without being asked</strong> — Folio generates and prints yesterday's full summary on its own, every day, and freezes it so the numbers can't drift later</li>
+            <li><strong>Comprehensive report</strong> — financials, outstanding dues, room-wise performance, top items, expenses, write-offs and refunds, all exportable as one CSV</li>
             <li><strong>Room-wise revenue</strong> — which room brings in the most spend</li>
             <li><strong>Item-wise reports</strong> — top sellers, thinnest margins</li>
-            <li><strong>Handover log</strong> — every shift, every till, accounted for</li>
-            <li><strong>Order-status tracking</strong> — received → preparing → ready → delivered</li>
+            <li><strong>Day close</strong> — once per day, PIN-gated, printed, and locked so the date can't be quietly reopened</li>
+            <li><strong>Shift handover</strong> — counted cash against system cash, differences shown, signed and filed</li>
           </ul>
         </div>
 
-        <div class="cap-card" style="grid-column:1/-1;">
+        <div class="cap-card">
           <div class="cap-card__head"><span class="cap-card__num">05</span><h3 class="cap-card__title">Trust &amp; Compliance</h3></div>
           <p class="cap-card__sub">The quiet layer that stops trouble before it starts.</p>
-          <ul class="cap-list" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;">
-            <li><strong>Manager PIN</strong> for sensitive actions — day close, write-offs, rectification</li>
+          <ul class="cap-list">
+            <li><strong>Manager PIN</strong> for sensitive actions — day close, write-offs, refunds, rectification</li>
             <li><strong>Sequential bill numbering</strong> with your own prefix — GST-audit safe</li>
-            <li><strong>Bill correction with versioning</strong> — new bill, linked to original, reason logged</li>
-            <li><strong>Bundled legal docs</strong> — EULA, ToS, Privacy, Liability shown in-app</li>
+            <li><strong>Full bill rectification</strong> — corrections create a new versioned bill linked to the original with a reason logged; the original is never destroyed</li>
+            <li><strong>Bundled legal docs</strong> — EULA, Terms, Privacy and Liability, readable in-app</li>
             <li><strong>Hardware-bound licensing</strong> — no piracy, no shared installs</li>
-            <li><strong>2-minute onboarding wizard</strong> — hotel operational fast</li>
+            <li><strong>Guarded factory reset</strong> — takes a mandatory backup first, and won't run without your PIN and a typed confirmation</li>
+          </ul>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-card__head"><span class="cap-card__num">06</span><h3 class="cap-card__title">Day-to-Day Comfort</h3></div>
+          <p class="cap-card__sub">Small things that decide whether staff actually use it.</p>
+          <ul class="cap-list">
+            <li><strong>Keyboard shortcuts</strong> for every screen — the front desk stops reaching for the mouse within a week</li>
+            <li><strong>Searchable in-app guide</strong> covering every feature, so a new staff member isn't blocked waiting on you</li>
+            <li><strong>Dark and light themes</strong> — the dark one matters at 2am</li>
+            <li><strong>Printer alignment test page</strong> — a printed ruler for fine-tuning margins on stubborn printers</li>
+            <li><strong>Seven-step setup wizard</strong> — hotel operational in under two minutes</li>
+            <li><strong>Runs on the PC you already own</strong> — no server, no new hardware</li>
           </ul>
         </div>
 
       </div>
+      <div class="features-link"><a href="/folio/features/">See the complete feature list and technical specification</a></div>
     </div>
   </section>
 
@@ -767,6 +802,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="trust-item"><div class="trust-item__val">HOURLY</div><div class="trust-item__label">AUTO-BACKUPS<br>48 KEPT</div></div>
         <div class="trust-item"><div class="trust-item__val">AES-256</div><div class="trust-item__label">DATABASE<br>ENCRYPTION</div></div>
         <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">BACKGROUND<br>AUTO-UPDATES</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section section--border reveal" id="roadmap">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">On The Roadmap</div>
+        <h2 class="section-title">What's coming next.</h2>
+        <p class="section-sub">We'd rather tell you what's coming than let you discover it isn't here yet.</p>
+      </div>
+      <div class="roadmap">
+        <div class="roadmap__label">Coming Soon</div>
+        <div class="roadmap__list">
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">Off-site cloud backup</h3>
+            <p class="roadmap__item-desc">An encrypted copy of your data kept off the property, in addition to the hourly local backups that already run. Built and tested; rolling out once our storage capacity is in place.</p>
+          </div>
+          <div class="roadmap__item">
+            <h3 class="roadmap__item-title">58mm printer support</h3>
+            <p class="roadmap__item-desc">Folio prints to 80mm thermal printers today. Support for the smaller 58mm rolls that many compact properties already own is in progress.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -833,7 +892,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="faq-item__body">Correct — 100% of core operations (orders, billing, dues, printing, reports, backups) work fully offline. Internet is only used for silent product updates and optional WhatsApp bill sharing. A hotel with a completely dead connection can operate all day without missing a bill.</div>
         </details>
         <details class="faq-item"><summary>What happens if the computer crashes or a power cut hits mid-bill?</summary>
-          <div class="faq-item__body">The database is transactional and auto-backed-up every hour, 48 backups deep. On a hard crash Folio recovers from the most recent good backup on next launch. In over a month of live production use, we've had zero data loss on power cuts.</div>
+          <div class="faq-item__body">Folio backs itself up every hour and keeps the last 48 — two full days of history — stored outside the install folder so updates never touch them. If the database is ever damaged, Folio finds the newest good backup and restores from it automatically on the next launch, keeping the damaged file aside just in case. In over a month of live production use, zero data lost to power cuts.</div>
         </details>
         <details class="faq-item"><summary>Can I get all my data out if I want to leave?</summary>
           <div class="faq-item__body">Yes. Rooms, menu, orders, bills, and dues export to CSV directly from the app — no support ticket, no data-ransom situation. Your data is yours.</div>
