@@ -1,0 +1,133 @@
+name: Download links
+
+# Every download button on tbn.tbbn.in points at a permanent GitHub URL of the
+# form /releases/latest/download/<exact-filename>. GitHub resolves that by
+# taking the newest non-draft, non-prerelease release and asking it for that
+# exact filename. There is no fallback to a similarly-named asset.
+#
+# So a button goes dark, silently, if any of these happen:
+#   - a release is cut without that asset (a build job failed but the release
+#     still published)
+#   - a release is marked draft or prerelease, moving the "latest" pointer
+#   - an asset is renamed or the artifactName changes without a matching release
+#   - an upload truncates and publishes a zero-byte or partial file
+#
+# None of those fail loudly anywhere. This workflow is the thing that notices.
+#
+# It also checks latest.yml, which matters more than the buttons: if that is
+# missing or unreachable, auto-update breaks for every copy already installed
+# at a customer site, and nobody finds out until someone complains.
+
+on:
+  schedule:
+    # 03:30 UTC = 09:00 IST — a failure lands at the start of the working day.
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/download-links.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Verify published downloads
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check every download URL the website links to
+        shell: bash
+        run: |
+          set -uo pipefail
+
+          ORG="The-Binary-Brain-Network"
+          BASE="https://github.com/$ORG"
+
+          # product | repo | filename | expected magic bytes (hex, or "-" to skip) | min bytes
+          TARGETS=(
+            "Folio|folio-releases|Folio-Setup.exe|4d5a|20000000"
+            "Folio|folio-releases|latest.yml|-|50"
+            "Pass|pass-releases|Pass-Setup.exe|4d5a|20000000"
+            "Pass|pass-releases|latest.yml|-|50"
+            "Slate|slate-releases|Slate-Setup.exe|4d5a|20000000"
+            "Slate|slate-releases|Slate-Linux.AppImage|7f454c46|20000000"
+            "Slate|slate-releases|slate.apk|504b|1000000"
+            "Slate|slate-releases|latest.yml|-|50"
+          )
+
+          FAILED=0
+          {
+            echo "## Download link check"
+            echo ""
+            echo "| Product | File | Status | Size | Payload |"
+            echo "|---|---|---|---|---|"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          for row in "${TARGETS[@]}"; do
+            IFS='|' read -r product repo file magic minbytes <<< "$row"
+            url="$BASE/$repo/releases/latest/download/$file"
+
+            # Final status + Content-Length after following redirects. Taking the
+            # last value of each means we read the real response, not a 302.
+            headers=$(curl -sIL --max-time 120 "$url" 2>/dev/null | tr -d '\r')
+            status=$(printf '%s\n' "$headers" | awk '/^HTTP/{s=$2} END{print s+0}')
+            size=$(printf '%s\n' "$headers" | awk 'tolower($1)=="content-length:"{v=$2} END{print v+0}')
+
+            note=""
+            ok=1
+
+            if [ "$status" != "200" ]; then
+              ok=0
+              note="HTTP $status — asset missing from the latest release"
+            elif [ "$size" -lt "$minbytes" ]; then
+              ok=0
+              note="only $size bytes — expected at least $minbytes, likely truncated"
+            elif [ "$magic" != "-" ]; then
+              # Range request: read the first 4 bytes without pulling ~100 MB.
+              got=$(curl -sL --max-time 120 -r 0-3 "$url" 2>/dev/null | xxd -p 2>/dev/null | tr -d '\n' | head -c 8)
+              case "$got" in
+                "$magic"*) : ;;
+                *) ok=0; note="bad magic bytes: got '${got:-empty}', expected '$magic' — not a valid binary" ;;
+              esac
+            fi
+
+            if [ "$ok" -eq 1 ]; then
+              printf '| %s | `%s` | 200 | %s | ok |\n' \
+                "$product" "$file" "$(numfmt --to=iec --suffix=B "$size" 2>/dev/null || echo "$size")" \
+                >> "$GITHUB_STEP_SUMMARY"
+              echo "PASS  $product  $file  ($size bytes)"
+            else
+              FAILED=$((FAILED+1))
+              printf '| %s | `%s` | **FAIL** | %s | %s |\n' \
+                "$product" "$file" "$size" "$note" >> "$GITHUB_STEP_SUMMARY"
+              echo "FAIL  $product  $file  — $note"
+              echo "      $url"
+            fi
+          done
+
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$FAILED" -gt 0 ]; then
+            {
+              echo "### $FAILED check(s) failed"
+              echo ""
+              echo "A download button on tbn.tbbn.in is dead, or auto-update is broken"
+              echo "for already-installed copies."
+              echo ""
+              echo "**Fix it on the release, not the website.** The site links are correct —"
+              echo "they point at the permanent \`/releases/latest/download/<name>\` URL."
+              echo "The failure means the newest release does not carry an asset with that"
+              echo "exact filename. Either re-upload it to that release under the right name,"
+              echo "or cut a new release that produces it."
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            echo ""
+            echo "::error::$FAILED download link check(s) failed — see the job summary."
+            exit 1
+          fi
+
+          echo "### All downloads healthy" >> "$GITHUB_STEP_SUMMARY"
+          echo ""
+          echo "All download links healthy."
