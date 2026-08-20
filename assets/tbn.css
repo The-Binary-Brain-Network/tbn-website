@@ -1,0 +1,263 @@
+/* ============================================================
+   TBN — shared responsive layer
+   Loaded after each page's inline <style>, so it overrides.
+   Every page keeps its own look; this fixes what breaks on small
+   screens and adds the interaction polish that isn't worth
+   duplicating 24 times.
+   ============================================================ */
+
+/* ---------- 1. Overflow guards -------------------------------
+   The single most common mobile bug: one wide child forces the
+   whole page to scroll sideways. Nothing should ever do that. */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+
+/* Wide content scrolls inside itself, never the page body. */
+table { max-width: 100%; }
+.ftable, .spec, .article-body table, .term-body table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 701px) {
+  .ftable, .spec, .article-body table, .term-body table { display: table; }
+}
+
+/* Long unbroken strings — URLs, licence keys, file names. */
+.article-body a, .term-body a, .faq-item__body a { word-break: break-word; }
+code, pre { overflow-wrap: anywhere; }
+
+/* ---------- 2. Mobile navigation -----------------------------
+   Pages hide .nav__links below ~900px with no replacement, so the
+   whole site becomes unnavigable on a phone. tbn.js clones those
+   links into this drawer at runtime — no per-page markup edits. */
+.nav__burger {
+  display: none;
+  width: 42px; height: 42px;
+  align-items: center; justify-content: center;
+  background: none;
+  border: 1px solid rgba(247,245,240,0.14);
+  color: #F7F5F0;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: border-color .18s ease, background .18s ease;
+}
+.nav__burger:hover { border-color: #E8A33D; }
+.nav__burger svg { width: 18px; height: 18px; display: block; }
+.nav__burger .ico-x { display: none; }
+.nav__burger[aria-expanded="true"] .ico-menu { display: none; }
+.nav__burger[aria-expanded="true"] .ico-x { display: block; }
+.nav__burger[aria-expanded="true"] { border-color: #E8A33D; background: rgba(232,163,61,.1); }
+
+.tbn-drawer {
+  position: fixed;
+  inset: 72px 0 0 0;
+  background: rgba(14,16,21,.97);
+  backdrop-filter: blur(14px);
+  z-index: 99;
+  padding: 18px 0 40px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.tbn-drawer.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+.tbn-drawer__inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+.tbn-drawer a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: #EDEAE2;
+  border-bottom: 1px solid rgba(247,245,240,.08);
+  min-height: 44px;              /* real tap target */
+}
+.tbn-drawer a:active { color: #E8A33D; }
+.tbn-drawer a::after {
+  content: '';
+  width: 7px; height: 7px;
+  border-right: 1.5px solid #5A6270;
+  border-bottom: 1.5px solid #5A6270;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+}
+.tbn-drawer__group {
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #5A6270;
+  padding: 24px 4px 8px;
+}
+.tbn-drawer__contact { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.tbn-drawer__contact a {
+  justify-content: center;
+  border: 1px solid rgba(247,245,240,.14);
+  border-bottom: 1px solid rgba(247,245,240,.14);
+  font-weight: 700;
+  font-size: 13px;
+}
+.tbn-drawer__contact a::after { display: none; }
+.tbn-drawer__contact a.is-wa { background: #25D366; color: #0B2E1A; border-color: #25D366; }
+
+body.tbn-nav-open { overflow: hidden; }
+
+@media (max-width: 1000px) { .nav__burger { display: inline-flex; } }
+
+/* ---------- 3. Phone layout ---------------------------------- */
+@media (max-width: 640px) {
+
+  /* Headlines are set for desktop; they need to breathe less on a
+     360px screen, and hyphenation stops awkward single-word lines. */
+  .hero__title, .cta__title, .section-title, .article-title, .term-title, .head__title {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .hero__title br, .cta__title br { display: none; }
+
+  .hero { padding-top: 34px !important; padding-bottom: 52px !important; }
+  .section { padding-top: 52px !important; padding-bottom: 52px !important; }
+  .cta { padding-top: 60px !important; padding-bottom: 60px !important; }
+  .section-head { margin-bottom: 30px !important; }
+
+  /* Full-bleed buttons read better than two cramped half-width ones. */
+  .hero__actions, .cta__actions { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero__actions .btn, .cta__actions .btn { width: 100%; justify-content: center; }
+
+  .cta__contact { flex-direction: column; gap: 14px !important; align-items: center; }
+
+  /* Cards and panels lose their generous desktop padding. */
+  .cap-card, .pain, .appmock__main, .deploy-card, .testimonial,
+  .roles-panel, .apply-block, .pricing-card, .pricing-tile, .price-block {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  .deploy-card, .testimonial { padding-top: 26px !important; padding-bottom: 26px !important; }
+  .testimonial__quote { font-size: 16.5px !important; }
+  .testimonial::before { display: none; }        /* giant quote mark eats the text */
+
+  .pricing-card__price { font-size: 40px !important; }
+  .story-marks, .trust-grid, .milestones { grid-template-columns: 1fr 1fr !important; }
+  .flow-item { grid-template-columns: 1fr !important; gap: 10px !important; }
+
+  /* Grid texture at 64px is visual noise on a small screen. */
+  .grid-texture { background-size: 40px 40px; opacity: .25; }
+}
+
+/* ---------- 4. Tap targets -----------------------------------
+   Anything tappable gets a real hit area. Small mono links are the
+   house style; this keeps the look and fixes the ergonomics. */
+@media (hover: none) and (pointer: coarse) {
+  .footer__links a, .breadcrumb a, .nav__links a,
+  .cta__contact a, .term__link, .tool__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+  }
+  .footer__links { gap: 6px 22px !important; }
+  .faq-item summary { padding-top: 20px; padding-bottom: 20px; }
+  /* Hover transforms just stick on touch — drop them. */
+  .btn:hover, .cap-card:hover, .pricing-tile:hover { transform: none !important; }
+}
+
+/* ---------- 5. Horizontal-scroll affordance ------------------
+   The status strip scrolls sideways on a phone with nothing to say
+   so. A right-edge fade shows there's more. */
+.status-strip { position: relative; }
+.status-strip::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 44px;
+  background: linear-gradient(90deg, transparent, #15181F);
+  pointer-events: none;
+}
+@media (min-width: 1024px) { .status-strip::after { display: none; } }
+
+/* ---------- 6. Terminal command blocks -----------------------
+   Used by the Linux install instructions. Copy button is wired in
+   tbn.js — the commands are useless if they can't be copied cleanly. */
+.cmd {
+  position: relative;
+  background: #0a0c11;
+  border: 1px solid rgba(247,245,240,.1);
+  border-left: 2px solid #E8A33D;
+  padding: 14px 52px 14px 16px;
+  margin: 12px 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #EDEAE2;
+  overflow-x: auto;
+  white-space: pre;
+}
+.cmd::selection, .cmd *::selection { background: #E8A33D; color: #0E1015; }
+.cmd__copy {
+  position: absolute;
+  top: 8px; right: 8px;
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(247,245,240,.05);
+  border: 1px solid rgba(247,245,240,.12);
+  color: #8A92A0;
+  cursor: pointer;
+  padding: 0;
+  transition: all .15s ease;
+}
+.cmd__copy:hover { color: #E8A33D; border-color: #E8A33D; }
+.cmd__copy svg { width: 14px; height: 14px; }
+.cmd__copy.is-done { color: #6FCB9A; border-color: #3D7A5C; }
+.cmd__copy .ico-tick { display: none; }
+.cmd__copy.is-done .ico-copy { display: none; }
+.cmd__copy.is-done .ico-tick { display: block; }
+
+/* ---------- 7. Reading progress ------------------------------
+   Long feature and article pages benefit from knowing how far in
+   you are. Cheap, unobtrusive, no layout cost. */
+.tbn-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #7A5A24, #E8A33D);
+  z-index: 200;
+  transition: width .08s linear;
+  pointer-events: none;
+}
+
+/* ---------- 8. Scroll reveals --------------------------------
+   Progressive: without JS or on reduced-motion, everything is
+   simply visible. Nothing depends on this to be readable. */
+.tbn-reveal { opacity: 0; transform: translateY(14px); }
+.tbn-reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity .5s cubic-bezier(.22,.61,.36,1), transform .5s cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- 9. Focus, print, motion --------------------------- */
+:focus-visible { outline: 2px solid #E8A33D; outline-offset: 3px; }
+
+@media print {
+  .nav, .tbn-drawer, .grid-texture, .tbn-progress, .cmd__copy,
+  .cta, .parent-strip { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tbn-reveal { opacity: 1 !important; transform: none !important; }
+  .tbn-progress { display: none; }
+}

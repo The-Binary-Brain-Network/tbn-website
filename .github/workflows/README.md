@@ -5,7 +5,7 @@
 Verifies every download button on tbn.tbbn.in actually resolves to a real
 binary, plus the `latest.yml` auto-update manifest for each product.
 
-Runs daily at 09:00 IST, and on demand from the Actions tab.
+Runs weekly, Thursday at 04:00 IST, and on demand from the Actions tab.
 
 ### Why this exists
 
@@ -105,8 +105,8 @@ Per-product values:
 | Repo | `RELEASES_REPO` | `FILES` |
 |---|---|---|
 | Folio | `The-Binary-Brain-Network/folio-releases` | `Folio-Setup.exe latest.yml` |
-| Pass | `The-Binary-Brain-Network/pass-releases` | `Pass-Setup.exe latest.yml` |
-| Slate | `The-Binary-Brain-Network/slate-releases` | `Slate-Setup.exe Slate-Linux.AppImage slate.apk latest.yml` |
+| Pass | `The-Binary-Brain-Network/pass-releases` | `Pass-Setup.exe Pass-x86_64.AppImage Pass-amd64.deb latest.yml latest-linux.yml` |
+| Slate | `The-Binary-Brain-Network/slate-releases` | `Slate-Setup.exe Slate-Linux.AppImage Slate-Linux.deb slate.apk latest.yml latest-linux.yml` |
 
 The `needs:` line matters more than the check itself. Listing every build job
 there means a failed Linux or Android build blocks the verification step and

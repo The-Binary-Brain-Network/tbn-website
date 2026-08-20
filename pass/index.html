@@ -33,7 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "SoftwareApplication",
   "name": "Pass",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
+  "operatingSystem": "Windows, Linux",
+  "softwareVersion": "1.0.7",
   "description": "Offline-first restaurant management and billing software. Orders, tables, KOT, GST billing, UPI QR, inventory with recipes, staff and payroll, customer loyalty, thermal printing, and AI-powered business insights.",
   "offers": {
     "@type": "Offer",
@@ -43,6 +44,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   },
   "publisher": {"@type": "Organization", "name": "The Binary Brain Network", "url": "https://tbn.tbbn.in/"}
 }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How much does Pass restaurant billing software cost?","acceptedAnswer":{"@type":"Answer","text":"Pass costs a flat ₹7,500 per year for the whole business, including unlimited outlets. There is no monthly SaaS fee, no per-terminal charge and no paid add-on tier — the Kitchen Display System, multi-outlet support and the full reporting suite are all included. Installation, onboarding and staff training are free. A 30-day free trial runs the complete product with no card required."}},
+    {"@type":"Question","name":"Does Pass work without an internet connection?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every core operation runs fully offline — taking orders, printing kitchen tickets, the Kitchen Display System, billing, and reports. The database lives on your own machine. Internet is only used for optional cloud replication, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill."}},
+    {"@type":"Question","name":"How do I install Pass on Linux?","acceptedAnswer":{"@type":"Answer","text":"On Ubuntu, Debian or Linux Mint, download the .deb package and install it with: sudo apt install ./Pass-amd64.deb. On any other Linux distribution, download the AppImage, make it executable with: chmod +x Pass-x86_64.AppImage, then run it with: ./Pass-x86_64.AppImage. The AppImage installs nothing — it is a single portable file."}},
+    {"@type":"Question","name":"The Pass AppImage will not start and mentions libfuse.so.2. How do I fix it?","acceptedAnswer":{"@type":"Answer","text":"Ubuntu 22.04 and newer no longer ship FUSE 2, which AppImages depend on. Either run it with: ./Pass-x86_64.AppImage --appimage-extract-and-run, or install the library once with: sudo apt install libfuse2. On Debian-family systems the simpler option is to use the .deb package instead, which has no such dependency."}},
+    {"@type":"Question","name":"Can Pass handle multiple restaurant outlets?","acceptedAnswer":{"@type":"Answer","text":"Yes, and unlimited outlets are included in the single ₹7,500 annual licence at current pricing. Each outlet keeps its own GSTIN, FSSAI, address and — importantly — its own bill numbering sequence, because two outlets sharing one sequence would issue duplicate invoice numbers, which is a GST compliance problem. The menu stays central so a price change lands everywhere at once."}},
+    {"@type":"Question","name":"Does Pass include a Kitchen Display System?","acceptedAnswer":{"@type":"Answer","text":"Yes, and at no extra cost. The Kitchen Display System filters by station so each screen shows only its own tickets, advances orders with one tap, and colours tickets by age — warming at 8 minutes and turning red at 15 — so nothing sits forgotten at the pass. Station-wise KOT routing sends each menu category's tickets to that station's own printer."}},
+    {"@type":"Question","name":"How is Pass different from a cloud POS subscription?","acceptedAnswer":{"@type":"Answer","text":"Cloud POS is a rental — you pay every month indefinitely, and if your internet drops your restaurant stops billing. Pass is a one-time annual licence. Your database lives on your own machine, your data is yours and exportable to Excel and PDF at any time, and the restaurant keeps working when the WiFi does not."}},
+    {"@type":"Question","name":"What GST support does Pass have?","acceptedAnswer":{"@type":"Answer","text":"Pass calculates the CGST, SGST and IGST split automatically, at a single flat rate across the menu or at a rate set per item where the slabs differ — 0%, 5%, 12% or 18%. GSTIN and FSSAI print on every bill, numbering is sequential and audit-safe, corrections are versioned rather than overwritten, and a monthly bill-level GST report exports for your accountant."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to install Pass restaurant billing software on Linux",
+  "description": "Install Pass on Ubuntu, Debian, Linux Mint or any other Linux distribution, using either the .deb package or the portable AppImage.",
+  "totalTime": "PT5M",
+  "tool": [{"@type":"HowToTool","name":"A Linux computer (64-bit)"}],
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Check which Linux you are running","text":"Run: cat /etc/os-release | head -2. If it reports Ubuntu, Debian, Mint, Pop!_OS or elementary, use the .deb package. Anything else, use the AppImage."},
+    {"@type":"HowToStep","position":2,"name":"Download the package","text":"For Debian-family systems: wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-amd64.deb — otherwise download Pass-x86_64.AppImage from the same location."},
+    {"@type":"HowToStep","position":3,"name":"Install or make executable","text":"For the .deb, run: sudo apt install ./Pass-amd64.deb. For the AppImage, run: chmod +x Pass-x86_64.AppImage to allow it to run."},
+    {"@type":"HowToStep","position":4,"name":"Start Pass","text":"If you installed the .deb, launch Pass from your applications menu or run: pass. If you are using the AppImage, run: ./Pass-x86_64.AppImage."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"The Binary Brain Network","item":"https://tbn.tbbn.in/"},
+  {"@type":"ListItem","position":2,"name":"Pass — Restaurant Management & Billing","item":"https://tbn.tbbn.in/pass/"}
+]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,6 +275,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cap-list li::before{content:'';position:absolute;left:0;top:9px;width:10px;height:1px;background:var(--amber);}
   .cap-list li strong{color:var(--paper);font-weight:600;}
 
+  .hero__dl-note{font-family:var(--mono);font-size:11.5px;color:var(--slate);letter-spacing:0.02em;line-height:1.7;margin-bottom:32px;max-width:520px;}
+  .hero__dl-note strong{color:var(--paper-dim);}
+  .hero__dl-note a{color:var(--amber);border-bottom:1px solid var(--amber-dim);}
+
+  /* LINUX INSTALL */
+  .linux-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;}
+  @media(max-width:860px){.linux-grid{grid-template-columns:1fr;}}
+  .lcard{background:var(--ink2);border:1px solid var(--line);padding:30px 28px;}
+  .lcard--rec{border-color:var(--amber-dim);}
+  .lcard__tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--slate-light);border:1px solid var(--line);padding:5px 10px;margin-bottom:16px;}
+  .lcard--rec .lcard__tag{color:var(--amber);border-color:var(--amber-dim);background:rgba(232,163,61,0.08);}
+  .lcard__title{font-size:19px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px;}
+  .lcard__for{font-family:var(--mono);font-size:11.5px;color:var(--slate-light);margin-bottom:18px;letter-spacing:0.02em;}
+  .lcard__step{font-size:13.5px;color:var(--paper-dim);line-height:1.6;margin:16px 0 6px;}
+  .lcard__step b{color:var(--amber);font-family:var(--mono);font-size:11px;letter-spacing:0.06em;margin-right:7px;}
+  .lnote{background:rgba(232,163,61,0.06);border-left:2px solid var(--amber-dim);padding:18px 22px;margin-top:8px;}
+  .lnote__title{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;}
+  .lnote p{font-size:13.5px;color:var(--slate-light);line-height:1.75;margin:0 0 10px;}
+  .lnote p:last-child{margin-bottom:0;}
+  .lnote code{background:rgba(0,0,0,0.35);padding:2px 6px;font-family:var(--mono);font-size:12px;color:var(--paper-dim);}
+
   .features-link{margin-top:36px;text-align:center;}
   .features-link a{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.04em;border-bottom:1px solid var(--amber-dim);padding-bottom:3px;}
 
@@ -326,6 +386,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ::selection{background:var(--amber);color:var(--ink);}
   :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
 </style>
+<link rel="stylesheet" href="/assets/tbn.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -344,6 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="nav__links">
         <li><a href="#features">Features</a></li>
         <li><a href="/pass/features/">Full Spec</a></li>
+        <li><a href="#linux">Linux</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="/folio/">Folio</a></li>
         <li><a href="/slate/">Slate</a></li>
@@ -351,8 +413,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </nav>
     <div class="nav__right">
-      <a href="tel:+919987991072" class="nav__phone">+91 99879 91072</a>
-      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="nav__cta" aria-label="Request a demo on WhatsApp">
+      <a href="tel:+918879070732" class="nav__phone">+91 88790 70732</a>
+      <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="nav__cta" aria-label="Request a demo on WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
         Request Demo
       </a>
@@ -374,17 +436,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1 class="hero__title">Your restaurant.<br>Your data. <em>Your rules.</em></h1>
         <p class="hero__desc">Pass is offline-first restaurant management and billing software that runs on your own hardware. Orders, GST bills, UPI QR, KOTs, inventory, staff and payroll, customer loyalty, and AI-powered insights — no cloud lock-in, no monthly SaaS fees.</p>
         <div class="hero__actions">
-          <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
+          <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
             Request Demo on WhatsApp
           </a>
-          <a href="https://github.com/the-binary-brain-network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
+          <a href="https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z" fill="currentColor"/></svg>
             Download for Windows
           </a>
+          <a href="#linux" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5c-2 0-3 1.7-3 3.6 0 1.5.2 2.3-.6 3.4C7.2 11.3 6 13.4 6 15.6c0 2.3 1.4 3.6 2.7 4.2.6.3 1 .9 1.1 1.4h4.4c.1-.5.5-1.1 1.1-1.4 1.3-.6 2.7-1.9 2.7-4.2 0-2.2-1.2-4.3-2.4-6.1-.8-1.1-.6-1.9-.6-3.4 0-1.9-1-3.6-3-3.6z"/><path d="M10.4 6.6h.01M13.6 6.6h.01"/></svg>
+            Download for Linux
+          </a>
         </div>
+        <p class="hero__dl-note">Windows and Linux both run the full system. Linux ships as a <strong>.deb</strong> for Ubuntu, Debian and Mint, or an <strong>AppImage</strong> that runs anywhere without installing. <a href="#linux">Install instructions and commands</a>.</p>
         <div class="hero__meta">
-          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows Desktop</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-label">Platform</span><span class="hero__meta-value">Windows · Linux</span></div>
           <div class="hero__meta-item"><span class="hero__meta-label">Free Trial</span><span class="hero__meta-value">30 Days</span></div>
           <div class="hero__meta-item"><span class="hero__meta-label">Setup + Training</span><span class="hero__meta-value">Included</span></div>
         </div>
@@ -419,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="status-strip__inner">
         <div class="status-item"><span class="status-item__label">Status</span><span class="status-item__value">In Restaurant Trials</span></div>
-        <div class="status-item"><span class="status-item__label">Platform</span><span class="status-item__value">Windows Desktop</span></div>
+        <div class="status-item"><span class="status-item__label">Platform</span><span class="status-item__value">Windows · Linux</span></div>
         <div class="status-item"><span class="status-item__label">Free Trial</span><span class="status-item__value">30 Days · No Card</span></div>
         <div class="status-item"><span class="status-item__label">Works Offline</span><span class="status-item__value">100% of Core Features</span></div>
       </div>
@@ -779,7 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="flow-item__num">01</div>
           <div>
             <h3 class="flow-item__title">Download &amp; install — free for 30 days</h3>
-            <p class="flow-item__desc">Download the Windows installer. Runs as a standard per-user install, no admin password needed. The full product is unlocked for 30 days. No card, no lock-in, no crippled features.</p>
+            <p class="flow-item__desc">Windows installer or Linux package — both run the full product, unlocked for 30 days. No card, no lock-in, no crippled features. On Windows it's a standard per-user install with no admin password needed; on Linux it's a <a href="#linux" style="color:var(--amber);">.deb or an AppImage</a>.</p>
           </div>
         </div>
         <div class="flow-item">
@@ -820,6 +887,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="trust-item"><div class="trust-item__val">LAN</div><div class="trust-item__label">MULTI-TERMINAL<br>ZERO-CONFIG SYNC</div></div>
         <div class="trust-item"><div class="trust-item__val">QUEUED</div><div class="trust-item__label">A DROPPED TERMINAL<br>KEEPS TAKING ORDERS</div></div>
         <div class="trust-item"><div class="trust-item__val">SILENT</div><div class="trust-item__label">UPDATES INSTALL ON<br>QUIT, NEVER MID-SERVICE</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINUX INSTALL -->
+  <section class="section section--border reveal" id="linux">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">Install on Linux</div>
+        <h2 class="section-title">Two ways to run Pass on Linux.</h2>
+        <p class="section-sub">If you're on Ubuntu, Debian or Linux Mint, use the <strong>.deb</strong> — it installs properly, adds Pass to your applications menu, and updates like any other package. If you're on something else, or you'd rather not install anything, use the <strong>AppImage</strong>.</p>
+      </div>
+
+      <div class="linux-grid">
+
+        <div class="lcard lcard--rec">
+          <span class="lcard__tag">Recommended</span>
+          <h3 class="lcard__title">.deb package</h3>
+          <p class="lcard__for">Ubuntu · Debian · Linux Mint · Pop!_OS · elementary</p>
+
+          <p class="lcard__step"><b>01</b>Download the package.</p>
+          <div class="cmd">wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-amd64.deb</div>
+
+          <p class="lcard__step"><b>02</b>Install it. This pulls in anything else it needs.</p>
+          <div class="cmd">sudo apt install ./Pass-amd64.deb</div>
+
+          <p class="lcard__step"><b>03</b>Start it — from your applications menu, or here.</p>
+          <div class="cmd">pass</div>
+
+          <p class="lcard__step" style="margin-top:22px;color:var(--slate-light);font-size:12.5px;">To remove it later: <code style="background:rgba(0,0,0,.35);padding:2px 6px;font-family:var(--mono);font-size:12px;">sudo apt remove pass</code></p>
+        </div>
+
+        <div class="lcard">
+          <span class="lcard__tag">No install needed</span>
+          <h3 class="lcard__title">AppImage</h3>
+          <p class="lcard__for">Fedora · Arch · openSUSE · anything else · USB stick</p>
+
+          <p class="lcard__step"><b>01</b>Download it.</p>
+          <div class="cmd">wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-x86_64.AppImage</div>
+
+          <p class="lcard__step"><b>02</b>Mark it executable. Linux won't run a downloaded file until you say it's allowed to.</p>
+          <div class="cmd">chmod +x Pass-x86_64.AppImage</div>
+
+          <p class="lcard__step"><b>03</b>Run it. That's the whole thing — one file, nothing installed.</p>
+          <div class="cmd">./Pass-x86_64.AppImage</div>
+
+          <p class="lcard__step" style="margin-top:22px;color:var(--slate-light);font-size:12.5px;">To remove it later: delete the file.</p>
+        </div>
+
+      </div>
+
+      <div class="lnote">
+        <div class="lnote__title">If the AppImage won't start</div>
+        <p>On Ubuntu 22.04 and newer you may see an error mentioning <code>libfuse.so.2</code>. Those releases stopped shipping FUSE 2, which AppImages rely on. Two fixes, either is fine:</p>
+        <div class="cmd">./Pass-x86_64.AppImage --appimage-extract-and-run</div>
+        <p>Or install the library once and run it normally after:</p>
+        <div class="cmd">sudo apt install libfuse2</div>
+        <p style="margin-top:12px;">This is exactly why we ship the <strong style="color:var(--paper-dim);">.deb</strong> as well — it has no such dependency. If you're on a Debian-family system and hit this, switch to the .deb and move on.</p>
+      </div>
+
+      <div class="lnote" style="margin-top:20px;">
+        <div class="lnote__title">Which file do I want?</div>
+        <p>Not sure which Linux you're running? This prints it:</p>
+        <div class="cmd">cat /etc/os-release | head -2</div>
+        <p>If it says Ubuntu, Debian, Mint, Pop!_OS or elementary — take the <strong style="color:var(--paper-dim);">.deb</strong>. Anything else — take the <strong style="color:var(--paper-dim);">AppImage</strong>. Both are the same application and the same version; only the packaging differs.</p>
       </div>
     </div>
   </section>
@@ -882,7 +1014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Full reporting with Excel and PDF export</li>
             <li>Silent auto-updates and a direct WhatsApp support line</li>
           </ul>
-          <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Pass%2030-day%20free%20trial." target="_blank" rel="noopener" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
+          <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Pass%2030-day%20free%20trial." target="_blank" rel="noopener" class="btn btn--whatsapp" style="width:100%;justify-content:center;">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
             Start Free Trial on WhatsApp
           </a>
@@ -927,6 +1059,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <details class="faq-item"><summary>How does multi-terminal work?</summary>
           <div class="faq-item__body">One machine acts as the host — usually the counter — and every other terminal on the same WiFi (kitchen KOT screen, waiter tablet, second cashier) connects to it automatically. No IP addresses, no port forwarding. If the host goes down, you keep taking orders on the other terminals and they sync back when it returns.</div>
         </details>
+        <details class="faq-item"><summary>How do I install Pass on Linux?</summary>
+          <div class="faq-item__body">Two options. On Ubuntu, Debian or Mint, download the <strong>.deb</strong> and run <code>sudo apt install ./Pass-amd64.deb</code> — it installs properly and appears in your applications menu. On any other distribution, download the <strong>AppImage</strong>, run <code>chmod +x Pass-x86_64.AppImage</code> to mark it executable, then <code>./Pass-x86_64.AppImage</code>. Nothing gets installed with the AppImage; it's a single file you can even keep on a USB stick. Full step-by-step commands are in the <a href="#linux">install section above</a>.</div>
+        </details>
+        <details class="faq-item"><summary>The Linux AppImage won't start — it mentions libfuse.so.2</summary>
+          <div class="faq-item__body">Ubuntu 22.04 and newer stopped shipping FUSE 2, which AppImages depend on. Either run it with <code>./Pass-x86_64.AppImage --appimage-extract-and-run</code>, or install the library once with <code>sudo apt install libfuse2</code> and run it normally afterwards. If you're on a Debian-family system, the simpler answer is to use the <strong>.deb</strong> instead — it has no such dependency, which is exactly why we publish both.</div>
+        </details>
+        <details class="faq-item"><summary>Is the Linux version the same as the Windows one?</summary>
+          <div class="faq-item__body">Yes — same application, same version number, same features, built from the same source in the same release. Billing, the Kitchen Display System, multi-outlet, inventory, staff and reporting all behave identically. The full test suite runs on Linux as part of every release. The only practical difference is printer setup, since Linux and Windows handle printers differently — we cover that during onboarding.</div>
+        </details>
         <details class="faq-item"><summary>Can I use my own thermal printer?</summary>
           <div class="faq-item__body">Yes. Pass supports any 80mm thermal receipt printer — USB, network, or Windows default. You can set different printers for KOT and bills. Silent printing means no print dialog interrupts a busy counter.</div>
         </details>
@@ -966,17 +1107,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="cta__title">Your restaurant shouldn't rent<br>its POS forever.</h2>
     <p class="cta__sub">Message us on WhatsApp and we'll have Pass installed, onboarded, and running at your restaurant — free for the first 30 days.</p>
     <div class="cta__actions">
-      <a href="https://wa.me/919987991072?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
+      <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>
         Request a Demo
       </a>
-      <a href="https://github.com/the-binary-brain-network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
+      <a href="https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z" fill="currentColor"/></svg>
         Download for Windows
       </a>
+      <a href="#linux" class="btn btn--ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5c-2 0-3 1.7-3 3.6 0 1.5.2 2.3-.6 3.4C7.2 11.3 6 13.4 6 15.6c0 2.3 1.4 3.6 2.7 4.2.6.3 1 .9 1.1 1.4h4.4c.1-.5.5-1.1 1.1-1.4 1.3-.6 2.7-1.9 2.7-4.2 0-2.2-1.2-4.3-2.4-6.1-.8-1.1-.6-1.9-.6-3.4 0-1.9-1-3.6-3-3.6z"/><path d="M10.4 6.6h.01M13.6 6.6h.01"/></svg>
+        Download for Linux
+      </a>
     </div>
     <div class="cta__contact">
-      <a href="tel:+919987991072">+91 99879 91072</a>
+      <a href="tel:+918879070732">+91 88790 70732</a>
       <a href="mailto:tbn@tbbn.in">tbn@tbbn.in</a>
       <a href="/">All TBN Products</a>
     </div>
@@ -995,11 +1140,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/tools/">TOOLS</a>
       <a href="/about/">ABOUT</a>
       <a href="https://tbbn.in" target="_blank" rel="noopener">TBBN.IN</a>
-      <a href="tel:+919987991072">+91 99879 91072</a>
+      <a href="tel:+918879070732">+91 88790 70732</a>
       <a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
     </div>
   </div>
 </footer>
 
+<script src="/assets/tbn.js" defer></script>
 </body>
 </html>

@@ -20,8 +20,9 @@ name: Download links
 
 on:
   schedule:
-    # 03:30 UTC = 09:00 IST — a failure lands at the start of the working day.
-    - cron: '30 3 * * *'
+    # Wed 22:30 UTC = Thu 04:00 IST. Weekly, so it lands as a start-of-day
+    # check rather than daily noise.
+    - cron: '30 22 * * 3'
   workflow_dispatch:
   push:
     paths:
@@ -46,15 +47,26 @@ jobs:
           BASE="https://github.com/$ORG"
 
           # product | repo | filename | expected magic bytes (hex, or "-" to skip) | min bytes
+          #   4d5a     = MZ        Windows PE executable
+          #   7f454c46 = \x7FELF   Linux AppImage
+          #   213c6172 = !<ar      Debian package
+          #   504b     = PK        APK (zip container)
           TARGETS=(
             "Folio|folio-releases|Folio-Setup.exe|4d5a|20000000"
             "Folio|folio-releases|latest.yml|-|50"
+
             "Pass|pass-releases|Pass-Setup.exe|4d5a|20000000"
+            "Pass|pass-releases|Pass-x86_64.AppImage|7f454c46|20000000"
+            "Pass|pass-releases|Pass-amd64.deb|213c6172|20000000"
             "Pass|pass-releases|latest.yml|-|50"
+            "Pass|pass-releases|latest-linux.yml|-|50"
+
             "Slate|slate-releases|Slate-Setup.exe|4d5a|20000000"
             "Slate|slate-releases|Slate-Linux.AppImage|7f454c46|20000000"
+            "Slate|slate-releases|Slate-Linux.deb|213c6172|20000000"
             "Slate|slate-releases|slate.apk|504b|1000000"
             "Slate|slate-releases|latest.yml|-|50"
+            "Slate|slate-releases|latest-linux.yml|-|50"
           )
 
           FAILED=0
