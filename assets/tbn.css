@@ -27,6 +27,15 @@ table { max-width: 100%; }
 .article-body a, .term-body a, .faq-item__body a { word-break: break-word; }
 code, pre { overflow-wrap: anywhere; }
 
+/* Grid and flex children default to min-width:auto, meaning they refuse
+   to shrink below their content. One long unbreakable string — a wget
+   URL in an install command — then forces the whole column wide and the
+   `overflow-x: auto` on the child never gets a chance to engage.
+   Allowing these to shrink is what makes the inner scrolling work. */
+.linux-grid > *, .cap-grid > *, .pain-list > *, .cap-card, .pain,
+.hero__grid > *, .pricing-wrap > *, .story-grid > *, .appmock__body > * { min-width: 0; }
+.cmd { max-width: 100%; }
+
 /* ---------- 2. Mobile navigation -----------------------------
    Pages hide .nav__links below ~900px with no replacement, so the
    whole site becomes unnavigable on a phone. tbn.js clones those
@@ -110,6 +119,134 @@ body.tbn-nav-open { overflow: hidden; }
 
 @media (max-width: 1000px) { .nav__burger { display: inline-flex; } }
 
+/* ---------- 2a. Nav fits, always -----------------------------
+   The bar holds a long brand name plus a phone number, a green
+   WhatsApp button and the burger. Below ~820px that overflowed, and the
+   WhatsApp button pushed the burger off-screen — leaving no way to open
+   the menu at all.
+
+   Rather than shrinking everything until it's unreadable, the WhatsApp
+   action moves to a floating button (see §2d). The bar keeps the two
+   things it must have: identity, and a way into the menu. */
+.nav__inner { min-width: 0; }
+.nav__brand { min-width: 0; overflow: hidden; }
+.nav__brand-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+@media (max-width: 820px) {
+  .nav__cta { display: none; }          /* becomes the floating button */
+}
+@media (max-width: 600px) {
+  /* The amber TBN mark carries the brand on its own here. Keeping the
+     full wordmark at this width means truncating it to nonsense. */
+  .nav__brand-name { display: none; }
+  .nav__inner { height: 62px; }
+  .tbn-drawer { top: 62px; }
+}
+
+/* ---------- 2d. Floating WhatsApp action ---------------------
+   WhatsApp is the primary conversion path, so removing it from the
+   mobile bar can't mean removing it from the page. It becomes a
+   floating button instead: always reachable, never overlapping the
+   nav, and dismissible — a persistent badge you can't close is the
+   thing people actually resent.
+
+   Bottom-left by request, which also keeps it clear of the scrollbar
+   and of "back to top" affordances on the right. */
+.tbn-fab {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 95;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px 13px 15px;
+  background: #25D366;
+  color: #06331A;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  box-shadow: 0 6px 24px rgba(0,0,0,.45);
+  transform: translateY(96px);
+  transition: transform .32s cubic-bezier(.22,.61,.36,1);
+}
+.tbn-fab.is-in { transform: translateY(0); }
+.tbn-fab svg { width: 19px; height: 19px; fill: currentColor; flex-shrink: 0; }
+.tbn-fab__close {
+  position: absolute;
+  top: -9px; right: -9px;
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  background: #15181F;
+  color: #8A92A0;
+  border: 1px solid rgba(247,245,240,.22);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0;
+}
+.tbn-fab__close svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2.4; }
+.tbn-fab__close:hover { color: #F7F5F0; border-color: #F7F5F0; }
+
+@media (max-width: 820px) { .tbn-fab { display: inline-flex; } }
+
+/* Out of the way while the menu is open. */
+body.tbn-nav-open .tbn-fab { transform: translateY(96px); }
+
+/* ---------- 2b. Parent strip gutters -------------------------
+   .parent-strip__inner sits on the same element as .container and
+   declares `padding: 44px 0`. That shorthand resets the container's
+   horizontal padding to zero, so the TBBN banner ran edge-to-edge with
+   its text touching both screen edges. Restore the gutters. */
+.parent-strip__inner { padding: 44px 32px; }
+@media (max-width: 640px) {
+  .parent-strip__inner { padding: 30px 20px; gap: 16px; }
+  .parent-strip__text  { font-size: 13.5px; }
+  .parent-strip__link  { font-size: 12px; }
+}
+
+/* .parent-strip__inner is the only class that collides this way — the
+   other .container siblings (nav, footer, tiles, hero grid, trust row)
+   set no padding of their own and correctly inherit the gutters. */
+
+/* ---------- 2c. Receipt / KOT card tag -----------------------
+   The card animates `clip-path` to look like paper rolling out of a
+   thermal printer. clip-path clips every descendant to the card's box,
+   including the "LIVE PREVIEW" / "KOT · KITCHEN" tag that deliberately
+   sits 12px above the card edge — so the tag was cropped at all screen
+   sizes, not only on mobile.
+
+   Move the reveal onto the inner panel. The tag is a sibling of that
+   panel, so it is no longer inside the clipped element, and the printing
+   effect is preserved exactly. */
+.receipt-card, .kot-card { animation: none !important; }
+.receipt-card__inner, .kot-card__inner {
+  animation: tbn-print .9s cubic-bezier(.2,.9,.3,1.2) both;
+}
+@keyframes tbn-print {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+/* The tag is meant to straddle the card's top edge like a pinned label,
+   so it must keep its negative offset — padding here would separate the
+   two. Margin instead, giving the overhang somewhere to go without
+   displacing the card relative to the tag. */
+.receipt-wrap, .kot-wrap { margin-top: 14px; }
+
+@media (max-width: 900px) {
+  /* Stacked on mobile the card should centre, not hug the right edge. */
+  .receipt-card, .kot-card { margin-left: auto; margin-right: auto; }
+}
+@media (max-width: 420px) {
+  /* Rotation costs horizontal room on the narrowest screens, and a
+     tilted receipt at 360px reads as broken rather than styled. */
+  .receipt-card, .kot-card { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .receipt-card__inner, .kot-card__inner { animation: none !important; clip-path: none !important; }
+}
+
 /* ---------- 3. Phone layout ---------------------------------- */
 @media (max-width: 640px) {
 
@@ -148,6 +285,17 @@ body.tbn-nav-open { overflow: hidden; }
 
   /* Grid texture at 64px is visual noise on a small screen. */
   .grid-texture { background-size: 40px 40px; opacity: .25; }
+}
+
+/* ---------- 3b. Footer ---------------------------------------
+   The homepage footer declares `display:flex` with no flex-wrap, so its
+   eleven links ran to 705px inside a 375px screen. Most other pages set
+   wrap; this makes it consistent everywhere. */
+.footer__links { flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .footer__inner  { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .footer__links  { justify-content: center; gap: 4px 20px; }
+  .footer__text   { order: 2; font-size: 11px; }
 }
 
 /* ---------- 4. Tap targets -----------------------------------

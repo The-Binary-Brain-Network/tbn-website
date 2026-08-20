@@ -110,6 +110,55 @@
     });
   }
 
+  /* ---------- Floating WhatsApp action -----------------------
+     The nav's WhatsApp button is hidden below 820px because it was
+     overflowing the bar and pushing the burger off-screen. WhatsApp is
+     the main way people get in touch, so it can't just disappear — it
+     becomes a floating button instead.
+
+     Dismissible, and the dismissal is remembered. A badge you can't
+     close is the kind people resent rather than use. */
+  function buildFab() {
+    var src = document.querySelector('.nav__cta');
+    if (!src || document.querySelector('.tbn-fab')) return;
+
+    var href = src.getAttribute('href') || '';
+    if (href.indexOf('wa.me') === -1) return;   // only for WhatsApp links
+
+    try {
+      if (window.localStorage && localStorage.getItem('tbn-fab-closed') === '1') return;
+    } catch (e) { /* private mode — just show it */ }
+
+    var fab = document.createElement('a');
+    fab.className = 'tbn-fab';
+    fab.href = href;
+    fab.target = '_blank';
+    fab.rel = 'noopener';
+    fab.setAttribute('aria-label', 'Message us on WhatsApp');
+    fab.innerHTML =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.05c-.25.7-1.44 1.34-1.99 1.42-.51.07-1.15.1-1.86-.12-.43-.13-.98-.31-1.68-.62-2.95-1.28-4.88-4.25-5.03-4.44-.15-.19-1.2-1.59-1.2-3.04 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.05.92 2.2.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.18-.32.4-.46.53-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.47.13.65-.08.18-.21.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.82 2.05.97.3.15.5.22.57.35.08.13.08.76-.17 1.46Z"/></svg>' +
+      '<span>WhatsApp</span>';
+
+    var close = document.createElement('button');
+    close.className = 'tbn-fab__close';
+    close.type = 'button';
+    close.setAttribute('aria-label', 'Hide the WhatsApp button');
+    close.innerHTML = '<svg viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    close.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      fab.classList.remove('is-in');
+      try { localStorage.setItem('tbn-fab-closed', '1'); } catch (err) {}
+      setTimeout(function () { if (fab.parentNode) fab.parentNode.removeChild(fab); }, 340);
+    });
+    fab.appendChild(close);
+    document.body.appendChild(fab);
+
+    /* Slide in slightly late so it isn't the first thing that moves on
+       a fresh page load. */
+    setTimeout(function () { fab.classList.add('is-in'); }, 620);
+  }
+
   /* ---------- Copy buttons on command blocks -----------------
      The Linux install instructions are worthless if the commands
      can't be copied cleanly on a phone. */
@@ -209,6 +258,7 @@
 
   function init() {
     try { buildNav(); } catch (e) {}
+    try { buildFab(); } catch (e) {}
     try { buildCopyButtons(); } catch (e) {}
     try { buildProgress(); } catch (e) {}
     try { buildReveals(); } catch (e) {}
