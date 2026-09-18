@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8">
 <!-- Google Tag Manager -->
@@ -29,36 +29,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Pass",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows, Linux",
-  "softwareVersion": "1.0.7",
-  "description": "Offline-first restaurant management and billing software. Orders, tables, KOT, GST billing, UPI QR, inventory with recipes, staff and payroll, customer loyalty, thermal printing, and AI-powered business insights.",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "INR",
-    "price": "7500",
-    "priceSpecification": {"@type": "UnitPriceSpecification", "price": "7500", "priceCurrency": "INR", "unitText": "per property per year"}
-  },
-  "publisher": {"@type": "Organization", "name": "The Binary Brain Network", "url": "https://tbn.tbbn.in/"}
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Pass",
+ "applicationCategory": "BusinessApplication",
+ "operatingSystem": "Windows, Linux",
+ "softwareVersion": "1.0.7",
+ "description": "Offline-first restaurant management and billing software. Orders, tables, KOT, GST billing, UPI QR, inventory with recipes, staff and payroll, customer loyalty, thermal printing, and AI-powered business insights.",
+ "offers": {
+  "@type": "Offer",
+  "priceCurrency": "INR",
+  "price": "7500",
+  "priceSpecification": {
+   "@type": "UnitPriceSpecification",
+   "price": "7500",
+   "priceCurrency": "INR",
+   "unitText": "per property per year"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "The Binary Brain Network",
+  "url": "https://tbn.tbbn.in/"
+ },
+ "dateModified": "2026-09-19"
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"How much does Pass restaurant billing software cost?","acceptedAnswer":{"@type":"Answer","text":"Pass costs a flat ₹7,500 per year for the whole business, including unlimited outlets. There is no monthly SaaS fee, no per-terminal charge and no paid add-on tier — the Kitchen Display System, multi-outlet support and the full reporting suite are all included. Installation, onboarding and staff training are free. A 30-day free trial runs the complete product with no card required."}},
-    {"@type":"Question","name":"Does Pass work without an internet connection?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every core operation runs fully offline — taking orders, printing kitchen tickets, the Kitchen Display System, billing, and reports. The database lives on your own machine. Internet is only used for optional cloud replication, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill."}},
-    {"@type":"Question","name":"How do I install Pass on Linux?","acceptedAnswer":{"@type":"Answer","text":"On Ubuntu, Debian or Linux Mint, download the .deb package and install it with: sudo apt install ./Pass-amd64.deb. On any other Linux distribution, download the AppImage, make it executable with: chmod +x Pass-x86_64.AppImage, then run it with: ./Pass-x86_64.AppImage. The AppImage installs nothing — it is a single portable file."}},
-    {"@type":"Question","name":"The Pass AppImage will not start and mentions libfuse.so.2. How do I fix it?","acceptedAnswer":{"@type":"Answer","text":"Ubuntu 22.04 and newer no longer ship FUSE 2, which AppImages depend on. Either run it with: ./Pass-x86_64.AppImage --appimage-extract-and-run, or install the library once with: sudo apt install libfuse2. On Debian-family systems the simpler option is to use the .deb package instead, which has no such dependency."}},
-    {"@type":"Question","name":"Can Pass handle multiple restaurant outlets?","acceptedAnswer":{"@type":"Answer","text":"Yes, and unlimited outlets are included in the single ₹7,500 annual licence at current pricing. Each outlet keeps its own GSTIN, FSSAI, address and — importantly — its own bill numbering sequence, because two outlets sharing one sequence would issue duplicate invoice numbers, which is a GST compliance problem. The menu stays central so a price change lands everywhere at once."}},
-    {"@type":"Question","name":"Does Pass include a Kitchen Display System?","acceptedAnswer":{"@type":"Answer","text":"Yes, and at no extra cost. The Kitchen Display System filters by station so each screen shows only its own tickets, advances orders with one tap, and colours tickets by age — warming at 8 minutes and turning red at 15 — so nothing sits forgotten at the pass. Station-wise KOT routing sends each menu category's tickets to that station's own printer."}},
-    {"@type":"Question","name":"How is Pass different from a cloud POS subscription?","acceptedAnswer":{"@type":"Answer","text":"Cloud POS is a rental — you pay every month indefinitely, and if your internet drops your restaurant stops billing. Pass is a one-time annual licence. Your database lives on your own machine, your data is yours and exportable to Excel and PDF at any time, and the restaurant keeps working when the WiFi does not."}},
-    {"@type":"Question","name":"What GST support does Pass have?","acceptedAnswer":{"@type":"Answer","text":"Pass calculates the CGST, SGST and IGST split automatically, at a single flat rate across the menu or at a rate set per item where the slabs differ — 0%, 5%, 12% or 18%. GSTIN and FSSAI print on every bill, numbering is sequential and audit-safe, corrections are versioned rather than overwritten, and a monthly bill-level GST report exports for your accountant."}}
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much does Pass restaurant billing software cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pass costs a flat ₹7,500 per year for the whole business, including unlimited outlets. There is no monthly SaaS fee, no per-terminal charge and no paid add-on tier — the Kitchen Display System, multi-outlet support and the full reporting suite are all included. Installation, onboarding and staff training are free. A 30-day free trial runs the complete product with no card required."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Pass work without an internet connection?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Every core operation runs fully offline — taking orders, printing kitchen tickets, the Kitchen Display System, billing, and reports. The database lives on your own machine. Internet is only used for optional cloud replication, silent product updates and WhatsApp order notifications. A restaurant with a completely dead connection can serve every table without missing a bill."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I install Pass on Linux?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "On Ubuntu, Debian or Linux Mint, download the .deb package and install it with: sudo apt install ./Pass-amd64.deb. On any other Linux distribution, download the AppImage, make it executable with: chmod +x Pass-x86_64.AppImage, then run it with: ./Pass-x86_64.AppImage. The AppImage installs nothing — it is a single portable file."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "The Pass AppImage will not start and mentions libfuse.so.2. How do I fix it?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ubuntu 22.04 and newer no longer ship FUSE 2, which AppImages depend on. Either run it with: ./Pass-x86_64.AppImage --appimage-extract-and-run, or install the library once with: sudo apt install libfuse2. On Debian-family systems the simpler option is to use the .deb package instead, which has no such dependency."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can Pass handle multiple restaurant outlets?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and unlimited outlets are included in the single ₹7,500 annual licence at current pricing. Each outlet keeps its own GSTIN, FSSAI, address and — importantly — its own bill numbering sequence, because two outlets sharing one sequence would issue duplicate invoice numbers, which is a GST compliance problem. The menu stays central so a price change lands everywhere at once."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Pass include a Kitchen Display System?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and at no extra cost. The Kitchen Display System filters by station so each screen shows only its own tickets, advances orders with one tap, and colours tickets by age — warming at 8 minutes and turning red at 15 — so nothing sits forgotten at the pass. Station-wise KOT routing sends each menu category's tickets to that station's own printer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is Pass different from a cloud POS subscription?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cloud POS is a rental — you pay every month indefinitely, and if your internet drops your restaurant stops billing. Pass is a one-time annual licence. Your database lives on your own machine, your data is yours and exportable to Excel and PDF at any time, and the restaurant keeps working when the WiFi does not."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What GST support does Pass have?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pass calculates the CGST, SGST and IGST split automatically, at a single flat rate across the menu or at a rate set per item where the slabs differ — 0%, 5%, 12% or 18%. GSTIN and FSSAI print on every bill, numbering is sequential and audit-safe, corrections are versioned rather than overwritten, and a monthly bill-level GST report exports for your accountant."
+   }
+  }
+ ],
+ "dateModified": "2026-09-19"
 }
 </script>
 <script type="application/ld+json">
@@ -1135,7 +1202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/">TBN HOME</a>
       <a href="/folio/">FOLIO</a>
       <a href="/slate/">SLATE</a>
-      <a href="/blog/">BLOG</a>
+      <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a>
       <a href="/glossary/">GLOSSARY</a>
       <a href="/tools/">TOOLS</a>
       <a href="/about/">ABOUT</a>

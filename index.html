@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8">
 <!-- Google Tag Manager -->
@@ -29,38 +29,248 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">
 [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "The Binary Brain Network",
-    "alternateName": "TBN",
-    "url": "https://tbn.tbbn.in/",
-    "logo": "https://tbn.tbbn.in/favicon.svg",
-    "description": "Software development division of The Big Brand Network. Builds focused operational systems for hospitality and service businesses in India.",
-    "parentOrganization": {"@type": "Organization", "name": "The Big Brand Network", "url": "https://tbbn.in/"},
-    "sameAs": ["https://tbbn.in/"],
-    "contactPoint": {"@type": "ContactPoint", "telephone": "+91-8879070732", "contactType": "sales", "email": "tbn@tbbn.in", "areaServed": "IN", "availableLanguage": ["en","hi"]}
+ {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tbn.tbbn.in/#organization",
+  "name": "The Binary Brain Network",
+  "alternateName": [
+   "TBN",
+   "Binary Brain Network"
+  ],
+  "url": "https://tbn.tbbn.in/",
+  "logo": "https://tbn.tbbn.in/favicon.svg",
+  "image": "https://tbn.tbbn.in/og-tbn.svg",
+  "description": "Software division of The Big Brand Network. Builds offline-first operational software for hospitality and service businesses in India — Folio for hotel room-service billing, Pass for restaurant management, and Slate for hotel management — plus custom software development. Every product is a flat annual licence with the customer's data on their own hardware.",
+  "foundingDate": "2025",
+  "parentOrganization": {
+   "@type": "Organization",
+   "name": "The Big Brand Network",
+   "url": "https://tbbn.in/",
+   "alternateName": "TBBN"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "The Binary Brain Network",
-    "image": "https://tbn.tbbn.in/og-tbn.svg",
-    "@id": "https://tbn.tbbn.in/",
-    "url": "https://tbn.tbbn.in/",
+  "sameAs": [
+   "https://tbbn.in/",
+   "https://github.com/The-Binary-Brain-Network"
+  ],
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Mumbai",
+   "addressRegion": "Maharashtra",
+   "addressCountry": "IN"
+  },
+  "areaServed": {
+   "@type": "Country",
+   "name": "India"
+  },
+  "knowsAbout": [
+   "Restaurant billing software",
+   "Hotel management software",
+   "Point of sale software",
+   "GST compliant invoicing India",
+   "Offline-first desktop software",
+   "Kitchen Order Ticket printing",
+   "C-Form FRRO registration",
+   "Hospitality software India",
+   "Custom software development"
+  ],
+  "contactPoint": [
+   {
+    "@type": "ContactPoint",
     "telephone": "+91-8879070732",
+    "contactType": "sales",
     "email": "tbn@tbbn.in",
-    "address": {"@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN"},
     "areaServed": "IN",
-    "priceRange": "₹₹"
+    "availableLanguage": [
+     "en",
+     "hi"
+    ]
+   },
+   {
+    "@type": "ContactPoint",
+    "telephone": "+91-8879070732",
+    "contactType": "technical support",
+    "email": "tbn@tbbn.in",
+    "areaServed": "IN",
+    "availableLanguage": [
+     "en",
+     "hi"
+    ]
+   }
+  ],
+  "makesOffer": [
+   {
+    "@type": "Offer",
+    "name": "Folio — hotel room-service billing",
+    "price": "6500",
+    "priceCurrency": "INR",
+    "url": "https://tbn.tbbn.in/folio/"
+   },
+   {
+    "@type": "Offer",
+    "name": "Pass — restaurant management and billing",
+    "price": "7500",
+    "priceCurrency": "INR",
+    "url": "https://tbn.tbbn.in/pass/"
+   },
+   {
+    "@type": "Offer",
+    "name": "Slate — hotel management system",
+    "price": "12000",
+    "priceCurrency": "INR",
+    "url": "https://tbn.tbbn.in/slate/"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://tbn.tbbn.in/#localbusiness",
+  "name": "The Binary Brain Network",
+  "image": "https://tbn.tbbn.in/og-tbn.svg",
+  "url": "https://tbn.tbbn.in/",
+  "telephone": "+91-8879070732",
+  "email": "tbn@tbbn.in",
+  "priceRange": "₹₹",
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Mumbai",
+   "addressRegion": "Maharashtra",
+   "addressCountry": "IN"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "The Binary Brain Network",
-    "url": "https://tbn.tbbn.in/",
-    "publisher": {"@type": "Organization", "name": "The Binary Brain Network"}
+  "areaServed": [
+   {
+    "@type": "Country",
+    "name": "India"
+   },
+   {
+    "@type": "City",
+    "name": "Mumbai"
+   },
+   {
+    "@type": "City",
+    "name": "Delhi"
+   }
+  ],
+  "parentOrganization": {
+   "@id": "https://tbn.tbbn.in/#organization"
   }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://tbn.tbbn.in/#website",
+  "name": "The Binary Brain Network",
+  "url": "https://tbn.tbbn.in/",
+  "inLanguage": "en-IN",
+  "publisher": {
+   "@id": "https://tbn.tbbn.in/#organization"
+  },
+  "dateModified": "2026-09-19"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Software products by The Binary Brain Network",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+     "@type": "SoftwareApplication",
+     "name": "Folio",
+     "applicationCategory": "BusinessApplication",
+     "operatingSystem": "Windows",
+     "url": "https://tbn.tbbn.in/folio/",
+     "offers": {
+      "@type": "Offer",
+      "price": "6500",
+      "priceCurrency": "INR"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+     "@type": "SoftwareApplication",
+     "name": "Pass",
+     "applicationCategory": "BusinessApplication",
+     "operatingSystem": "Windows, Linux",
+     "url": "https://tbn.tbbn.in/pass/",
+     "offers": {
+      "@type": "Offer",
+      "price": "7500",
+      "priceCurrency": "INR"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+     "@type": "SoftwareApplication",
+     "name": "Slate",
+     "applicationCategory": "BusinessApplication",
+     "operatingSystem": "Windows, Linux, Android",
+     "url": "https://tbn.tbbn.in/slate/",
+     "offers": {
+      "@type": "Offer",
+      "price": "12000",
+      "priceCurrency": "INR"
+     }
+    }
+   }
+  ],
+  "dateModified": "2026-09-19"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What does The Binary Brain Network make?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Three products for Indian hospitality, plus custom software development. Folio handles hotel room-service billing at ₹6,500 per property per year and is live in production. Pass is restaurant management and billing at ₹7,500 per year covering unlimited outlets, and is in trials. Slate is a full hotel management system at ₹12,000 per property per year, also in trials. All three run offline-first with the data on the customer's own hardware."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is TBN software a monthly subscription?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Every product is a flat annual licence — ₹6,500 for Folio, ₹7,500 for Pass, ₹12,000 for Slate. There are no per-seat charges, no per-room charges, no per-terminal fees and no paid add-on tiers. Installation, onboarding and staff training are included, and each product has a free trial that runs the complete software with no card required."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does TBN software work without internet?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. All three products are offline-first by design, because Indian hospitality cannot depend on connectivity. Billing, ordering, printing, reports and backups all run with the internet unplugged. Internet is used only for optional features such as cloud replication, WhatsApp notifications and silent product updates."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does The Binary Brain Network build custom software?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Alongside its three products, TBN takes on custom builds for hospitality and service businesses whose problem an off-the-shelf product does not fit. The engagement is a paid discovery phase producing a written specification the client owns, then a fixed price against that fixed scope rather than hourly billing. Source code is handed over at the end."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Where is The Binary Brain Network based?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Mumbai, Maharashtra. It is the software division of The Big Brand Network, a trademark-registered and MSME-certified brand ecosystem operating across Delhi NCR and pan-India. Contact is +91 88790 70732 on WhatsApp or tbn@tbbn.in."
+    }
+   }
+  ],
+  "dateModified": "2026-09-19"
+ }
 ]
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -624,7 +834,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/folio/">FOLIO</a>
       <a href="/pass/">PASS</a>
       <a href="/slate/">SLATE</a>
-      <a href="/blog/">BLOG</a>
+      <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a>
       <a href="/glossary/">GLOSSARY</a>
       <a href="/tools/">TOOLS</a>
       <a href="/about/">ABOUT</a>
