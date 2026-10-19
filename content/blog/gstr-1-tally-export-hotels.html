@@ -1,0 +1,63 @@
+<!--meta
+{"title": "GSTR-1 and Tally Export for Hotels: Getting Clean Data to Your Accountant", "h1": "GSTR-1 and Tally export for hotels: <em>clean data, no retyping.</em>", "crumb": "GSTR-1 and Tally export", "description": "How hotels should prepare GSTR-1 data — B2B, B2C large and B2C small invoices, state codes, HSN/SAC — and hand accounts to Tally without retyping. Month-end checklist included.", "category": "Hotels", "product": "slate", "date": "2026-10-19", "order": 8, "keywords": ["gstr 1 hotel", "tally export hotel software", "hotel gst return"], "lede": "Every month a small hotel's accountant asks for the same things: the invoices, split the way GSTR-1 wants them, and something they can load into Tally. When the hotel software produces both, month-end takes an hour instead of two days.", "answer": "GSTR-1 reports a hotel's outward supplies, split into B2B invoices (to GST-registered guests, with their GSTIN), B2C large (inter-state invoices to unregistered guests above the threshold) and B2C small (everything else, summarised by state and rate). Hotel software should export this split directly, along with a file your accountant can import into Tally, so invoices are never retyped.", "faqs": [["What is GSTR-1 for a hotel?", "GSTR-1 is the return of outward supplies. A hotel reports its invoices for rooms, food and other services, split into B2B invoices with the customer's GSTIN, large inter-state B2C invoices, and other B2C supplies summarised by place of supply and rate."], ["What is the difference between B2B, B2CL and B2CS in GSTR-1?", "B2B covers invoices to GST-registered customers and is reported invoice by invoice with their GSTIN. B2CL covers inter-state invoices to unregistered customers above the prescribed value. B2CS covers all other supplies to unregistered customers, reported as totals by state and tax rate."], ["Can hotel software export data to Tally?", "Many can. A Tally XML export lets your accountant import sales vouchers directly instead of entering each invoice. Check the format with your accountant before relying on it."]], "related": ["gst-on-hotel-rooms-2026", "night-audit-explained-small-hotels", "best-hotel-management-software-small-hotels-india"]}
+-->
+<h2>What GSTR-1 needs from a hotel</h2>
+<p>GSTR-1 lists your outward supplies for the period. For a hotel, those are room charges, food and beverage, laundry and other services. They are reported in buckets:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Bucket</th><th>What goes in it</th><th>Reported as</th></tr></thead>
+<tbody>
+<tr><td>B2B</td><td>Invoices to GST-registered guests (companies, travel agents)</td><td>Each invoice, with the guest's GSTIN</td></tr>
+<tr><td>B2C large (B2CL)</td><td>Inter-state invoices to unregistered guests above the prescribed value</td><td>Each invoice</td></tr>
+<tr><td>B2C small (B2CS)</td><td>All other supplies to unregistered guests</td><td>Totals by place of supply and rate</td></tr>
+<tr><td>Credit/debit notes</td><td>Corrections to issued invoices</td><td>Each note</td></tr>
+<tr><td>HSN/SAC summary</td><td>Supplies by service code</td><td>Summary</td></tr>
+</tbody></table></div>
+<p>Thresholds and table formats are revised from time to time; your accountant will apply the current ones.</p>
+
+<h2>Where hotel data goes wrong</h2>
+<h3>Missing or wrong GSTINs</h3>
+<p>A corporate guest who wanted credit gives a GSTIN at check-in; the desk types it with one digit wrong. The invoice goes into B2B with an invalid number, and the guest cannot claim credit. Validate GSTINs at entry — the last character is a check digit, so many typos can be caught immediately.</p>
+<h3>Place of supply</h3>
+<p>For hotel accommodation, the place of supply is generally where the property is located, so most room invoices are intra-state (CGST + SGST) even when the guest is from another state. Getting this wrong creates IGST invoices that should not exist. Confirm treatment of specific cases with your accountant.</p>
+<h3>Rates</h3>
+<p>Since 22 September 2025, rooms charged up to ₹7,500 a night are at 5% and above that at 18%; F&amp;B follows its own rules. If software is still using old rates, GSTR-1 inherits the error. See <a href="/blog/gst-on-hotel-rooms-2026/">GST on hotel rooms</a>.</p>
+<h3>Edited invoices</h3>
+<p>An invoice changed after issue, without a credit note or cancel-and-reissue, leaves the return and the accounts disagreeing. Corrections should always produce a new document and keep the original.</p>
+
+<h2>The Tally side</h2>
+<p>Most small hotels' accountants work in Tally. Retyping a month of invoices into Tally is slow and introduces errors. A Tally XML export lets the accountant import sales vouchers — invoice number, date, party, ledger, tax — in one step. Before relying on it, do a trial import with your accountant and agree ledger names, because the export has to match how they have set up your books.</p>
+
+<h2>A month-end checklist</h2>
+<ul class="checklist">
+<li>All night audits for the month have run.</li>
+<li>No invoices left in draft; corrections issued properly.</li>
+<li>B2B invoices all carry valid GSTINs.</li>
+<li>GST report totals match the revenue summary.</li>
+<li>GSTR-1 export and Tally export generated and sent together.</li>
+<li>Foreign guests' Form-III records complete (not part of GST, but the same month-end habit).</li>
+</ul>
+
+<h2>A worked example: one month, three buckets</h2>
+<p>A 25-room hotel issues 340 invoices in a month:</p>
+<ul>
+<li><strong>42 B2B invoices</strong> — to companies and travel agents with GSTINs. Each is reported individually with the customer's GSTIN, so each must be correct.</li>
+<li><strong>A handful of B2C large invoices</strong>, if any meet the current criteria — reported individually.</li>
+<li><strong>The remainder as B2C small</strong> — reported as totals by place of supply and tax rate: for example, rooms at 5%, rooms at 18%, food at 5%.</li>
+</ul>
+<p>When the software produces these buckets directly, the accountant checks totals and files. When it does not, someone sorts 340 invoices by hand.</p>
+
+<h2>Corrections: credit notes and reissues</h2>
+<p>Mistakes happen: a guest's company name is wrong, or a charge was posted to the wrong room. The rule of thumb is never to edit an issued invoice silently. Either cancel it and issue a new one — before it has been reported — or issue a credit note against it. Both leave a trail your accountant and an auditor can follow. Ask your accountant which they prefer for which situations, and make sure the software supports it.</p>
+
+<h2>Questions to settle with your accountant once</h2>
+<ul class="checklist">
+<li>Which ledger names should room revenue, F&amp;B and other income map to in Tally?</li>
+<li>Do they want one Tally voucher per invoice, or daily summaries?</li>
+<li>How should advances be recorded, and how are they adjusted against invoices?</li>
+<li>Which SAC codes apply to your services?</li>
+<li>When do they need the month's data — and in which format?</li>
+</ul>
+<p>Write the answers down and configure the export once. Every month after that is routine.</p>
+
+<h2>In Slate</h2>
+<p><a href="/slate/">Slate</a> exports GSTR-1 data split into B2B, B2CL and B2CS by state code, and a Tally XML file for your accountant. GST invoices include a GSTIN check, cancel-and-reissue for corrections, configurable room-tariff bands, and a GST report; manual invoices support backdating, guest count and a GST on/off toggle, with GST-off invoices titled Bill of Supply. Everything is also covered by an audit log of who changed what.</p>

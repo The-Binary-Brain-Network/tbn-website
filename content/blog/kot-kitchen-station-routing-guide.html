@@ -1,0 +1,67 @@
+<!--meta
+{"title": "KOT Routing by Kitchen Station: A Setup Guide for Restaurants", "h1": "KOT routing by kitchen station: <em>one order, the right tickets.</em>", "crumb": "KOT routing by station", "description": "How to set up kitchen order tickets so each station — tandoor, Chinese, bar, desserts — gets only its own items. Mapping categories to stations, printers, KOT format and common mistakes.", "category": "Restaurants", "product": "pass", "date": "2026-10-19", "order": 28, "keywords": ["kot routing", "kitchen order ticket station", "kot printer setup"], "lede": "A single KOT printer works until the kitchen grows a second station. Then waiters start tearing tickets, the tandoor misses a naan, and the bar makes a drink nobody ordered. Station routing fixes that — if you set it up in the right order.", "answer": "To route KOTs by station, list your physical stations, give each its own thermal printer (or screen), map every menu category to a station, and set a default printer for anything unmapped. When an order is sent, the POS splits it and prints each station's items on that station's printer, so one order produces as many tickets as stations involved.", "faqs": [["What is KOT routing?", "KOT routing means sending each item of an order to the kitchen station that prepares it. The POS splits one order into several kitchen order tickets — tandoor items to the tandoor printer, drinks to the bar printer — instead of printing everything on one slip."], ["Do I need a separate printer for each station?", "For printed KOTs, yes — each station needs its own thermal printer, usually connected over the network so it can sit away from the counter. Alternatively, a kitchen display screen filtered by station can replace the paper."], ["What happens to items that are not mapped to a station?", "Good POS software sends unmapped categories to a default KOT printer, so nothing is ever lost. Check the default printer after adding new menu categories."]], "related": ["kitchen-display-system-vs-printed-kot", "thermal-printer-troubleshooting-restaurants", "best-restaurant-billing-software-india-2026"]}
+-->
+<h2>Why one KOT printer stops working</h2>
+<p>In a small kitchen, one KOT printer next to the pass is fine: the cook reads the whole ticket and makes everything. The moment you split the kitchen into stations — a tandoor, a Chinese wok station, a cold section, a bar — a single ticket becomes a coordination problem. Someone has to read it out, copy it, or tear it. Items get missed, especially the small ones: one butter naan, a side of raita, a fresh lime soda.</p>
+<p>Station routing removes the human relay. The POS knows which station makes which item and prints only those items at that station.</p>
+
+<h2>Step 1: list your physical stations</h2>
+<p>Walk the kitchen and write down every place where food or drink is actually prepared by a different person. Typical Indian restaurant setups:</p>
+<ul>
+<li><strong>Tandoor</strong> — breads, kebabs, tikkas</li>
+<li><strong>Main kitchen / curry</strong> — gravies, dal, rice</li>
+<li><strong>Chinese / wok</strong> — noodles, fried rice, manchurian</li>
+<li><strong>Cold / desserts</strong> — salads, raita, ice cream</li>
+<li><strong>Bar / beverages</strong> — mocktails, lassi, tea and coffee</li>
+</ul>
+<p>Keep it to the stations that genuinely exist. Five stations on paper and three in reality means tickets printing at empty counters.</p>
+
+<h2>Step 2: give each station an output</h2>
+<p>Each station needs somewhere for its tickets to appear: its own thermal printer, or a kitchen display screen filtered to that station. For printers, network (Ethernet or Wi-Fi) models are easiest because they can sit anywhere; USB printers have to be near a computer. Name each printer after its station in the operating system — "KOT-TANDOOR", not "POS-80 (2)" — so nobody maps the wrong one.</p>
+
+<h2>Step 3: map menu categories to stations</h2>
+<p>Routing works at the <strong>category</strong> level: you tell the POS that the "Breads" and "Tandoor Starters" categories belong to the tandoor station, "Chinese Mains" to the wok station, and so on. This is why your menu categories should follow the kitchen, not just the printed menu. If "Starters" contains both paneer tikka (tandoor) and chilli paneer (wok), split it into "Tandoor Starters" and "Chinese Starters" before routing.</p>
+<div class="callout"><div class="callout__tag">Rule of thumb</div><p>Every category should be made in exactly one station. If a category spans two stations, split the category.</p></div>
+
+<h2>Step 4: set a default printer</h2>
+<p>New dishes get added in a hurry, often into a new category nobody mapped. A default KOT printer catches anything without a station, so nothing silently disappears. Check it whenever you add categories.</p>
+
+<h2>Step 5: decide what goes on the ticket</h2>
+<p>A KOT is for the cook, not the guest. It needs:</p>
+<ul>
+<li>KOT number and time</li>
+<li>Table and section, or "Takeaway" / "Delivery"</li>
+<li>Items and quantities, large and readable</li>
+<li>Modifiers and notes directly under the item ("No onion", "Extra spicy")</li>
+<li>Server name and covers, if useful</li>
+</ul>
+<p>It does not need prices. A cluttered KOT gets misread at speed.</p>
+
+<h2>Step 6: test with a real order</h2>
+<p>Punch one order that touches every station: a naan, a dal, a hakka noodles, a raita and a lime soda. Each station should receive exactly its item, once. Then punch an order with an unmapped item and confirm it reaches the default printer. Then add a second round to the same table and check that only the new items print.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Mapping items instead of categories</strong> — fine for ten items, unmanageable at two hundred.</li>
+<li><strong>Printers on Wi-Fi with a weak signal</strong> in a steel-and-tile kitchen. Prefer Ethernet for kitchen printers where you can.</li>
+<li><strong>Forgetting the bar</strong> — drinks printed in the kitchen get made late or not at all.</li>
+<li><strong>KOT and bill on the same printer</strong> at the counter. Give bills their own printer so a long KOT queue never holds up a guest's bill.</li>
+</ul>
+
+<h2>Paper or screens?</h2>
+<p>Once routing is set up, the same mapping can drive kitchen display screens instead of printers. Screens show how long each order has been waiting and let the cook mark it ready; paper survives grease, power cuts and a dead tablet. <a href="/blog/kitchen-display-system-vs-printed-kot/">KDS versus printed KOT</a> compares the two honestly.</p>
+
+<h2>Worked example</h2>
+<p>Table 7 orders: 2 butter naan, 1 dal makhani, 1 veg hakka noodles, 1 raita, 2 fresh lime soda. With routing set up, the POS prints four tickets:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Station</th><th>Ticket</th></tr></thead>
+<tbody>
+<tr><td>Tandoor</td><td>KOT 0181 · T7 · Butter Naan x2</td></tr>
+<tr><td>Main kitchen</td><td>KOT 0181 · T7 · Dal Makhani x1</td></tr>
+<tr><td>Chinese</td><td>KOT 0181 · T7 · Veg Hakka Noodles x1</td></tr>
+<tr><td>Cold / bar</td><td>KOT 0181 · T7 · Raita x1, Fresh Lime Soda x2</td></tr>
+</tbody></table></div>
+<p>Same KOT number on each, so the pass can match them back to the table.</p>
+
+<h2>How Pass does it</h2>
+<p>In <a href="/pass/">Pass</a>, you define kitchen stations, map menu categories to them, and assign each station a printer; categories without a station go to the default KOT printer. KOTs are auto-numbered and printed silently on 80mm thermal printers over USB, the network or the system default, with a separate printer for bills. The included kitchen display can be filtered by station and colours tickets by age, turning amber at 8 minutes and red at 15.</p>

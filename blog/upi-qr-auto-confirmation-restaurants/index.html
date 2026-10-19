@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem("tbn-consent")}catch(e){}var g=c==="granted"?"granted":"denied";gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);})();</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation | TBN</title>
+<meta name="description" content="Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/">
+<meta property="og:title" content="UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation | TBN">
+<meta property="og:description" content="Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.">
+<meta property="og:url" content="https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-10-19">
+<meta property="article:section" content="Restaurants">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="The Binary Brain Network">
+<meta property="og:image" content="https://tbn.tbbn.in/og-tbn.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1015">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="TBN Blog" href="/blog/feed.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation",
+ "description": "Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.",
+ "datePublished": "2026-10-19",
+ "dateModified": "2026-10-19",
+ "inLanguage": "en-IN",
+ "wordCount": 1021,
+ "articleSection": "Restaurants",
+ "keywords": "upi qr restaurant, dynamic upi qr, upi payment confirmation pos",
+ "author": {
+  "@type": "Organization",
+  "@id": "https://tbn.tbbn.in/#organization",
+  "name": "The Binary Brain Network"
+ },
+ "publisher": {
+  "@id": "https://tbn.tbbn.in/#organization"
+ },
+ "mainEntityOfPage": "https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/",
+ "image": "https://tbn.tbbn.in/og-tbn.svg",
+ "isPartOf": {
+  "@type": "Blog",
+  "@id": "https://tbn.tbbn.in/blog/#blog"
+ },
+ "speakable": {
+  "@type": "SpeakableSpecification",
+  "cssSelector": [
+   ".article-title",
+   ".answer"
+  ]
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between static and dynamic UPI QR?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A static QR is printed once and encodes only your UPI ID; the customer enters the amount. A dynamic QR is generated for each bill and encodes the exact amount and a reference, so the customer cannot pay the wrong amount and the payment can be matched to the bill automatically."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does automatic UPI payment confirmation work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The billing software creates the QR through a payment gateway. When the customer pays, the gateway records the payment against that QR, and the billing software checks or is told the status, marking the bill paid without the cashier looking at a phone."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Are there charges for UPI payments?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Person-to-merchant UPI payments are generally free of merchant discount rate for most transactions, but payment gateways may charge their own fees for dynamic QR and settlement services. Check the gateway's current pricing before choosing."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "The Binary Brain Network",
+   "item": "https://tbn.tbbn.in/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://tbn.tbbn.in/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "UPI QR auto-confirmation",
+   "item": "https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/"
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/page.css">
+<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="/assets/tbn.css">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBHC2VR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="grid-texture"></div>
+<header class="nav"><div class="container nav__inner">
+  <a href="/" class="nav__brand"><span class="nav__brand-mark">TBN</span><span class="nav__brand-name">The Binary Brain Network <span>/ Blog</span></span></a>
+  <nav><ul class="nav__links"><li><a href="/#products">Products</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/download/">Download</a></li><li><a href="/blog/">Blog</a></li><li><a href="/compare/">Compare</a></li><li><a href="/about/">About</a></li></ul></nav>
+  <div class="nav__right"><a href="tel:+918879070732" class="nav__phone">+91 88790 70732</a><a href="https://wa.me/918879070732?text=Hi%2C%20I%20read%20your%20article%20and%20I%27d%20like%20to%20know%20more%20about%20Pass." target="_blank" rel="noopener" class="nav__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>WhatsApp</a></div>
+</div></header>
+<div class="container"><nav class="breadcrumb"><a href="/">TBN</a> / <a href="/blog/">Blog</a> / <span>UPI QR auto-confirmation</span></nav></div>
+<main>
+<article>
+  <header class="article-head"><div class="container container--narrow">
+    <div class="article-meta"><span>Restaurants</span><span>19 · 10 · 2026</span><span>5 min read</span></div>
+    <h1 class="article-title">UPI QR at the counter: <em>static, dynamic, and confirming payment automatically.</em></h1>
+    <p class="article-lede">UPI is now the default way most Indians pay for a meal. The question for a restaurant is no longer whether to accept it, but how to stop the counter turning into a queue of people holding up phones that say 'payment successful'.</p>
+  </div></header>
+  <div class="article-body"><div class="container container--narrow">
+    <div class="answer"><div class="answer__label">Short answer</div><p>A static UPI QR shows your UPI ID; the customer types the amount and the cashier has to check the payment arrived. A dynamic QR is generated per bill with the exact amount and, when issued through a payment gateway such as Razorpay or PhonePe, confirms the payment to your billing software automatically. Static is free and simple; dynamic removes amount errors and manual checking.</p></div>
+<h2>Option 1: a static UPI QR</h2>
+<p>The familiar printed standee by the cash counter. It encodes your UPI ID (a VPA such as <code>yourrestaurant@okbank</code>) and nothing else. The customer scans, types the bill amount, pays, and shows the cashier the confirmation screen.</p>
+<p><strong>Good:</strong> free, works with every UPI app, needs no gateway account and no internet on your side.</p>
+<p><strong>Not so good:</strong> the customer can mistype the amount; the cashier has to trust the screenshot or check the business phone; screenshots of old payments are a known fraud; and matching UPI receipts to bills at closing is manual.</p>
+<p>Many billing systems can print a static QR on the bill or show it on screen with your UPI ID, which at least removes the standee hunt.</p>
+
+<h2>Option 2: a dynamic QR per bill</h2>
+<p>A dynamic QR is created for a specific bill. It encodes the exact amount and a reference, so the customer only has to approve. There are two flavours:</p>
+<ul>
+<li><strong>Dynamic but unconfirmed</strong> — the software builds a UPI link with the amount filled in. The amount is right, but someone still checks the phone.</li>
+<li><strong>Gateway-confirmed</strong> — the software asks a payment gateway (Razorpay, PhonePe and others offer this) to create the QR. When the customer pays, the gateway knows, and the billing software marks the bill paid automatically — either because the gateway notifies it or because it checks the status every few seconds.</li>
+</ul>
+<p>The second flavour is what removes the queue: the cashier hands over the change for the next customer while the screen turns green on its own.</p>
+
+<h2>What auto-confirmation changes at the counter</h2>
+<ul>
+<li><strong>No wrong amounts.</strong> ₹460 cannot become ₹46.</li>
+<li><strong>No screenshot fraud.</strong> The bill is paid when the gateway says so, not when a phone is waved.</li>
+<li><strong>Faster turns.</strong> At lunch rush, saving twenty seconds per UPI payment is several minutes of queue.</li>
+<li><strong>Clean closing.</strong> Every UPI payment is already matched to a bill number, so the day's UPI total in your report matches the gateway's settlement report.</li>
+</ul>
+
+<h2>What it needs</h2>
+<ol>
+<li>A merchant account with a gateway that offers UPI QR, with KYC completed.</li>
+<li>API keys from that gateway entered into your billing software — stored securely, never displayed after entry.</li>
+<li>An internet connection on the billing computer at the moment of payment. If the connection drops, fall back to static QR or cash; good software makes that switch obvious.</li>
+</ol>
+<p>Check the gateway's fee schedule and settlement timing before choosing. UPI itself is largely free for merchants, but gateway services built on top of it may not be.</p>
+
+<h2>Split payments still matter</h2>
+<p>A table of four often pays partly in cash and partly by UPI, or two people pay by UPI separately. Your software should let one bill be settled across several payment modes, each recorded separately, so the day's cash and UPI totals are both right. That is different from splitting the bill itself into several invoices — see our <a href="/blog/day-close-cash-reconciliation-guide/">day-close reconciliation guide</a> for why the distinction matters at closing.</p>
+
+<h2>Practical setup for a busy counter</h2>
+<ul class="checklist">
+<li>Keep a static QR standee as a fallback, even with a gateway.</li>
+<li>Put the dynamic QR on a customer-facing screen or print it on the bill, so the customer is not leaning over the cashier.</li>
+<li>Test a ₹1 payment end to end before going live.</li>
+<li>Check that refunds are handled — through the gateway dashboard, recorded in your billing software.</li>
+<li>Reconcile the gateway settlement against your UPI report weekly at first, then monthly.</li>
+</ul>
+
+<h2>A worked example at the counter</h2>
+<p>A ₹640 bill at a busy café, paid by UPI:</p>
+<ul>
+<li><strong>Static QR:</strong> the customer scans the standee, types 640, pays, and turns their phone towards the cashier. The cashier checks the amount and the time, perhaps glances at the business phone for the notification, and closes the bill. Twenty to forty seconds, and an occasional wrong amount.</li>
+<li><strong>Gateway QR:</strong> the cashier presses UPI; a QR for exactly ₹640 appears on the customer screen or bill. The customer scans and approves. The bill closes itself when payment lands. The cashier was already serving the next person.</li>
+</ul>
+
+<h2>Reconciling UPI at month end</h2>
+<ol>
+<li>Export your POS's UPI payments for the month.</li>
+<li>Download the gateway's settlement report for the same period.</li>
+<li>Match totals, then investigate any day that does not match — usually a refund or a payment taken outside the POS.</li>
+<li>Check the gateway's fees against the rates you agreed.</li>
+</ol>
+
+<h2>In Pass</h2>
+<p><a href="/pass/">Pass</a> supports three UPI options: a static QR that needs only your UPI ID and no gateway account; a Razorpay dynamic QR per bill with automatic payment confirmation; and a PhonePe QR whose payment status is checked automatically. Gateway keys are stored encrypted and never shown on screen. Bills can be settled across cash, UPI and card on the same invoice, and the cash change calculator handles the cash part. Paytm is not supported.</p>
+<div class="related-cta">
+  <div><div class="related-cta__label">From the people who wrote this</div>
+  <div class="related-cta__title">Pass · Restaurant POS</div>
+  <div class="related-cta__desc">Billing, KOT and kitchen display, inventory with recipes, staff and payroll, multiple outlets — offline. ₹7,500 per billing computer a year.</div></div>
+  <div class="related-cta__actions"><a href="/download/#pass" class="btn btn--primary"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Free 15-day trial</a><a href="/pass/" class="btn btn--ghost">See Pass</a></div>
+</div>
+    <div class="post-faq"><h2>Common questions</h2><div class="faq-list">
+<details class="faq-item"><summary>What is the difference between static and dynamic UPI QR?</summary><div class="faq-item__body">A static QR is printed once and encodes only your UPI ID; the customer enters the amount. A dynamic QR is generated for each bill and encodes the exact amount and a reference, so the customer cannot pay the wrong amount and the payment can be matched to the bill automatically.</div></details>
+<details class="faq-item"><summary>How does automatic UPI payment confirmation work?</summary><div class="faq-item__body">The billing software creates the QR through a payment gateway. When the customer pays, the gateway records the payment against that QR, and the billing software checks or is told the status, marking the bill paid without the cashier looking at a phone.</div></details>
+<details class="faq-item"><summary>Are there charges for UPI payments?</summary><div class="faq-item__body">Person-to-merchant UPI payments are generally free of merchant discount rate for most transactions, but payment gateways may charge their own fees for dynamic QR and settlement services. Check the gateway's current pricing before choosing.</div></details>
+</div></div>
+    <div class="author-box"><strong>Written by The Binary Brain Network</strong> — the software division of The Big Brand Network, Mumbai. We build Folio, Pass and Slate, so where our own products come up we say so, and we say where they are the wrong fit. Last reviewed 19 October 2026.</div>
+  </div></div>
+</article>
+<section class="related-posts"><div class="container container--narrow">
+  <div class="related-posts__head">Keep reading</div>
+  <div class="related-list"><a class="related-item" href="/blog/best-restaurant-billing-software-india-2026/"><div class="related-item__cat">Restaurants</div><div class="related-item__title">Best Restaurant Billing Software in India (2026): How to Shortlist</div></a><a class="related-item" href="/blog/cafe-pos-setup-checklist/"><div class="related-item__cat">Restaurants</div><div class="related-item__title">Café POS Setup Checklist: From Menu to First Bill</div></a><a class="related-item" href="/blog/day-close-cash-reconciliation-guide/"><div class="related-item__cat">Operations</div><div class="related-item__title">Day Close and Cash Reconciliation for Restaurants and Hotels</div></a></div>
+</div></section>
+</main>
+<div class="parent-strip"><div class="container parent-strip__inner">
+  <p class="parent-strip__text"><strong>The Binary Brain Network</strong> is the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai, operating pan-India. Trademark registered, MSME certified.</p>
+  <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency</a>
+</div></div>
+<section class="cta"><div class="container container--narrow">
+  <h2 class="cta__title">Try it on your own property, free.</h2>
+  <p class="cta__sub">Every TBN product has a 15-day free trial of the complete software, with no card. Installation and staff training are included when you buy.</p>
+  <div class="cta__actions">
+    <a href="/download/" class="btn btn--primary"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Download a free trial</a>
+    <a href="https://wa.me/918879070732?text=Hi%2C%20I%20read%20your%20article%20and%20I%27d%20like%20to%20know%20more%20about%20Pass." target="_blank" rel="noopener" class="btn btn--whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg> Ask on WhatsApp</a>
+  </div>
+  <div class="cta__contact"><a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">tbn@tbbn.in</a></div>
+</div></section>
+<footer class="footer"><div class="container footer__inner">
+  <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
+  <div class="footer__links"><a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a><a href="/pricing/">PRICING</a><a href="/download/">DOWNLOAD</a><a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a><a href="/careers/">CAREERS</a><a href="/privacy/">PRIVACY</a><a href="/terms/">TERMS</a><a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a></div>
+</div></footer>
+<script src="/assets/tbn.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!--meta
+{"title": "Thermal Bill Printer Troubleshooting for Restaurants and Hotels", "h1": "Thermal printer troubleshooting: <em>blank bills, no cut, wrong width.</em>", "crumb": "Thermal printer troubleshooting", "description": "Fix the common thermal receipt printer problems in restaurants and hotels: blank or faded prints, paper not cutting, text cut off, wrong width, printer offline, duplicate prints and network printers that disappear.", "category": "Operations", "product": "all", "date": "2026-10-19", "order": 17, "keywords": ["thermal printer not printing", "receipt printer not cutting", "pos printer troubleshooting"], "lede": "Thermal printers are cheap, fast and nearly indestructible — until the night one prints blank paper in the middle of service. Almost every failure has one of a handful of causes, and most take two minutes to fix.", "answer": "Most thermal printer problems come from five causes: paper loaded upside down (blank prints), the wrong paper width or driver (cut-off text), the auto-cutter disabled in the driver (no cut), a changed IP address (network printer offline), or the wrong printer selected in the billing software. Check them in that order.", "faqs": [["Why is my thermal printer printing blank paper?", "Almost always because the roll is loaded the wrong way round. Thermal paper only darkens on one side. Flip the roll so the paper feeds from the bottom with the coated side facing the print head. If it is still blank, the paper may be old or not thermal paper."], ["Why doesn't my receipt printer cut the paper?", "The auto-cut option may be disabled in the printer driver, or the driver may ignore the cut command. Enable cutting in the driver's preferences; if your software offers a raw or forced cut option, use it for printers whose drivers skip the command."], ["Why does my network printer keep going offline?", "Usually the router gives the printer a new IP address after a power cut. Reserve a fixed IP address for the printer in your router settings and set the same address in the printer configuration."]], "related": ["58mm-vs-80mm-thermal-printer", "kot-kitchen-station-routing-guide", "restaurant-pos-ubuntu-linux"]}
+-->
+<h2>Blank or very faint prints</h2>
+<p><strong>Cause 1: the roll is upside down.</strong> Thermal paper darkens only on its coated side. Scratch the paper with a fingernail; the side that marks grey is the printing side. Load the roll so that side faces the print head — on most printers, paper feeds from underneath the roll.</p>
+<p><strong>Cause 2: old or wrong paper.</strong> Thermal paper fades with heat and age, and plain paper rolls of the same size will not print at all. Buy from a supplier you trust and store rolls away from the kitchen heat.</p>
+<p><strong>Cause 3: print density.</strong> Some drivers have a density or darkness setting. Raise it one step if prints are pale but readable.</p>
+<p><strong>Cause 4: a dirty head.</strong> Kitchens coat everything in grease. Switch off, let the head cool, and wipe it with isopropyl alcohol on a lint-free cloth.</p>
+
+<h2>Paper doesn't cut</h2>
+<ul>
+<li>Open the printer's driver preferences and enable <strong>cut after each document</strong> (wording varies).</li>
+<li>Some inexpensive printers' drivers ignore the cut command from applications. Billing software that sends the cut command directly to the printer — a "force cut" or raw-print option — solves this.</li>
+<li>If the cutter jams, switch off, open the cover and remove any paper scraps around the blade.</li>
+</ul>
+
+<h2>Text cut off at the edges, or a narrow strip of text</h2>
+<p>This is almost always a <strong>width mismatch</strong>.</p>
+<ul>
+<li>An 80mm roll has about 72mm printable; a 58mm roll about 48mm. If the software thinks it is printing 80mm on a 58mm printer, the right side is lost; the other way round, you get a thin column in the middle.</li>
+<li>Check the paper size in the printer driver, then the paper width in your billing software. They must agree.</li>
+<li>If a few characters are clipped on one side only, adjust the left or right margin in the software. An alignment test page with a printed ruler makes this a one-minute job.</li>
+</ul>
+<p>Not sure which size you have? Measure the roll. <a href="/blog/58mm-vs-80mm-thermal-printer/">58mm versus 80mm</a> explains the trade-offs.</p>
+
+<h2>Printer shows offline</h2>
+<h3>USB printers</h3>
+<ul>
+<li>Try a different USB port, directly on the PC rather than through a hub.</li>
+<li>Check the printer is switched on and the cover is closed — many printers report "offline" when the cover is open or paper is out.</li>
+<li>In the operating system's printer list, make sure the right printer is not paused and "use printer offline" is not ticked.</li>
+</ul>
+<h3>Network printers</h3>
+<ul>
+<li>Print the printer's self-test page (usually by holding the feed button while switching on). It shows the current IP address.</li>
+<li>If the address has changed since setup, your router reassigned it — common after power cuts. In the router settings, <strong>reserve a fixed IP</strong> for the printer's MAC address.</li>
+<li>Prefer Ethernet over Wi-Fi in kitchens; steel and tiles absorb signals.</li>
+</ul>
+
+<h2>Prints going to the wrong printer</h2>
+<p>When a restaurant has a bill printer and several KOT printers, it is easy to map a station to the wrong one. Name printers clearly in the operating system — <code>BILL-COUNTER</code>, <code>KOT-TANDOOR</code> — then recheck the mapping in the POS. Send a test order that touches every station.</p>
+
+<h2>Duplicate prints</h2>
+<p>Usually two causes: the bill is set to print automatically after payment <em>and</em> someone presses print; or both the customer copy and an internal copy are enabled when only one is needed. Check the auto-print and copies settings.</p>
+
+<h2>Garbled characters or symbols</h2>
+<p>Random characters usually mean the wrong driver — a generic text driver sending data the printer does not understand. Install the manufacturer's driver, or choose the ESC/POS driver your billing software recommends. A missing ₹ symbol is a character-set issue; many printers cannot print it, and "Rs." is an acceptable fallback on a bill.</p>
+
+<h2>A preventive checklist</h2>
+<ul class="checklist">
+<li>Keep two spare rolls per printer, stored away from heat.</li>
+<li>Reserve fixed IPs for every network printer.</li>
+<li>Put printers on a UPS along with the billing PC.</li>
+<li>Clean print heads monthly in the kitchen.</li>
+<li>Keep the alignment test page from setup, so you can spot drift.</li>
+</ul>
+
+<h2>Printer handling in TBN software</h2>
+<p><a href="/folio/">Folio</a> prints silently to 80mm and 58mm thermal printers, sets up common POS-80/XP-80 and POS-58/XP-58 models automatically, has a "force cut" option for printers whose drivers skip the cut, left and right margin fine-tuning, and an alignment test page with a millimetre ruler. <a href="/pass/">Pass</a> prints KOTs and bills silently on 80mm printers over USB, the network or the system default, with separate printers per station. <a href="/slate/">Slate</a> routes F&amp;B and invoice printing to separate printers.</p>

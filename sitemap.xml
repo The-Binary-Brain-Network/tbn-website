@@ -3,46 +3,58 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tbn.tbbn.in/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://tbn.tbbn.in/download/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://tbn.tbbn.in/folio/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image><image:loc>https://tbn.tbbn.in/og-folio.svg</image:loc></image:image>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image><image:loc>https://tbn.tbbn.in/og-pass.svg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://tbn.tbbn.in/pricing/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://tbn.tbbn.in/slate/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image><image:loc>https://tbn.tbbn.in/og-slate.svg</image:loc></image:image>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/compare/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/compare/hotel-management-software-india/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/compare/restaurant-billing-software-india/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -54,99 +66,285 @@
   </url>
   <url>
     <loc>https://tbn.tbbn.in/folio/features/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/features/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/slate/features/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tbn.tbbn.in/blog/58mm-vs-80mm-thermal-printer/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/best-hotel-management-software-small-hotels-india/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/best-restaurant-billing-software-india-2026/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/c-form-form-iii-foreign-guests-hotels-guide/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/cafe-pos-setup-checklist/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/composition-scheme-bill-of-supply-restaurants/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/custom-vs-off-the-shelf-hospitality-software/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/day-close-cash-reconciliation-guide/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/do-small-hotels-need-channel-manager/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/ezee-hotelogix-alternatives-small-hotels/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/group-bookings-master-folio/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://tbn.tbbn.in/blog/gst-for-restaurants-india-explained/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/gst-on-hotel-rooms-2026/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/gstr-1-tally-export-hotels/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/guest-house-software-essentials/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/hotel-housekeeping-room-status-workflow/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/blog/hotel-room-service-billing-setup-guide/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/hourly-hotel-stays-pricing-billing/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/kitchen-display-system-vs-printed-kot/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/kot-kitchen-station-routing-guide/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/multi-outlet-restaurant-gstin-bill-series/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/night-audit-explained-small-hotels/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/offline-first-software-indian-hospitality/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/offline-vs-cloud-pos-restaurants-india/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/per-room-vs-flat-hotel-software-pricing/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/petpooja-alternatives-small-restaurants/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/recipe-costing-food-cost-percentage/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/blog/restaurant-billing-software-cost-india/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://tbn.tbbn.in/about/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tbn.tbbn.in/blog/restaurant-pos-ubuntu-linux/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://tbn.tbbn.in/blog/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tbn.tbbn.in/blog/restaurant-staff-attendance-payroll/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/room-service-billing-without-pms-module/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/thermal-printer-troubleshooting-restaurants/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/folio/for-boutique-hotels/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/folio/for-guest-houses/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/for-bakeries/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/for-bars/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/for-cafes/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/pass/for-qsrs/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/tools/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/tools/gst-calculator/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/tools/software-cost-calculator/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/about/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tbn.tbbn.in/glossary/</loc>
@@ -187,7 +385,19 @@
   <url>
     <loc>https://tbn.tbbn.in/careers/</loc>
     <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/privacy/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://tbn.tbbn.in/terms/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

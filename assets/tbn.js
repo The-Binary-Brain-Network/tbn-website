@@ -256,12 +256,197 @@
     });
   }
 
+  /* ---------- Measurement --------------------------------------
+     The site pushes plain events into dataLayer; which vendors receive
+     them (GA4, Google Ads, Meta, Microsoft, LinkedIn) is decided in Google
+     Tag Manager, so adding or swapping a tracker never needs a deploy.
+     Consent defaults are set inline in <head>, before GTM loads. */
+  window.dataLayer = window.dataLayer || [];
+  function gtagShim() { window.dataLayer.push(arguments); }
+  var gtag = typeof window.gtag === 'function' ? window.gtag : gtagShim;
+
+  function track(name, params) {
+    var payload = { event: name };
+    if (params) for (var k in params) if (params.hasOwnProperty(k)) payload[k] = params[k];
+    payload.page_path = location.pathname;
+    var src = getSource();
+    if (src) payload.lead_source = src;
+    window.dataLayer.push(payload);
+  }
+  window.tbnTrack = track;
+
+  function productFrom(str) {
+    var s = (str || '').toLowerCase();
+    if (s.indexOf('folio') !== -1) return 'folio';
+    if (s.indexOf('pass') !== -1) return 'pass';
+    if (s.indexOf('slate') !== -1) return 'slate';
+    if (s.indexOf('custom') !== -1) return 'custom';
+    return 'general';
+  }
+
+  /* First touch for this visit: ad click ids, UTM tags, or the referring
+     site. Kept for the session only. */
+  function getSource() {
+    try { return sessionStorage.getItem('tbn-src') || ''; } catch (e) { return ''; }
+  }
+  function captureSource() {
+    if (getSource()) return;
+    var q = new URLSearchParams(location.search);
+    var tag = '';
+    if (q.get('gclid') || q.get('gbraid') || q.get('wbraid')) tag = 'google-ads';
+    else if (q.get('fbclid')) tag = 'meta';
+    else if (q.get('msclkid')) tag = 'microsoft-ads';
+    else if (q.get('li_fat_id')) tag = 'linkedin';
+    var utm = [q.get('utm_source'), q.get('utm_medium'), q.get('utm_campaign')].filter(Boolean).join('/');
+    if (utm) tag = tag ? tag + ' ' + utm : utm;
+    if (!tag && document.referrer) {
+      try {
+        var host = new URL(document.referrer).hostname.replace(/^www\./, '');
+        if (host && host !== location.hostname) tag = host;
+      } catch (e) {}
+    }
+    try { sessionStorage.setItem('tbn-src', tag || 'direct'); } catch (e) {}
+  }
+
+  /* So a sales chat shows where the lead came from, add a short
+     reference to the pre-filled WhatsApp text. Visible to the visitor,
+     nothing hidden. */
+  function tagWhatsAppLinks() {
+    var src = getSource();
+    var page = location.pathname;
+    var ref = ' (ref: ' + page + (src && src !== 'direct' ? ' · ' + src : '') + ')';
+    var links = document.querySelectorAll('a[href*="wa.me/"]');
+    Array.prototype.forEach.call(links, function (a) {
+      if (a.getAttribute('data-ref-tagged')) return;
+      try {
+        var u = new URL(a.href);
+        var text = u.searchParams.get('text') || 'Hi, I found you on tbn.tbbn.in.';
+        u.searchParams.set('text', text + ref);
+        a.href = u.toString().replace(/\+/g, '%20');   // wa.me expects %20, not +
+        a.setAttribute('data-ref-tagged', '1');
+      } catch (e) {}
+    });
+  }
+
+  function osFromFile(file) {
+    var f = file.toLowerCase();
+    if (/\.exe$/.test(f)) return 'windows';
+    if (/\.(appimage|deb)$/.test(f)) return 'linux';
+    if (/\.apk$/.test(f)) return 'android';
+    return 'other';
+  }
+
+  function bindTracking() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a) {
+        var copy = e.target.closest && e.target.closest('.cmd__copy');
+        if (copy) {
+          var cmd = (copy.parentNode.textContent || '').trim();
+          track('command_copy', { command: cmd.slice(0, 80), product: productFrom(cmd + location.pathname) });
+        }
+        return;
+      }
+      var href = a.getAttribute('href') || '';
+      var where = a.closest('.tbn-fab') ? 'floating' :
+                  a.closest('.nav, .tbn-drawer') ? 'nav' :
+                  a.closest('.hero') ? 'hero' :
+                  a.closest('#pricing, .pricing-card, .price-block') ? 'pricing' :
+                  a.closest('.cta, .related-cta') ? 'cta' : 'body';
+
+      if (/\/releases\/(latest\/)?download\//.test(href)) {
+        var file = href.split('/').pop();
+        track('trial_download', { product: productFrom(file), os: osFromFile(file), file: file, cta_location: where });
+      } else if (href.indexOf('wa.me/') !== -1) {
+        var txt = '';
+        try { txt = new URL(a.href).searchParams.get('text') || ''; } catch (err) {}
+        track('whatsapp_click', { product: productFrom(txt + ' ' + location.pathname), cta_location: where });
+      } else if (href.indexOf('tel:') === 0) {
+        track('phone_click', { cta_location: where });
+      } else if (href.indexOf('mailto:') === 0) {
+        track('email_click', { cta_location: where });
+      } else if (/^\/(download|pricing)\//.test(href)) {
+        track('cta_click', { target: href, cta_location: where });
+      }
+    }, true);
+
+    /* Scroll depth, once per threshold. */
+    var marks = [25, 50, 75, 90], hit = {};
+    window.addEventListener('scroll', function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return;
+      var pct = (window.scrollY / max) * 100;
+      marks.forEach(function (m) {
+        if (pct >= m && !hit[m]) { hit[m] = 1; track('scroll_depth', { percent: m }); }
+      });
+    }, { passive: true });
+
+    /* Pricing seen: the strongest buying signal short of a click. */
+    var pricing = document.querySelector('#pricing');
+    if (location.pathname.indexOf('/pricing/') === 0) {
+      track('pricing_view', { product: 'all' });
+    } else if (pricing && 'IntersectionObserver' in window) {
+      var seen = false;
+      var po = new IntersectionObserver(function (entries) {
+        if (!seen && entries[0].isIntersecting) {
+          seen = true;
+          track('pricing_view', { product: productFrom(location.pathname) });
+          po.disconnect();
+        }
+      }, { threshold: 0.3 });
+      po.observe(pricing);
+    }
+  }
+
+  /* ---------- Consent ------------------------------------------
+     Analytics runs cookieless until the visitor chooses; advertising
+     storage stays off until they accept. One small bar, two buttons,
+     remembered. */
+  function readConsent() {
+    try { return localStorage.getItem('tbn-consent'); } catch (e) { return null; }
+  }
+  function applyConsent(granted) {
+    var v = granted ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v
+    });
+    window.dataLayer.push({ event: granted ? 'consent_granted' : 'consent_denied' });
+  }
+  function buildConsent() {
+    if (readConsent() || document.querySelector('.tbn-consent')) return;
+    var bar = document.createElement('div');
+    bar.className = 'tbn-consent';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Cookie choice');
+    bar.innerHTML =
+      '<p>We use cookies to see which pages help and to measure our ads. Nothing is sold. <a href="/privacy/">Privacy policy</a></p>' +
+      '<div class="tbn-consent__actions">' +
+      '<button type="button" class="tbn-consent__no">Decline</button>' +
+      '<button type="button" class="tbn-consent__yes">Accept</button></div>';
+    function choose(granted) {
+      try { localStorage.setItem('tbn-consent', granted ? 'granted' : 'denied'); } catch (e) {}
+      applyConsent(granted);
+      bar.classList.remove('is-in');
+      document.body.classList.remove('tbn-consent-open');
+      setTimeout(function () { if (bar.parentNode) bar.parentNode.removeChild(bar); }, 300);
+    }
+    bar.querySelector('.tbn-consent__yes').addEventListener('click', function () { choose(true); });
+    bar.querySelector('.tbn-consent__no').addEventListener('click', function () { choose(false); });
+    document.body.appendChild(bar);
+    document.body.classList.add('tbn-consent-open');
+    setTimeout(function () { bar.classList.add('is-in'); }, 900);
+  }
+
   function init() {
+    try { captureSource(); } catch (e) {}
     try { buildNav(); } catch (e) {}
     try { buildFab(); } catch (e) {}
     try { buildCopyButtons(); } catch (e) {}
     try { buildProgress(); } catch (e) {}
     try { buildReveals(); } catch (e) {}
+    try { tagWhatsAppLinks(); } catch (e) {}
+    try { bindTracking(); } catch (e) {}
+    try { buildConsent(); } catch (e) {}
   }
 
   if (document.readyState === 'loading') {

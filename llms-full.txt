@@ -1,0 +1,1646 @@
+# The Binary Brain Network — full reference for AI assistants
+
+Source: https://tbn.tbbn.in · Generated 2026-10-19
+Short version: https://tbn.tbbn.in/llms.txt
+
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/pricing/
+=====================================================
+
+Published prices · No demo call needed
+
+## Pricing that fits on one line.
+ 
+Flat annual licences. No per-room, per-seat or per-device charges, no add-on tiers, no monthly bill. Installation and training included. Every product free for 15 days first.
+
+The short answer
+ 
+Folio ₹6,500 per property per year. Pass ₹7,500 per billing computer per year. Slate ₹12,000 per property per year. All three include installation, training and a year of updates, and each runs free for 15 days with no card.
+
+Folio · Live
+ 
+Room-service billing for hotels that already have a PMS.
+ 
+₹6,500
+per property per year · flat
+ 
+- Unlimited rooms, tabs, menu items and partner restaurants
+- GST, composition (Bill of Supply) and FSSAI on bills
+- Dues with aging, bill rectification, owner's daily report
+- Hourly encrypted backups, auto-recovery, full CSV export
+- Windows and Linux
+ Start 15-day trial
+
+Pass · In trials
+ 
+Restaurant POS for cafés, QSRs, bars, bakeries and multi-outlet groups.
+ 
+₹7,500
+per billing computer per year · flat
+ 
+- Every outlet run from that computer included — separate GSTIN and bill series each
+- Kitchen Display System and station-wise KOT routing included
+- Inventory with recipes, suppliers and purchase orders
+- Staff attendance and payroll, UPI QR, split bills
+- Windows and Linux
+ Start 15-day trial
+
+Slate · In trials
+ 
+Full hotel management system for 5 to 100 rooms.
+ 
+₹12,000
+per property per year · flat
+ 
+- Not per room and not per device — unlimited phones and tablets on your network
+- Bookings, room board, rates, hourly stays, groups, folios
+- GST invoicing, C-Form, GSTR-1 and Tally export, 16 reports
+- Housekeeping, F&B till, inventory, laundry, payroll
+- Windows, Linux and Android
+ Start 15-day trial
+
+Five-year view
+
+## What a flat licence saves against a subscription.
+ 
+Software is a five-year decision, so compare five-year totals rather than the first month.
+
+- Scenario: Typical cloud subscription: TBN: 5-year difference
+
+- 20-room hotel, full PMS: ₹100 per room per month = ₹24,000 a year → ₹1,20,000 over 5 years: Slate ₹12,000 a year → ₹60,000: ₹60,000 less
+
+- 40-room hotel, full PMS: ₹100 per room per month = ₹48,000 a year → ₹2,40,000: Slate → ₹60,000 (same price at any size): ₹1,80,000 less
+
+- Single restaurant, one billing PC: ₹1,500 a month = ₹18,000 a year → ₹90,000: Pass ₹7,500 a year → ₹37,500: ₹52,500 less
+
+- Hotel with a PMS but no room-service module: Separate restaurant POS at ₹1,000 a month → ₹60,000: Folio ₹6,500 a year → ₹32,500: ₹27,500 less
+
+Subscription figures are illustrative, taken from the middle of the ranges commonly quoted in India (₹50–₹200 per room per month for hotel PMS; ₹800–₹2,500 a month for cloud restaurant POS). Your own quote may be higher or lower — run your real numbers in the cost calculator.
+
+Every licence
+
+## Included, whichever product you choose.
+
+01
+
+### Installation and training
+We set it up with you and train your staff on a live walkthrough. No setup fee.
+
+02
+
+### Works offline
+Billing, printing, reports and backups run with the internet unplugged. Your data lives on your own machine.
+
+03
+
+### Updates for the year
+New releases download in the background and install on restart — never mid-shift.
+
+04
+
+### Your data, exportable
+Excel, PDF and CSV exports. Leaving never means losing your records.
+
+05
+
+### Direct WhatsApp support
+A real person on +91 88790 70732, not a ticket queue.
+
+06
+
+### ₹1,500 per referral
+Credited immediately when a business you refer buys a licence. Stacks across referrals.
+
+Questions
+
+## Pricing questions, answered.
+
+Q: How much does TBN software cost?
+A: 
+Folio costs ₹6,500 per property per year. Pass costs ₹7,500 per billing computer per year, with every outlet run from that computer included. Slate costs ₹12,000 per property per year, not per room and not per device. Each has a 15-day free trial of the complete software.
+
+Q: Is it a subscription?
+A: 
+It is an annual licence, not a monthly SaaS plan. You pay once a year; there are no per-seat, per-room or per-device charges and no paid add-on tiers. Renewal is never automatic — we contact you before it is due and you confirm.
+
+Q: What is included in the price?
+A: 
+The complete product, installation, onboarding, staff training, updates for the year and a direct WhatsApp support line. Nothing is held back for a higher tier.
+
+Q: Why does Pass charge per computer?
+A: 
+Each Pass installation is its own billing station, and the licence is bound to that computer. Everything you run from it — any number of outlets, each with its own GSTIN and bill series — is included.
+
+Q: Is there a discount for referrals?
+A: 
+Yes. Refer another business that buys a licence and you get ₹1,500 off, credited immediately rather than held for renewal. It stacks across referrals. The business you refer pays the standard price.
+
+Q: Do I need to buy new hardware?
+A: 
+Usually not. Every product runs on a Windows 10/11 or Linux PC you already own, with a standard thermal receipt printer. Slate adds Android phones you already have.
+
+Q: What happens to my data if I stop paying?
+A: 
+It stays on your computer. Every product exports your data — Folio as 16 CSV files, Pass and Slate to Excel and PDF — so leaving never means losing your records.
+
+Prices current as of 19 October 2026. Terms: licence, trial and referral terms.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/download/
+=====================================================
+
+Free 15-day trial · No card
+
+## Download TBN software, free for 15 days.
+ 
+The complete software, not a demo. Pick your product, pick your computer, and you can be billing within the hour. Every download below is the latest release, straight from our official GitHub release page.
+ 
+Versions checked 19 October 2026 · download links verified weekly
+
+FolioLive
+ 
+Room-service ordering and billing for hotels that already run a hotel management system.
+ 
+Version 3.15.0 · Runs on Windows 10/11 · Linux
+Price ₹6,500 per property per year
+
+ Windows installer
+ Linux AppImage
+
+Trial starts in the app. On first launch choose Try Folio free for 15 days and enter your hotel's name and phone. Needs internet for that one step. About Folio
+
+PassIn trials
+ 
+Restaurant POS and management — billing, KOT and kitchen display, inventory, staff, multiple outlets.
+ 
+Version 1.0.12 · Runs on Windows 10/11 · Linux
+Price ₹7,500 per billing computer per year
+
+ Windows installer
+ Linux .deb (Ubuntu, Debian, Mint)
+ Linux AppImage
+
+Trial key on WhatsApp. Install, then message us for your 15-day key — usually within minutes in working hours. About Pass
+
+SlateIn trials
+ 
+Hotel management system — bookings, room board, folios, GST invoicing, housekeeping, C-Form, night audit.
+ 
+Version 0.5.9 · Runs on Windows 10/11 · Linux · Android
+Price ₹12,000 per property per year
+
+ Windows installer
+ Linux .deb (Ubuntu, Debian, Mint)
+ Linux AppImage
+ Android app (APK)
+
+Trial key on WhatsApp. Install on the front-desk PC, then message us for your 15-day key. The Android app pairs with that PC over your Wi-Fi. About Slate
+
+Windows
+
+## Installing on Windows.
+
+- Download the Windows installer for your product above.
+ 
+- Open it. If Windows shows "Windows protected your PC", click More info and then Run anyway — this appears because the installer is not code-signed yet.
+ 
+- Start the trial. Folio offers the 15-day trial on its first screen. For Pass and Slate, message us on WhatsApp and we send a 15-day key.
+ 
+- Run the setup wizard — business details, GSTIN, rooms or tables, and printer. Most properties are done in a few minutes.
+
+Linux
+
+## Installing on Linux.
+ 
+Copy-paste commands for each product, including the .deb and AppImage options and the fix for the common libfuse.so.2 error: Folio on Linux · Pass on Linux · Slate on Linux.
+ 
+wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-amd64.deb
+ 
+sudo apt install ./Pass-amd64.deb
+ 
+Example shown for Pass. Launch it afterwards from your applications menu, or with pass-pos.
+
+Questions
+
+## Before you download.
+
+Q: Is the trial really free?
+A: 
+Yes. Every TBN product runs as the complete software for 15 days with no card taken and no feature switched off. If you do nothing at the end of the trial, nothing is charged — the software simply asks for a licence key.
+
+Q: What happens when the 15 days end?
+A: 
+The app stops at its licence screen until a paid key is entered. Your data stays on your computer; nothing is deleted. Enter the paid key and you carry on exactly where you left off.
+
+Q: Windows says "Windows protected your PC". Is it safe?
+A: 
+Yes. Our Windows installers are not code-signed yet, so SmartScreen shows a warning for any publisher it has not seen before. Click More info, then Run anyway. The files come straight from our official GitHub release pages, and we are arranging a signing certificate.
+
+Q: Which Windows versions are supported?
+A: 
+Windows 10 and Windows 11, 64-bit. Windows 7 and 8 are not supported.
+
+Q: Which Linux file should I take?
+A: 
+On Ubuntu, Debian, Linux Mint, Pop!_OS or elementary, take the .deb where one is offered. Anything else, take the AppImage. If an AppImage complains about libfuse.so.2, run sudo apt install libfuse2 once. Full commands are on each product page.
+
+Q: Can I trial on more than one computer?
+A: 
+Each computer gets one trial per product, and trying Folio does not use up a Pass or Slate trial. If you need a second machine for testing, message us.
+
+Q: Do I need internet?
+A: 
+Only briefly. Starting a trial and receiving updates need a connection; billing, printing, reports and backups all run fully offline after that.
+
+Q: Will you help me install it?
+A: 
+Yes. Installation, onboarding and staff training are included with every licence, and we are happy to do the trial install with you over a call.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/folio/features/
+=====================================================
+
+Live in Production · Mumbai · v3.15.0
+
+## Folio — the complete feature list.
+ 
+Everything Folio does, grouped by where you'd use it, plus the full technical specification. Nothing here is an add-on or an upgrade tier — every feature below is in the flat ₹6,500 annual licence.
+
+ Download for Windows
+ Download for Linux
+ Back to Folio
+
+Feature List
+
+## Every screen, every function.
+
+01
+
+### Tabs & Orders
+
+- Room tabs: One open tab per room, opened at check-in with guest name, phone and check-in date. Running total always visible.
+ 
+- Payment modes per tab: Settle on checkout, daily, or per order — set per tab to match how that guest is paying.
+ 
+- Order sources: Order from a partner restaurant, your own kitchen, or split a single order across both.
+ 
+- Menu search: Type-ahead search grouped by restaurant, with a cart and quantity stepping.
+ 
+- Custom items: Add a one-off item that isn't on the menu, without polluting the menu.
+ 
+- Order status: Received → preparing → ready → delivered, tracked per item and rolled up per order.
+ 
+- Order steps: Partner-restaurant items: order taken → ordered → delivered. Your own kitchen: order taken → preparing → ready → delivered.
+ 
+- Price snapshot: Each order line keeps the GST rate, unit and source it was ordered at, so a later menu change never rewrites an old bill.
+ 
+- Overdue flag: A tab unpaid past three days marks itself visually, so nothing ages quietly.
+ 
+- Tab states: Open, due, settled, written off — each visually distinct on the board.
+ 
+- Duplicate protection: A room can't accidentally end up with two open tabs.
+
+02
+
+### Billing
+
+- Consolidated bill: One bill across a date range with optional discount and notes. Preview before printing.
+ 
+- Two copies: Customer copy shows items and totals; hotel copy shows cost against selling price per source, so you see the margin. Either copy can be switched off.
+ 
+- Print options: Print both copies, customer only, hotel only, or share to WhatsApp.
+ 
+- Bill numbering: Sequential with your own prefix and counter. Audit-safe — numbering never resets mid-year.
+ 
+- Reprint: Any past bill, any time, no time limit, identical to the original.
+ 
+- Rectification: Fully edit a finalised bill — guest, period, items, discount, GST. Creates a new versioned bill linked to the original with a reason logged. The original is never destroyed.
+ 
+- Cost-only override: Adjust the cost side without touching the guest bill, then auto-reprint the hotel copy with the new margin.
+ 
+- Refunds: Recorded against the bill with a full trail, and automatically deducted from day-close revenue.
+ 
+- Bulk billing: Select several tabs and close them onto one combined bill — for group checkouts and corporate stays.
+ 
+- Payment methods: Cash, card, UPI, bank transfer and credit — part payments allowed, refunds recorded as negative payments.
+ 
+- Bill of Supply: For composition-scheme properties: prints "BILL OF SUPPLY", collects no tax, and carries the required declaration line.
+ 
+- FSSAI on bills: Your FSSAI licence number printed alongside your GSTIN, on by default, with a renewal warning across the app from 45 days before expiry.
+ 
+- Rupee rounding: Optional, with the adjustment shown transparently as its own "Round Off" line.
+
+03
+
+### Dues & Pay-Later
+
+- On-account bills: A corporate guest signs and leaves; the room frees up for the next guest while the bill stays tracked.
+ 
+- Revenue recognition: Dues are not counted as revenue until actually collected, so your reports show cash reality.
+ 
+- Aging buckets: 0–7, 8–30, 31–60 and 60+ days, with total outstanding at a glance.
+ 
+- Search: By guest name, room number or bill number.
+ 
+- Part payment: Pay against a due in instalments, with balance tracked.
+ 
+- Bad-debt write-off: Write off an uncollectable bill; GST on it is reversed automatically so your filings stay accurate.
+ 
+- CSV export: Full dues list with totals and aging summary, for your accountant.
+
+04
+
+### Menu, Restaurants & Inventory
+
+- Partner restaurants: Add the restaurants you source from, with address, phone and display order.
+ 
+- Menu items: Source, cost price, selling price, unit (half, full, plate, pieces), category, GST rate and availability.
+ 
+- Unit disambiguation: Two items with the same name are shown distinctly by unit, so staff never pick the wrong one.
+ 
+- CSV / TSV import: Import your menu from any spreadsheet, with column mapping and a preview. Unknown restaurant names are created for you.
+ 
+- Inventory items: Stock levels, minimum thresholds, cost per unit and category.
+ 
+- Stock transactions: Purchases, usage and adjustments, with vendor recorded.
+ 
+- Recipe linking: Link a menu item to an inventory item so stock deducts automatically when it sells.
+ 
+- Low-stock alerts: Surfaced at day close and shift handover, where someone will actually see them.
+
+05
+
+### Reports
+
+- Owner's daily report: Generated and printed automatically every day without anyone asking, and frozen so the numbers can't drift later. Reprint or recompute any past day.
+ 
+- Revenue summary: Collected revenue on a cash basis, food cost, gross profit, expenses, inventory, bad debt, refunds, dues added and net profit.
+ 
+- Comprehensive report: Financials, outstanding dues with aging, room-wise performance, top items, expenses, write-offs and refunds — exportable as one CSV covering all eight sections.
+ 
+- Room-wise: Revenue by room, with manually-overridden rows flagged.
+ 
+- Item-wise: Top sellers and thinnest margins.
+ 
+- Expenses: Ingredient, kitchen supply, food purchase and miscellaneous, with vendor and date-range filtering.
+ 
+- Day close: Once per calendar day, PIN-gated, printed, and locks the date. Guards against running an earlier date than the last close.
+ 
+- Shift handover: Pulls today's payments by method, you enter counted cash and UPI, and it prints a signed report showing any difference.
+
+06
+
+### Security & Data
+
+- Database encryption: AES-256-CBC with the key derived from the machine itself — copy the file to another PC and it's unreadable.
+ 
+- Manager PIN: 4–8 digits, stored as a salted PBKDF2-SHA256 hash (200,000 iterations), guarding day close and factory reset.
+ 
+- Hourly backups: 48 retained — two full days of history — stored outside the install folder so updates never touch them.
+ 
+- Automatic recovery: If the database is damaged, Folio finds the newest good backup and restores it on startup, keeping the damaged file aside.
+ 
+- Licensing: Hardware-bound licence key, verified offline. Online revocation and extension checked periodically.
+ 
+- Guarded factory reset: Takes a mandatory backup first, needs your PIN and a typed confirmation, and keeps your setup data.
+ 
+- Crash reporting: Automatic and anonymised, so we can fix a problem before you report it. Can be switched off.
+ 
+- Diagnostics: A built-in eight-point health check with a one-click error report to support.
+ 
+- Full data export: Every table exported as CSV — 16 files plus a README — readable in Excel with the ₹ symbol intact. Your data, any time, no ticket.
+ 
+- PC rename safe: Renaming the computer does not lock you out of your own database.
+
+07
+
+### Day-to-Day
+
+- Keyboard shortcuts: Jump between screens, open search and bring up help without touching the mouse.
+ 
+- In-app guide: Searchable help covering every feature — a new staff member isn't blocked waiting on you.
+ 
+- Themes: Dark and light. The dark one matters at 2am.
+ 
+- Printer setup: Common POS-80 / XP-80 and POS-58 / XP-58 printers are detected and configured automatically. A printed millimetre ruler fine-tunes margins on stubborn ones.
+ 
+- Auto-updates: Download in the background, install on restart. Never interrupts a shift.
+ 
+- Setup wizard: Seven guided steps — hotel details, logo, rooms, partner restaurants, PIN. Under two minutes.
+
+On The Roadmap
+
+## Coming to Folio.
+
+Coming Soon
+
+### Off-site cloud backup
+ 
+An encrypted copy kept off the property, in addition to the hourly local backups that already run. Built and tested; rolling out once storage capacity is in place.
+
+Technical Specification
+
+## What it needs, and what it runs on.
+
+- Version: 3.15.0 (October 2026)
+ 
+- Platform: Windows 10 or 11 (64-bit) — one-click installer with desktop and Start Menu shortcuts. Linux (64-bit) as a single AppImage. Both update themselves.
+ 
+- Hardware: Any Windows 10/11 or Linux PC the property already owns. No server, no new hardware.
+ 
+- Printing: 80mm and 58mm thermal receipt printers, printed silently with no dialog, with automatic setup for common models. Works with any printer installed on the system. Includes a raw fallback for cheap printers that ignore the standard cut command.
+ 
+- Internet: Not required. Every core operation works fully offline. Internet is used only for updates, crash reports and the WhatsApp share link.
+ 
+- Database: Embedded local database (17 tables), AES-256-CBC encrypted, bound to the machine. Changes written to disk within half a second.
+ 
+- Backups: Hourly, 48 retained, stored outside the install folder, with automatic corruption recovery on startup.
+ 
+- Multi-terminal: Single machine. Folio is designed as one install for the front desk.
+ 
+- Licensing: One licence per property, hardware-bound, verified offline. Revocations checked online every 30 minutes when connected.
+ 
+- Updates: Automatic — downloaded in the background, applied on restart.
+ 
+- GST: Off, Regular (CGST + SGST tax invoice, per-item rate override) or Composition (Bill of Supply). GSTIN and FSSAI on every bill.
+ 
+- Free trial: 15 days, full product, started from inside the app with hotel name and phone. No card. One trial per computer.
+ 
+- Legal: EULA, Terms, Privacy and Liability bundled and readable inside the app.
+ 
+- Support: Direct WhatsApp line. Not a ticketing queue.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/pass/features/
+=====================================================
+
+In Restaurant Trials · India
+
+## Pass — the complete feature list.
+ 
+Everything Pass does, grouped by where you'd use it, plus the full technical specification. Nothing below is an add-on tier or a paid module — the Kitchen Display System, multi-outlet and the full reporting suite are all in the flat ₹7,500 annual licence per billing computer.
+
+ Download for Windows
+ Download for Linux
+ Back to Pass
+
+Feature List
+
+## Every screen, every function.
+
+01
+
+### Orders & Tables
+
+- Order types: Dine-in, takeaway and delivery, all from one screen with no mode-switching ceremony.
+ 
+- Table floor plan: Visual layout with sections — AC Room, Garden, Rooftop — and colour-coded status: available, occupied, reserved, cleaning.
+ 
+- Quick Order Entry: Keyboard-driven type-ahead search for punching orders fast at a busy counter.
+ 
+- Merge tables: Combine several tables onto one bill when a group pushes tables together.
+
+- Cancel with reason: Cancellations are recorded with a reason, not silently deleted.
+ 
+- Order status: Placed → KOT sent → preparing → ready → served → billed.
+ 
+- Order numbering: Auto-generated and dated, so every order is traceable.
+ 
+- Customer lookup: Find a returning customer by phone as you take the order.
+ 
+- Online-orders inbox: A single queue for incoming delivery orders — accept or reject, mark the store online or offline, and try it with a built-in test order. Swiggy and Zomato connectivity is on the roadmap.
+
+02
+
+### Kitchen
+
+- Kitchen Display System: Included in the licence — no separate screen fee, no add-on tier.
+ 
+- Station filtering: Each screen shows only its own station's tickets, so tandoor isn't reading Chinese orders.
+ 
+- Tap to advance: Move a ticket through preparing and ready with one touch.
+ 
+- Age colouring: Tickets warm at 8 minutes and go red at 15, so nothing sits forgotten at the pass.
+ 
+- Kitchen stations: Define your stations and map menu categories to them.
+ 
+- Station-wise KOT routing: A category's tickets print at that station's own printer automatically. Unmapped categories fall back to the default.
+ 
+- KOT printing: Auto-numbered per order, printed silently to any 80mm thermal printer.
+ 
+- Separate printers: Different printers for kitchen tickets and customer bills, configured once.
+
+03
+
+### Billing & Payments
+
+- GST billing: CGST, SGST and IGST calculated and shown correctly, with GSTIN and FSSAI printed on the bill.
+ 
+- Tax modes: Flat (one rate across the menu), per item (where slabs differ), or composition — a Bill of Supply with the required declaration and no tax lines, with composition turnover kept separate in the GST report.
+ 
+- Split bill: Settle one order as several separately-numbered invoices — by equal share or by picking items.
+ 
+- Split payments: Part cash, part UPI, part card against a single bill, each recorded with its own reference.
+ 
+- Static UPI QR: Works with any UPI app, needs no gateway account and no API key. Just your UPI ID.
+ 
+- Razorpay QR: Single-use QR per bill with the amount pre-filled, and automatic payment confirmation so the counter isn't waiting on the customer to say "done".
+ 
+- PhonePe QR: Dynamic QR with the payment status checked automatically.
+ 
+- Cash change calculator: Colour-coded so the cashier reads it at a glance.
+ 
+- Bill adjustments: Refunds and corrections recorded properly rather than overwriting history.
+ 
+- Discounts: Flat or percentage, applied before the bill is generated.
+ 
+- Bill numbering: Sequential with a configurable prefix, per outlet, audit-safe.
+ 
+- Auto-print on payment: Optional — the bill prints itself the moment payment lands.
+
+04
+
+### Menu
+
+- Categories: Nested, colour-coded, with item counts and sort order.
+ 
+- Variants: Half and full, small and large — one item, several sizes, each priced independently.
+ 
+- Modifiers: Extra cheese, no onion — free or priced, applied at order time.
+ 
+- Veg / non-veg / egg: Marked with the standard colour dots your customers expect.
+ 
+- Cost price tracking: Stored per item, so margin is real rather than estimated.
+ 
+- Per-item tax rate: 0%, 5%, 12% or 18% set per item where the slabs differ.
+ 
+- Availability toggle: Mark an item sold out in one tap; it greys out at the counter instantly.
+ 
+- Excel import: Bulk-import your menu from a spreadsheet, with a downloadable template.
+ 
+- Import from a photo: Read a photo of your printed menu (JPG, PNG, WebP) entirely on the machine — no internet, no API key, no per-use cost. Every item lands on a review screen to correct before anything is saved.
+
+05
+
+### Inventory & Recipes
+
+- Stock items: Units in kg, g, litre, ml, piece or dozen, with cost per unit and a low-stock threshold.
+ 
+- Stock transactions: Purchases, adjustments and wastage, each with vendor and notes.
+ 
+- Low-stock alerts: Fire at your configured threshold, so you find out before service, not during it.
+ 
+- Recipes: Link a menu item to its ingredients with a quantity per serving.
+ 
+- Automatic deduction: Selling a dish deducts its ingredients from stock on its own. Optional — switch it off if you'd rather not.
+ 
+- Excel import: Bulk-import inventory from a spreadsheet.
+ 
+- Stock log: Every movement, kept for reconciliation.
+ 
+- Suppliers: A supplier list with contact details, linked to your stock purchases.
+ 
+- Purchase orders: Raise a PO, then receive it straight into stock when the delivery arrives.
+
+06
+
+### Multiple Outlets
+
+- Per-outlet identity: Each outlet keeps its own name, address, GSTIN, FSSAI and phone.
+ 
+- Separate bill numbering: Each outlet has its own prefix and counter. Two outlets sharing one sequence would issue duplicate invoice numbers, which is a GST problem — Pass prevents it.
+ 
+- Central master menu: One menu shared across outlets, so a price change lands everywhere at once.
+ 
+- Per-outlet operations: Orders, tables, sections, inventory, expenses and staff are kept separate per outlet.
+ 
+- Outlet switcher: Change which outlet you're working in from inside the app.
+ 
+- Licensing: Every outlet run from one installation is covered by that computer's licence. An outlet comparison report appears once there is more than one.
+
+07
+
+### Staff & Payroll
+
+- Roles: Owner, manager, cashier, waiter and kitchen — each sees only the screens their job needs.
+ 
+- PIN login: A short PIN per staff member — no passwords to manage or forget.
+ 
+- Attendance: Monthly grid with keyboard shortcuts for present, absent, half day and leave, plus check-in tracking.
+ 
+- Salary sheets: Computed monthly from attendance, salary type and advances — gross, deductions, net. Exports to Excel.
+ 
+- Salary advances: Recorded and deducted automatically at payroll.
+ 
+- Excel import: Bulk-import your staff list.
+ 
+- Lock screen: Lock the till between shifts without closing the app.
+
+08
+
+### Customers
+
+- Phone-keyed database: One record per customer, found instantly by number.
+ 
+- Visit tracking: Visit count, total spend and average per visit.
+ 
+- Order history: Everything that customer has ordered, on their record.
+ 
+- Profiles: Name, address, area, city, birthday, email and notes — so a regular gets treated like one.
+ 
+- WhatsApp notifications: Tell a delivery customer their order is ready, pre-formatted, in one click.
+
+09
+
+### Reports
+
+- Dashboard: Today's revenue, active orders, average bill value and cash-versus-UPI collection, updating live.
+ 
+- Daily summary: Revenue, bill count and payment split for the day.
+ 
+- Sales reports: Any date range, with a daily breakdown.
+ 
+- Item-wise: Quantity sold, revenue and average price per item.
+ 
+- GST report: Monthly, bill-level, with the CGST/SGST/IGST breakdown your accountant needs.
+ 
+- Profit & loss: Gross revenue, categorised expenses and net margin.
+ 
+- Expense tracker: Ten categories seeded on setup — rent, electricity, raw materials, salaries and more.
+ 
+- Daily email report: The day's summary sent from your own email account, so the owner sees it without opening the app.
+ 
+- Outlet comparison: Outlets side by side once you run more than one.
+
+- Export: Sales, items, GST, P&L, expenses and salary to Excel; sales, items, GST and P&L to PDF.
+ 
+- Role-gated: Restrict reports to the staff who should see them.
+
+10
+
+### Infrastructure
+
+- Offline-first: Every core operation runs with the internet unplugged. Nothing waits on a server.
+
+- Local backups: At startup and every hour, the last 48 kept. A damaged database is recovered from the newest good backup automatically.
+ 
+- Payment secrets: Gateway keys and the email password stored encrypted, never displayed in the app.
+ 
+- Auto-updates: Downloaded in the background, installed on quit — never mid-service.
+ 
+- Licensing: Signed licence key bound to the computer, verified offline, with revocations checked when online.
+ 
+- Themes: Dark and light, switched instantly.
+ 
+- Guided tour: An in-app walkthrough on first run, plus a built-in FAQ.
+
+On The Roadmap
+
+## Coming to Pass.
+
+Coming Soon
+
+### Swiggy & Zomato connectivity
+ 
+The online-orders inbox is built and running. Direct connectivity to Swiggy and Zomato is pending a platform partnership and will switch on in a future update.
+
+### Scan & order
+ 
+Guests scan a QR at the table and order from their own phone, straight into the same queue your counter uses.
+
+### Customer feedback
+ 
+A short post-bill prompt, aggregated in your reports — so you hear about a bad night from the guest, not a review site.
+
+### Head-office dashboard
+ 
+One view across every outlet — revenue, top items and margins side by side.
+
+### Several billing computers, one database
+ 
+A second counter, kitchen screen or waiter station pairing with the main computer over your own WiFi with a 6-digit code, plus day close with cash reconciliation, an activity log and stricter per-role permissions. Built and in final testing.
+
+### Void, table transfer, hold, complimentary and loyalty points
+ 
+The groundwork is in the database; the screens are being finished.
+
+### Database encryption
+ 
+The whole database encrypted at rest, with a recovery passphrase. In final testing.
+
+### Android app, 58mm printers, logo and UPI QR on the printed bill
+ 
+Planned, in that rough order of demand.
+
+One thing worth knowing up front: the Windows installer isn't code-signed yet, so Windows may show a "publisher unknown" warning the first time you run it. It's safe to proceed — we're sorting the certificate.
+
+Technical Specification
+
+## What it needs, and what it runs on.
+
+- Version: 1.0.12
+ 
+- Platform: Windows 10 or 11 (64-bit) — per-user install, no admin rights required. Linux x86_64 as a .deb (Ubuntu, Debian, Mint) or a portable AppImage.
+ 
+- Hardware: Any Windows or Linux PC the restaurant already owns. No server to buy.
+ 
+- Printing: 80mm thermal printers over USB, network or the system default (58mm rolls are not supported). Silent printing with no dialog. Separate printers for kitchen tickets, bills and each kitchen station.
+ 
+- Internet: Not required. Core billing, ordering, kitchen display and reporting all run fully offline.
+ 
+- Database: Embedded local database on your own machine.
+ 
+- Backups: Hourly local backups, 48 kept, with automatic recovery on startup.
+ 
+- Multi-computer: One installation per billing computer today. Pairing several computers onto one database is in final testing.
+ 
+- Outlets: As many as you need in one installation, each with its own GSTIN, FSSAI and bill numbering.
+ 
+- Security: PIN login per staff member, role-based screens, encrypted payment secrets, and a signed licence verified offline.
+ 
+- Payments: Static UPI QR with no gateway account needed, plus Razorpay and PhonePe. Card and cash recorded with references.
+ 
+- GST: Flat, per-item (0, 5, 12 or 18 percent) or composition scheme, with CGST/SGST/IGST computed and printed.
+ 
+- Licence: ₹7,500 per billing computer per year. Free trial: 15 days, full product, no card.
+ 
+- Setup: Guided onboarding wizard. Most restaurants are billing the same day, including menu import.
+ 
+- Updates: Automatic — downloaded in the background, applied on quit.
+ 
+- Support: Direct WhatsApp line. Not a ticketing queue.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/slate/features/
+=====================================================
+
+In Hotel Trials · India · v0.5.9
+
+## Slate — the complete feature list.
+ 
+Everything Slate does, grouped by where you'd use it, plus the full technical specification. Nothing below is a paid module or an upgrade tier — C-Form, payroll, GSTR-1 export, the F&B module and the Android app are all in the flat ₹12,000 annual licence.
+
+ Download for Windows
+ Download for Linux
+ Android App
+ Back to Slate
+
+Feature List
+
+## Every screen, every function.
+
+01
+
+### Front Desk & Bookings
+
+- Live room board: The home screen. Every room, colour-coded by occupied, vacant, dirty, arriving today or out of order.
+ 
+- Walk-in check-in: Guest details, ID capture, room assignment and folio opened in one guided flow.
+ 
+- Advance bookings: Future reservations with a booking calendar view.
+ 
+- Today's arrivals: Who's expected, at a glance, with per-room arrival lookup.
+ 
+- Room moves: Change a guest's room mid-stay, with available rooms shown and the folio following them.
+ 
+- Checkout preview: See the complete total before committing, then settle.
+ 
+- Hourly & slot stays: Configurable time slots with a live quote per room, in-house hourly guest tracking, and negotiable overstay charges.
+ 
+- Group bookings: One reservation across many rooms, with a master folio and per-room allocation.
+ 
+- Room types: Defined with base rate and maximum occupancy.
+ 
+- Room history: Every stay a given room has had — who, when, what they paid.
+ 
+- No-show handling: Marked automatically at night audit and reported.
+
+02
+
+### Rates & Availability
+
+- Rate plans: Define your plans once and apply them across bookings.
+ 
+- Seasons: Seasonal pricing that applies itself on the right dates.
+ 
+- Rate calendar: Per-date rates, visible and editable across the month.
+ 
+- Rate grid: Room types against dates in one view.
+ 
+- Preview before publishing: See what a rate change actually does before it goes live.
+ 
+- Live quote: Instant quote for a room and date range at the desk.
+ 
+- Occupancy forecast: Projected occupancy from confirmed bookings.
+
+03
+
+### Folios & Billing
+
+- Guest folio: One running account per stay — room charges, F&B, laundry and incidentals, all itemised.
+ 
+- Post charges: Add any charge to a folio at any point in the stay.
+ 
+- Record payments: Cash, UPI, card or bank transfer, each with its own reference.
+ 
+- Discounts with approval: Above a percentage you set, a discount needs a manager. Below it, the desk just gets on with it.
+ 
+- Charge voids: Voided with a reason logged. Nothing disappears silently.
+ 
+- GST invoicing: Configurable GST bands for room tariff, so your property's slabs are applied correctly.
+ 
+- UPI QR on the bill: Printed on the invoice — guest scans and pays without going to the desk.
+ 
+- Branded PDF invoices: Your logo, header note, footer note, terms, bank details, accent colour and title.
+ 
+- Email the invoice: Sent from your own mailbox — connect your SMTP in Settings, with a test button. Optionally automatic at checkout.
+ 
+- Billing register: Every invoice, searchable, with sequential numbering and your own prefix.
+ 
+- Advance payments: Recorded against future bookings, with balance due shown at check-in.
+
+04
+
+### Guests & CRM
+
+- Guest search: By phone or name, with full stay history and total spend.
+ 
+- VIP flag: Marked once, visible to everyone at the desk.
+ 
+- Blacklist: So a problem guest isn't quietly re-admitted by the night shift.
+ 
+- Internal notes: Per guest, staff-only.
+ 
+- ID & photo capture: Camera, file upload, or a Windows flatbed scanner driven directly from the app.
+ 
+- Guest segments: Grouped for reporting and follow-up.
+ 
+- Pre-arrival check-in: Send a secure link, the guest fills in their own details and documents, and your desk reviews and applies or rejects it. Links can be revoked.
+
+05
+
+### Housekeeping & Maintenance
+
+- Room status: Clean, dirty, in progress, inspected and out of order.
+ 
+- Auto-flag on checkout: A departing room marks itself dirty; inspection clears it.
+ 
+- Task assignment: Per housekeeper, with printable daily lists.
+ 
+- Mobile housekeeping view: A dedicated phone screen so the floor updates status where they are, not on a clipboard.
+ 
+- Arrival priority: Rooms with a guest arriving today are flagged for turning first.
+ 
+- Maintenance log: Out-of-order rooms with reason, expected return and resolution tracking.
+ 
+- Productivity reporting: Rooms turned per staff member, in the manager's report.
+
+06
+
+### Compliance
+
+- C-Form register: Full foreigner registration record, auto-populated from check-in data.
+ 
+- Document attachments: Passport and visa scans attached to the C-Form entry.
+ 
+- Guest photo on Form C: Printed on the form itself, as expected.
+ 
+- Submission tracking: Mark entries submitted so you know what's outstanding.
+ 
+- CSV export: For FRRO submission.
+ 
+- FRRO settings: Your user ID, accommodation type, grade, capacity and owner details, stored once and reprinted on every form.
+ 
+- GSTR-1 export: Your return data, straight out of the app.
+ 
+- Tally XML export: Hand your accountant a file, not a shoebox.
+ 
+- GST report: Bill-level breakdown for the period.
+ 
+- Audit log: A record of who did what, so a discrepancy has a trail.
+ 
+- Card data refused: Slate actively rejects card numbers pasted into reference fields, keeping your property out of card-compliance scope by design.
+
+07
+
+### Staff, Attendance & Payroll
+
+- Six roles: Owner, manager, receptionist, housekeeping, F&B and accounts — enforced on the server, not just hidden from the menu.
+ 
+- PIN login: A short PIN per staff member, securely stored.
+ 
+- Brute-force protection: Repeated wrong PINs lock out on a rising delay, but never so long that a receptionist is stuck mid-shift.
+ 
+- Staff records: Add, edit, deactivate and reactivate, with PIN reset.
+ 
+- Attendance: Daily marking, bulk present, and full history — with automatic fill so a missed midnight doesn't break the month.
+ 
+- Payroll: Computed monthly from attendance, salary type and advances.
+ 
+- Salary advances: Recorded and deducted at payroll.
+
+08
+
+### F&B / Room Service
+
+- Menu management: Categories and items, with bulk import.
+ 
+- Orders: Taken against an occupied room, with a kitchen ticket.
+ 
+- Order status: Tracked through to delivery.
+ 
+- Settle to folio: The order lands on the guest's running account instead of a separate cash transaction.
+ 
+- Occupied-room lookup: See which rooms can be charged right now.
+ 
+- F&B sales summary: Food and beverage revenue reported separately from rooms.
+ 
+- Optional module: Switch it off entirely if your property doesn't do F&B.
+
+09
+
+### The Manager's Desk
+
+- Day sheet: The whole day on one screen, laid out the way a GM actually reads it.
+ 
+- Exceptions: What needs a decision, surfaced rather than buried in a report.
+ 
+- Flash report: A fast read on the day so far.
+ 
+- Housekeeping productivity: Output per staff member.
+ 
+- No-shows: Tracked and reported.
+ 
+- Night audit: Closes the business day — posts room rent for every occupied room, marks no-shows and snapshots the day. Catches up on up to 31 missed days.
+ 
+- Shift handover: With cash reconciliation between shifts.
+
+10
+
+### Reports
+
+- Revenue: By source and period.
+ 
+- Occupancy: Daily, weekly and monthly.
+ 
+- Arrivals & departures: For any date range.
+ 
+- Outstanding dues: What's owed and by whom.
+ 
+- Profit & loss: Revenue against categorised expenses.
+ 
+- Expenses: Categorised ledger with summary.
+ 
+- GST: Bill-level for the period.
+ 
+- F&B sales: Food and beverage performance.
+ 
+- Occupancy forecast: What's coming, based on confirmed bookings.
+ 
+- Audit log: Who changed what, and when.
+ 
+- Night audit & handover: Both as printable reports.
+ 
+- Channel analysis: Bookings and revenue by source.
+ 
+- No-shows & cancellations: Who didn't arrive, who cancelled, and what it cost.
+ 
+- GSTR-1 & Tally: B2B, B2CL and B2CS splits by state code, and a Tally XML file for your accountant.
+ 
+- Count: Sixteen reports in all, grouped as Today, Yesterday, Performance and Compliance.
+
+11
+
+### Devices, Data & Security
+
+- Runs on the front desk: The desk PC holds the data and serves every other device on your network.
+ 
+- Android app: Scan a QR at reception and the phone pairs itself. Holds no data of its own — it talks to the desk.
+ 
+- Installable web app: Any phone, tablet or PC on the network can install Slate to its home screen.
+ 
+- Zero-config discovery: Devices find the desk automatically. No IP addresses, no router settings.
+ 
+- Secure connection for cameras: A secure local connection so ID and passport capture works properly on phones, including iPhones.
+ 
+- Firewall handled: The installer creates the network rule for you.
+ 
+- Daily automatic backups: 30 retained, taken safely while the system is live so a backup is never a half-written file.
+ 
+- Recoverable restore: Restoring stages the change and keeps the database it replaced, so even a bad restore can be undone.
+ 
+- Download backups: Keep your own copy off the machine.
+ 
+- Guest data stays local: Guest ID numbers, ID photos and C-Form entries are never sent to the cloud, by design.
+ 
+- Optional cloud sync: Bookings, bills and expenses only, and only if you switch it on.
+ 
+- Licensing: Signed licence key bound to your machine, verified offline.
+ 
+- Free trial: 15 days, the complete product, no card. One trial per computer.
+ 
+- Diagnostics: A built-in health screen showing version, modules, database and logs.
+ 
+- Auto-updates: Applied on quit, never mid-shift, with progress shown in the app.
+
+On The Roadmap
+
+## Coming to Slate.
+
+Coming Soon
+
+### Channel manager
+ 
+Built for major OTAs like Booking.com, MakeMyTrip, Goibibo, Agoda and Expedia. Currently in testing and partnership approval; it will switch on in a future update once those integrations are certified and the commercial agreements are in place.
+
+### Owner dashboard
+ 
+A read-only mobile dashboard for revenue, occupancy, expenses and staff, so an owner can watch the property without touching the front desk or exposing the guest database. Built and rolling out shortly.
+
+### FSSAI on bills
+ 
+Your FSSAI licence number printed alongside your GSTIN, with a setting to control it.
+
+### Off-site guest pre-arrival
+ 
+Pre-arrival check-in works on your property's network today. Sending the link to a guest before they travel is in progress.
+
+One thing worth knowing up front: the Windows installer isn't code-signed yet, so Windows may show a "publisher unknown" warning the first time you run it, and the Android app installs from the desk rather than the Play Store. Both are safe to proceed with — we're sorting the certificates. The Linux AppImage isn't affected.
+
+Technical Specification
+
+## What it needs, and what it runs on.
+
+- Version: 0.5.9
+ 
+- Platform: Windows or Linux for the front-desk machine, plus an Android app and an installable web app for every other device.
+ 
+- Linux build: Shipped as an AppImage — download it, mark it executable, and run. No package manager, no dependencies to resolve, no install step.
+ 
+- Hardware: Any reasonably modern Windows PC. No server to buy, no cloud subscription in the middle.
+ 
+- Devices: Unlimited phones, tablets and PCs on the same network. No per-device licence.
+ 
+- Android app: Distributed from your own front desk by QR rather than the Play Store, because Slate is designed to work with a paired desk on your network.
+ 
+- Internet: Not required. Bookings, check-in, folios, billing, housekeeping, reports and backups all run offline. Internet is used only for optional WhatsApp, invoice email and updates.
+ 
+- Database: Embedded local database on the front-desk machine.
+ 
+- Backups: Daily and automatic, 30 retained, taken safely while live. Restore is staged and keeps the replaced database.
+ 
+- Scanning: Windows flatbed scanners driven from the app, with camera and file upload as alternatives.
+ 
+- Security: PIN authentication with hashed storage, six server-enforced roles, brute-force lockout, and an audit log.
+ 
+- Payments: Cash, UPI, card and bank transfer recorded with references, plus a UPI QR on the invoice. Card numbers are actively refused.
+ 
+- Compliance: C-Form / FRRO register with CSV export, GST invoicing with configurable room bands, GSTR-1 export and Tally XML export.
+ 
+- Property size: Designed for roughly 5 to 100 rooms.
+ 
+- Setup: Guided seven-step wizard, then an in-app tutorial on the room board.
+ 
+- Updates: Automatic — downloaded in the background, applied on quit.
+ 
+- Support: Direct WhatsApp line. Not a ticketing queue.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/compare/restaurant-billing-software-india/
+=====================================================
+
+Buyer's Guide · Updated September 2026
+
+## Restaurant billing software in India: how to actually choose.
+ 
+We build one of these products, so read this with that in mind. We've still written the guide we wish existed when we were the ones buying — including the parts where our own software is the wrong answer.
+
+Short answer
+ 
+There is no single best restaurant billing software in India. The honest answer turns on three questions: is your internet reliable, how many outlets do you run, and would you rather pay every month forever or once a year.
+ 
+If connectivity is dependable and you need deep Swiggy and Zomato integration today, an established cloud POS is the reasonable choice. If your restaurant has to keep billing when the connection drops — which in most of India it will — an offline-first annual licence is the safer default.
+ 
+Judge any candidate on four things: does billing work with the internet physically unplugged, what does three years cost including every add-on you'll actually use, can you export your own data without asking permission, and is bill numbering sequential and audit-safe.
+
+Most comparison articles on this subject are written by whoever is selling. This one is too — we make Pass. What we can offer instead of false neutrality is specificity: real numbers, the questions that actually separate these products, and a clear statement of where Pass loses.
+
+The Real Decision
+
+## You're choosing a licence model, not a feature list.
+ 
+Feature lists across this category converge fast — everyone does KOTs, everyone does GST, everyone does reports. What genuinely differs is how you pay and where your data lives, and those two choices outlast every feature comparison you'll make.
+
+-  : Cloud SaaS (monthly): Annual licence (self-hosted)
+
+- Typical India pricing: ₹800 – ₹2,500 per month per outlet: ₹6,000 – ₹9,000 per year
+ 
+- Three-year cost at mid-tier: ≈ ₹54,000 (at ₹1,500/mo): ≈ ₹22,500 (at ₹7,500/yr)
+ 
+- Works with internet down: Usually not, or degraded: Yes, fully
+ 
+- Where your data lives: Vendor's servers: Your own machine
+ 
+- Live multi-outlet reporting: Strong — the real advantage: Usually per-outlet
+ 
+- Aggregator integrations: Mature, established partnerships: Varies; often limited
+ 
+- Remote access from anywhere: Built in: Needs setup, if at all
+ 
+- If you stop paying: Access typically ends: Software usually keeps running
+ 
+- Add-ons priced separately: Commonly — KDS, loyalty, feedback: Varies by vendor
+
+Neither column is the right answer universally. A twelve-outlet chain with a head office that needs consolidated numbers by 9am has genuine reasons to accept the monthly cost and the connectivity dependency. A single restaurant in a place where the connection drops twice a week does not.
+ 
+The mistake worth avoiding is choosing cloud by default because it's what everyone pitches, without having asked what happens to your evening when it's unreachable.
+
+Before You Sign
+
+## Six questions worth more than a feature demo.
+ 
+Ask these of every vendor including us. The answers separate products far more reliably than a features grid does.
+
+01
+
+### "Can I unplug the internet and take a bill?"
+ 
+Ask them to demonstrate it, not describe it. "Works offline" often means orders queue and sync later — which is no help at all if the counter itself is frozen. The test is whether you can complete a sale and print, with the router switched off.
+
+02
+
+### "What does three years cost, everything included?"
+ 
+Get it in writing with every add-on you'll genuinely use. Kitchen display screens, loyalty, customer feedback, extra terminals and aggregator integrations are frequently priced apart from the headline number, and the headline is what gets quoted.
+
+03
+
+### "How do I get all my data out?"
+ 
+The right answer is a button you press yourself. If it's "raise a request with support", you're renting access to your own sales history. Ask specifically about menu, bills, customers and stock — not just a summary report.
+
+04
+
+### "Is bill numbering sequential and audit-safe?"
+ 
+Numbering must not reset mid-year, and a correction must create a new linked document with a reason logged rather than silently editing the original. This is the difference between a clean GST audit and an uncomfortable afternoon.
+
+05
+
+### "Will it drive the printer I already own?"
+ 
+Most Indian restaurants have an 80mm thermal printer already. Confirm it prints silently — with no dialog box appearing mid-service — and that KOT and bill printers can be set separately.
+
+06
+
+### "Who answers at 10pm on Saturday?"
+ 
+Not what the SLA document claims. Ask for the actual channel and a realistic response time during service. A ticket queue read on Monday morning is not support for a business that trades at weekends.
+
+Where We Fit
+
+## What Pass is, and what it isn't.
+ 
+Stated plainly so you can rule us out quickly if we're wrong for you — which is more useful to you than a page of advantages.
+
+### Pass is a good fit if
+
+- Your connection is unreliable, or you simply refuse to let billing depend on it.
+ 
+- You'd rather pay ₹7,500 once a year than a monthly bill that never stops.
+ 
+- You run more than one outlet — every outlet run from one installation is included in that computer's licence, each with its own GSTIN, FSSAI and bill numbering.
+ 
+- You want a Kitchen Display System without a separate screen fee, which is commonly an add-on elsewhere.
+ 
+- You care that the database sits on your machine and exports to Excel and PDF whenever you like.
+
+### Pass is the wrong choice if
+
+- You need live Swiggy and Zomato integration today. Pass has the online-orders inbox built, but direct platform connectivity is pending a partnership. If this is central to your operation, buy something else — we'd tell you that on a call.
+ 
+- You need consolidated live reporting across many outlets from a head office. Multi-outlet works, but a central real-time dashboard across all of them is on our roadmap, not shipping.
+ 
+- You want to run the POS from your phone from anywhere. Pass is a desktop application for the counter, with terminals on the venue's own network. That's a deliberate choice, and it isn't what you're describing.
+ 
+- You're on macOS. Pass ships for Windows and Linux. There's no Mac build.
+
+### What it costs
+ 
+₹7,500 per billing computer per year, flat, with every outlet run from that computer included. Installation, onboarding and staff training are included. A 15-day free trial runs the complete product with no card taken. There are no add-on tiers — the Kitchen Display System, multi-outlet, inventory, staff and payroll, and the full reporting suite are all in that number.
+ 
+The complete feature list and technical specification is published rather than gated, and so is the price. We think being able to check both without talking to anyone is the minimum a buyer deserves.
+
+Answers
+
+## Questions buyers ask us.
+
+Q: What is the best restaurant billing software in India?
+A: 
+ 
+There isn't one best — it depends on your connectivity, your outlet count, and whether you prefer monthly or annual payment. With reliable internet and a need for deep aggregator integration, an established cloud POS is reasonable. If billing must survive an outage, or you object to renting software indefinitely, an offline-first annual licence fits better. Judge on the four things above: offline billing, three-year total cost, data portability, and audit-safe numbering.
+
+Q: How much should restaurant POS software cost in India?
+A: 
+ 
+Around ₹6,000–₹9,000 per year for a self-hosted annual licence, or ₹800–₹2,500 per month for cloud SaaS. Over three years, a mid-tier subscription at ₹1,500/month reaches about ₹54,000 against roughly ₹22,500 for an annual licence at ₹7,500. Always ask for a three-year total including add-ons — that's where the gap widens.
+
+Q: Is offline POS actually better than cloud?
+A: 
+ 
+Better for reliability, worse for multi-location reporting. Offline-first keeps billing when the connection dies. Cloud gives live consolidated reporting and easy remote access. For a single restaurant or small group in India, where connectivity is usually the weak link, offline-first is the safer default. For a large chain with solid connectivity and central operations, cloud has genuine advantages.
+
+Q: Do I need composite GST scheme support?
+A: 
+ 
+Only if you're registered under the composition scheme — turnover up to ₹1.5 crore. If so you must issue a Bill of Supply rather than a tax invoice, must not show a GST breakup, and must print "composition taxable person, not eligible to collect tax on supplies". Confirm your chosen software produces that exact document; many handle only regular-scheme invoices. Ours is adding it — today Pass handles regular-scheme flat and per-item GST. More detail in our glossary entry.
+
+Q: Can I run Pass on more than one outlet?
+A: 
+ 
+Yes. Every outlet run from one Pass installation is included in that computer's ₹7,500 annual licence. Each keeps its own GSTIN, FSSAI, address and — importantly — its own bill numbering sequence, because two outlets sharing a sequence would issue duplicate invoice numbers, which is a GST problem. The menu stays central so a price change lands everywhere at once.
+
+Q: What about hotels rather than restaurants?
+A: 
+ 
+Different problem, different software. For a hotel needing room-service billing alongside an existing property management system, see Folio. For a full front-desk system — bookings, folios, housekeeping, C-Form — see Slate. There's a separate guide to choosing hotel management software in India.
+
+Last reviewed: 19 September 2026. Pricing figures are indicative market ranges for India; our own pricing is exact and published.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/compare/hotel-management-software-india/
+=====================================================
+
+Buyer's Guide · Updated September 2026
+
+## Hotel management software in India: how to actually choose.
+ 
+We build two products in this space, so read accordingly. What follows is still the guide we'd have wanted as buyers — including the section explaining when you shouldn't buy a PMS at all.
+
+Short answer
+ 
+It depends on size and distribution. Above roughly 100 rooms, or if your occupancy depends on Booking.com and MakeMyTrip inventory staying in sync, buy an established PMS with certified channel-manager connections. That capability is hard-won and worth paying for.
+ 
+For boutique and mid-range properties of roughly 5–100 rooms, a lighter offline-first system usually fits better and costs a fraction as much.
+ 
+Verify four things before signing: does check-in and billing work without internet, is C-Form genuinely built in rather than promised, is pricing per-room or flat, and can you export your guest data yourself.
+
+The Indian hotel software market splits awkwardly. At one end sit enterprise property management systems priced and designed for chains. At the other, a great many properties still run the front desk on a register, a spreadsheet and a WhatsApp group. The 20-to-60-room property in between is chronically underserved — usually sold something built for a 200-room hotel and then charged per room for the privilege.
+
+Pricing Models
+
+## Per-room pricing punishes you for growing.
+ 
+This is the single biggest cost variable in Indian hotel software, and it's the one most buyers don't normalise before comparing quotes.
+
+- Model: Typical India pricing: 20-room property: 50-room property
+
+- Per room, per month: ₹50 – ₹200 / room / month: ₹24,000 – ₹48,000 / yr: ₹60,000 – ₹1,20,000 / yr
+ 
+- Flat annual licence: ₹10,000 – ₹25,000 / property / yr: Same regardless of rooms: Same regardless of rooms
+ 
+- Enterprise quote: ₹50,000+ / yr, negotiated: Overkill at this size: Sometimes justified
+
+The figures above are indicative market ranges, not quotes from named vendors — get your own in writing. The point is the shape: under per-room pricing, adding ten rooms adds cost forever, and a good year raises your software bill.
+ 
+Convert every quote to an annual per-property number before comparing. Vendors quote in the unit that flatters them — per room per month sounds small, and ₹100 per room per month is ₹60,000 a year at 50 rooms.
+
+India-Specific
+
+## Three requirements generic PMS software misses.
+ 
+International hotel software often handles the front desk beautifully and then falls down on compliance that isn't optional in India.
+
+01
+
+### C-Form / FRRO
+ 
+If you host foreign guests you must report them to the FRRO. Proper support means the form auto-populates from check-in, carries the guest photo, attaches passport and visa scans, and exports as CSV. Ask to see it — it's frequently absent or manual. More on C-Form.
+
+02
+
+### Tariff-banded GST
+ 
+Room GST is banded — since 22 Sep 2025, 5% (no input tax credit) up to ₹7,500/night and 18% above. And a restaurant inside a hotel with any room above ₹7,500 attracts 18% on food, not the 5% a standalone restaurant pays. Software should let you configure the bands, not hard-code one rate.
+
+03
+
+### GSTR-1 and Tally export
+ 
+Your accountant works in Tally. Software that can't export to it creates a monthly re-keying job that someone will eventually do badly. Ask for GSTR-1 and Tally XML export specifically, not "reports available".
+
+Before You Buy Anything
+
+## You may not need a PMS at all.
+
+This is the advice that costs us sales, so it's worth stating clearly.
+ 
+If you already run software that handles bookings, room allocation and the front desk — Menson, eZee, IDS, Hotelogix, anything working — and your only real gap is capturing in-room food and beverage orders, then you don't need a second full PMS. You need a room-service billing layer that sits alongside what you have.
+ 
+Replacing a functioning property management system to fix an F&B gap is an expensive way to solve a narrow problem, and it puts your entire front desk through a migration to fix something at the edges. That's the case Folio exists for, at ₹6,500 a year.
+ 
+If you have no system at all, or the front desk runs on a register and a spreadsheet, then a full PMS is the right purchase and you should make it properly.
+
+Where We Fit
+
+## What Slate is, and what it isn't.
+ 
+Stated plainly, so you can rule us out fast if we're wrong for your property.
+
+### Slate is a good fit if
+
+- You run roughly 5 to 100 rooms and want one system for the whole front desk.
+ 
+- You want flat pricing — ₹12,000 per property per year — rather than a per-room bill that grows with the property.
+ 
+- You need C-Form, tariff-banded GST, GSTR-1 and Tally export as built-in features rather than promises.
+ 
+- Your connection is unreliable and the front desk cannot stop working when it drops.
+ 
+- You want staff on phones and tablets at no per-device charge — housekeeping updating room status from the floor, not a clipboard.
+
+### Slate is the wrong choice if
+
+- You need live OTA channel management today. Slate's channel manager is built for Booking.com, MakeMyTrip, Goibibo, Agoda and Expedia, but it's in testing and partnership approval — not switched on. If your occupancy depends on inventory sync, buy a PMS that has it working now.
+ 
+- You're above roughly 100 rooms. Beyond that the integration and process requirements usually justify enterprise software, and we'd want a conversation before selling you anything.
+ 
+- You want a cloud PMS you can run from anywhere. Slate runs on the front-desk machine and serves your property's own network. The owner dashboard for remote visibility is built but not yet deployed.
+ 
+- You're on macOS. Slate ships for Windows and Linux, with an Android companion app.
+
+### What it costs
+ 
+₹12,000 per property per year, flat. Not per room, not per device, not per terminal. C-Form, payroll, GSTR-1 and Tally export, the F&B module and the Android app are all included — there's no add-on tier. Installation, onboarding and staff training come with it, and a 15-day free trial runs the complete product with no card taken.
+ 
+The full feature list and technical specification is published, as is the price. Slate is currently in trials with a small cohort of Indian properties — we'd rather you knew that than found out later.
+
+Answers
+
+## Questions hoteliers ask us.
+
+Q: What is the best hotel management software in India?
+A: 
+ 
+It depends on size and distribution. Above ~100 rooms, or where OTA inventory sync drives occupancy, choose an established PMS with certified channel-manager connections. For 5–100 rooms, a lighter offline-first system usually fits better at a fraction of the cost. Verify offline operation, real C-Form support, per-room versus flat pricing, and data export.
+
+Q: How much does hotel software cost in India?
+A: 
+ 
+Three common shapes: per room per month (₹50–₹200), flat annual licence (₹10,000–₹25,000 per property), or enterprise quotes above ₹50,000. Convert everything to an annual per-property figure before comparing — a 50-room property at ₹100/room/month is ₹60,000 a year.
+
+Q: Is C-Form support really necessary?
+A: 
+ 
+Yes, if you ever host foreign guests — reporting to the FRRO is a legal requirement, not a convenience. Proper support auto-populates the form from check-in data, carries the guest photo, attaches passport and visa scans and exports the register as CSV. Ask to see it demonstrated; it's commonly missing or manual.
+
+Q: What GST applies to hotel rooms?
+A: 
+ 
+Room tariff is banded — since 22 September 2025, 5% without input tax credit up to ₹7,500 per night, and 18% with input tax credit above. The test is the price actually charged per room per night. A restaurant inside a hotel where any room is charged above ₹7,500 attracts 18% on food rather than the 5% a standalone restaurant pays. Since the bands depend on your tariff, software should let you configure them. Our GST guide covers the F&B side in detail.
+
+Q: I only need room-service billing, not a whole PMS.
+A: 
+ 
+Then don't buy a PMS. Folio is built precisely for that — it sits alongside whatever hotel software you already run, opens a tab per room, prints kitchen tickets and produces GST-compliant bills. ₹6,500 per property per year, live in production at a Mumbai hotel. Replacing a working PMS to fix an F&B gap is the expensive way round.
+
+Q: Can Slate and Folio run together?
+A: 
+ 
+Yes. Slate handles the front desk — bookings, folios, housekeeping, compliance — while Folio handles room-service billing. Same team, same support line, same pricing philosophy. Many properties start with one and add the other.
+
+Last reviewed: 19 September 2026. Pricing figures are indicative market ranges for India; our own pricing is exact and published.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/custom-software/
+=====================================================
+
+Custom Development · India
+
+## Custom software, built by people who ship their own.
+ 
+We build bespoke software for Indian hospitality and service businesses — billing systems, point-of-sale, property management, inventory, internal tools. Fixed scope, fixed price, and the source code is yours at the end.
+ 
+Most agencies pitching you custom software have a portfolio of things they built for someone else. Ours is three products running in live properties right now, which means the judgement you're paying for has already been tested against a real Saturday night.
+
+ Discuss Your Project
+ See What We've Shipped
+
+Shipped & Live
+Folio
+Room-service billing, running in production at a Mumbai hotel. Offline-first, encrypted, GST-compliant.
+
+In Trials
+Pass
+Restaurant POS with kitchen display, multi-outlet and recipe-linked inventory. Windows and Linux.
+
+In Trials
+Slate
+Full hotel PMS — bookings, folios, housekeeping, C-Form, payroll. Windows, Linux and Android.
+
+What We Build
+
+## The problems we're actually good at.
+ 
+We work almost entirely in hospitality, food and beverage, and service businesses. That narrowness is the point — it's where our judgement is worth paying for, and where we can tell you in the first conversation whether your idea will survive contact with a real operator.
+
+01
+
+### Billing & point-of-sale
+ 
+GST-compliant invoicing, thermal-printer workflows, sequential audit-safe numbering, split and part payments, UPI QR, corrections that version rather than overwrite. We've built this three times; we know where it goes wrong.
+
+02
+
+### Offline-first desktop software
+ 
+Systems that keep working when the internet doesn't. Local database, encrypted at rest where it matters, automatic backups with a real restore path, and silent updates that never interrupt a shift.
+
+03
+
+### Multi-terminal & local network
+ 
+A counter, a kitchen screen and three phones sharing one live view over the venue's own WiFi — with zero-config discovery, so nobody is typing IP addresses. Devices that drop off queue their work and catch up.
+
+04
+
+### Inventory, staff & payroll
+ 
+Recipe-linked stock that deducts itself, wastage tracking, attendance grids, salary sheets computed from attendance and advances, role-based access with PIN authentication.
+
+05
+
+### Indian compliance
+ 
+GST with flat and per-item rates, GSTIN and FSSAI on documents, GSTR-1 and Tally exports, C-Form and FRRO registers for foreign guests. The unglamorous work that decides whether software is usable in India at all.
+
+06
+
+### Internal operational tools
+ 
+The spreadsheet that's outgrown itself. Handover logs, day-close reconciliation, owner reporting, approval workflows — the systems a growing business runs on but nobody sells off the shelf.
+
+How It Works
+
+## Discovery first. Fixed price after.
+ 
+We don't quote a number before we understand the problem, and we don't bill by the hour — hourly billing makes slow work profitable, which is the wrong incentive to put between us.
+
+01
+
+### Conversation — free
+ 
+Tell us the problem. If an existing product solves it — ours or somebody else's — we'll tell you that and you'll have saved yourself a project. This happens more often than you'd expect from someone selling custom development.
+
+02
+
+### Discovery — paid, and yours to keep
+ 
+We spend time with the people who'll actually use the thing, and produce a written specification: what it does, what it doesn't, how it behaves when things go wrong. You own that document outright. If you take it to another developer, that's a legitimate outcome and there's no clause stopping you.
+
+03
+
+### Fixed price against fixed scope
+ 
+One number, quoted against the specification, staged across milestones. Scope changes are re-quoted openly rather than absorbed into a vague hourly total. You always know what you're committed to.
+
+04
+
+### Build, with you seeing it early
+ 
+Working software in front of your staff as early as it's useful, not a reveal at the end. The people who'll use it daily find the problems that a specification never catches.
+
+05
+
+### Handover — code, data and documentation
+ 
+Source code, database and documentation are yours. We don't hold software hostage as a retention strategy. Ongoing support is a separate agreement you're free to decline, and declining it doesn't cost you access to anything.
+
+How We Work
+
+## Four things we won't compromise on.
+
+### Your data stays yours
+ 
+Local-first by default, exportable always. We build so that leaving us is possible — which is the only thing that makes staying meaningful.
+
+### Built for the floor, not the demo
+ 
+The person using it at 11pm with a queue in front of them is the user we design for, not the person who signed the cheque.
+
+### We'll tell you not to build it
+ 
+If off-the-shelf solves your problem, or the project doesn't justify its cost, you'll hear that from us before you've spent anything substantial.
+
+### Small team, direct line
+ 
+You talk to the people writing the code. No account manager relaying your problem to someone you never meet. Support is a WhatsApp message, not a ticket queue.
+
+Answers
+
+## What people ask before starting.
+
+Q: How much does custom software cost in India?
+A: 
+ 
+It depends entirely on scope, so any number quoted before scoping is guesswork — and usually a number designed to win the conversation rather than survive it. We run a paid discovery phase that produces a written specification you own, then quote a fixed price against that fixed scope. Not hourly, because hourly billing makes slow work profitable. If discovery concludes that an off-the-shelf product solves your problem, we'll say so and you take the specification elsewhere.
+
+Q: Who owns the source code?
+A: 
+ 
+You do. Code, database and documentation are handed over at the end. We don't hold software hostage as a retention mechanism — if you want to take it to another developer in two years, nothing in the arrangement stops you. It's worth asking this question of anyone you're considering, because the answer isn't always yes.
+
+Q: Why should I trust a small team over an established agency?
+A: 
+ 
+Partly you shouldn't, without evidence — so here's ours: Folio is running in production at a Mumbai hotel, Pass and Slate are in trials with real businesses. That's shipped software, not a portfolio of work done for clients who may or may not still use it. The trade-off is honest: a larger agency gives you more people and more process. We give you direct access to whoever is writing your code, and a team that has made the mistakes in this domain already, at our own expense.
+
+Q: Do you build web apps, or only desktop software?
+A: 
+ 
+Both, but we'll push back on web for anything that must work during a power cut or a dead connection. Our own products are offline-first desktop applications for exactly that reason. Web is the right answer for dashboards, reporting, customer-facing booking and anything genuinely multi-location — and Slate is a hybrid, running a local server that phones and tablets reach over the property's own network.
+
+Q: How long does a project take?
+A: 
+ 
+A focused internal tool is usually weeks. A full billing or property-management system is months — Folio took considerably longer than that, and it does one thing. Discovery gives you a real timeline instead of an optimistic one, and we'd rather tell you six months honestly than three months you'll resent us for.
+
+Q: Do you work outside Mumbai?
+A: 
+ 
+Yes. The Binary Brain Network is the software division of The Big Brand Network, registered in Mumbai and operating across Delhi NCR and pan-India. Installation and training happen on site where that makes sense; day-to-day work and support run remotely over a direct WhatsApp line.
+
+Q: Can you take over software someone else built?
+A: 
+ 
+Sometimes. It depends on what state it's in and whether you have the source code — which is precisely why we hand ours over. We'll look at it honestly and tell you whether maintaining it or rebuilding it is the better use of your money. Occasionally the answer is uncomfortable.
+
+
+=====================================================
+PAGE: https://tbn.tbbn.in/terms/
+=====================================================
+
+Effective 19 October 2026
+
+## Terms: website, trials, licences and referrals
+ 
+The commercial terms behind the prices on this site. Each product's full licence agreement (EULA) is shown inside the software and accepted on installation; if anything here conflicts with it, the in-app agreement applies.
+
+## 1. The website
+
+tbn.tbbn.in is published by The Binary Brain Network, the software division of The Big Brand Network, Mumbai. We try hard to keep it accurate — features we have not shipped are labelled "Coming Soon" — but product details, prices and availability can change. Buyer's guides and blog posts are general information, not tax, legal or financial advice; confirm GST and compliance questions with your accountant.
+
+## 2. Free trials
+
+- Folio, Pass and Slate each offer a 15-day free trial of the complete software. No payment details are taken.
+
+- One trial per product per computer. Trialling one product does not use up the trial of another.
+
+- Starting a trial needs an internet connection once. Folio starts its trial from inside the app; for Pass and Slate we issue the trial key on request.
+
+- When the trial ends the software stops at its licence screen until a paid key is entered. Your data stays on your computer and is not deleted.
+
+- Nothing is charged automatically at the end of a trial.
+
+## 3. Licences and prices
+
+- Folio — ₹6,500 per property per year.
+
+- Pass — ₹7,500 per billing computer per year. Every outlet operated from that computer's installation is included.
+
+- Slate — ₹12,000 per property per year, not per room and not per device. Phones and tablets connecting to the licensed front-desk computer on the property's network are included.
+
+- Licences run for one year and are bound to the computer they are activated on.
+
+- Installation, onboarding and staff training are included. Updates released during the licence year are included.
+
+- Renewal is not automatic. We contact you before renewal; the renewal price is confirmed with you in advance and never changes during a licence term.
+
+## 4. Referral credit
+
+- If a business you refer buys a paid licence for any TBN product, you — the referring customer — receive a ₹1,500 credit, applied immediately against your account rather than held until renewal.
+
+- Credits stack across successful referrals. The referred business pays the standard price, and can then earn referral credit of its own.
+
+- Credit is given once per referred business.
+
+## 5. Your data
+
+Your business data stays on your hardware and remains yours. Every product exports it in standard formats. Our handling of the limited data we do receive is described in the privacy policy.
+
+## 6. Responsibility
+
+The software helps you produce correct bills, tax documents and compliance records, but you remain responsible for the information you enter, the GST rates and registrations you configure, and your filings. Keep backups — each product makes them automatically — and keep copies off the machine for anything you cannot afford to lose. Our liability is limited as set out in each product's licence agreement.
+
+## 7. Contact and jurisdiction
+
+Questions: tbn@tbbn.in or +91 88790 70732. These terms are governed by the laws of India, with courts at Mumbai having jurisdiction.

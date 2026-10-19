@@ -1,0 +1,4 @@
+# Source files that live in the repo but are not pages.
+/content/*  /blog/  301
+/scripts/*  /       302
+/ops/*      /       302

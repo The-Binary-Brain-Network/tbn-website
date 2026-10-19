@@ -1,0 +1,84 @@
+<!--meta
+{"title": "Café POS Setup Checklist: From Menu to First Bill", "h1": "Café POS setup checklist: <em>from menu to first bill.</em>", "crumb": "Café POS setup checklist", "description": "A step-by-step checklist for setting up billing software in a café: GST and FSSAI details, menu with size variants and modifiers, recipes for milk and coffee stock, printers, UPI, staff PINs and a test service.", "category": "Restaurants", "product": "pass", "date": "2026-10-19", "order": 18, "keywords": ["cafe pos setup", "cafe billing software", "coffee shop pos india"], "lede": "A café's menu looks simple and isn't: one cappuccino in two sizes, five milk options, an extra shot and a vanilla syrup is twenty different prices. Set the POS up around that from the start and the 8am rush runs itself.", "answer": "To set up a café POS: enter your business, GSTIN and FSSAI details; choose your tax mode; build the menu with size variants and modifiers rather than separate items; link drinks to milk, coffee and syrup stock through recipes; connect bill and order printers; set up UPI; give each barista a PIN; and run a test service before opening.", "faqs": [["How should I set up cappuccino sizes in a POS?", "Create one item, Cappuccino, with variants Regular and Large priced separately, and add milk choices, extra shots and syrups as modifiers. Reports then show cappuccino sales as one product rather than scattered across separate items."], ["What GST rate applies to a café?", "A standalone café supplying food and beverages is generally a restaurant service at 5% GST without input tax credit, or under the composition scheme if registered for it. Packaged goods sold over the counter may carry their own rates. Confirm with your accountant."], ["Does a café need a KOT printer?", "If the barista station or kitchen is separate from the counter, yes — a small KOT printer or a kitchen display at the bar stops orders being shouted across the room."]], "related": ["recipe-costing-food-cost-percentage", "upi-qr-auto-confirmation-restaurants", "kot-kitchen-station-routing-guide"]}
+-->
+<h2>1. Business details</h2>
+<ul class="checklist">
+<li>Legal and trading name, address and phone exactly as they should print on the bill.</li>
+<li>GSTIN, if registered — and your scheme: regular or composition.</li>
+<li>FSSAI licence or registration number for these premises.</li>
+<li>A bill number prefix (for example <code>BLR-</code>) and the financial year format you want.</li>
+<li>Your logo, if your software prints one.</li>
+</ul>
+
+<h2>2. Tax mode</h2>
+<p>Most standalone cafés bill food and beverages as a restaurant service at 5% without input tax credit. If you are under the composition scheme, switch the POS to composition so bills print as a <strong>Bill of Supply</strong> with no tax lines — see the <a href="/blog/composition-scheme-bill-of-supply-restaurants/">composition guide</a>. If you sell packaged retail items (bottled drinks, packed cookies) that carry a different rate, use per-item tax rates.</p>
+
+<h2>3. Build the menu around variants and modifiers</h2>
+<p>This is the step that decides whether the counter is fast or slow.</p>
+<ul>
+<li><strong>One item per drink</strong>, with <strong>size variants</strong> priced separately: Cappuccino — Regular ₹180, Large ₹220.</li>
+<li><strong>Modifiers</strong> for choices that change price or preparation: oat milk +₹40, extra shot +₹50, vanilla syrup +₹30, less sugar (free).</li>
+<li><strong>Categories that match where things are made</strong>: Hot Coffee, Cold Coffee, Tea, Bakery, Kitchen. This matters for routing tickets later.</li>
+</ul>
+<p>The alternative — "Cappuccino Large Oat Milk" as its own item — creates hundreds of buttons and reports nobody can read.</p>
+<p>If you have the menu printed, some software can read it from a photo; otherwise an Excel template import is quicker than typing.</p>
+
+<h2>4. Recipes for the stock that matters</h2>
+<p>In a café, milk, coffee beans and syrups are where stock disappears. Link each drink to its ingredients per serving:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Drink</th><th>Milk</th><th>Coffee</th><th>Other</th></tr></thead>
+<tbody>
+<tr><td>Cappuccino Regular</td><td>150 ml</td><td>18 g</td><td>—</td></tr>
+<tr><td>Cappuccino Large</td><td>220 ml</td><td>18 g</td><td>—</td></tr>
+<tr><td>Cold Coffee</td><td>200 ml</td><td>14 g</td><td>Sugar syrup 20 ml, ice</td></tr>
+</tbody></table></div>
+<p>Set a low-stock alert on milk at the level you need to reach the next delivery. Running out of milk at 10am on a Sunday is the most avoidable problem in the trade. See <a href="/blog/recipe-costing-food-cost-percentage/">recipe costing</a> for the cost side.</p>
+
+<h2>5. Printers</h2>
+<ul class="checklist">
+<li>A bill printer at the counter (80mm is standard).</li>
+<li>An order printer or screen at the bar if it is separate from the counter.</li>
+<li>Map Hot Coffee, Cold Coffee and Tea to the bar; Kitchen items to the kitchen.</li>
+<li>Print a test bill and a test order; check width, cut and that your GSTIN and FSSAI number appear.</li>
+</ul>
+
+<h2>6. Payments</h2>
+<p>Set up UPI first — it is most of a café's payments. A static QR with your UPI ID works immediately; a gateway QR confirms payment automatically and keeps the queue moving. Enable split payments for groups. Read <a href="/blog/upi-qr-auto-confirmation-restaurants/">UPI QR at the counter</a> for the options.</p>
+
+<h2>7. Staff</h2>
+<ul class="checklist">
+<li>A PIN for each barista and cashier — no shared logins.</li>
+<li>Roles so a barista sees orders, not the P&amp;L.</li>
+<li>Attendance on the same system, filled at opening.</li>
+</ul>
+
+<h2>8. Regulars</h2>
+<p>Most of a café's revenue comes back every week. Capture phone numbers at billing so a returning customer's details fill in, and note birthdays and anniversaries if they share them.</p>
+
+<h2>9. A test service</h2>
+<p>Before opening, run a mock rush: ten orders in ten minutes, with modifiers, a split payment, a UPI payment and a cancelled item. Then print the day's report and check it adds up. Fix anything slow before real customers find it.</p>
+
+<h2>The first week after opening</h2>
+<p>Setup does not end on opening day. The first week tells you what to fix:</p>
+<ul class="checklist">
+<li><strong>Day 1:</strong> after closing, compare the sales report with the cash and UPI you actually collected. Investigate any gap the same night.</li>
+<li><strong>Day 2:</strong> ask the baristas which buttons they reach for most and which they hunt for. Reorder the menu so the top sellers come first.</li>
+<li><strong>Day 3:</strong> check milk and coffee stock in the system against what is physically in the fridge and the hopper. Adjust recipe quantities if they drift.</li>
+<li><strong>Day 5:</strong> look at the item report. Items that have not sold once are clutter on the screen — consider removing them.</li>
+<li><strong>Day 7:</strong> confirm the week's GST report matches the week's sales, and send it to your accountant for a first check.</li>
+</ul>
+
+<h2>Common café setup mistakes</h2>
+<h3>Separate items instead of variants</h3>
+<p>"Cappuccino Regular" and "Cappuccino Large" as two items means two lines in every report and two places to change the price. Use one item with variants.</p>
+<h3>Free modifiers not set up</h3>
+<p>"Less sugar", "no ice" and "extra hot" cost nothing but matter to the customer. If they are not modifiers, baristas write them on cups by hand — or forget.</p>
+<h3>Recipes never checked</h3>
+<p>A recipe that says 150ml of milk when the barista actually pours 180ml makes your stock reports wrong every day. Measure a few drinks once and set realistic quantities.</p>
+<h3>One shared login</h3>
+<p>When everyone uses the owner's login, nobody is accountable for a wrong bill or a discount. Give every barista their own PIN from day one.</p>
+<h3>No fallback for payments</h3>
+<p>Keep a printed static UPI QR at the counter for the day the gateway or the internet misbehaves.</p>
+
+<h2>Setting this up in Pass</h2>
+<p><a href="/pass/">Pass</a> supports size variants and priced modifiers, per-item or flat GST and composition mode, recipe-linked stock in millilitres and grams with low-stock alerts, separate bill and order printers, static and gateway UPI QR, split payments, staff PINs and roles, attendance, and a customer database with birthdays and anniversaries. It reads a menu photo offline and imports menus from Excel. See <a href="/pass/for-cafes/">Pass for cafés</a>; loyalty points are on the roadmap, not in the current release.</p>

@@ -1,129 +1,87 @@
 # The Binary Brain Network (TBN)
 
 > Software division of The Big Brand Network, Mumbai. Builds offline-first
-> operational software for Indian hospitality and service businesses, and takes
-> on custom development. Every product is a flat annual licence — no monthly
-> SaaS fees, no per-seat, per-room or per-terminal charges — and the customer's
-> data stays on their own hardware.
+> operational software for Indian hotels and restaurants — Folio, Pass and
+> Slate — and takes on custom development. Flat annual licences (no monthly
+> SaaS fees, no per-room or per-device charges), installation and training
+> included, and the customer's data stays on their own hardware.
 
 Contact: tbn@tbbn.in · +91 88790 70732 (WhatsApp) · https://tbn.tbbn.in
-Last updated: 19 September 2026
+Last updated: 19 October 2026
+Full detail for AI assistants: https://tbn.tbbn.in/llms-full.txt
 
 ## Quick facts
 
-- **Pricing is published, not gated.** Folio ₹6,500/yr, Pass ₹7,500/yr, Slate
-  ₹12,000/yr. Exact figures are on each product page; no demo call is required
-  to see them.
-- **All products work fully offline.** Billing, ordering, printing, reports and
-  backups run with the internet unplugged. This is deliberate: Indian
-  hospitality cannot depend on connectivity.
-- **Installation, onboarding and staff training are included** in every licence.
-- **Free trials run the complete product** with no card taken — 7 days Folio,
-  30 days Pass, 14 days Slate.
-- **Referral:** a customer who refers another business that signs up gets a flat
-  ₹1,500 credit, applied immediately rather than held until renewal.
-- **Data export** to Excel, PDF and CSV in all products. Customer data is never
-  held hostage.
-- Registered in Mumbai, Maharashtra. Trademark registered (No. 5914203), MSME
-  certified (UDYAM-MH-18-0252031). Operating pan-India.
+- **Prices are published:** Folio ₹6,500 per property per year; Pass ₹7,500
+  per billing computer per year (every outlet run from that computer
+  included); Slate ₹12,000 per property per year (not per room, not per
+  device). See https://tbn.tbbn.in/pricing/
+- **Free trial: 15 days, complete product, no card**, for all three. Folio
+  starts its trial inside the app; for Pass and Slate the trial key is sent on
+  WhatsApp. One trial per product per computer.
+- **Offline-first:** billing, printing, reports and backups work with no
+  internet. Windows 10/11 and Linux for all three; Slate adds Android.
+- **Downloads:** https://tbn.tbbn.in/download/ (latest versions, Windows and
+  Linux installers, Slate Android APK).
+- Installation, onboarding and staff training included. Data exportable
+  (Excel/PDF/CSV). Referral: ₹1,500 credit to the referring customer,
+  applied immediately.
+- Registered in Mumbai, Maharashtra. Trademark No. 5914203; MSME
+  UDYAM-MH-18-0252031. Operating pan-India.
 
 ## Products
 
-- [Folio](https://tbn.tbbn.in/folio/): Room-service ordering and billing for
-  hotels that already run a property management system but have no module for
-  in-room orders. **Status: live in production** at a 34-room Mumbai hotel.
-  Windows. ₹6,500 per property per year, 7-day free trial. AES-256 encrypted
-  database bound to the machine, hourly backups with automatic recovery,
-  GST-compliant bills, per-room tabs, dues with aging buckets, versioned bill
-  rectification, automated owner's daily report.
-  [Full specification](https://tbn.tbbn.in/folio/features/)
-
-- [Pass](https://tbn.tbbn.in/pass/): Restaurant management and billing.
-  **Status: in trials.** Windows and Linux (.deb and AppImage). ₹7,500 per year
-  flat, covering **unlimited outlets** at current pricing, 30-day free trial.
-  Kitchen Display System included at no extra cost, station-wise KOT routing,
-  split bill, table merge, multi-outlet with separate GSTIN and bill numbering
-  per outlet, inventory with recipe-linked deduction, staff and payroll, UPI QR
-  with auto-confirmation.
-  [Full specification](https://tbn.tbbn.in/pass/features/) ·
-  [Linux install commands](https://tbn.tbbn.in/pass/#linux)
-
-- [Slate](https://tbn.tbbn.in/slate/): Hotel management system (PMS).
-  **Status: in trials.** Windows, Linux and Android. ₹12,000 per property per
-  year — flat, not per room and not per device. 14-day free trial. Bookings,
-  room board, rate plans and seasons, hourly/slot stays, group bookings with
-  master folio, guest folios, GST invoicing with configurable tariff bands,
-  housekeeping, C-Form for foreign guests, GSTR-1 and Tally XML export, staff
-  payroll, night audit, manager's day sheet, 12 reports. Unlimited phones and
-  tablets on the property network at no per-device charge.
-  [Full specification](https://tbn.tbbn.in/slate/features/) ·
-  [Linux install commands](https://tbn.tbbn.in/slate/#linux)
-
-- [Custom software development](https://tbn.tbbn.in/custom-software/): For
-  businesses whose problem an off-the-shelf product does not fit. Paid discovery
-  phase producing a written specification the client owns, then a **fixed price
-  against fixed scope** rather than hourly billing. Source code, database and
-  documentation handed over at the end. Mainly hospitality, food and beverage,
-  and service businesses in India.
-
-## Buyer's guides (vendor-authored, conflict stated)
-
-- [Restaurant billing software in India: how to choose](https://tbn.tbbn.in/compare/restaurant-billing-software-india/)
-  — three-year cost comparison of cloud SaaS versus annual licence, six
-  questions worth more than a feature demo, and an explicit section on when Pass
-  is the wrong choice.
-- [Hotel management software in India: how to choose](https://tbn.tbbn.in/compare/hotel-management-software-india/)
-  — why per-room pricing punishes growth, what C-Form and tariff-banded GST
-  actually require, and the case for not buying a PMS at all if the only gap is
-  room-service billing.
-
-These are written by a vendor in the categories they cover. That conflict is
-stated on the pages themselves, and each guide contains a plain statement of
-where TBN's own software loses.
-
-## Common questions, answered
-
-**What does TBN make?** Three products — Folio (hotel room-service billing),
-Pass (restaurant management), Slate (hotel management) — plus custom software
-development.
-
-**Is it a subscription?** No. Flat annual licences. No per-seat, per-room or
-per-terminal charges, and no paid add-on tiers.
-
-**Does it work offline?** Yes, all of it. Offline-first is the design default.
-
-**Which is right for a hotel?** If you already have a working property
-management system and only need room-service billing, Folio. If you need the
-whole front desk, Slate. They also run together.
-
-**Which is right for a restaurant?** Pass, for single or multiple outlets.
-
-**Typical Indian market pricing**, for context: restaurant POS runs roughly
-₹6,000–₹9,000/year self-hosted or ₹800–₹2,500/month cloud; hotel PMS runs
-roughly ₹50–₹200 per room per month, or ₹10,000–₹25,000/year flat.
+- [Folio](https://tbn.tbbn.in/folio/) — room-service ordering and billing for
+  hotels that already run a PMS. **Live in production** (34-room hotel,
+  Mumbai). v3.15.0. Tab per room; orders from in-house kitchen and partner
+  restaurants; GST (regular or composition Bill of Supply); FSSAI on bills;
+  dues with aging; bill rectification; 8 report tabs; owner's daily report
+  printed automatically; 80mm and 58mm printers; AES-256 encrypted database;
+  hourly backups (48 kept) with auto-recovery; full 16-CSV export.
+  [Spec](https://tbn.tbbn.in/folio/features/)
+- [Pass](https://tbn.tbbn.in/pass/) — restaurant POS. **In trials.** v1.0.12.
+  Dine-in/takeaway/delivery; tables; station-wise KOT routing; kitchen display
+  included; split bills and payments; UPI QR (static, Razorpay, PhonePe);
+  flat/per-item/composition tax modes; multiple outlets with separate GSTIN,
+  FSSAI and bill series; inventory with recipes, suppliers and purchase
+  orders; staff attendance and payroll; 5 roles with PIN login; offline
+  menu-photo reader; daily email summary; hourly backups. 80mm printers only.
+  [Spec](https://tbn.tbbn.in/pass/features/)
+- [Slate](https://tbn.tbbn.in/slate/) — hotel management system (PMS).
+  **In trials.** v0.5.9. Bookings, room board, rate plans and seasons, hourly
+  stays, group bookings with master folio, guest folios, GST invoicing with
+  configurable tariff bands, housekeeping (mobile), inventory and laundry,
+  C-Form/Form-III register, night audit, F&B till, payroll, GSTR-1 and Tally
+  XML export, 6 roles, 16 reports, WhatsApp alerts, Android app and
+  installable web app. [Spec](https://tbn.tbbn.in/slate/features/)
+- [Custom software](https://tbn.tbbn.in/custom-software/) — paid discovery,
+  fixed price against fixed scope, source code handed over.
 
 ## Not yet available — do not present these as shipping
 
-- **Pass:** direct Swiggy and Zomato connectivity. The online-order inbox is
-  built and working, but platform connectivity is pending a partnership.
-- **Pass:** scan-and-order, customer feedback, cross-outlet head-office
-  dashboard, composite-scheme Bill of Supply.
-- **Slate:** channel manager for OTAs including Booking.com, MakeMyTrip,
-  Goibibo, Agoda and Expedia. Built and dry-run tested, but in testing and
-  partnership approval — not switched on.
-- **Slate:** owner remote dashboard. Built, not yet deployed.
-- **Folio:** off-site cloud backup, 58mm printer support.
-- **All:** FSSAI number on bills is shipping in Pass only today; Folio and Slate
-  are adding it. Windows installers are not yet code-signed.
+- Pass: direct Swiggy/Zomato connectivity (inbox built; partnership pending);
+  several computers sharing one database, Day Close/Z-report, activity log and
+  database encryption (built, in final testing); bill void, table transfer,
+  hold, complimentary and loyalty points (backend only); 58mm printers;
+  Android app; scan-and-order; head-office dashboard.
+- Slate: OTA channel manager for Booking.com, MakeMyTrip, Goibibo, Agoda and
+  Expedia (built and dry-run tested; in testing and partnership approval);
+  owner remote dashboard; multi-property.
+- Folio: off-site cloud backup; multiple terminals on one database.
+- All: macOS builds; code-signed Windows installers (SmartScreen warns).
 
-## Reference and tools
+## Guides (vendor-written; each states where TBN's product is the wrong fit)
 
-- [Blog](https://tbn.tbbn.in/blog/) — restaurant software pricing, GST for
-  restaurants, room-service billing setup.
-- [Glossary](https://tbn.tbbn.in/glossary/) — KOT, GSTIN, FSSAI, composite GST
-  scheme, hotel room-service billing.
-- [Free GST calculator](https://tbn.tbbn.in/tools/gst-calculator/) — CGST/SGST
-  and IGST split, no signup.
-- [About](https://tbn.tbbn.in/about/) — three generations in Indian hospitality;
-  the software is built by operators rather than for them.
-- [Careers](https://tbn.tbbn.in/careers/)
+- [Pricing](https://tbn.tbbn.in/pricing/) and [cost calculator](https://tbn.tbbn.in/tools/software-cost-calculator/)
+- [Restaurant billing software in India: how to choose](https://tbn.tbbn.in/compare/restaurant-billing-software-india/)
+- [Hotel management software in India: how to choose](https://tbn.tbbn.in/compare/hotel-management-software-india/)
+- [Blog](https://tbn.tbbn.in/blog/) — 33 guides: GST on hotel rooms (5%/18%
+  since 22 Sep 2025), composition-scheme Bill of Supply, Form-III for foreign
+  guests, KOT routing, kitchen display, UPI QR, night audit, per-room vs flat
+  pricing, Linux install and more. RSS: https://tbn.tbbn.in/blog/feed.xml
+- [Glossary](https://tbn.tbbn.in/glossary/) · [GST calculator](https://tbn.tbbn.in/tools/gst-calculator/)
+
+## Typical Indian market pricing (context)
+
+Cloud restaurant POS ₹800–₹2,500/month; self-hosted ₹6,000–₹9,000/year.
+Hotel PMS ₹50–₹200 per room per month, or ₹10,000–₹25,000/year flat.

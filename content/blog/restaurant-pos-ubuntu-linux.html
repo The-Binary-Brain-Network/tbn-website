@@ -1,0 +1,61 @@
+<!--meta
+{"title": "Restaurant POS on Ubuntu and Linux: Install Guide and Hardware Tips", "h1": "Restaurant POS on Ubuntu and Linux: <em>install guide and hardware tips.</em>", "crumb": "Restaurant POS on Linux", "description": "Run restaurant billing software on Ubuntu, Debian, Linux Mint or any Linux PC. Why Linux suits a billing counter, .deb vs AppImage, exact terminal commands, the libfuse fix, and thermal printer setup.", "category": "Restaurants", "product": "pass", "date": "2026-10-19", "order": 21, "keywords": ["restaurant pos linux", "billing software ubuntu", "pos software for linux"], "lede": "A billing counter does one job all day. Linux is very good at doing one job all day — on older hardware, without licence fees, and without a surprise update restarting the machine during lunch.", "answer": "To run restaurant billing software on Linux, use a 64-bit PC with Ubuntu, Debian or Linux Mint and install the vendor's .deb package with sudo apt install, or use the AppImage on other distributions after marking it executable with chmod +x. If an AppImage fails with a libfuse.so.2 error, install libfuse2. Set up the thermal printer through the system's printer settings first.", "faqs": [["Can I run restaurant POS software on Ubuntu?", "Yes, if the vendor ships a Linux build. Pass, for example, ships a .deb package for Ubuntu, Debian and Linux Mint and an AppImage for other distributions, both 64-bit."], ["What is the difference between a .deb and an AppImage?", "A .deb is a package installed with apt; it appears in your applications menu and can be removed cleanly. An AppImage is a single portable file you mark executable and run, with nothing installed — useful on non-Debian distributions."], ["How do I fix 'libfuse.so.2: cannot open shared object file'?", "Ubuntu 22.04 and newer no longer ship FUSE 2, which AppImages need. Run sudo apt install libfuse2 once, or start the AppImage with --appimage-extract-and-run. Using the .deb avoids the problem."]], "related": ["thermal-printer-troubleshooting-restaurants", "offline-vs-cloud-pos-restaurants-india", "best-restaurant-billing-software-india-2026"]}
+-->
+<h2>Why run a billing counter on Linux?</h2>
+<ul>
+<li><strong>No operating-system licence.</strong> On a second or third counter PC, that saves real money.</li>
+<li><strong>Older hardware lives longer.</strong> A five-year-old office PC that struggles with the latest Windows often runs a lightweight Linux desktop comfortably.</li>
+<li><strong>Updates on your schedule.</strong> Linux does not restart itself in the middle of service to install updates.</li>
+<li><strong>Fewer distractions.</strong> A counter PC that only runs the POS and a browser is harder to misuse.</li>
+</ul>
+<p>The catch is that your software has to support it. Many restaurant POS products are Windows-only or browser-only; check before you wipe a machine.</p>
+
+<h2>Choose the distribution</h2>
+<p>If you have no preference, use <strong>Ubuntu LTS</strong> or <strong>Linux Mint</strong>. Both are Debian-family, so .deb packages install directly, both have long support periods, and Mint's desktop feels familiar to staff who have only used Windows. Use the 64-bit version; most POS builds are x86_64 only.</p>
+
+<h2>Which file: .deb or AppImage?</h2>
+<p>Find out what you are running:</p>
+<div class="cmd">cat /etc/os-release | head -2</div>
+<p>If it says Ubuntu, Debian, Linux Mint, Pop!_OS or elementary, use the <strong>.deb</strong>. It installs properly, appears in the applications menu, and can be removed with one command. On Fedora, Arch, openSUSE or anything else, use the <strong>AppImage</strong>: one portable file, nothing installed.</p>
+
+<h2>Installing a .deb (example: Pass)</h2>
+<div class="cmd">wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-amd64.deb</div>
+<div class="cmd">sudo apt install ./Pass-amd64.deb</div>
+<p>Start it from the applications menu, or from a terminal:</p>
+<div class="cmd">pass-pos</div>
+<p>To remove it later:</p>
+<div class="cmd">sudo apt remove pass-pos</div>
+
+<h2>Running an AppImage</h2>
+<div class="cmd">wget https://github.com/The-Binary-Brain-Network/pass-releases/releases/latest/download/Pass-x86_64.AppImage</div>
+<div class="cmd">chmod +x Pass-x86_64.AppImage</div>
+<div class="cmd">./Pass-x86_64.AppImage</div>
+<p>Linux will not run a downloaded file until you mark it executable — that is what <code>chmod +x</code> does.</p>
+
+<h2>The libfuse error</h2>
+<p>On Ubuntu 22.04 and newer, an AppImage may refuse to start with a message about <code>libfuse.so.2</code>. Those releases stopped shipping FUSE 2, which AppImages rely on. Either install it once:</p>
+<div class="cmd">sudo apt install libfuse2</div>
+<p>or run without FUSE:</p>
+<div class="cmd">./Pass-x86_64.AppImage --appimage-extract-and-run</div>
+<p>On a Debian-family system, simply switching to the .deb avoids the issue.</p>
+
+<h2>Thermal printers on Linux</h2>
+<p>Printers are the one area where Linux and Windows genuinely differ. Most 80mm USB and network thermal printers sold in India are generic ESC/POS devices.</p>
+<ol>
+<li>Connect the printer and open the system's printer settings. Network printers can be added by IP address.</li>
+<li>If the manufacturer offers a Linux (CUPS) driver, install it. Otherwise, a generic or raw queue often works for ESC/POS printers.</li>
+<li>Name the queue clearly — <code>BILL</code>, <code>KOT-KITCHEN</code> — so you choose the right one in the POS.</li>
+<li>Print a test page from the POS, not just from the system, and check width and cut.</li>
+</ol>
+<p>For network printers, give each one a fixed IP address in your router so it does not move after a power cut. Our <a href="/blog/thermal-printer-troubleshooting-restaurants/">thermal printer troubleshooting guide</a> covers blank prints, wrong widths and missing cuts.</p>
+
+<h2>Small things that help</h2>
+<ul class="checklist">
+<li>Turn off screen lock during service hours, or set a long timeout.</li>
+<li>Add the POS to startup applications so it opens when the PC boots.</li>
+<li>Use a UPS — a power blip should never reboot the counter mid-bill.</li>
+<li>Keep the PC on a wired connection if it also drives network printers.</li>
+</ul>
+
+<h2>About Pass on Linux</h2>
+<p><a href="/pass/">Pass</a> ships the same version for Linux as for Windows, built from the same source in the same release, with the same features: billing, KOT routing, the kitchen display, multiple outlets, inventory, staff and reports. Linux builds are x86_64 only, as a .deb and an AppImage, and update themselves. Full copy-paste commands are on the <a href="/pass/#linux">Pass Linux section</a>; <a href="/slate/#linux">Slate</a> and <a href="/folio/#linux">Folio</a> also run on Linux.</p>

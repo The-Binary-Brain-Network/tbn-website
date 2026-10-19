@@ -54,6 +54,8 @@ jobs:
           TARGETS=(
             "Folio|folio-releases|Folio-Setup.exe|4d5a|20000000"
             "Folio|folio-releases|latest.yml|-|50"
+            "Folio|folio-releases|Folio-Linux.AppImage|7f454c46|50000000"
+            "Folio|folio-releases|latest-linux.yml|-|50"
 
             "Pass|pass-releases|Pass-Setup.exe|4d5a|20000000"
             "Pass|pass-releases|Pass-x86_64.AppImage|7f454c46|20000000"

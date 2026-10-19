@@ -1,0 +1,61 @@
+<!--meta
+{"title": "Running Multiple Restaurant Outlets: GSTIN, FSSAI and Bill Number Series", "h1": "Multiple restaurant outlets: <em>GSTIN, FSSAI and a bill series each.</em>", "crumb": "Multi-outlet GSTIN and bill series", "description": "How to set up billing for a second or third restaurant outlet in India: when you need a separate GSTIN, why each outlet needs its own invoice number series, FSSAI per premises, shared menus and outlet-wise reports.", "category": "Restaurants", "product": "pass", "date": "2026-10-19", "order": 22, "keywords": ["multi outlet restaurant software", "invoice number series gst multiple branches", "restaurant chain billing"], "lede": "Opening a second outlet doubles more than the rent. It doubles the compliance: another FSSAI licence, possibly another GSTIN, and — the one owners forget — another invoice number series that must never collide with the first.", "answer": "Each restaurant outlet should have its own bill number series, because GST requires invoice numbers to be unique and sequential within a financial year for each registration, and two outlets sharing a counter will issue duplicates. Outlets in different states need separate GSTINs; outlets in the same state can share one GSTIN as additional places of business. Each premises needs its own FSSAI licence or registration.", "faqs": [["Do I need a separate GSTIN for each restaurant outlet?", "You need a separate GSTIN for each state you operate in. Outlets within the same state can be added as additional places of business under one GSTIN, or registered separately if you choose. Your accountant will advise which suits your structure."], ["Can two outlets use the same invoice number series?", "They should not. Invoice numbers must be unique for a registration within a financial year. Two outlets billing from the same series at the same time risk issuing the same number twice. Give each outlet its own prefix, such as KOR-0001 and IND-0001."], ["Does each outlet need its own FSSAI licence?", "Yes. FSSAI licences and registrations are issued per premises, so each kitchen needs its own, and its number should be printed on that outlet's bills."]], "related": ["composition-scheme-bill-of-supply-restaurants", "best-restaurant-billing-software-india-2026", "offline-vs-cloud-pos-restaurants-india"]}
+-->
+<h2>Three identities every outlet needs</h2>
+<p>When a restaurant becomes two, three things have to be decided per outlet: its <strong>GST registration</strong>, its <strong>FSSAI licence</strong>, and its <strong>invoice number series</strong>. Get these right in the software on day one, because untangling a month of mixed-up bills is miserable.</p>
+
+<h2>GSTIN: per state, sometimes per outlet</h2>
+<p>GST registration is state-wise. An outlet in Mumbai and an outlet in Bengaluru must have separate GSTINs. Two outlets in the same state can sit under one GSTIN, with the second added as an additional place of business — or you can register them separately if that suits your accounting or ownership. That is a decision for you and your accountant; the software simply needs to let each outlet carry its own GSTIN and print it correctly.</p>
+<p>Remember that the composition-scheme choice applies across registrations under the same PAN. If one outlet is under composition, check what that means for the others before you configure billing.</p>
+
+<h2>FSSAI: always per premises</h2>
+<p>Food safety licences and registrations are issued for a premises. A new kitchen means a new FSSAI number, and that number must appear on the bills issued from that kitchen. Printing the head outlet's FSSAI number on every outlet's bill is a common shortcut and an avoidable problem during an inspection. See our <a href="/glossary/fssai/">FSSAI glossary entry</a> for licence types.</p>
+
+<h2>Invoice series: the one that bites</h2>
+<p>GST rules require invoice numbers to be consecutive, unique within a financial year for a registration, and no more than 16 characters. If two outlets bill from one counter — both issuing "1043" on the same evening — you have duplicate invoice numbers. That is a compliance issue, and it makes reconciliation with your accounts impossible.</p>
+<p>The fix is simple: <strong>a prefix and a counter per outlet</strong>.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Outlet</th><th>Prefix</th><th>First bill</th><th>Hundredth bill</th></tr></thead>
+<tbody>
+<tr><td>Koramangala</td><td>KOR</td><td>KOR-0001</td><td>KOR-0100</td></tr>
+<tr><td>Indiranagar</td><td>IND</td><td>IND-0001</td><td>IND-0100</td></tr>
+<tr><td>HSR Layout</td><td>HSR</td><td>HSR-0001</td><td>HSR-0100</td></tr>
+</tbody></table></div>
+<p>Many restaurants also add the financial year (KOR/26-27/0001) so numbering restarts cleanly each April. Keep the total within 16 characters.</p>
+
+<h2>What should be shared, and what shouldn't</h2>
+<p>A sensible multi-outlet setup shares what is the same everywhere and separates what is legally or operationally distinct:</p>
+<ul>
+<li><strong>Shared:</strong> the master menu and prices, so a change lands everywhere at once; recipe definitions.</li>
+<li><strong>Per outlet:</strong> GSTIN, FSSAI, address and phone on the bill; bill prefix and counter; tables and sections; staff and attendance; stock and purchases; expenses.</li>
+</ul>
+<p>Per-outlet stock matters more than it seems. If both kitchens draw from one stock figure, neither stock count means anything.</p>
+
+<h2>Reports you will want</h2>
+<ul class="checklist">
+<li>Sales, items and GST per outlet — your returns are filed per registration.</li>
+<li>An outlet comparison: revenue, bill count and average bill side by side.</li>
+<li>Expenses per outlet, so a P&amp;L per outlet is possible.</li>
+<li>Exports to Excel your accountant can use without retyping.</li>
+</ul>
+
+<h2>One installation or several?</h2>
+<p>There are two ways software handles outlets. A cloud POS typically gives each outlet its own login against one central database, with a head-office view on top. A local, offline-first POS can either run each outlet as its own installation, or manage several outlets from one installation with an outlet switcher. The second suits groups where the owner or a manager bills or reviews several outlets from one office; the first suits outlets that each have their own counter.</p>
+
+<h2>Opening outlet two: a checklist</h2>
+<ul class="checklist">
+<li>FSSAI licence or registration for the new premises.</li>
+<li>GST: new registration (different state) or additional place of business (same state) — decided with your accountant.</li>
+<li>A new bill prefix and counter in the POS, starting at 0001.</li>
+<li>The outlet's own address, phone, GSTIN and FSSAI on its bill — print a test bill and check every line.</li>
+<li>Tables and sections for the new floor.</li>
+<li>Staff added to the new outlet, with their own PINs.</li>
+<li>Opening stock entered for the new kitchen.</li>
+<li>Printers mapped for the new kitchen's stations.</li>
+</ul>
+
+<h2>Menu prices that differ by outlet</h2>
+<p>A shared master menu keeps things simple, but some groups price differently at an airport outlet or a premium location. Decide early whether you want one menu with identical prices everywhere, or per-outlet price overrides, and check your software supports the approach before you print menu cards.</p>
+
+<h2>In Pass</h2>
+<p><a href="/pass/">Pass</a> lets each outlet keep its own name, address, GSTIN, FSSAI number, bill prefix and bill counter, with tables, sections, staff, stock and expenses kept separate per outlet and one central menu shared across them. You switch outlets from inside the app, and an outlet comparison report appears once you run more than one. Every outlet run from one installation is covered by that computer's ₹7,500 annual licence. A cross-outlet head-office dashboard is on the <a href="/pass/#roadmap">roadmap</a>, not shipping yet.</p>

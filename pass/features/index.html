@@ -2,6 +2,7 @@
 <html lang="en-IN">
 <head>
 <meta charset="UTF-8">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem("tbn-consent")}catch(e){}var g=c==="granted"?"granted":"denied";gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);})();</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pass — Complete Feature List &amp; Technical Specification | TBN</title>
@@ -112,7 +113,7 @@ a{color:inherit;text-decoration:none;}
  "name": "Pass — Complete Feature List & Technical Specification | TBN",
  "description": "Every feature in Pass, the restaurant management and billing system — orders, kitchen display, billing, multi-outlet, inventory, staff, reports — plus the full technical specification.",
  "inLanguage": "en-IN",
- "dateModified": "2026-09-19",
+ "dateModified": "2026-10-19",
  "isPartOf": {
   "@id": "https://tbn.tbbn.in/#website"
  },
@@ -162,9 +163,10 @@ a{color:inherit;text-decoration:none;}
   <section class="hero"><div class="container">
     <span class="hero__eyebrow">In Restaurant Trials · India</span>
     <h1 class="hero__title">Pass — the complete feature list.</h1>
-    <p class="hero__desc">Everything Pass does, grouped by where you'd use it, plus the full technical specification. Nothing below is an add-on tier or a paid module — the Kitchen Display System, multi-outlet and the full reporting suite are all in the flat ₹7,500 annual licence.</p>
+    <p class="hero__desc">Everything Pass does, grouped by where you'd use it, plus the full technical specification. Nothing below is an add-on tier or a paid module — the Kitchen Display System, multi-outlet and the full reporting suite are all in the flat ₹7,500 annual licence per billing computer.</p>
     <div class="hero__actions">
       <a href="https://github.com/the-binary-brain-network/pass-releases/releases/latest/download/Pass-Setup.exe" class="btn btn--primary"><svg viewBox="0 0 24 24"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z"/></svg>Download for Windows</a>
+      <a href="/pass/#linux" class="btn btn--ghost">Download for Linux</a>
       <a href="/pass/" class="btn btn--ghost">Back to Pass</a>
     </div>
   </div></section>
@@ -182,14 +184,13 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Table floor plan</td><td>Visual layout with sections — AC Room, Garden, Rooftop — and colour-coded status: available, occupied, reserved, cleaning.</td></tr>
         <tr><td>Quick Order Entry</td><td>Keyboard-driven type-ahead search for punching orders fast at a busy counter.</td></tr>
         <tr><td>Merge tables</td><td>Combine several tables onto one bill when a group pushes tables together.</td></tr>
-        <tr><td>Transfer order</td><td>Move an order to a different table without re-punching a single item.</td></tr>
-        <tr><td>Hold orders</td><td>Park an order and come back to it.</td></tr>
+        
+        
         <tr><td>Cancel with reason</td><td>Cancellations are recorded with a reason, not silently deleted.</td></tr>
-        <tr><td>Complementary orders</td><td>Comp an order with a reason logged, so it shows correctly in reports rather than distorting sales.</td></tr>
         <tr><td>Order status</td><td>Placed → KOT sent → preparing → ready → served → billed.</td></tr>
         <tr><td>Order numbering</td><td>Auto-generated and dated, so every order is traceable.</td></tr>
         <tr><td>Customer lookup</td><td>Find a returning customer by phone as you take the order.</td></tr>
-        <tr><td>Online-orders inbox</td><td>A single queue for incoming delivery orders — accept, reject, and push straight into the kitchen.</td></tr>
+        <tr><td>Online-orders inbox</td><td>A single queue for incoming delivery orders — accept or reject, mark the store online or offline, and try it with a built-in test order. Swiggy and Zomato connectivity is on the roadmap.</td></tr>
       </tbody></table>
     </div>
 
@@ -211,16 +212,15 @@ a{color:inherit;text-decoration:none;}
       <div class="fgroup__head"><span class="fgroup__num">03</span><h3 class="fgroup__title">Billing &amp; Payments</h3></div>
       <table class="ftable"><tbody>
         <tr><td>GST billing</td><td>CGST, SGST and IGST calculated and shown correctly, with GSTIN and FSSAI printed on the bill.</td></tr>
-        <tr><td>Tax modes</td><td>One flat rate across the menu, or a rate set per item where slabs differ.</td></tr>
+        <tr><td>Tax modes</td><td>Flat (one rate across the menu), per item (where slabs differ), or composition — a Bill of Supply with the required declaration and no tax lines, with composition turnover kept separate in the GST report.</td></tr>
         <tr><td>Split bill</td><td>Settle one order as several separately-numbered invoices — by equal share or by picking items.</td></tr>
-        <tr><td>Split payments</td><td>Cash, UPI, card and loyalty points against a single bill, each recorded with its own reference.</td></tr>
+        <tr><td>Split payments</td><td>Part cash, part UPI, part card against a single bill, each recorded with its own reference.</td></tr>
         <tr><td>Static UPI QR</td><td>Works with any UPI app, needs no gateway account and no API key. Just your UPI ID.</td></tr>
         <tr><td>Razorpay QR</td><td>Single-use QR per bill with the amount pre-filled, and automatic payment confirmation so the counter isn't waiting on the customer to say "done".</td></tr>
-        <tr><td>PhonePe</td><td>Supported as a payment gateway option.</td></tr>
+        <tr><td>PhonePe QR</td><td>Dynamic QR with the payment status checked automatically.</td></tr>
         <tr><td>Cash change calculator</td><td>Colour-coded so the cashier reads it at a glance.</td></tr>
-        <tr><td>Bill void</td><td>Voided with a reason, the staff member and the timestamp all recorded.</td></tr>
         <tr><td>Bill adjustments</td><td>Refunds and corrections recorded properly rather than overwriting history.</td></tr>
-        <tr><td>Discount ceilings per role</td><td>An owner can discount fully; a manager, cashier and waiter each have their own limit. Nobody hands out more than their role allows.</td></tr>
+        <tr><td>Discounts</td><td>Flat or percentage, applied before the bill is generated.</td></tr>
         <tr><td>Bill numbering</td><td>Sequential with a configurable prefix, per outlet, audit-safe.</td></tr>
         <tr><td>Auto-print on payment</td><td>Optional — the bill prints itself the moment payment lands.</td></tr>
       </tbody></table>
@@ -237,7 +237,7 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Per-item tax rate</td><td>0%, 5%, 12% or 18% set per item where the slabs differ.</td></tr>
         <tr><td>Availability toggle</td><td>Mark an item sold out in one tap; it greys out at the counter instantly.</td></tr>
         <tr><td>Excel import</td><td>Bulk-import your menu from a spreadsheet, with a downloadable template.</td></tr>
-        <tr><td>Import from a photo</td><td>Point a camera at your printed menu and let it read the items in, then review before committing.</td></tr>
+        <tr><td>Import from a photo</td><td>Read a photo of your printed menu (JPG, PNG, WebP) entirely on the machine — no internet, no API key, no per-use cost. Every item lands on a review screen to correct before anything is saved.</td></tr>
       </tbody></table>
     </div>
 
@@ -251,6 +251,8 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Automatic deduction</td><td>Selling a dish deducts its ingredients from stock on its own. Optional — switch it off if you'd rather not.</td></tr>
         <tr><td>Excel import</td><td>Bulk-import inventory from a spreadsheet.</td></tr>
         <tr><td>Stock log</td><td>Every movement, kept for reconciliation.</td></tr>
+        <tr><td>Suppliers</td><td>A supplier list with contact details, linked to your stock purchases.</td></tr>
+        <tr><td>Purchase orders</td><td>Raise a PO, then receive it straight into stock when the delivery arrives.</td></tr>
       </tbody></table>
     </div>
 
@@ -262,16 +264,15 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Central master menu</td><td>One menu shared across outlets, so a price change lands everywhere at once.</td></tr>
         <tr><td>Per-outlet operations</td><td>Orders, tables, sections, inventory, expenses and staff are kept separate per outlet.</td></tr>
         <tr><td>Outlet switcher</td><td>Change which outlet you're working in from inside the app.</td></tr>
-        <tr><td>Licensing</td><td>Unlimited outlets on a single licence at current pricing.</td></tr>
+        <tr><td>Licensing</td><td>Every outlet run from one installation is covered by that computer's licence. An outlet comparison report appears once there is more than one.</td></tr>
       </tbody></table>
     </div>
 
     <div class="fgroup">
       <div class="fgroup__head"><span class="fgroup__num">07</span><h3 class="fgroup__title">Staff &amp; Payroll</h3></div>
       <table class="ftable"><tbody>
-        <tr><td>Roles</td><td>Owner, manager, cashier, waiter and kitchen, with 14 granular permissions between them.</td></tr>
+        <tr><td>Roles</td><td>Owner, manager, cashier, waiter and kitchen — each sees only the screens their job needs.</td></tr>
         <tr><td>PIN login</td><td>A short PIN per staff member — no passwords to manage or forget.</td></tr>
-        <tr><td>Manager override</td><td>Sensitive actions ask for a manager's PIN rather than blocking the shift.</td></tr>
         <tr><td>Attendance</td><td>Monthly grid with keyboard shortcuts for present, absent, half day and leave, plus check-in tracking.</td></tr>
         <tr><td>Salary sheets</td><td>Computed monthly from attendance, salary type and advances — gross, deductions, net. Exports to Excel.</td></tr>
         <tr><td>Salary advances</td><td>Recorded and deducted automatically at payroll.</td></tr>
@@ -281,10 +282,9 @@ a{color:inherit;text-decoration:none;}
     </div>
 
     <div class="fgroup">
-      <div class="fgroup__head"><span class="fgroup__num">08</span><h3 class="fgroup__title">Customers &amp; Loyalty</h3></div>
+      <div class="fgroup__head"><span class="fgroup__num">08</span><h3 class="fgroup__title">Customers</h3></div>
       <table class="ftable"><tbody>
         <tr><td>Phone-keyed database</td><td>One record per customer, found instantly by number.</td></tr>
-        <tr><td>Loyalty points</td><td>Earned on spend and redeemable as a payment mode at the counter.</td></tr>
         <tr><td>Visit tracking</td><td>Visit count, total spend and average per visit.</td></tr>
         <tr><td>Order history</td><td>Everything that customer has ordered, on their record.</td></tr>
         <tr><td>Profiles</td><td>Name, address, area, city, birthday, email and notes — so a regular gets treated like one.</td></tr>
@@ -293,7 +293,7 @@ a{color:inherit;text-decoration:none;}
     </div>
 
     <div class="fgroup">
-      <div class="fgroup__head"><span class="fgroup__num">09</span><h3 class="fgroup__title">Reports &amp; Intelligence</h3></div>
+      <div class="fgroup__head"><span class="fgroup__num">09</span><h3 class="fgroup__title">Reports</h3></div>
       <table class="ftable"><tbody>
         <tr><td>Dashboard</td><td>Today's revenue, active orders, average bill value and cash-versus-UPI collection, updating live.</td></tr>
         <tr><td>Daily summary</td><td>Revenue, bill count and payment split for the day.</td></tr>
@@ -302,11 +302,11 @@ a{color:inherit;text-decoration:none;}
         <tr><td>GST report</td><td>Monthly, bill-level, with the CGST/SGST/IGST breakdown your accountant needs.</td></tr>
         <tr><td>Profit &amp; loss</td><td>Gross revenue, categorised expenses and net margin.</td></tr>
         <tr><td>Expense tracker</td><td>Ten categories seeded on setup — rent, electricity, raw materials, salaries and more.</td></tr>
-        <tr><td>Business insights</td><td>Today read against yesterday, with specific things to do about it.</td></tr>
-        <tr><td>Sales forecast</td><td>A seven-day projection built from your own trading history.</td></tr>
-        <tr><td>Menu pricing advisor</td><td>Flags items that underperform and suggests what to change.</td></tr>
-        <tr><td>Marketing generator</td><td>Ready-to-send WhatsApp copy for promotions, festivals and new launches.</td></tr>
-        <tr><td>Export</td><td>Every report to Excel and PDF.</td></tr>
+        <tr><td>Daily email report</td><td>The day's summary sent from your own email account, so the owner sees it without opening the app.</td></tr>
+        <tr><td>Outlet comparison</td><td>Outlets side by side once you run more than one.</td></tr>
+        
+        
+        <tr><td>Export</td><td>Sales, items, GST, P&amp;L, expenses and salary to Excel; sales, items, GST and P&amp;L to PDF.</td></tr>
         <tr><td>Role-gated</td><td>Restrict reports to the staff who should see them.</td></tr>
       </tbody></table>
     </div>
@@ -315,13 +315,12 @@ a{color:inherit;text-decoration:none;}
       <div class="fgroup__head"><span class="fgroup__num">10</span><h3 class="fgroup__title">Infrastructure</h3></div>
       <table class="ftable"><tbody>
         <tr><td>Offline-first</td><td>Every core operation runs with the internet unplugged. Nothing waits on a server.</td></tr>
-        <tr><td>Multi-terminal</td><td>Cashier, kitchen and waiter stations on your own WiFi, all sharing one live view.</td></tr>
-        <tr><td>Zero-config discovery</td><td>Terminals find the host automatically. No IP addresses to type, no router settings to learn.</td></tr>
-        <tr><td>Offline queue</td><td>A terminal that drops off the network keeps taking orders and catches up when it returns.</td></tr>
-        <tr><td>Local backups</td><td>Automatic, with retention and a restore path.</td></tr>
-        <tr><td>Optional cloud replication</td><td>An off-site copy of your trading data, entirely opt-in.</td></tr>
+        
+        
+        <tr><td>Local backups</td><td>At startup and every hour, the last 48 kept. A damaged database is recovered from the newest good backup automatically.</td></tr>
+        <tr><td>Payment secrets</td><td>Gateway keys and the email password stored encrypted, never displayed in the app.</td></tr>
         <tr><td>Auto-updates</td><td>Downloaded in the background, installed on quit — never mid-service.</td></tr>
-        <tr><td>Licensing</td><td>Signed licence key, verified offline, with optional hardware binding.</td></tr>
+        <tr><td>Licensing</td><td>Signed licence key bound to the computer, verified offline, with revocations checked when online.</td></tr>
         <tr><td>Themes</td><td>Dark and light, switched instantly.</td></tr>
         <tr><td>Guided tour</td><td>An in-app walkthrough on first run, plus a built-in FAQ.</td></tr>
       </tbody></table>
@@ -354,12 +353,20 @@ a{color:inherit;text-decoration:none;}
           <p class="roadmap__item-desc">One view across every outlet — revenue, top items and margins side by side.</p>
         </div>
         <div class="roadmap__item">
-          <h3 class="roadmap__item-title">Composite-scheme billing</h3>
-          <p class="roadmap__item-desc">Bill of Supply format for restaurants registered under the GST composition scheme, with the required legal wording.</p>
+          <h3 class="roadmap__item-title">Several billing computers, one database</h3>
+          <p class="roadmap__item-desc">A second counter, kitchen screen or waiter station pairing with the main computer over your own WiFi with a 6-digit code, plus day close with cash reconciliation, an activity log and stricter per-role permissions. Built and in final testing.</p>
         </div>
         <div class="roadmap__item">
-          <h3 class="roadmap__item-title">Supplier &amp; purchase orders</h3>
-          <p class="roadmap__item-desc">A supplier master and PO workflow on top of the inventory you already track.</p>
+          <h3 class="roadmap__item-title">Void, table transfer, hold, complimentary and loyalty points</h3>
+          <p class="roadmap__item-desc">The groundwork is in the database; the screens are being finished.</p>
+        </div>
+        <div class="roadmap__item">
+          <h3 class="roadmap__item-title">Database encryption</h3>
+          <p class="roadmap__item-desc">The whole database encrypted at rest, with a recovery passphrase. In final testing.</p>
+        </div>
+        <div class="roadmap__item">
+          <h3 class="roadmap__item-title">Android app, 58mm printers, logo and UPI QR on the printed bill</h3>
+          <p class="roadmap__item-desc">Planned, in that rough order of demand.</p>
         </div>
       </div>
       <p class="roadmap__foot">One thing worth knowing up front: the Windows installer isn't code-signed yet, so Windows may show a "publisher unknown" warning the first time you run it. It's safe to proceed — we're sorting the certificate.</p>
@@ -372,18 +379,20 @@ a{color:inherit;text-decoration:none;}
       <h2 class="section-title">What it needs, and what it runs on.</h2>
     </div>
     <table class="spec"><tbody>
-      <tr><td>Platform</td><td>Windows desktop. Per-user install — no admin rights required.</td></tr>
-      <tr><td>Hardware</td><td>Any Windows PC the restaurant already owns. No server to buy.</td></tr>
-      <tr><td>Printing</td><td>80mm thermal printers over USB, network or the Windows default. Silent printing with no dialog. Separate printers for kitchen tickets, bills and each kitchen station.</td></tr>
+      <tr><td>Version</td><td>1.0.12</td></tr>
+      <tr><td>Platform</td><td>Windows 10 or 11 (64-bit) — per-user install, no admin rights required. Linux x86_64 as a .deb (Ubuntu, Debian, Mint) or a portable AppImage.</td></tr>
+      <tr><td>Hardware</td><td>Any Windows or Linux PC the restaurant already owns. No server to buy.</td></tr>
+      <tr><td>Printing</td><td>80mm thermal printers over USB, network or the system default (58mm rolls are not supported). Silent printing with no dialog. Separate printers for kitchen tickets, bills and each kitchen station.</td></tr>
       <tr><td>Internet</td><td>Not required. Core billing, ordering, kitchen display and reporting all run fully offline.</td></tr>
       <tr><td>Database</td><td>Embedded local database on your own machine.</td></tr>
-      <tr><td>Backups</td><td>Automatic local backups with retention and a restore path. Optional cloud replication for an off-site copy.</td></tr>
-      <tr><td>Multi-terminal</td><td>One host terminal plus unlimited clients on the same network, discovered automatically. Clients queue offline and sync on reconnect.</td></tr>
-      <tr><td>Outlets</td><td>Unlimited outlets on one licence at current pricing, each with its own GSTIN, FSSAI and bill numbering.</td></tr>
-      <tr><td>Security</td><td>PIN authentication with hashed storage, role-based permissions enforced across the app, and a signed licence verified offline.</td></tr>
+      <tr><td>Backups</td><td>Hourly local backups, 48 kept, with automatic recovery on startup.</td></tr>
+      <tr><td>Multi-computer</td><td>One installation per billing computer today. Pairing several computers onto one database is in final testing.</td></tr>
+      <tr><td>Outlets</td><td>As many as you need in one installation, each with its own GSTIN, FSSAI and bill numbering.</td></tr>
+      <tr><td>Security</td><td>PIN login per staff member, role-based screens, encrypted payment secrets, and a signed licence verified offline.</td></tr>
       <tr><td>Payments</td><td>Static UPI QR with no gateway account needed, plus Razorpay and PhonePe. Card and cash recorded with references.</td></tr>
-      <tr><td>GST</td><td>Flat or per-item rates at 0, 5, 12 and 18 percent, with CGST/SGST/IGST computed and printed.</td></tr>
-      <tr><td>Setup</td><td>Guided wizard, then terminal setup. Most restaurants are billing the same day, including menu import.</td></tr>
+      <tr><td>GST</td><td>Flat, per-item (0, 5, 12 or 18 percent) or composition scheme, with CGST/SGST/IGST computed and printed.</td></tr>
+      <tr><td>Licence</td><td>₹7,500 per billing computer per year. Free trial: 15 days, full product, no card.</td></tr>
+      <tr><td>Setup</td><td>Guided onboarding wizard. Most restaurants are billing the same day, including menu import.</td></tr>
       <tr><td>Updates</td><td>Automatic — downloaded in the background, applied on quit.</td></tr>
       <tr><td>Support</td><td>Direct WhatsApp line. Not a ticketing queue.</td></tr>
     </tbody></table>
@@ -396,7 +405,7 @@ a{color:inherit;text-decoration:none;}
 </div></div>
 <section class="cta"><div class="container container--narrow">
   <h2 class="cta__title">Want to see it on your own menu?</h2>
-  <p class="cta__sub">We'll install Pass, import your menu, and train your counter team — free for 30 days.</p>
+  <p class="cta__sub">We'll install Pass, import your menu, and train your counter team — free for 15 days.</p>
   <div class="cta__actions">
     <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Pass%20demo%20for%20my%20restaurant." target="_blank" rel="noopener" class="btn btn--whatsapp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>Request a Demo</a>
     <a href="/pass/#pricing" class="btn btn--ghost">See Pricing</a>
@@ -406,8 +415,8 @@ a{color:inherit;text-decoration:none;}
 <footer class="footer"><div class="container footer__inner">
   <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
   <div class="footer__links">
-    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a>
-    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a>
+    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a><a href="/pricing/">PRICING</a><a href="/download/">DOWNLOAD</a>
+    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a><a href="/privacy/">PRIVACY</a><a href="/terms/">TERMS</a>
     <a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
   </div>
 </div></footer>

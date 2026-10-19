@@ -1,0 +1,62 @@
+<!--meta
+{"title": "UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation", "h1": "UPI QR at the counter: <em>static, dynamic, and confirming payment automatically.</em>", "crumb": "UPI QR auto-confirmation", "description": "Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.", "category": "Restaurants", "product": "pass", "date": "2026-10-19", "order": 25, "keywords": ["upi qr restaurant", "dynamic upi qr", "upi payment confirmation pos"], "lede": "UPI is now the default way most Indians pay for a meal. The question for a restaurant is no longer whether to accept it, but how to stop the counter turning into a queue of people holding up phones that say 'payment successful'.", "answer": "A static UPI QR shows your UPI ID; the customer types the amount and the cashier has to check the payment arrived. A dynamic QR is generated per bill with the exact amount and, when issued through a payment gateway such as Razorpay or PhonePe, confirms the payment to your billing software automatically. Static is free and simple; dynamic removes amount errors and manual checking.", "faqs": [["What is the difference between static and dynamic UPI QR?", "A static QR is printed once and encodes only your UPI ID; the customer enters the amount. A dynamic QR is generated for each bill and encodes the exact amount and a reference, so the customer cannot pay the wrong amount and the payment can be matched to the bill automatically."], ["How does automatic UPI payment confirmation work?", "The billing software creates the QR through a payment gateway. When the customer pays, the gateway records the payment against that QR, and the billing software checks or is told the status, marking the bill paid without the cashier looking at a phone."], ["Are there charges for UPI payments?", "Person-to-merchant UPI payments are generally free of merchant discount rate for most transactions, but payment gateways may charge their own fees for dynamic QR and settlement services. Check the gateway's current pricing before choosing."]], "related": ["best-restaurant-billing-software-india-2026", "cafe-pos-setup-checklist", "day-close-cash-reconciliation-guide"]}
+-->
+<h2>Option 1: a static UPI QR</h2>
+<p>The familiar printed standee by the cash counter. It encodes your UPI ID (a VPA such as <code>yourrestaurant@okbank</code>) and nothing else. The customer scans, types the bill amount, pays, and shows the cashier the confirmation screen.</p>
+<p><strong>Good:</strong> free, works with every UPI app, needs no gateway account and no internet on your side.</p>
+<p><strong>Not so good:</strong> the customer can mistype the amount; the cashier has to trust the screenshot or check the business phone; screenshots of old payments are a known fraud; and matching UPI receipts to bills at closing is manual.</p>
+<p>Many billing systems can print a static QR on the bill or show it on screen with your UPI ID, which at least removes the standee hunt.</p>
+
+<h2>Option 2: a dynamic QR per bill</h2>
+<p>A dynamic QR is created for a specific bill. It encodes the exact amount and a reference, so the customer only has to approve. There are two flavours:</p>
+<ul>
+<li><strong>Dynamic but unconfirmed</strong> — the software builds a UPI link with the amount filled in. The amount is right, but someone still checks the phone.</li>
+<li><strong>Gateway-confirmed</strong> — the software asks a payment gateway (Razorpay, PhonePe and others offer this) to create the QR. When the customer pays, the gateway knows, and the billing software marks the bill paid automatically — either because the gateway notifies it or because it checks the status every few seconds.</li>
+</ul>
+<p>The second flavour is what removes the queue: the cashier hands over the change for the next customer while the screen turns green on its own.</p>
+
+<h2>What auto-confirmation changes at the counter</h2>
+<ul>
+<li><strong>No wrong amounts.</strong> ₹460 cannot become ₹46.</li>
+<li><strong>No screenshot fraud.</strong> The bill is paid when the gateway says so, not when a phone is waved.</li>
+<li><strong>Faster turns.</strong> At lunch rush, saving twenty seconds per UPI payment is several minutes of queue.</li>
+<li><strong>Clean closing.</strong> Every UPI payment is already matched to a bill number, so the day's UPI total in your report matches the gateway's settlement report.</li>
+</ul>
+
+<h2>What it needs</h2>
+<ol>
+<li>A merchant account with a gateway that offers UPI QR, with KYC completed.</li>
+<li>API keys from that gateway entered into your billing software — stored securely, never displayed after entry.</li>
+<li>An internet connection on the billing computer at the moment of payment. If the connection drops, fall back to static QR or cash; good software makes that switch obvious.</li>
+</ol>
+<p>Check the gateway's fee schedule and settlement timing before choosing. UPI itself is largely free for merchants, but gateway services built on top of it may not be.</p>
+
+<h2>Split payments still matter</h2>
+<p>A table of four often pays partly in cash and partly by UPI, or two people pay by UPI separately. Your software should let one bill be settled across several payment modes, each recorded separately, so the day's cash and UPI totals are both right. That is different from splitting the bill itself into several invoices — see our <a href="/blog/day-close-cash-reconciliation-guide/">day-close reconciliation guide</a> for why the distinction matters at closing.</p>
+
+<h2>Practical setup for a busy counter</h2>
+<ul class="checklist">
+<li>Keep a static QR standee as a fallback, even with a gateway.</li>
+<li>Put the dynamic QR on a customer-facing screen or print it on the bill, so the customer is not leaning over the cashier.</li>
+<li>Test a ₹1 payment end to end before going live.</li>
+<li>Check that refunds are handled — through the gateway dashboard, recorded in your billing software.</li>
+<li>Reconcile the gateway settlement against your UPI report weekly at first, then monthly.</li>
+</ul>
+
+<h2>A worked example at the counter</h2>
+<p>A ₹640 bill at a busy café, paid by UPI:</p>
+<ul>
+<li><strong>Static QR:</strong> the customer scans the standee, types 640, pays, and turns their phone towards the cashier. The cashier checks the amount and the time, perhaps glances at the business phone for the notification, and closes the bill. Twenty to forty seconds, and an occasional wrong amount.</li>
+<li><strong>Gateway QR:</strong> the cashier presses UPI; a QR for exactly ₹640 appears on the customer screen or bill. The customer scans and approves. The bill closes itself when payment lands. The cashier was already serving the next person.</li>
+</ul>
+
+<h2>Reconciling UPI at month end</h2>
+<ol>
+<li>Export your POS's UPI payments for the month.</li>
+<li>Download the gateway's settlement report for the same period.</li>
+<li>Match totals, then investigate any day that does not match — usually a refund or a payment taken outside the POS.</li>
+<li>Check the gateway's fees against the rates you agreed.</li>
+</ol>
+
+<h2>In Pass</h2>
+<p><a href="/pass/">Pass</a> supports three UPI options: a static QR that needs only your UPI ID and no gateway account; a Razorpay dynamic QR per bill with automatic payment confirmation; and a PhonePe QR whose payment status is checked automatically. Gateway keys are stored encrypted and never shown on screen. Bills can be settled across cash, UPI and card on the same invoice, and the cash change calculator handles the cash part. Paytm is not supported.</p>

@@ -2,6 +2,7 @@
 <html lang="en-IN">
 <head>
 <meta charset="UTF-8">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem("tbn-consent")}catch(e){}var g=c==="granted"?"granted":"denied";gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);})();</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slate — Complete Feature List &amp; Technical Specification | TBN</title>
@@ -112,7 +113,7 @@ a{color:inherit;text-decoration:none;}
  "name": "Slate — Complete Feature List & Technical Specification | TBN",
  "description": "Every feature in Slate, the hotel management system — bookings, room board, rates, folios, GST invoicing, housekeeping, C-Form, GSTR-1 and Tally export, payroll, night audit and reports — plus the full technical specification.",
  "inLanguage": "en-IN",
- "dateModified": "2026-09-19",
+ "dateModified": "2026-10-19",
  "isPartOf": {
   "@id": "https://tbn.tbbn.in/#website"
  },
@@ -160,7 +161,7 @@ a{color:inherit;text-decoration:none;}
 <main>
 
   <section class="hero"><div class="container">
-    <span class="hero__eyebrow">In Hotel Trials · India · v0.4.0</span>
+    <span class="hero__eyebrow">In Hotel Trials · India · v0.5.9</span>
     <h1 class="hero__title">Slate — the complete feature list.</h1>
     <p class="hero__desc">Everything Slate does, grouped by where you'd use it, plus the full technical specification. Nothing below is a paid module or an upgrade tier — C-Form, payroll, GSTR-1 export, the F&amp;B module and the Android app are all in the flat ₹12,000 annual licence.</p>
     <div class="hero__actions">
@@ -301,7 +302,7 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Flash report</td><td>A fast read on the day so far.</td></tr>
         <tr><td>Housekeeping productivity</td><td>Output per staff member.</td></tr>
         <tr><td>No-shows</td><td>Tracked and reported.</td></tr>
-        <tr><td>Night audit</td><td>Runs automatically — posts room rent for every occupied room, marks no-shows and snapshots the day.</td></tr>
+        <tr><td>Night audit</td><td>Closes the business day — posts room rent for every occupied room, marks no-shows and snapshots the day. Catches up on up to 31 missed days.</td></tr>
         <tr><td>Shift handover</td><td>With cash reconciliation between shifts.</td></tr>
       </tbody></table>
     </div>
@@ -320,6 +321,10 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Occupancy forecast</td><td>What's coming, based on confirmed bookings.</td></tr>
         <tr><td>Audit log</td><td>Who changed what, and when.</td></tr>
         <tr><td>Night audit &amp; handover</td><td>Both as printable reports.</td></tr>
+        <tr><td>Channel analysis</td><td>Bookings and revenue by source.</td></tr>
+        <tr><td>No-shows &amp; cancellations</td><td>Who didn't arrive, who cancelled, and what it cost.</td></tr>
+        <tr><td>GSTR-1 &amp; Tally</td><td>B2B, B2CL and B2CS splits by state code, and a Tally XML file for your accountant.</td></tr>
+        <tr><td>Count</td><td>Sixteen reports in all, grouped as Today, Yesterday, Performance and Compliance.</td></tr>
       </tbody></table>
     </div>
 
@@ -338,6 +343,7 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Guest data stays local</td><td>Guest ID numbers, ID photos and C-Form entries are never sent to the cloud, by design.</td></tr>
         <tr><td>Optional cloud sync</td><td>Bookings, bills and expenses only, and only if you switch it on.</td></tr>
         <tr><td>Licensing</td><td>Signed licence key bound to your machine, verified offline.</td></tr>
+        <tr><td>Free trial</td><td>15 days, the complete product, no card. One trial per computer.</td></tr>
         <tr><td>Diagnostics</td><td>A built-in health screen showing version, modules, database and logs.</td></tr>
         <tr><td>Auto-updates</td><td>Applied on quit, never mid-shift, with progress shown in the app.</td></tr>
       </tbody></table>
@@ -380,7 +386,7 @@ a{color:inherit;text-decoration:none;}
       <h2 class="section-title">What it needs, and what it runs on.</h2>
     </div>
     <table class="spec"><tbody>
-      <tr><td>Version</td><td>0.4.0</td></tr>
+      <tr><td>Version</td><td>0.5.9</td></tr>
       <tr><td>Platform</td><td>Windows or Linux for the front-desk machine, plus an Android app and an installable web app for every other device.</td></tr>
       <tr><td>Linux build</td><td>Shipped as an AppImage — download it, mark it executable, and run. No package manager, no dependencies to resolve, no install step.</td></tr>
       <tr><td>Hardware</td><td>Any reasonably modern Windows PC. No server to buy, no cloud subscription in the middle.</td></tr>
@@ -407,7 +413,7 @@ a{color:inherit;text-decoration:none;}
 </div></div>
 <section class="cta"><div class="container container--narrow">
   <h2 class="cta__title">Want to see it on your own property?</h2>
-  <p class="cta__sub">We'll install Slate, run onboarding and train your team — free for the first two weeks.</p>
+  <p class="cta__sub">We'll install Slate, run onboarding and train your team — free for the first 15 days.</p>
   <div class="cta__actions">
     <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Slate%20demo%20for%20my%20hotel." target="_blank" rel="noopener" class="btn btn--whatsapp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>Request a Demo</a>
     <a href="/slate/#pricing" class="btn btn--ghost">See Pricing</a>
@@ -417,8 +423,8 @@ a{color:inherit;text-decoration:none;}
 <footer class="footer"><div class="container footer__inner">
   <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
   <div class="footer__links">
-    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a>
-    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a>
+    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a><a href="/pricing/">PRICING</a><a href="/download/">DOWNLOAD</a>
+    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a><a href="/privacy/">PRIVACY</a><a href="/terms/">TERMS</a>
     <a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
   </div>
 </div></footer>

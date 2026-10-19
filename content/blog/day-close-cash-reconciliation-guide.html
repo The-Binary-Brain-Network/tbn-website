@@ -1,0 +1,75 @@
+<!--meta
+{"title": "Day Close and Cash Reconciliation for Restaurants and Hotels", "h1": "Day close and cash reconciliation: <em>making the drawer match the system.</em>", "crumb": "Day close and cash reconciliation", "description": "A practical end-of-day routine for restaurants and hotel front desks: Z-report, opening float, cash in and out, counted versus expected cash, UPI matching, shift handover and what to do about differences.", "category": "Operations", "product": "all", "date": "2026-10-19", "order": 23, "keywords": ["day close report", "cash reconciliation restaurant", "z report", "shift handover"], "lede": "Every business that handles cash has a moment at the end of the day when someone counts the drawer and the number doesn't quite match. A good day-close routine doesn't make that moment disappear. It makes it small, explained and written down.", "answer": "Day close is the end-of-day routine that freezes the day's sales and checks the money. Expected cash is opening float plus cash sales plus cash paid in, minus cash paid out and refunds. Count the drawer, compare it with expected cash, match UPI and card totals to their statements, record any difference with a reason, and lock the day so it cannot be quietly edited.", "faqs": [["What is a Z-report?", "A Z-report is the end-of-day summary that closes a trading day: total sales, tax, payment-mode breakdown, voids and discounts, and cash reconciliation. Unlike a mid-day X-report, it resets the day and should not be changed afterwards."], ["How do you calculate expected cash in the drawer?", "Expected cash = opening float + cash sales + cash paid in − cash paid out − cash refunds. Compare it with the counted cash; the difference is the over or short."], ["What is a shift handover report?", "A shift handover report records what one shift passes to the next: cash and UPI as recorded by the system versus counted, open orders or tabs, pending balances and anything low in stock, usually signed by both people."]], "related": ["upi-qr-auto-confirmation-restaurants", "night-audit-explained-small-hotels", "restaurant-staff-attendance-payroll"]}
+-->
+<h2>What "day close" actually does</h2>
+<p>Day close does two jobs. It <strong>freezes the record</strong> — the day's bills, taxes and payments are summarised and locked, so nobody edits Tuesday's numbers on Friday. And it <strong>checks the money</strong> — the cash, UPI and card that should exist are compared with what actually does.</p>
+<p>In restaurants the frozen summary is often called a Z-report. In hotels the equivalent runs as part of the <a href="/blog/night-audit-explained-small-hotels/">night audit</a>. The routine below works for both.</p>
+
+<h2>The expected-cash formula</h2>
+<p>Everything starts with what should be in the drawer:</p>
+<p><strong>Expected cash = opening float + cash sales + cash paid in − cash paid out − cash refunds</strong></p>
+<ul>
+<li><strong>Opening float</strong> — the change you started with, say ₹2,000.</li>
+<li><strong>Cash sales</strong> — only the cash portion of each bill. A ₹1,200 bill paid ₹500 cash and ₹700 UPI adds ₹500 here.</li>
+<li><strong>Cash paid in</strong> — money added to the drawer that is not a sale: more change from the safe, an owner's top-up.</li>
+<li><strong>Cash paid out</strong> — money taken out for expenses: vegetables bought at the market, a delivery tip, a plumber.</li>
+<li><strong>Cash refunds</strong> — money returned to customers.</li>
+</ul>
+<p>If the software does not record pay-ins and pay-outs, every vegetable run shows up as a shortage. That is the first thing to fix.</p>
+
+<h2>A ten-minute closing routine</h2>
+<ol>
+<li><strong>Close or transfer open orders.</strong> A table still open at closing distorts the day.</li>
+<li><strong>Print the expected figures</strong> from the system: cash, UPI, card and total.</li>
+<li><strong>Count the drawer</strong> by denomination. Write it down before looking at the expected figure — it keeps the count honest.</li>
+<li><strong>Compare</strong> counted with expected. Note the difference.</li>
+<li><strong>Match UPI</strong> against the payment app or gateway for the day, and card against the terminal's settlement slip.</li>
+<li><strong>Record a reason</strong> for any difference above your tolerance — "₹50 short, change given wrongly on table 7", not just "short".</li>
+<li><strong>Lock the day.</strong> Day close should need a manager's PIN, and reopening a closed day should be possible but recorded.</li>
+<li><strong>Remove the takings</strong> above the next day's float, and record that as a pay-out to the safe or bank.</li>
+</ol>
+
+<h2>Shift handover: the same check, mid-day</h2>
+<p>If the counter changes hands between shifts, run a smaller version at handover. The outgoing person and the incoming person both see the system's cash and UPI figures against the counted drawer, along with open tabs or orders, pending balances and anything running low in stock. Both sign. When a shortage appears later, you know which shift it belongs to.</p>
+
+<h2>Tolerance and patterns</h2>
+<p>Small differences happen — a coin dropped, change miscounted. Set a tolerance (₹20, ₹50, whatever suits your volume) below which you simply record the figure. Above it, record a reason. What matters is the pattern: a ₹30 shortage every day on the same shift is a ₹900 monthly problem with a name attached.</p>
+
+<h2>Things that make reconciliation hard (and how to avoid them)</h2>
+<ul>
+<li><strong>Split payments not recorded as split.</strong> A bill paid half cash, half UPI recorded as all cash creates a phantom shortage.</li>
+<li><strong>Edits after closing.</strong> If yesterday's bills can be changed without a trail, yesterday's count means nothing.</li>
+<li><strong>Clock changes.</strong> Setting the PC's date back to "fix" a bill is a classic way to break day close. Software should refuse to close an earlier date than the last close.</li>
+<li><strong>Refunds outside the system.</strong> Cash handed back without a refund entry is a guaranteed mismatch.</li>
+</ul>
+
+<h2>A worked example</h2>
+<p>A restaurant opens with a ₹2,000 float. During the day:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Opening float</td><td>₹2,000</td></tr>
+<tr><td>Cash sales (cash portion of all bills)</td><td>₹18,450</td></tr>
+<tr><td>Cash paid in (change from the safe)</td><td>₹1,000</td></tr>
+<tr><td>Cash paid out (vegetables, ₹1,200; plumber, ₹500)</td><td>−₹1,700</td></tr>
+<tr><td>Cash refund to a customer</td><td>−₹350</td></tr>
+<tr><td><strong>Expected cash</strong></td><td><strong>₹19,400</strong></td></tr>
+<tr><td>Counted cash</td><td>₹19,320</td></tr>
+<tr><td><strong>Difference</strong></td><td><strong>₹80 short</strong></td></tr>
+</tbody></table></div>
+<p>With a ₹50 tolerance, ₹80 needs a reason. The cashier remembers giving ₹100 instead of ₹20 change on a busy table — recorded, and the day is closed. Without the pay-out entries for vegetables and the plumber, the drawer would have looked ₹1,780 short, and the conversation would have been very different.</p>
+
+<h2>Who should close the day</h2>
+<p>Ideally, not the person who handled the cash all day. A manager, or the owner, counts or at least witnesses the count. In a small business where that is not possible, the next best thing is a system that records who closed the day and when, requires a PIN, and does not allow quiet reopening.</p>
+
+<h2>What to keep</h2>
+<ul class="checklist">
+<li>The printed day-close or Z-report, signed.</li>
+<li>The denomination count sheet.</li>
+<li>Card settlement slips and the UPI summary for the day.</li>
+<li>Receipts for every cash pay-out.</li>
+</ul>
+<p>File them by date. When your accountant or an auditor asks about a particular day, you can answer in minutes.</p>
+
+<h2>How TBN products handle it</h2>
+<p><a href="/folio/">Folio</a> has a day close that runs once per day, needs the manager PIN, prints, locks the date and refuses to run if the system clock has been set back; its shift handover compares system cash and UPI with counted amounts and lists open tabs, pending balances and low stock, with signature lines. It also prints an owner's daily report automatically. <a href="/slate/">Slate</a> includes a shift handover report with cash reconciliation and a night audit that closes the hotel's business day. For <a href="/pass/">Pass</a>, a full day close (Z-report) with opening float, cash in and out, expected versus counted and reopen-with-history is built and in final testing; today's release records split payments by mode and sends the owner a daily summary by email.</p>

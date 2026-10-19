@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>The Binary Brain Network — Blog</title>
+  <link>https://tbn.tbbn.in/blog/</link>
+  <atom:link href="https://tbn.tbbn.in/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Guides for Indian hotels and restaurants: GST, billing, kitchen operations, compliance and software costs.</description>
+  <language>en-in</language>
+  <item>
+    <title>Best Restaurant Billing Software in India (2026): How to Shortlist</title>
+    <link>https://tbn.tbbn.in/blog/best-restaurant-billing-software-india-2026/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/best-restaurant-billing-software-india-2026/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>There is no single best restaurant POS. A practical way to shortlist billing software in India: the seven checks that matter, the questions vendors avoid, and five-year cost maths.</description>
+  </item>
+  <item>
+    <title>Offline vs Cloud POS for Restaurants in India: Which Should You Choose?</title>
+    <link>https://tbn.tbbn.in/blog/offline-vs-cloud-pos-restaurants-india/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/offline-vs-cloud-pos-restaurants-india/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Cloud POS or offline-first POS for your restaurant? What each does well, what happens when the internet drops, five-year cost, data ownership and multi-outlet trade-offs.</description>
+  </item>
+  <item>
+    <title>KOT Routing by Kitchen Station: A Setup Guide for Restaurants</title>
+    <link>https://tbn.tbbn.in/blog/kot-kitchen-station-routing-guide/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/kot-kitchen-station-routing-guide/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>How to set up kitchen order tickets so each station — tandoor, Chinese, bar, desserts — gets only its own items. Mapping categories to stations, printers, KOT format and common mistakes.</description>
+  </item>
+  <item>
+    <title>Kitchen Display System vs Printed KOT: Which Does Your Kitchen Need?</title>
+    <link>https://tbn.tbbn.in/blog/kitchen-display-system-vs-printed-kot/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/kitchen-display-system-vs-printed-kot/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Should your restaurant replace KOT printers with a kitchen display system? Speed, ticket times, cost, durability, power cuts and the setups that work best in Indian kitchens.</description>
+  </item>
+  <item>
+    <title>Composition Scheme for Restaurants: The Bill of Supply Explained</title>
+    <link>https://tbn.tbbn.in/blog/composition-scheme-bill-of-supply-restaurants/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/composition-scheme-bill-of-supply-restaurants/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>If your restaurant is under the GST composition scheme you must issue a Bill of Supply, not a tax invoice, and you cannot charge GST. What the bill must show, the 5% rate, the ₹1.5 crore limit, and common mistakes.</description>
+  </item>
+  <item>
+    <title>UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation</title>
+    <link>https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.</description>
+  </item>
+  <item>
+    <title>Recipe Costing and Food Cost Percentage: A Restaurant Owner&#x27;s Guide</title>
+    <link>https://tbn.tbbn.in/blog/recipe-costing-food-cost-percentage/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/recipe-costing-food-cost-percentage/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>How to cost a recipe, calculate food cost percentage per dish and for the whole restaurant, set menu prices, and use recipe-linked inventory so stock deducts itself. Worked examples in rupees.</description>
+  </item>
+  <item>
+    <title>Day Close and Cash Reconciliation for Restaurants and Hotels</title>
+    <link>https://tbn.tbbn.in/blog/day-close-cash-reconciliation-guide/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/day-close-cash-reconciliation-guide/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Operations</category>
+    <description>A practical end-of-day routine for restaurants and hotel front desks: Z-report, opening float, cash in and out, counted versus expected cash, UPI matching, shift handover and what to do about differences.</description>
+  </item>
+  <item>
+    <title>Running Multiple Restaurant Outlets: GSTIN, FSSAI and Bill Number Series</title>
+    <link>https://tbn.tbbn.in/blog/multi-outlet-restaurant-gstin-bill-series/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/multi-outlet-restaurant-gstin-bill-series/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>How to set up billing for a second or third restaurant outlet in India: when you need a separate GSTIN, why each outlet needs its own invoice number series, FSSAI per premises, shared menus and outlet-wise reports.</description>
+  </item>
+  <item>
+    <title>Restaurant POS on Ubuntu and Linux: Install Guide and Hardware Tips</title>
+    <link>https://tbn.tbbn.in/blog/restaurant-pos-ubuntu-linux/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/restaurant-pos-ubuntu-linux/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Run restaurant billing software on Ubuntu, Debian, Linux Mint or any Linux PC. Why Linux suits a billing counter, .deb vs AppImage, exact terminal commands, the libfuse fix, and thermal printer setup.</description>
+  </item>
+  <item>
+    <title>Petpooja Alternatives for Small Restaurants: A Fair Comparison</title>
+    <link>https://tbn.tbbn.in/blog/petpooja-alternatives-small-restaurants/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/petpooja-alternatives-small-restaurants/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Looking for a Petpooja alternative? When Petpooja is the right choice, when a smaller restaurant might want something else, the main types of alternatives, and questions to ask any POS vendor. Written by a competitor, and says so.</description>
+  </item>
+  <item>
+    <title>Restaurant Staff Attendance and Payroll: A Simple System That Works</title>
+    <link>https://tbn.tbbn.in/blog/restaurant-staff-attendance-payroll/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/restaurant-staff-attendance-payroll/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Operations</category>
+    <description>How small Indian restaurants and hotels can track attendance, half days and leave, handle salary advances, and produce a monthly salary sheet without a separate HR tool. Formulas, examples and common mistakes.</description>
+  </item>
+  <item>
+    <title>Café POS Setup Checklist: From Menu to First Bill</title>
+    <link>https://tbn.tbbn.in/blog/cafe-pos-setup-checklist/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/cafe-pos-setup-checklist/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>A step-by-step checklist for setting up billing software in a café: GST and FSSAI details, menu with size variants and modifiers, recipes for milk and coffee stock, printers, UPI, staff PINs and a test service.</description>
+  </item>
+  <item>
+    <title>Thermal Bill Printer Troubleshooting for Restaurants and Hotels</title>
+    <link>https://tbn.tbbn.in/blog/thermal-printer-troubleshooting-restaurants/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/thermal-printer-troubleshooting-restaurants/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Operations</category>
+    <description>Fix the common thermal receipt printer problems in restaurants and hotels: blank or faded prints, paper not cutting, text cut off, wrong width, printer offline, duplicate prints and network printers that disappear.</description>
+  </item>
+  <item>
+    <title>Best Hotel Management Software for Small Hotels in India: How to Choose</title>
+    <link>https://tbn.tbbn.in/blog/best-hotel-management-software-small-hotels-india/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/best-hotel-management-software-small-hotels-india/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>How a 5 to 100 room Indian hotel should choose a PMS: the modules that matter, GST and C-Form requirements, per-room versus flat pricing, offline operation, channel managers and a trial plan.</description>
+  </item>
+  <item>
+    <title>C-Form (Form-III) for Foreign Guests: A Hotel Compliance Guide for 2026</title>
+    <link>https://tbn.tbbn.in/blog/c-form-form-iii-foreign-guests-hotels-guide/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/c-form-form-iii-foreign-guests-hotels-guide/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>What Indian hotels, guest houses and homestays must do when a foreign national checks in: the 24-hour Form-III (formerly C-Form) under the Immigration and Foreigners Act 2025, details to capture, the portal, departures and penalties.</description>
+  </item>
+  <item>
+    <title>GST on Hotel Rooms in 2026: 5% and 18% Explained After GST 2.0</title>
+    <link>https://tbn.tbbn.in/blog/gst-on-hotel-rooms-2026/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/gst-on-hotel-rooms-2026/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>Since 22 September 2025, hotel rooms up to ₹7,500 a night attract 5% GST without input tax credit and rooms above ₹7,500 attract 18% with ITC. How the bands work, in-hotel restaurants, ITC reversal and invoicing.</description>
+  </item>
+  <item>
+    <title>Night Audit Explained for Small Hotels: What It Does and How to Run It</title>
+    <link>https://tbn.tbbn.in/blog/night-audit-explained-small-hotels/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/night-audit-explained-small-hotels/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>What a hotel night audit is, why even a 10-room property needs one, the steps — posting room charges, no-shows, reconciliation, the business date — and automatic versus manager-confirmed audits.</description>
+  </item>
+  <item>
+    <title>Hourly Hotel Stays: How to Price, Sell and Bill Short Stays</title>
+    <link>https://tbn.tbbn.in/blog/hourly-hotel-stays-pricing-billing/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/hourly-hotel-stays-pricing-billing/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>How Indian hotels can sell rooms by the hour — 3, 6 and 12-hour slots — without breaking room inventory or GST: slot pricing, overstay rules, housekeeping turnaround, compliance and software support.</description>
+  </item>
+  <item>
+    <title>Hotel Housekeeping Room Status Workflow: A Practical Setup</title>
+    <link>https://tbn.tbbn.in/blog/hotel-housekeeping-room-status-workflow/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/hotel-housekeeping-room-status-workflow/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>Set up room status codes, daily housekeeping assignments, inspection, maintenance reporting and laundry tracking for a small Indian hotel, with phones instead of paper.</description>
+  </item>
+  <item>
+    <title>Group Bookings and the Master Folio: How Hotels Should Bill Groups</title>
+    <link>https://tbn.tbbn.in/blog/group-bookings-master-folio/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/group-bookings-master-folio/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>How small hotels should handle weddings, corporate groups and tour parties: blocking rooms, a master folio for shared charges, routing room and F&amp;B charges, split invoices and group check-out.</description>
+  </item>
+  <item>
+    <title>Per-Room vs Flat Pricing for Hotel Software: A Five-Year Cost Comparison</title>
+    <link>https://tbn.tbbn.in/blog/per-room-vs-flat-hotel-software-pricing/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/per-room-vs-flat-hotel-software-pricing/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>Hotel PMS pricing in India compared: per room per month, per device, flat annual licence. Five-year totals for 10, 20, 40 and 80-room hotels, and the hidden costs to ask about.</description>
+  </item>
+  <item>
+    <title>GSTR-1 and Tally Export for Hotels: Getting Clean Data to Your Accountant</title>
+    <link>https://tbn.tbbn.in/blog/gstr-1-tally-export-hotels/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/gstr-1-tally-export-hotels/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>How hotels should prepare GSTR-1 data — B2B, B2C large and B2C small invoices, state codes, HSN/SAC — and hand accounts to Tally without retyping. Month-end checklist included.</description>
+  </item>
+  <item>
+    <title>Room-Service Billing When Your Hotel PMS Has No F&amp;B Module</title>
+    <link>https://tbn.tbbn.in/blog/room-service-billing-without-pms-module/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/room-service-billing-without-pms-module/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>Many hotel management systems in India handle rooms but not room-service orders. Options compared: paper, a restaurant POS, a full PMS switch, or a dedicated room-service billing tool alongside your PMS.</description>
+  </item>
+  <item>
+    <title>Guest House and Homestay Software: What You Actually Need</title>
+    <link>https://tbn.tbbn.in/blog/guest-house-software-essentials/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/guest-house-software-essentials/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>A plain guide for guest houses, homestays and lodges in India with 3 to 20 rooms: the minimum software you need for bookings, GST bills, Form-III for foreign guests and food billing — and what you can skip.</description>
+  </item>
+  <item>
+    <title>58mm vs 80mm Thermal Printer: Which Should a Hotel or Restaurant Buy?</title>
+    <link>https://tbn.tbbn.in/blog/58mm-vs-80mm-thermal-printer/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/58mm-vs-80mm-thermal-printer/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Operations</category>
+    <description>58mm or 80mm thermal receipt printer for a restaurant, café or hotel room-service desk? Printable width, what fits on a GST bill, cost, paper, auto-cutters, connectivity and software support compared.</description>
+  </item>
+  <item>
+    <title>eZee and Hotelogix Alternatives for Small Hotels: A Fair Comparison</title>
+    <link>https://tbn.tbbn.in/blog/ezee-hotelogix-alternatives-small-hotels/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/ezee-hotelogix-alternatives-small-hotels/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>eZee Absolute and Hotelogix are established cloud hotel PMS platforms. When they are the right choice, why some small Indian hotels look elsewhere, the types of alternatives, and what to ask. Written by a competitor, and says so.</description>
+  </item>
+  <item>
+    <title>Do Small Hotels Need a Channel Manager? An Honest Answer</title>
+    <link>https://tbn.tbbn.in/blog/do-small-hotels-need-channel-manager/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/do-small-hotels-need-channel-manager/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>What a hotel channel manager does, when a small Indian hotel needs one, when it can manage without, overbooking risks, costs, and how to manage OTAs manually until you do.</description>
+  </item>
+  <item>
+    <title>Why Offline-First Software Suits Indian Hotels and Restaurants</title>
+    <link>https://tbn.tbbn.in/blog/offline-first-software-indian-hospitality/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/offline-first-software-indian-hospitality/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Guides</category>
+    <description>Power cuts, patchy broadband and busy services: why hotels and restaurants in India benefit from software that runs locally first. What offline-first means, what it costs, backups, and the trade-offs against cloud.</description>
+  </item>
+  <item>
+    <title>Custom vs Off-the-Shelf Software for Hospitality Businesses</title>
+    <link>https://tbn.tbbn.in/blog/custom-vs-off-the-shelf-hospitality-software/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/custom-vs-off-the-shelf-hospitality-software/</guid>
+    <pubDate>Mon, 19 Oct 2026 09:00:00 +0530</pubDate>
+    <category>Guides</category>
+    <description>When should a hotel, restaurant group or service business build custom software instead of buying a product? Costs, timelines, risks, ownership of code, fixed-price versus hourly, and a decision checklist.</description>
+  </item>
+  <item>
+    <title>Room-Service Billing for Small Hotels: A Practical Setup Guide</title>
+    <link>https://tbn.tbbn.in/blog/hotel-room-service-billing-setup-guide/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/hotel-room-service-billing-setup-guide/</guid>
+    <pubDate>Sun, 28 Jun 2026 09:00:00 +0530</pubDate>
+    <category>Hotels</category>
+    <description>Why most hotel PMS have no room-service module, and the five components of a setup that works.</description>
+  </item>
+  <item>
+    <title>What Restaurant Billing Software Really Costs in India</title>
+    <link>https://tbn.tbbn.in/blog/restaurant-billing-software-cost-india/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/restaurant-billing-software-cost-india/</guid>
+    <pubDate>Wed, 24 Jun 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Licence vs subscription, the add-ons that inflate the headline price, and a five-year way to compare quotes.</description>
+  </item>
+  <item>
+    <title>GST for Restaurants in India, Explained</title>
+    <link>https://tbn.tbbn.in/blog/gst-for-restaurants-india-explained/</link>
+    <guid isPermaLink="true">https://tbn.tbbn.in/blog/gst-for-restaurants-india-explained/</guid>
+    <pubDate>Sat, 20 Jun 2026 09:00:00 +0530</pubDate>
+    <category>Restaurants</category>
+    <description>Composite vs regular scheme, when 5% applies and when 18% does, and what a GST-compliant restaurant bill must show.</description>
+  </item>
+</channel>
+</rss>

@@ -2,6 +2,7 @@
 <html lang="en-IN">
 <head>
 <meta charset="UTF-8">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem("tbn-consent")}catch(e){}var g=c==="granted"?"granted":"denied";gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);})();</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Folio — Complete Feature List &amp; Technical Specification | TBN</title>
@@ -111,7 +112,7 @@ a{color:inherit;text-decoration:none;}
  "name": "Folio — Complete Feature List & Technical Specification | TBN",
  "description": "Every feature in Folio, the room-service billing system for hotels — tabs, orders, dues, billing, rectification, reports, security and backups — plus the full technical specification.",
  "inLanguage": "en-IN",
- "dateModified": "2026-09-19",
+ "dateModified": "2026-10-19",
  "isPartOf": {
   "@id": "https://tbn.tbbn.in/#website"
  },
@@ -159,11 +160,12 @@ a{color:inherit;text-decoration:none;}
 <main>
 
   <section class="hero"><div class="container">
-    <span class="hero__eyebrow">Live in Production · Mumbai · v3.10.0</span>
+    <span class="hero__eyebrow">Live in Production · Mumbai · v3.15.0</span>
     <h1 class="hero__title">Folio — the complete feature list.</h1>
     <p class="hero__desc">Everything Folio does, grouped by where you'd use it, plus the full technical specification. Nothing here is an add-on or an upgrade tier — every feature below is in the flat ₹6,500 annual licence.</p>
     <div class="hero__actions">
       <a href="https://github.com/The-Binary-Brain-Network/folio-releases/releases/latest/download/Folio-Setup.exe" class="btn btn--primary"><svg viewBox="0 0 24 24"><path d="M3 5.5 10 4v7H3zM11 3.8 21 2.5V11H11zM3 12h7v7L3 17.5zM11 12h10v8.5L11 19z"/></svg>Download for Windows</a>
+      <a href="/folio/#linux" class="btn btn--ghost">Download for Linux</a>
       <a href="/folio/" class="btn btn--ghost">Back to Folio</a>
     </div>
   </div></section>
@@ -183,7 +185,8 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Menu search</td><td>Type-ahead search grouped by restaurant, with a cart and quantity stepping.</td></tr>
         <tr><td>Custom items</td><td>Add a one-off item that isn't on the menu, without polluting the menu.</td></tr>
         <tr><td>Order status</td><td>Received → preparing → ready → delivered, tracked per item and rolled up per order.</td></tr>
-        <tr><td>Markup modes</td><td>None, a percentage markup, or a fixed amount added — applied per item.</td></tr>
+        <tr><td>Order steps</td><td>Partner-restaurant items: order taken → ordered → delivered. Your own kitchen: order taken → preparing → ready → delivered.</td></tr>
+        <tr><td>Price snapshot</td><td>Each order line keeps the GST rate, unit and source it was ordered at, so a later menu change never rewrites an old bill.</td></tr>
         <tr><td>Overdue flag</td><td>A tab unpaid past three days marks itself visually, so nothing ages quietly.</td></tr>
         <tr><td>Tab states</td><td>Open, due, settled, written off — each visually distinct on the board.</td></tr>
         <tr><td>Duplicate protection</td><td>A room can't accidentally end up with two open tabs.</td></tr>
@@ -194,7 +197,7 @@ a{color:inherit;text-decoration:none;}
       <div class="fgroup__head"><span class="fgroup__num">02</span><h3 class="fgroup__title">Billing</h3></div>
       <table class="ftable"><tbody>
         <tr><td>Consolidated bill</td><td>One bill across a date range with optional discount and notes. Preview before printing.</td></tr>
-        <tr><td>Two copies</td><td>Customer copy shows items and totals; hotel copy shows cost against markup per source, so you see the margin.</td></tr>
+        <tr><td>Two copies</td><td>Customer copy shows items and totals; hotel copy shows cost against selling price per source, so you see the margin. Either copy can be switched off.</td></tr>
         <tr><td>Print options</td><td>Print both copies, customer only, hotel only, or share to WhatsApp.</td></tr>
         <tr><td>Bill numbering</td><td>Sequential with your own prefix and counter. Audit-safe — numbering never resets mid-year.</td></tr>
         <tr><td>Reprint</td><td>Any past bill, any time, no time limit, identical to the original.</td></tr>
@@ -202,6 +205,9 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Cost-only override</td><td>Adjust the cost side without touching the guest bill, then auto-reprint the hotel copy with the new margin.</td></tr>
         <tr><td>Refunds</td><td>Recorded against the bill with a full trail, and automatically deducted from day-close revenue.</td></tr>
         <tr><td>Bulk billing</td><td>Select several tabs and close them onto one combined bill — for group checkouts and corporate stays.</td></tr>
+        <tr><td>Payment methods</td><td>Cash, card, UPI, bank transfer and credit — part payments allowed, refunds recorded as negative payments.</td></tr>
+        <tr><td>Bill of Supply</td><td>For composition-scheme properties: prints "BILL OF SUPPLY", collects no tax, and carries the required declaration line.</td></tr>
+        <tr><td>FSSAI on bills</td><td>Your FSSAI licence number printed alongside your GSTIN, on by default, with a renewal warning across the app from 45 days before expiry.</td></tr>
         <tr><td>Rupee rounding</td><td>Optional, with the adjustment shown transparently as its own "Round Off" line.</td></tr>
       </tbody></table>
     </div>
@@ -250,14 +256,16 @@ a{color:inherit;text-decoration:none;}
     <div class="fgroup">
       <div class="fgroup__head"><span class="fgroup__num">06</span><h3 class="fgroup__title">Security &amp; Data</h3></div>
       <table class="ftable"><tbody>
-        <tr><td>Database encryption</td><td>AES-256 with the key derived from the machine itself — copy the file to another PC and it's unreadable.</td></tr>
-        <tr><td>Manager PIN</td><td>4–8 digits, heavily hashed, protecting day close, refunds, write-offs, rectification and factory reset.</td></tr>
+        <tr><td>Database encryption</td><td>AES-256-CBC with the key derived from the machine itself — copy the file to another PC and it's unreadable.</td></tr>
+        <tr><td>Manager PIN</td><td>4–8 digits, stored as a salted PBKDF2-SHA256 hash (200,000 iterations), guarding day close and factory reset.</td></tr>
         <tr><td>Hourly backups</td><td>48 retained — two full days of history — stored outside the install folder so updates never touch them.</td></tr>
         <tr><td>Automatic recovery</td><td>If the database is damaged, Folio finds the newest good backup and restores it on startup, keeping the damaged file aside.</td></tr>
         <tr><td>Licensing</td><td>Hardware-bound licence key, verified offline. Online revocation and extension checked periodically.</td></tr>
         <tr><td>Guarded factory reset</td><td>Takes a mandatory backup first, needs your PIN and a typed confirmation, and keeps your setup data.</td></tr>
         <tr><td>Crash reporting</td><td>Automatic and anonymised, so we can fix a problem before you report it. Can be switched off.</td></tr>
-        <tr><td>Diagnostics</td><td>A built-in health check with a one-click error report to support.</td></tr>
+        <tr><td>Diagnostics</td><td>A built-in eight-point health check with a one-click error report to support.</td></tr>
+        <tr><td>Full data export</td><td>Every table exported as CSV — 16 files plus a README — readable in Excel with the ₹ symbol intact. Your data, any time, no ticket.</td></tr>
+        <tr><td>PC rename safe</td><td>Renaming the computer does not lock you out of your own database.</td></tr>
       </tbody></table>
     </div>
 
@@ -267,7 +275,7 @@ a{color:inherit;text-decoration:none;}
         <tr><td>Keyboard shortcuts</td><td>Jump between screens, open search and bring up help without touching the mouse.</td></tr>
         <tr><td>In-app guide</td><td>Searchable help covering every feature — a new staff member isn't blocked waiting on you.</td></tr>
         <tr><td>Themes</td><td>Dark and light. The dark one matters at 2am.</td></tr>
-        <tr><td>Printer alignment</td><td>A printed ruler page for fine-tuning margins on stubborn printers.</td></tr>
+        <tr><td>Printer setup</td><td>Common POS-80 / XP-80 and POS-58 / XP-58 printers are detected and configured automatically. A printed millimetre ruler fine-tunes margins on stubborn ones.</td></tr>
         <tr><td>Auto-updates</td><td>Download in the background, install on restart. Never interrupts a shift.</td></tr>
         <tr><td>Setup wizard</td><td>Seven guided steps — hotel details, logo, rooms, partner restaurants, PIN. Under two minutes.</td></tr>
       </tbody></table>
@@ -287,18 +295,6 @@ a{color:inherit;text-decoration:none;}
           <h3 class="roadmap__item-title">Off-site cloud backup</h3>
           <p class="roadmap__item-desc">An encrypted copy kept off the property, in addition to the hourly local backups that already run. Built and tested; rolling out once storage capacity is in place.</p>
         </div>
-        <div class="roadmap__item">
-          <h3 class="roadmap__item-title">58mm printer support</h3>
-          <p class="roadmap__item-desc">Folio prints to 80mm thermal printers today. Support for the smaller 58mm rolls many compact properties already own is in progress.</p>
-        </div>
-        <div class="roadmap__item">
-          <h3 class="roadmap__item-title">FSSAI on bills</h3>
-          <p class="roadmap__item-desc">Your FSSAI licence number printed alongside your GSTIN, with a setting to control it.</p>
-        </div>
-        <div class="roadmap__item">
-          <h3 class="roadmap__item-title">Composite-scheme billing</h3>
-          <p class="roadmap__item-desc">Bill of Supply format for properties registered under the GST composition scheme, with the required legal wording.</p>
-        </div>
       </div>
     </div>
   </div></section>
@@ -309,17 +305,18 @@ a{color:inherit;text-decoration:none;}
       <h2 class="section-title">What it needs, and what it runs on.</h2>
     </div>
     <table class="spec"><tbody>
-      <tr><td>Version</td><td>3.10.0</td></tr>
-      <tr><td>Platform</td><td>Windows desktop. Runs as a standard per-user install — no admin password needed.</td></tr>
-      <tr><td>Hardware</td><td>Any Windows PC the property already owns. No server, no new hardware.</td></tr>
-      <tr><td>Printing</td><td>80mm thermal receipt printers, printed silently with no dialog. Works with any printer installed on Windows. Includes a raw fallback for cheap printers that ignore the standard cut command.</td></tr>
+      <tr><td>Version</td><td>3.15.0 (October 2026)</td></tr>
+      <tr><td>Platform</td><td>Windows 10 or 11 (64-bit) — one-click installer with desktop and Start Menu shortcuts. Linux (64-bit) as a single AppImage. Both update themselves.</td></tr>
+      <tr><td>Hardware</td><td>Any Windows 10/11 or Linux PC the property already owns. No server, no new hardware.</td></tr>
+      <tr><td>Printing</td><td>80mm and 58mm thermal receipt printers, printed silently with no dialog, with automatic setup for common models. Works with any printer installed on the system. Includes a raw fallback for cheap printers that ignore the standard cut command.</td></tr>
       <tr><td>Internet</td><td>Not required. Every core operation works fully offline. Internet is used only for updates, crash reports and the WhatsApp share link.</td></tr>
-      <tr><td>Database</td><td>Embedded local database, AES-256 encrypted, bound to the machine.</td></tr>
+      <tr><td>Database</td><td>Embedded local database (17 tables), AES-256-CBC encrypted, bound to the machine. Changes written to disk within half a second.</td></tr>
       <tr><td>Backups</td><td>Hourly, 48 retained, stored outside the install folder, with automatic corruption recovery on startup.</td></tr>
       <tr><td>Multi-terminal</td><td>Single machine. Folio is designed as one install for the front desk.</td></tr>
-      <tr><td>Licensing</td><td>One licence per property, hardware-bound, verified offline.</td></tr>
+      <tr><td>Licensing</td><td>One licence per property, hardware-bound, verified offline. Revocations checked online every 30 minutes when connected.</td></tr>
       <tr><td>Updates</td><td>Automatic — downloaded in the background, applied on restart.</td></tr>
-      <tr><td>GST</td><td>Optional CGST + SGST with a per-item rate override. Configurable rates and GSTIN on every bill.</td></tr>
+      <tr><td>GST</td><td>Off, Regular (CGST + SGST tax invoice, per-item rate override) or Composition (Bill of Supply). GSTIN and FSSAI on every bill.</td></tr>
+      <tr><td>Free trial</td><td>15 days, full product, started from inside the app with hotel name and phone. No card. One trial per computer.</td></tr>
       <tr><td>Legal</td><td>EULA, Terms, Privacy and Liability bundled and readable inside the app.</td></tr>
       <tr><td>Support</td><td>Direct WhatsApp line. Not a ticketing queue.</td></tr>
     </tbody></table>
@@ -332,7 +329,7 @@ a{color:inherit;text-decoration:none;}
 </div></div>
 <section class="cta"><div class="container container--narrow">
   <h2 class="cta__title">Want to see it on your own hotel's data?</h2>
-  <p class="cta__sub">We'll install Folio, run onboarding and train your front desk — free for the first week.</p>
+  <p class="cta__sub">We'll install Folio, run onboarding and train your front desk — free for the first 15 days.</p>
   <div class="cta__actions">
     <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20a%20Folio%20demo%20for%20my%20hotel." target="_blank" rel="noopener" class="btn btn--whatsapp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>Request a Demo</a>
     <a href="/folio/#pricing" class="btn btn--ghost">See Pricing</a>
@@ -342,8 +339,8 @@ a{color:inherit;text-decoration:none;}
 <footer class="footer"><div class="container footer__inner">
   <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
   <div class="footer__links">
-    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a>
-    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a>
+    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a><a href="/pricing/">PRICING</a><a href="/download/">DOWNLOAD</a>
+    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a><a href="/privacy/">PRIVACY</a><a href="/terms/">TERMS</a>
     <a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
   </div>
 </div></footer>

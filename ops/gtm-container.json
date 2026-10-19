@@ -1,0 +1,1653 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-10-19 19:06:01",
+  "containerVersion": {
+    "accountId": "0",
+    "containerId": "0",
+    "path": "accounts/0/containers/0/versions/0",
+    "containerVersionId": "0",
+    "container": {
+      "accountId": "0",
+      "containerId": "0",
+      "path": "accounts/0/containers/0",
+      "name": "The Binary Brain Network",
+      "publicId": "GTM-TFBHC2VR",
+      "usageContext": [
+        "WEB"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "1",
+        "name": "GA4 - Google tag",
+        "type": "googtag",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "tagId",
+            "value": "{{ID - GA4 Measurement ID}}"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479573"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "2",
+        "name": "GA4 - event - trial_download",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "trial_download"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "product"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - product}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "os"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - os}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "file"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - file}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "cta_location"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - cta_location}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "lead_source"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - lead_source}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "1"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "3",
+        "name": "GA4 - event - whatsapp_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "whatsapp_click"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "product"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - product}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "cta_location"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - cta_location}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "lead_source"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - lead_source}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "2"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "4",
+        "name": "GA4 - event - phone_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "phone_click"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "cta_location"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - cta_location}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "lead_source"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - lead_source}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "3"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "5",
+        "name": "GA4 - event - email_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "email_click"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "cta_location"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - cta_location}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "lead_source"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - lead_source}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "4"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "6",
+        "name": "GA4 - event - command_copy",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "command_copy"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "product"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - product}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "command"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - command}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "5"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "7",
+        "name": "GA4 - event - scroll_depth",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "scroll_depth"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "percent"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - percent}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "6"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "8",
+        "name": "GA4 - event - pricing_view",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "pricing_view"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "product"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - product}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "7"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "9",
+        "name": "GA4 - event - calculator_used",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "calculator_used"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "product"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - product}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "8"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "10",
+        "name": "GA4 - event - cta_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "eventName",
+            "value": "cta_click"
+          },
+          {
+            "type": "template",
+            "key": "measurementIdOverride",
+            "value": "{{ID - GA4 Measurement ID}}"
+          },
+          {
+            "type": "list",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "target"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - target}}"
+                  }
+                ]
+              },
+              {
+                "type": "map",
+                "map": [
+                  {
+                    "type": "template",
+                    "key": "parameter",
+                    "value": "cta_location"
+                  },
+                  {
+                    "type": "template",
+                    "key": "parameterValue",
+                    "value": "{{DLV - cta_location}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": [
+          "9"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "11",
+        "name": "Google Ads - Conversion Linker",
+        "type": "gclidw",
+        "parameter": [
+          {
+            "type": "boolean",
+            "key": "enableCrossDomain",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "12",
+        "name": "Google Ads - Conversion - Trial download",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "conversionId",
+            "value": "{{ID - Google Ads Conversion ID}}"
+          },
+          {
+            "type": "template",
+            "key": "conversionLabel",
+            "value": "{{ID - Google Ads Label Trial Download}}"
+          },
+          {
+            "type": "template",
+            "key": "conversionValue",
+            "value": "1"
+          },
+          {
+            "type": "template",
+            "key": "currencyCode",
+            "value": "INR"
+          }
+        ],
+        "firingTriggerId": [
+          "1"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "13",
+        "name": "Google Ads - Conversion - WhatsApp lead",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "conversionId",
+            "value": "{{ID - Google Ads Conversion ID}}"
+          },
+          {
+            "type": "template",
+            "key": "conversionLabel",
+            "value": "{{ID - Google Ads Label WhatsApp Lead}}"
+          },
+          {
+            "type": "template",
+            "key": "conversionValue",
+            "value": "1"
+          },
+          {
+            "type": "template",
+            "key": "currencyCode",
+            "value": "INR"
+          }
+        ],
+        "firingTriggerId": [
+          "2"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "14",
+        "name": "Meta - Pixel base",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>\n!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\nn.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\ndocument,'script','https://connect.facebook.net/en_US/fbevents.js');\nif(!window.__tbnFbInit){window.__tbnFbInit=1;fbq('init','{{ID - Meta Pixel ID}}');fbq('track','PageView');}\n</script>"
+          },
+          {
+            "type": "boolean",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553",
+          "10"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "15",
+        "name": "Meta - StartTrial (download)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.fbq&&fbq('track','StartTrial',{content_name:'{{DLV - product}}',content_category:'{{DLV - os}}'});</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "1"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "16",
+        "name": "Meta - Lead (WhatsApp)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.fbq&&fbq('track','Lead',{content_name:'{{DLV - product}}'});</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "2"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "17",
+        "name": "Meta - Contact (call or email)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.fbq&&fbq('track','Contact');</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "3",
+          "4"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "18",
+        "name": "Meta - ViewContent (pricing)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.fbq&&fbq('track','ViewContent',{content_name:'pricing {{DLV - product}}'});</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "7"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "19",
+        "name": "Microsoft - Clarity",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>\n(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\nt=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\ny=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,\"clarity\",\"script\",\"{{ID - Microsoft Clarity Project ID}}\");\nwindow.clarity('consent');\n</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553",
+          "10"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "analytics_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "20",
+        "name": "Microsoft Ads - UET base",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>\n(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:\"{{ID - Microsoft UET Tag ID}}\",enableAutoSpaTracking:true};\no.q=w[u],w[u]=new UET(o),w[u].push(\"pageLoad\")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){\nvar s=this.readyState;s&&s!==\"loaded\"&&s!==\"complete\"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],\ni.parentNode.insertBefore(n,i)})(window,document,\"script\",\"//bat.bing.com/bat.js\",\"uetq\");\n</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553",
+          "10"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "21",
+        "name": "Microsoft Ads - trial_download",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.uetq=window.uetq||[];uetq.push('event','trial_download',{event_category:'{{DLV - product}}',event_label:'{{DLV - os}}'});</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "1"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "22",
+        "name": "Microsoft Ads - whatsapp_click",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>window.uetq=window.uetq||[];uetq.push('event','whatsapp_click',{event_category:'{{DLV - product}}'});</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "2"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "23",
+        "name": "LinkedIn - Insight tag",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "html",
+            "value": "<script>\n_linkedin_partner_id=\"{{ID - LinkedIn Partner ID}}\";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];\nwindow._linkedin_data_partner_ids.push(_linkedin_partner_id);\n(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}\nvar s=document.getElementsByTagName(\"script\")[0];var b=document.createElement(\"script\");b.type=\"text/javascript\";b.async=true;\nb.src=\"https://snap.licdn.com/li.lms-analytics/insight.min.js\";s.parentNode.insertBefore(b,s);})(window.lintrk);\n</script>"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553",
+          "10"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "paused": true,
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "list",
+            "list": [
+              {
+                "type": "template",
+                "value": "ad_storage"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "1",
+        "name": "CE - trial_download",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "trial_download"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "2",
+        "name": "CE - whatsapp_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "whatsapp_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "3",
+        "name": "CE - phone_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "phone_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "4",
+        "name": "CE - email_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "email_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "5",
+        "name": "CE - command_copy",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "command_copy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "6",
+        "name": "CE - scroll_depth",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "scroll_depth"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "7",
+        "name": "CE - pricing_view",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "pricing_view"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "8",
+        "name": "CE - calculator_used",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "calculator_used"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "9",
+        "name": "CE - cta_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "cta_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "10",
+        "name": "CE - consent_granted",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "template",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "template",
+                "key": "arg1",
+                "value": "consent_granted"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "1",
+        "name": "ID - GA4 Measurement ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "G-XXXXXXXXXX"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "2",
+        "name": "ID - Google Ads Conversion ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "AW-XXXXXXXXXX"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "3",
+        "name": "ID - Google Ads Label Trial Download",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "XXXXXXXXXXXXXXXXXXX"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "4",
+        "name": "ID - Google Ads Label WhatsApp Lead",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "XXXXXXXXXXXXXXXXXXX"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "5",
+        "name": "ID - Meta Pixel ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "000000000000000"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "6",
+        "name": "ID - Microsoft Clarity Project ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "xxxxxxxxxx"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "7",
+        "name": "ID - Microsoft UET Tag ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "00000000"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "8",
+        "name": "ID - LinkedIn Partner ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "template",
+            "key": "value",
+            "value": "0000000"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "9",
+        "name": "DLV - product",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "product"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "10",
+        "name": "DLV - os",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "os"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "11",
+        "name": "DLV - file",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "file"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "12",
+        "name": "DLV - cta_location",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "cta_location"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "13",
+        "name": "DLV - lead_source",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "lead_source"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "14",
+        "name": "DLV - percent",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "percent"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "15",
+        "name": "DLV - command",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "command"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "16",
+        "name": "DLV - target",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "target"
+          }
+        ]
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "17",
+        "name": "DLV - page_path",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "integer",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "boolean",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "template",
+            "key": "name",
+            "value": "page_path"
+          }
+        ]
+      }
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "REFERRER",
+        "name": "Referrer"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "EVENT",
+        "name": "Event"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "type": "CLICK_URL",
+        "name": "Click URL"
+      }
+    ],
+    "fingerprint": "0"
+  }
+}

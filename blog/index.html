@@ -2,102 +2,235 @@
 <html lang="en-IN">
 <head>
 <meta charset="UTF-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var c=null;try{c=localStorage.getItem("tbn-consent")}catch(e){}var g=c==="granted"?"granted":"denied";gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});gtag("set","ads_data_redaction",true);gtag("set","url_passthrough",true);})();</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFBHC2VR');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — The Binary Brain Network</title>
-<meta name="description" content="Practical writing on restaurant and hotel operations software in India — pricing, GST, room service, POS choices, and what actually matters on the floor.">
+<title>Blog — Hotel &amp; Restaurant Software, GST and Operations Guides | TBN</title>
+<meta name="description" content="Practical guides for Indian hotels and restaurants: GST, billing, KOT and kitchen display, C-Form, night audit, inventory, payroll and what software really costs.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://tbn.tbbn.in/blog/">
-<meta property="og:title" content="TBN Blog — Software for Indian Hospitality Operators">
-<meta property="og:description" content="Working notes on restaurant billing, hotel room service, GST, and the software choices Indian operators actually face.">
+<meta property="og:title" content="Blog — Hotel &amp; Restaurant Software, GST and Operations Guides | TBN">
+<meta property="og:description" content="Practical guides for Indian hotels and restaurants: GST, billing, KOT and kitchen display, C-Form, night audit, inventory, payroll and what software really costs.">
 <meta property="og:url" content="https://tbn.tbbn.in/blog/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="The Binary Brain Network">
 <meta property="og:image" content="https://tbn.tbbn.in/og-tbn.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E1015">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0E1015;--ink2:#15181F;--paper:#F7F5F0;--paper-dim:#EDEAE2;--amber:#E8A33D;--amber-dim:#7A5A24;--slate:#5A6270;--slate-light:#8A92A0;--green:#3D7A5C;--green-glow:rgba(61,122,92,0.35);--line:rgba(247,245,240,0.1);--whatsapp:#25D366;--mono:'Space Mono',monospace;--sans:'Inter',sans-serif;}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-a{color:inherit;text-decoration:none;}
-.container{max-width:1180px;margin:0 auto;padding:0 32px;}
-@media(max-width:640px){.container{padding:0 20px;}}
-.grid-texture{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:0.4;pointer-events:none;z-index:0;}
-.nav{position:sticky;top:0;z-index:100;background:rgba(14,16,21,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px;}
-.nav__brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;flex-shrink:0;}
-.nav__brand-mark{width:28px;height:28px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--amber);}
-.nav__brand-name{font-weight:700;white-space:nowrap;}
-.nav__brand-name span{color:var(--slate-light);font-weight:400;}
-.nav__links{display:flex;gap:28px;list-style:none;align-items:center;}
-.nav__links a{font-size:13px;font-family:var(--mono);color:var(--slate-light);transition:color 0.2s;}
-.nav__links a:hover{color:var(--paper);}
-.nav__right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
-.nav__phone{font-family:var(--mono);font-size:12px;color:var(--slate-light);white-space:nowrap;transition:color 0.2s;}
-.nav__phone:hover{color:var(--amber);}
-.nav__cta{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--whatsapp);color:#0B2E1A;padding:10px 18px;letter-spacing:0.02em;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
-.nav__cta:hover{background:#2fe377;}
-.nav__cta svg{width:14px;height:14px;fill:currentColor;}
-@media(max-width:900px){.nav__links,.nav__phone{display:none;}}
-@media(max-width:520px){.nav__brand-name{font-size:12px;}}
-.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--slate-light);padding:24px 0 0;position:relative;z-index:1;}
-.breadcrumb a{color:var(--slate-light);}.breadcrumb a:hover{color:var(--amber);}
-.breadcrumb span{color:var(--paper);}
-.hero{position:relative;z-index:1;padding:56px 0 72px;border-bottom:1px solid var(--line);}
-.hero__eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:var(--amber);text-transform:uppercase;margin-bottom:24px;}
-.hero__title{font-family:var(--sans);font-weight:800;font-size:clamp(36px,5.4vw,54px);line-height:1.05;letter-spacing:-0.02em;max-width:820px;margin-bottom:22px;}
-.hero__desc{font-size:17px;color:var(--slate-light);max-width:640px;line-height:1.75;}
-.posts{position:relative;z-index:1;padding:72px 0;}
-.post-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
-.post-card{display:grid;grid-template-columns:120px 1fr auto;gap:32px;padding:40px 0;border-bottom:1px solid var(--line);align-items:center;transition:background 0.2s;}
-.post-card:hover{background:rgba(232,163,61,0.02);}
-.post-card:hover .post-card__arrow{color:var(--amber);transform:translateX(4px);}
-.post-card__date{font-family:var(--mono);font-size:12px;color:var(--slate);letter-spacing:0.04em;}
-.post-card__body{display:flex;flex-direction:column;gap:8px;}
-.post-card__cat{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.08em;text-transform:uppercase;}
-.post-card__title{font-size:22px;font-weight:700;letter-spacing:-0.01em;line-height:1.3;color:var(--paper);}
-.post-card__desc{font-size:14.5px;color:var(--slate-light);line-height:1.65;max-width:640px;}
-.post-card__arrow{font-family:var(--mono);font-size:20px;color:var(--slate-light);transition:all 0.2s;white-space:nowrap;}
-@media(max-width:760px){.post-card{grid-template-columns:1fr;gap:12px;}.post-card__arrow{justify-self:start;}}
-.parent-strip{background:var(--paper);color:var(--ink);position:relative;z-index:1;}
-.parent-strip__inner{display:flex;align-items:center;justify-content:space-between;padding:44px 0;flex-wrap:wrap;gap:24px;}
-.parent-strip__text{font-size:14px;color:var(--slate);max-width:520px;}
-.parent-strip__text strong{color:var(--ink);}
-.parent-strip__link{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:2px;white-space:nowrap;}
-.footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:44px 0;}
-.footer__inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.footer__text{font-family:var(--mono);font-size:12px;color:var(--slate);}
-.footer__links{display:flex;gap:24px;flex-wrap:wrap;}
-.footer__links a{font-family:var(--mono);font-size:12px;color:var(--slate-light);}
-.footer__links a:hover{color:var(--paper);}
-::selection{background:var(--amber);color:var(--ink);}
-:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
-</style>
-<link rel="stylesheet" href="/assets/tbn.css">
+<link rel="alternate" type="application/rss+xml" title="TBN Blog" href="/blog/feed.xml">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "WebPage",
- "@id": "https://tbn.tbbn.in/blog/#webpage",
+ "@type": "Blog",
+ "@id": "https://tbn.tbbn.in/blog/#blog",
  "url": "https://tbn.tbbn.in/blog/",
- "name": "Blog — The Binary Brain Network",
- "description": "Practical writing on restaurant and hotel operations software in India — pricing, GST, room service, POS choices, and what actually matters on the floor.",
+ "name": "The Binary Brain Network blog",
  "inLanguage": "en-IN",
- "dateModified": "2026-09-19",
- "isPartOf": {
-  "@id": "https://tbn.tbbn.in/#website"
- },
  "publisher": {
   "@id": "https://tbn.tbbn.in/#organization"
- }
+ },
+ "blogPost": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Best Restaurant Billing Software in India (2026): How to Shortlist",
+   "url": "https://tbn.tbbn.in/blog/best-restaurant-billing-software-india-2026/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Offline vs Cloud POS for Restaurants in India: Which Should You Choose?",
+   "url": "https://tbn.tbbn.in/blog/offline-vs-cloud-pos-restaurants-india/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "KOT Routing by Kitchen Station: A Setup Guide for Restaurants",
+   "url": "https://tbn.tbbn.in/blog/kot-kitchen-station-routing-guide/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Kitchen Display System vs Printed KOT: Which Does Your Kitchen Need?",
+   "url": "https://tbn.tbbn.in/blog/kitchen-display-system-vs-printed-kot/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Composition Scheme for Restaurants: The Bill of Supply Explained",
+   "url": "https://tbn.tbbn.in/blog/composition-scheme-bill-of-supply-restaurants/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation",
+   "url": "https://tbn.tbbn.in/blog/upi-qr-auto-confirmation-restaurants/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Recipe Costing and Food Cost Percentage: A Restaurant Owner's Guide",
+   "url": "https://tbn.tbbn.in/blog/recipe-costing-food-cost-percentage/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Day Close and Cash Reconciliation for Restaurants and Hotels",
+   "url": "https://tbn.tbbn.in/blog/day-close-cash-reconciliation-guide/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Running Multiple Restaurant Outlets: GSTIN, FSSAI and Bill Number Series",
+   "url": "https://tbn.tbbn.in/blog/multi-outlet-restaurant-gstin-bill-series/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Restaurant POS on Ubuntu and Linux: Install Guide and Hardware Tips",
+   "url": "https://tbn.tbbn.in/blog/restaurant-pos-ubuntu-linux/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Petpooja Alternatives for Small Restaurants: A Fair Comparison",
+   "url": "https://tbn.tbbn.in/blog/petpooja-alternatives-small-restaurants/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Restaurant Staff Attendance and Payroll: A Simple System That Works",
+   "url": "https://tbn.tbbn.in/blog/restaurant-staff-attendance-payroll/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Café POS Setup Checklist: From Menu to First Bill",
+   "url": "https://tbn.tbbn.in/blog/cafe-pos-setup-checklist/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Thermal Bill Printer Troubleshooting for Restaurants and Hotels",
+   "url": "https://tbn.tbbn.in/blog/thermal-printer-troubleshooting-restaurants/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Best Hotel Management Software for Small Hotels in India: How to Choose",
+   "url": "https://tbn.tbbn.in/blog/best-hotel-management-software-small-hotels-india/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "C-Form (Form-III) for Foreign Guests: A Hotel Compliance Guide for 2026",
+   "url": "https://tbn.tbbn.in/blog/c-form-form-iii-foreign-guests-hotels-guide/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "GST on Hotel Rooms in 2026: 5% and 18% Explained After GST 2.0",
+   "url": "https://tbn.tbbn.in/blog/gst-on-hotel-rooms-2026/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Night Audit Explained for Small Hotels: What It Does and How to Run It",
+   "url": "https://tbn.tbbn.in/blog/night-audit-explained-small-hotels/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Hourly Hotel Stays: How to Price, Sell and Bill Short Stays",
+   "url": "https://tbn.tbbn.in/blog/hourly-hotel-stays-pricing-billing/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Hotel Housekeeping Room Status Workflow: A Practical Setup",
+   "url": "https://tbn.tbbn.in/blog/hotel-housekeeping-room-status-workflow/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Group Bookings and the Master Folio: How Hotels Should Bill Groups",
+   "url": "https://tbn.tbbn.in/blog/group-bookings-master-folio/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Per-Room vs Flat Pricing for Hotel Software: A Five-Year Cost Comparison",
+   "url": "https://tbn.tbbn.in/blog/per-room-vs-flat-hotel-software-pricing/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "GSTR-1 and Tally Export for Hotels: Getting Clean Data to Your Accountant",
+   "url": "https://tbn.tbbn.in/blog/gstr-1-tally-export-hotels/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Room-Service Billing When Your Hotel PMS Has No F&B Module",
+   "url": "https://tbn.tbbn.in/blog/room-service-billing-without-pms-module/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Guest House and Homestay Software: What You Actually Need",
+   "url": "https://tbn.tbbn.in/blog/guest-house-software-essentials/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "58mm vs 80mm Thermal Printer: Which Should a Hotel or Restaurant Buy?",
+   "url": "https://tbn.tbbn.in/blog/58mm-vs-80mm-thermal-printer/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "eZee and Hotelogix Alternatives for Small Hotels: A Fair Comparison",
+   "url": "https://tbn.tbbn.in/blog/ezee-hotelogix-alternatives-small-hotels/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Do Small Hotels Need a Channel Manager? An Honest Answer",
+   "url": "https://tbn.tbbn.in/blog/do-small-hotels-need-channel-manager/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Why Offline-First Software Suits Indian Hotels and Restaurants",
+   "url": "https://tbn.tbbn.in/blog/offline-first-software-indian-hospitality/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Custom vs Off-the-Shelf Software for Hospitality Businesses",
+   "url": "https://tbn.tbbn.in/blog/custom-vs-off-the-shelf-hospitality-software/",
+   "datePublished": "2026-10-19"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Room-Service Billing for Small Hotels: A Practical Setup Guide",
+   "url": "https://tbn.tbbn.in/blog/hotel-room-service-billing-setup-guide/",
+   "datePublished": "2026-06-28"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "What Restaurant Billing Software Really Costs in India",
+   "url": "https://tbn.tbbn.in/blog/restaurant-billing-software-cost-india/",
+   "datePublished": "2026-06-24"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "GST for Restaurants in India, Explained",
+   "url": "https://tbn.tbbn.in/blog/gst-for-restaurants-india-explained/",
+   "datePublished": "2026-06-20"
+  }
+ ]
 }
 </script>
 <script type="application/ld+json">
@@ -120,85 +253,122 @@ a{color:inherit;text-decoration:none;}
  ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/page.css">
+<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="/assets/tbn.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBHC2VR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div class="grid-texture" aria-hidden="true"></div>
-<header class="nav">
-  <div class="container nav__inner">
-    <a href="/" class="nav__brand"><span class="nav__brand-mark">TBN</span><span class="nav__brand-name">The Binary Brain Network <span>/ Blog</span></span></a>
-    <nav aria-label="Primary"><ul class="nav__links">
-      <li><a href="/#products">Products</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/glossary/">Glossary</a></li>
-      <li><a href="/tools/">Tools</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul></nav>
-    <div class="nav__right">
-      <a href="tel:+918879070732" class="nav__phone">+91 88790 70732</a>
-      <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%27s%20software." target="_blank" rel="noopener" class="nav__cta"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>WhatsApp</a>
-    </div>
-  </div>
-</header>
+<div class="grid-texture"></div>
+<header class="nav"><div class="container nav__inner">
+  <a href="/" class="nav__brand"><span class="nav__brand-mark">TBN</span><span class="nav__brand-name">The Binary Brain Network <span>/ Blog</span></span></a>
+  <nav><ul class="nav__links"><li><a href="/#products">Products</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/download/">Download</a></li><li><a href="/blog/">Blog</a></li><li><a href="/compare/">Compare</a></li><li><a href="/about/">About</a></li></ul></nav>
+  <div class="nav__right"><a href="tel:+918879070732" class="nav__phone">+91 88790 70732</a><a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%20software." target="_blank" rel="noopener" class="nav__cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>WhatsApp</a></div>
+</div></header>
 <div class="container"><nav class="breadcrumb"><a href="/">TBN</a> / <span>Blog</span></nav></div>
 <main>
-  <section class="hero">
-    <div class="container">
-      <div class="hero__eyebrow">TBN Blog</div>
-      <h1 class="hero__title">Working notes for people who run the floor.</h1>
-      <p class="hero__desc">Practical writing on restaurant and hotel operations software in India — pricing, GST, room service, POS choices, and the trade-offs Indian operators actually face when picking a system.</p>
-    </div>
-  </section>
-  <section class="posts">
-    <div class="container">
-      <div class="post-list">
-
-        <a href="/blog/restaurant-billing-software-cost-india/" class="post-card">
-          <span class="post-card__date">04 · 07 · 2026</span>
-          <div class="post-card__body">
-            <span class="post-card__cat">Pricing · Guide</span>
-            <h2 class="post-card__title">How much does restaurant billing software cost in India in 2026?</h2>
-            <p class="post-card__desc">The real price range for restaurant POS in India, what's usually not in the base fee, and how monthly SaaS compares to a one-time annual licence over three years.</p>
-          </div>
-          <span class="post-card__arrow">→</span>
-        </a>
-
-        <a href="/blog/gst-for-restaurants-india-explained/" class="post-card">
-          <span class="post-card__date">02 · 07 · 2026</span>
-          <div class="post-card__body">
-            <span class="post-card__cat">GST · Compliance</span>
-            <h2 class="post-card__title">GST for restaurants in India: composite scheme, rates and bill format explained.</h2>
-            <p class="post-card__desc">The two GST regimes restaurants can pick, when 5% applies vs 18%, and the six things a GST-compliant restaurant bill must show — plus the mistakes that get caught in audits.</p>
-          </div>
-          <span class="post-card__arrow">→</span>
-        </a>
-
-        <a href="/blog/hotel-room-service-billing-setup-guide/" class="post-card">
-          <span class="post-card__date">28 · 06 · 2026</span>
-          <div class="post-card__body">
-            <span class="post-card__cat">Hotels · How-To</span>
-            <h2 class="post-card__title">Room-service billing for small hotels: a practical setup guide.</h2>
-            <p class="post-card__desc">Why most hotel PMS doesn't handle room service, the five components of a working setup, and a printable sample bill format you can adapt to any property.</p>
-          </div>
-          <span class="post-card__arrow">→</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
+<section class="hero"><div class="container">
+  <span class="hero__eyebrow">Guides for Indian hotels &amp; restaurants</span>
+  <h1 class="hero__title">The TBN blog: <em>practical, specific, honest.</em></h1>
+  <p class="hero__lede">GST, billing, kitchen operations, front-desk compliance and the real cost of software — written by the team that builds Folio, Pass and Slate, from three generations of running hospitality businesses.</p>
+  <p class="updated"><a href="/blog/feed.xml" style="color:var(--amber)">RSS feed</a> · 33 articles</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="blog-filters" role="group" aria-label="Filter by topic"><button type="button" class="is-on" data-cat="all">All</button><button type="button" data-cat="Restaurants">Restaurants</button><button type="button" data-cat="Operations">Operations</button><button type="button" data-cat="Hotels">Hotels</button><button type="button" data-cat="Guides">Guides</button></div>
+  <div class="post-grid"><a class="post-card" href="/blog/best-restaurant-billing-software-india-2026/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Best Restaurant Billing Software in India (2026): How to Shortlist</h2>
+  <p class="post-card__desc">There is no single best restaurant POS. A practical way to shortlist billing software in India: the seven checks that matter, the questions vendors avoid, and five-year cost maths.</p><div class="post-card__meta">19 · 10 · 2026 · 6 min</div></a><a class="post-card" href="/blog/offline-vs-cloud-pos-restaurants-india/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Offline vs Cloud POS for Restaurants in India: Which Should You Choose?</h2>
+  <p class="post-card__desc">Cloud POS or offline-first POS for your restaurant? What each does well, what happens when the internet drops, five-year cost, data ownership and multi-outlet trade-offs.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/kot-kitchen-station-routing-guide/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">KOT Routing by Kitchen Station: A Setup Guide for Restaurants</h2>
+  <p class="post-card__desc">How to set up kitchen order tickets so each station — tandoor, Chinese, bar, desserts — gets only its own items. Mapping categories to stations, printers, KOT format and common mistakes.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/kitchen-display-system-vs-printed-kot/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Kitchen Display System vs Printed KOT: Which Does Your Kitchen Need?</h2>
+  <p class="post-card__desc">Should your restaurant replace KOT printers with a kitchen display system? Speed, ticket times, cost, durability, power cuts and the setups that work best in Indian kitchens.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/composition-scheme-bill-of-supply-restaurants/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Composition Scheme for Restaurants: The Bill of Supply Explained</h2>
+  <p class="post-card__desc">If your restaurant is under the GST composition scheme you must issue a Bill of Supply, not a tax invoice, and you cannot charge GST. What the bill must show, the 5% rate, the ₹1.5 crore limit, and common mistakes.</p><div class="post-card__meta">19 · 10 · 2026 · 6 min</div></a><a class="post-card" href="/blog/upi-qr-auto-confirmation-restaurants/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">UPI QR at the Restaurant Counter: Static vs Dynamic, and Auto-Confirmation</h2>
+  <p class="post-card__desc">Static UPI QR or dynamic gateway QR for your restaurant? How each works, why automatic payment confirmation shortens queues, fees, settlement, and how to set it up with your billing software.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/recipe-costing-food-cost-percentage/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Recipe Costing and Food Cost Percentage: A Restaurant Owner&#x27;s Guide</h2>
+  <p class="post-card__desc">How to cost a recipe, calculate food cost percentage per dish and for the whole restaurant, set menu prices, and use recipe-linked inventory so stock deducts itself. Worked examples in rupees.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/day-close-cash-reconciliation-guide/" data-cat="Operations">
+  <div class="post-card__cat">Operations</div><h2 class="post-card__title">Day Close and Cash Reconciliation for Restaurants and Hotels</h2>
+  <p class="post-card__desc">A practical end-of-day routine for restaurants and hotel front desks: Z-report, opening float, cash in and out, counted versus expected cash, UPI matching, shift handover and what to do about differences.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/multi-outlet-restaurant-gstin-bill-series/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Running Multiple Restaurant Outlets: GSTIN, FSSAI and Bill Number Series</h2>
+  <p class="post-card__desc">How to set up billing for a second or third restaurant outlet in India: when you need a separate GSTIN, why each outlet needs its own invoice number series, FSSAI per premises, shared menus and outlet-wise reports.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/restaurant-pos-ubuntu-linux/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Restaurant POS on Ubuntu and Linux: Install Guide and Hardware Tips</h2>
+  <p class="post-card__desc">Run restaurant billing software on Ubuntu, Debian, Linux Mint or any Linux PC. Why Linux suits a billing counter, .deb vs AppImage, exact terminal commands, the libfuse fix, and thermal printer setup.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/petpooja-alternatives-small-restaurants/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Petpooja Alternatives for Small Restaurants: A Fair Comparison</h2>
+  <p class="post-card__desc">Looking for a Petpooja alternative? When Petpooja is the right choice, when a smaller restaurant might want something else, the main types of alternatives, and questions to ask any POS vendor. Written by a competitor, and says so.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/restaurant-staff-attendance-payroll/" data-cat="Operations">
+  <div class="post-card__cat">Operations</div><h2 class="post-card__title">Restaurant Staff Attendance and Payroll: A Simple System That Works</h2>
+  <p class="post-card__desc">How small Indian restaurants and hotels can track attendance, half days and leave, handle salary advances, and produce a monthly salary sheet without a separate HR tool. Formulas, examples and common mistakes.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/cafe-pos-setup-checklist/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">Café POS Setup Checklist: From Menu to First Bill</h2>
+  <p class="post-card__desc">A step-by-step checklist for setting up billing software in a café: GST and FSSAI details, menu with size variants and modifiers, recipes for milk and coffee stock, printers, UPI, staff PINs and a test service.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/thermal-printer-troubleshooting-restaurants/" data-cat="Operations">
+  <div class="post-card__cat">Operations</div><h2 class="post-card__title">Thermal Bill Printer Troubleshooting for Restaurants and Hotels</h2>
+  <p class="post-card__desc">Fix the common thermal receipt printer problems in restaurants and hotels: blank or faded prints, paper not cutting, text cut off, wrong width, printer offline, duplicate prints and network printers that disappear.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/best-hotel-management-software-small-hotels-india/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Best Hotel Management Software for Small Hotels in India: How to Choose</h2>
+  <p class="post-card__desc">How a 5 to 100 room Indian hotel should choose a PMS: the modules that matter, GST and C-Form requirements, per-room versus flat pricing, offline operation, channel managers and a trial plan.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/c-form-form-iii-foreign-guests-hotels-guide/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">C-Form (Form-III) for Foreign Guests: A Hotel Compliance Guide for 2026</h2>
+  <p class="post-card__desc">What Indian hotels, guest houses and homestays must do when a foreign national checks in: the 24-hour Form-III (formerly C-Form) under the Immigration and Foreigners Act 2025, details to capture, the portal, departures and penalties.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/gst-on-hotel-rooms-2026/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">GST on Hotel Rooms in 2026: 5% and 18% Explained After GST 2.0</h2>
+  <p class="post-card__desc">Since 22 September 2025, hotel rooms up to ₹7,500 a night attract 5% GST without input tax credit and rooms above ₹7,500 attract 18% with ITC. How the bands work, in-hotel restaurants, ITC reversal and invoicing.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/night-audit-explained-small-hotels/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Night Audit Explained for Small Hotels: What It Does and How to Run It</h2>
+  <p class="post-card__desc">What a hotel night audit is, why even a 10-room property needs one, the steps — posting room charges, no-shows, reconciliation, the business date — and automatic versus manager-confirmed audits.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/hourly-hotel-stays-pricing-billing/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Hourly Hotel Stays: How to Price, Sell and Bill Short Stays</h2>
+  <p class="post-card__desc">How Indian hotels can sell rooms by the hour — 3, 6 and 12-hour slots — without breaking room inventory or GST: slot pricing, overstay rules, housekeeping turnaround, compliance and software support.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/hotel-housekeeping-room-status-workflow/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Hotel Housekeeping Room Status Workflow: A Practical Setup</h2>
+  <p class="post-card__desc">Set up room status codes, daily housekeeping assignments, inspection, maintenance reporting and laundry tracking for a small Indian hotel, with phones instead of paper.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/group-bookings-master-folio/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Group Bookings and the Master Folio: How Hotels Should Bill Groups</h2>
+  <p class="post-card__desc">How small hotels should handle weddings, corporate groups and tour parties: blocking rooms, a master folio for shared charges, routing room and F&amp;B charges, split invoices and group check-out.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/per-room-vs-flat-hotel-software-pricing/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Per-Room vs Flat Pricing for Hotel Software: A Five-Year Cost Comparison</h2>
+  <p class="post-card__desc">Hotel PMS pricing in India compared: per room per month, per device, flat annual licence. Five-year totals for 10, 20, 40 and 80-room hotels, and the hidden costs to ask about.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/gstr-1-tally-export-hotels/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">GSTR-1 and Tally Export for Hotels: Getting Clean Data to Your Accountant</h2>
+  <p class="post-card__desc">How hotels should prepare GSTR-1 data — B2B, B2C large and B2C small invoices, state codes, HSN/SAC — and hand accounts to Tally without retyping. Month-end checklist included.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/room-service-billing-without-pms-module/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Room-Service Billing When Your Hotel PMS Has No F&amp;B Module</h2>
+  <p class="post-card__desc">Many hotel management systems in India handle rooms but not room-service orders. Options compared: paper, a restaurant POS, a full PMS switch, or a dedicated room-service billing tool alongside your PMS.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/guest-house-software-essentials/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Guest House and Homestay Software: What You Actually Need</h2>
+  <p class="post-card__desc">A plain guide for guest houses, homestays and lodges in India with 3 to 20 rooms: the minimum software you need for bookings, GST bills, Form-III for foreign guests and food billing — and what you can skip.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/58mm-vs-80mm-thermal-printer/" data-cat="Operations">
+  <div class="post-card__cat">Operations</div><h2 class="post-card__title">58mm vs 80mm Thermal Printer: Which Should a Hotel or Restaurant Buy?</h2>
+  <p class="post-card__desc">58mm or 80mm thermal receipt printer for a restaurant, café or hotel room-service desk? Printable width, what fits on a GST bill, cost, paper, auto-cutters, connectivity and software support compared.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/ezee-hotelogix-alternatives-small-hotels/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">eZee and Hotelogix Alternatives for Small Hotels: A Fair Comparison</h2>
+  <p class="post-card__desc">eZee Absolute and Hotelogix are established cloud hotel PMS platforms. When they are the right choice, why some small Indian hotels look elsewhere, the types of alternatives, and what to ask. Written by a competitor, and says so.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/do-small-hotels-need-channel-manager/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Do Small Hotels Need a Channel Manager? An Honest Answer</h2>
+  <p class="post-card__desc">What a hotel channel manager does, when a small Indian hotel needs one, when it can manage without, overbooking risks, costs, and how to manage OTAs manually until you do.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/offline-first-software-indian-hospitality/" data-cat="Guides">
+  <div class="post-card__cat">Guides</div><h2 class="post-card__title">Why Offline-First Software Suits Indian Hotels and Restaurants</h2>
+  <p class="post-card__desc">Power cuts, patchy broadband and busy services: why hotels and restaurants in India benefit from software that runs locally first. What offline-first means, what it costs, backups, and the trade-offs against cloud.</p><div class="post-card__meta">19 · 10 · 2026 · 4 min</div></a><a class="post-card" href="/blog/custom-vs-off-the-shelf-hospitality-software/" data-cat="Guides">
+  <div class="post-card__cat">Guides</div><h2 class="post-card__title">Custom vs Off-the-Shelf Software for Hospitality Businesses</h2>
+  <p class="post-card__desc">When should a hotel, restaurant group or service business build custom software instead of buying a product? Costs, timelines, risks, ownership of code, fixed-price versus hourly, and a decision checklist.</p><div class="post-card__meta">19 · 10 · 2026 · 5 min</div></a><a class="post-card" href="/blog/hotel-room-service-billing-setup-guide/" data-cat="Hotels">
+  <div class="post-card__cat">Hotels</div><h2 class="post-card__title">Room-Service Billing for Small Hotels: A Practical Setup Guide</h2>
+  <p class="post-card__desc">Why most hotel PMS have no room-service module, and the five components of a setup that works.</p><div class="post-card__meta">28 · 06 · 2026 · 7 min</div></a><a class="post-card" href="/blog/restaurant-billing-software-cost-india/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">What Restaurant Billing Software Really Costs in India</h2>
+  <p class="post-card__desc">Licence vs subscription, the add-ons that inflate the headline price, and a five-year way to compare quotes.</p><div class="post-card__meta">24 · 06 · 2026 · 8 min</div></a><a class="post-card" href="/blog/gst-for-restaurants-india-explained/" data-cat="Restaurants">
+  <div class="post-card__cat">Restaurants</div><h2 class="post-card__title">GST for Restaurants in India, Explained</h2>
+  <p class="post-card__desc">Composite vs regular scheme, when 5% applies and when 18% does, and what a GST-compliant restaurant bill must show.</p><div class="post-card__meta">20 · 06 · 2026 · 8 min</div></a></div>
+</div></section>
+<script>
+(function(){var b=document.querySelectorAll('.blog-filters button'),c=document.querySelectorAll('.post-card');
+Array.prototype.forEach.call(b,function(x){x.addEventListener('click',function(){
+Array.prototype.forEach.call(b,function(y){y.classList.toggle('is-on',y===x)});var k=x.getAttribute('data-cat');
+Array.prototype.forEach.call(c,function(p){p.hidden=!(k==='all'||p.getAttribute('data-cat')===k)});})});})();
+</script>
 </main>
 <div class="parent-strip"><div class="container parent-strip__inner">
-  <p class="parent-strip__text">The Binary Brain Network is the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai.</p>
+  <p class="parent-strip__text"><strong>The Binary Brain Network</strong> is the software division of <strong>The Big Brand Network</strong> — a full-service brand ecosystem based in Mumbai, operating pan-India. Trademark registered, MSME certified.</p>
   <a href="https://tbbn.in" target="_blank" rel="noopener" class="parent-strip__link">Visit TBBN Agency</a>
 </div></div>
+<section class="cta"><div class="container container--narrow">
+  <h2 class="cta__title">Try it on your own property, free.</h2>
+  <p class="cta__sub">Every TBN product has a 15-day free trial of the complete software, with no card. Installation and staff training are included when you buy.</p>
+  <div class="cta__actions">
+    <a href="/download/" class="btn btn--primary"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Download a free trial</a>
+    <a href="https://wa.me/918879070732?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TBN%20software." target="_blank" rel="noopener" class="btn btn--whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg> Ask on WhatsApp</a>
+  </div>
+  <div class="cta__contact"><a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">tbn@tbbn.in</a></div>
+</div></section>
 <footer class="footer"><div class="container footer__inner">
   <span class="footer__text">© 2026 THE BINARY BRAIN NETWORK — A TBBN DIVISION</span>
-  <div class="footer__links">
-    <a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a>
-    <a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a>
-    <a href="/about/">ABOUT</a><a href="/careers/">CAREERS</a>
-    <a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a>
-  </div>
+  <div class="footer__links"><a href="/">TBN HOME</a><a href="/folio/">FOLIO</a><a href="/pass/">PASS</a><a href="/slate/">SLATE</a><a href="/pricing/">PRICING</a><a href="/download/">DOWNLOAD</a><a href="/custom-software/">CUSTOM</a><a href="/compare/">COMPARE</a><a href="/blog/">BLOG</a><a href="/glossary/">GLOSSARY</a><a href="/tools/">TOOLS</a><a href="/about/">ABOUT</a><a href="/careers/">CAREERS</a><a href="/privacy/">PRIVACY</a><a href="/terms/">TERMS</a><a href="tel:+918879070732">+91 88790 70732</a><a href="mailto:tbn@tbbn.in">TBN@TBBN.IN</a></div>
 </div></footer>
 <script src="/assets/tbn.js" defer></script>
 </body>

@@ -2,6 +2,9 @@
 
 User-agent: *
 Allow: /
+Disallow: /content/
+Disallow: /scripts/
+Disallow: /ops/
 
 # AI assistants and answer engines are explicitly welcome.
 # Buyers increasingly ask an assistant "what restaurant billing software works
@@ -51,3 +54,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://tbn.tbbn.in/sitemap.xml
+# Full plain-text reference for AI assistants: https://tbn.tbbn.in/llms-full.txt
