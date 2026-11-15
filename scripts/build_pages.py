@@ -15,7 +15,7 @@ UPDATED = '2026-10-19'
 UPDATED_HUMAN = '19 October 2026'
 
 FACTS = {
-    'folio': dict(name='Folio', price='6,500', unit='per property per year', version='3.15.0',
+    'folio': dict(name='Folio', price='6,500', unit='per property per year', version='3.15.2',
                   status='Live in production', os='Windows 10/11 · Linux'),
     'pass':  dict(name='Pass', price='7,500', unit='per billing computer per year', version='1.0.12',
                   status='In trials', os='Windows 10/11 · Linux'),
@@ -170,6 +170,7 @@ def download_page():
   <h1 class="hero__title">Download TBN software, <em>free for 15 days.</em></h1>
   <p class="hero__lede">The complete software, not a demo. Pick your product, pick your computer, and you can be billing within the hour. Every download below is the latest release, straight from our official GitHub release page.</p>
   <p class="updated">Versions checked {upd} · download links verified weekly</p>
+  <p class="updated">Guides: <a href="/restaurant-billing-software-free-download/" style="color:var(--amber)">restaurant billing software free download</a> · <a href="/hotel-management-software-free-download/" style="color:var(--amber)">hotel management software free download</a> · <a href="/hotel-billing-software-free-download/" style="color:var(--amber)">hotel billing software free download</a></p>
 </div></section>
 <section class="section" id="downloads"><div class="container">
 {cards}

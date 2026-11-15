@@ -1,6 +1,6 @@
 # The Binary Brain Network — full reference for AI assistants
 
-Source: https://tbn.tbbn.in · Generated 2026-10-19
+Source: https://tbn.tbbn.in · Generated 2026-11-15
 Short version: https://tbn.tbbn.in/llms.txt
 
 
@@ -159,12 +159,14 @@ Free 15-day trial · No card
 The complete software, not a demo. Pick your product, pick your computer, and you can be billing within the hour. Every download below is the latest release, straight from our official GitHub release page.
  
 Versions checked 19 October 2026 · download links verified weekly
+ 
+Guides: restaurant billing software free download · hotel management software free download · hotel billing software free download
 
 FolioLive
  
 Room-service ordering and billing for hotels that already run a hotel management system.
  
-Version 3.15.0 · Runs on Windows 10/11 · Linux
+Version 3.15.2 · Runs on Windows 10/11 · Linux
 Price ₹6,500 per property per year
 
  Windows installer
@@ -264,7 +266,7 @@ Yes. Installation, onboarding and staff training are included with every licence
 PAGE: https://tbn.tbbn.in/folio/features/
 =====================================================
 
-Live in Production · Mumbai · v3.15.0
+Live in Production · Mumbai · v3.15.2
 
 ## Folio — the complete feature list.
  
@@ -446,7 +448,7 @@ Technical Specification
 
 ## What it needs, and what it runs on.
 
-- Version: 3.15.0 (October 2026)
+- Version: 3.15.2 (October 2026)
  
 - Platform: Windows 10 or 11 (64-bit) — one-click installer with desktop and Start Menu shortcuts. Linux (64-bit) as a single AppImage. Both update themselves.
  

@@ -15,6 +15,7 @@ PRIORITY = [
     (r'^/$', '1.0', 'weekly'),
     (r'^/(folio|pass|slate)/$', '0.95', 'weekly'),
     (r'^/(download|pricing)/$', '0.95', 'weekly'),
+    (r'-free-download/$', '0.95', 'weekly'),
     (r'^/(compare|custom-software)/', '0.9', 'monthly'),
     (r'^/(folio|pass|slate)/features/$', '0.85', 'monthly'),
     (r'^/blog/$', '0.8', 'weekly'),
