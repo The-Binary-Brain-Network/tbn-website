@@ -6,7 +6,7 @@ Run:  python scripts/build_pages.py
 Facts here must match the product repos. When a price, trial length or
 platform changes, change it in FACTS below and rebuild.
 """
-import os, sys
+import io, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tbnsite import page, DL, WA_ICON, WIN_ICON, DL_ICON, wa_link, faq_html, faq_ld, SITE, esc
 
@@ -507,5 +507,76 @@ def terms_page():
         body=body, crumbs=[('The Binary Brain Network', '/'), ('Terms', '/terms/')], schema=schema,
         section_label='Terms', final_cta=False))
 
+def pass_terms_page():
+    """Pass's licence agreement, exactly as the app shows it on first launch.
+
+    The text lives in content/legal/pass-terms.txt, copied from
+    Pass/src/renderer/src/legal/terms.ts (TERMS_OF_SERVICE). Change it there
+    first, then copy it here, so the page never says something the app does not.
+    """
+    import re as _re
+    from html import escape as _esc
+    raw = io.open(os.path.join(ROOT, 'content', 'legal', 'pass-terms.txt'), encoding='utf-8').read()
+    first, rest = raw.split('\n', 1)
+    version = first.replace('VERSION', '').strip()
+    lines = rest.split('\n')
+    out, para, items = [], [], []
+
+    def flush_para():
+        if para:
+            out.append('<p>%s</p>' % _esc(' '.join(x.strip() for x in para)))
+            para.clear()
+
+    def flush_items():
+        if items:
+            out.append('<ul>' + ''.join('<li>%s</li>' % _esc(i) for i in items) + '</ul>')
+            items.clear()
+
+    head = []
+    started = False
+    for ln in lines:
+        t = ln.strip()
+        m = _re.match(r'^(\d+)\.\s+([A-Z][A-Z ,&/-]+)$', t)
+        if m:
+            started = True
+            flush_para(); flush_items()
+            out.append('<h2>%s. %s</h2>' % (m.group(1), _esc(m.group(2).title())))
+            continue
+        if not started:
+            if t:
+                head.append(t)
+            continue
+        if not t:
+            flush_para(); flush_items()
+            continue
+        sub = _re.match(r'^\(([a-z])\)\s+(.*)$', t)
+        if sub:
+            flush_para()
+            items.append('(%s) %s' % (sub.group(1), sub.group(2)))
+        elif items and ln.startswith('       '):
+            items[-1] += ' ' + t
+        else:
+            flush_items()
+            para.append(t)
+    flush_para(); flush_items()
+
+    lede = 'The licence agreement you accept when you set up Pass on a computer, phone or tablet — the same text the app shows, published here so you can read it before installing.'
+    body = ('<section class="hero"><div class="container container--narrow">'
+            '<span class="hero__eyebrow">Version %s</span>'
+            '<h1 class="hero__title">Pass — Terms of Service</h1>'
+            '<p class="hero__lede">%s</p>'
+            '</div></section>'
+            '<section class="section"><div class="container container--narrow legal">'
+            '<p class="note">%s</p>%s'
+            '<h2>Related</h2><p>How we handle data: <a href="/privacy/">privacy policy</a>. Trials, prices and referrals: <a href="/terms/">commercial terms</a>.</p>'
+            '</div></section>') % (_esc(version), lede, _esc(' · '.join(head)), ''.join(out))
+    schema = [{'@context': 'https://schema.org', '@type': 'WebPage', 'url': SITE + '/pass/terms/',
+               'name': 'Pass — Terms of Service', 'inLanguage': 'en-IN', 'dateModified': UPDATED,
+               'isPartOf': {'@id': SITE + '/#website'}, 'publisher': {'@id': SITE + '/#organization'}}]
+    write('/pass/terms/', page(path='/pass/terms/', title='Pass Terms of Service | The Binary Brain Network',
+        description='The licence agreement for Pass, the restaurant billing and POS software for Windows, Linux and Android: licence, data, liability, privacy and updates.',
+        body=body, crumbs=[('The Binary Brain Network', '/'), ('Pass', '/pass/'), ('Terms of Service', '/pass/terms/')],
+        schema=schema, section_label='Pass terms', final_cta=False))
+
 if __name__ == '__main__':
-    download_page(); pricing_page(); calculator_page(); privacy_page(); terms_page()
+    download_page(); pricing_page(); calculator_page(); privacy_page(); terms_page(); pass_terms_page()
