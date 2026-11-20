@@ -419,14 +419,16 @@ def privacy_page():
 <p>You can decline on the cookie bar and the site works exactly the same. To change your mind, clear this site's data in your browser and the bar will appear again. Browser settings and ad-blockers also block these tools.</p>
 
 <h2>What our software collects</h2>
-<p>Folio, Pass and Slate are <strong>installed on your own computer and keep your business data there</strong> — your bills, guests, menu, staff and reports are not sent to us.</p>
+<p>Folio, Pass and Slate are <strong>installed on your own computer or phone and keep your business data there</strong> — your bills, guests, menu, staff and reports are not sent to us.</p>
 <ul>
-<li><strong>Licence and trial activation.</strong> When you start a trial or activate a licence, the software sends your business name, phone number and an identifier derived from your computer to our licence server, so that each computer gets one trial and a key cannot be copied to another machine. We are notified by email of each new trial so we can offer help.</li>
+<li><strong>Licence and trial activation.</strong> When you start a trial or activate a licence, the software sends your business name, phone number and an identifier derived from your computer or phone to our licence server, so that each device gets one trial and a key cannot be copied to another device. We are notified by email of each new trial so we can offer help.</li>
 <li><strong>Licence checks.</strong> When online, the software periodically checks whether its key has been revoked.</li>
-<li><strong>Updates.</strong> The software checks our GitHub release page for new versions.</li>
-<li><strong>Crash reports.</strong> If the software crashes it can send an error report with personal details removed. You can switch this off in the app's settings.</li>
+<li><strong>Updates.</strong> The software checks our GitHub release page for new versions. Pass installed from Google Play is updated by Google Play instead.</li>
+<li><strong>Crash reports.</strong> If the desktop software crashes it can send an error report with personal details removed. You can switch this off in the app's settings. Pass for Android does not send crash reports.</li>
 <li><strong>Features you switch on.</strong> Some optional features use the internet on your instruction — sending a bill or alert on WhatsApp, emailing a report from your own email account, or confirming a UPI payment with Razorpay or PhonePe. That data goes to the service you chose, not to us.</li>
 </ul>
+<p><strong>Pass for Android permissions.</strong> <em>Nearby devices (Bluetooth)</em> — only to print to a Bluetooth receipt printer you have paired; Pass never scans for or tracks other devices. <em>Internet</em> — for the licence, updates and the optional features above. On Android 7–9, <em>storage</em> — only when you save a report to Downloads. Pass does not use your location, contacts, camera, microphone or advertising ID, and shows no ads.</p>
+<p><strong>Deleting your data.</strong> Your business data lives only on your device: uninstalling the app or clearing its storage deletes it. To delete the licence and trial details we hold (business name, phone number, device identifier), write to tbn@tbbn.in or WhatsApp us and we will delete them within 30 days, except what the law requires us to keep, such as invoices.</p>
 <p>Each product also includes its own privacy notice inside the app.</p>
 
 <h2>How long we keep it</h2>
